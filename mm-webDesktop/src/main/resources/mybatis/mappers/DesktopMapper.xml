@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liv.dao.DesktopMapper">
+  <resultMap id="BaseResultMap" type="com.liv.dao.datamodel.Desktop">
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="SORT" jdbcType="INTEGER" property="sort" />
+    <result column="ALIAS" jdbcType="VARCHAR" property="alias" />
+    <result column="DEL" jdbcType="INTEGER" property="del" />
+    <result column="ISDEFAULT" jdbcType="INTEGER" property="isdefault" />
+    <result column="USER_ID" jdbcType="BIGINT" property="userId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from desktop
+    where ID = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.liv.dao.datamodel.Desktop">
+    insert into desktop (ID, SORT, ALIAS,
+      DEL, ISDEFAULT, USER_ID
+      )
+    values (#{id,jdbcType=BIGINT}, #{sort,jdbcType=INTEGER}, #{alias,jdbcType=VARCHAR},
+      #{del,jdbcType=INTEGER}, #{isdefault,jdbcType=INTEGER}, #{userId,jdbcType=BIGINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.liv.dao.datamodel.Desktop">
+    update desktop
+    set SORT = #{sort,jdbcType=INTEGER},
+      ALIAS = #{alias,jdbcType=VARCHAR},
+      DEL = #{del,jdbcType=INTEGER},
+      ISDEFAULT = #{isdefault,jdbcType=INTEGER},
+      USER_ID = #{userId,jdbcType=BIGINT}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+
+  <update id="updateDefaultByPrimaryKey" >
+    update desktop
+    set
+      ISDEFAULT = 1
+    where ID = #{id,jdbcType=BIGINT} and isdefault=0
+  </update>
+
+  <update id="updateNotDefault" >
+    update desktop
+    set
+      ISDEFAULT = 0
+    where isdefault =1 and del = '0'
+  </update>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID
+    from desktop
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID
+    from desktop
+  </select>
+  <select id="select" resultMap="BaseResultMap">
+    select ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID
+    from desktop
+    <where>
+      <if test="userId!='' and userId!=null ">
+        and USER_ID =#{userId}
+      </if>
+    </where>
+    order by sort
+  </select>
+</mapper>

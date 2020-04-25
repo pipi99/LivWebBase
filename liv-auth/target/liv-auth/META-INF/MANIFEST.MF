@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: LW
+Build-Jdk: 1.8.0_121
+Implementation-Title: liv-auth Maven Webapp
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.liv
+Main-Class: ${start-class}
+

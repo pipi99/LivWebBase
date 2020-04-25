@@ -1,0 +1,130 @@
+2020-04-16 09:07:22.467 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 09:12:09.038 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 09:15:07.829 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 09:19:19.004 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 09:19:49.697 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 09:20:40.900 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 09:21:42.199 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
+2020-04-16 09:21:42.284 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution(String)
+2020-04-16 09:21:42.360 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - <==      Total: 16
+2020-04-16 10:19:52.246 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 10:20:45.322 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
+2020-04-16 10:20:45.349 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution(String)
+2020-04-16 10:20:45.383 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - <==      Total: 16
+2020-04-16 10:22:11.840 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 10:22:32.649 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
+2020-04-16 10:22:32.674 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution(String)
+2020-04-16 10:22:32.699 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - <==      Total: 16
+2020-04-16 10:22:55.349 [http-nio-80-exec-1] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
+2020-04-16 10:22:55.349 [http-nio-80-exec-1] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution(String)
+2020-04-16 10:22:55.352 [http-nio-80-exec-1] DEBUG com.liv.dao.DictMapper.select - <==      Total: 16
+2020-04-16 10:26:13.148 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 10:34:57.434 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 10:35:13.941 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 10:36:27.505 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 10:38:24.472 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 11:16:56.142 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 11:21:56.997 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 11:22:23.539 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==>  Preparing: select ID, SUBJECT, BGCOLOR, BGIMG, USER_ID, DESKTOP_RESOLUTION from DesktopSubject 
+2020-04-16 11:22:23.564 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==> Parameters: 
+2020-04-16 11:22:23.586 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.select - <==      Total: 0
+2020-04-16 11:33:21.686 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 11:34:09.521 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.insert - ==>  Preparing: insert into DesktopSubject (ID, SUBJECT, BGCOLOR, BGIMG, USER_ID, DESKTOP_RESOLUTION ) values (?, ?, ?, ?, ?, ? ) 
+2020-04-16 11:34:09.549 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.insert - ==> Parameters: 0(Long), 0(Integer), string(String), 0(Integer), 0(Integer), string(String)
+2020-04-16 11:34:09.605 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.insert - <==    Updates: 1
+2020-04-16 11:34:35.243 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==>  Preparing: select ID, SUBJECT, BGCOLOR, BGIMG, USER_ID, DESKTOP_RESOLUTION from DesktopSubject 
+2020-04-16 11:34:35.243 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==> Parameters: 
+2020-04-16 11:34:35.268 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.select - <==      Total: 1
+2020-04-16 11:34:41.839 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==>  Preparing: select ID, SUBJECT, BGCOLOR, BGIMG, USER_ID, DESKTOP_RESOLUTION from DesktopSubject 
+2020-04-16 11:34:41.840 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==> Parameters: 
+2020-04-16 11:34:41.841 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopSubjectMapper.select - <==      Total: 1
+2020-04-16 11:34:56.115 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopSubjectMapper.updateByPrimaryKey - ==>  Preparing: update DesktopSubject set SUBJECT = ?, BGCOLOR = ?, BGIMG = ?, USER_ID = ?, DESKTOP_RESOLUTION = ? where ID = ? 
+2020-04-16 11:34:56.115 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopSubjectMapper.updateByPrimaryKey - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Integer), string(String), 0(Long)
+2020-04-16 11:34:56.116 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopSubjectMapper.updateByPrimaryKey - <==    Updates: 0
+2020-04-16 11:35:19.531 [http-nio-80-exec-4] DEBUG c.liv.dao.DesktopSubjectMapper.updateByPrimaryKey - ==>  Preparing: update DesktopSubject set SUBJECT = ?, BGCOLOR = ?, BGIMG = ?, USER_ID = ?, DESKTOP_RESOLUTION = ? where ID = ? 
+2020-04-16 11:35:19.531 [http-nio-80-exec-4] DEBUG c.liv.dao.DesktopSubjectMapper.updateByPrimaryKey - ==> Parameters: 1(Integer), string(String), 0(Integer), 0(Integer), string(String), 0(Long)
+2020-04-16 11:35:19.532 [http-nio-80-exec-4] DEBUG c.liv.dao.DesktopSubjectMapper.updateByPrimaryKey - <==    Updates: 0
+2020-04-16 11:35:38.969 [http-nio-80-exec-5] DEBUG c.liv.dao.DesktopSubjectMapper.updateByPrimaryKey - ==>  Preparing: update DesktopSubject set SUBJECT = ?, BGCOLOR = ?, BGIMG = ?, USER_ID = ?, DESKTOP_RESOLUTION = ? where ID = ? 
+2020-04-16 11:35:38.970 [http-nio-80-exec-5] DEBUG c.liv.dao.DesktopSubjectMapper.updateByPrimaryKey - ==> Parameters: 1(Integer), 111(String), 0(Integer), 0(Integer), 111(String), 1(Long)
+2020-04-16 11:35:39.029 [http-nio-80-exec-5] DEBUG c.liv.dao.DesktopSubjectMapper.updateByPrimaryKey - <==    Updates: 1
+2020-04-16 11:36:56.676 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 11:37:40.497 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==>  Preparing: select ID, SUBJECT, BGCOLOR, BGIMG, USER_ID, DESKTOP_RESOLUTION from DesktopSubject WHERE USER_ID =? 
+2020-04-16 11:37:40.522 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==> Parameters: 1(Integer)
+2020-04-16 11:37:40.546 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.select - <==      Total: 0
+2020-04-16 11:37:44.706 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==>  Preparing: select ID, SUBJECT, BGCOLOR, BGIMG, USER_ID, DESKTOP_RESOLUTION from DesktopSubject 
+2020-04-16 11:37:44.706 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.select - ==> Parameters: 
+2020-04-16 11:37:44.709 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.select - <==      Total: 1
+2020-04-16 11:37:55.105 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 15:44:43.294 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 15:45:03.453 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
+2020-04-16 15:45:03.477 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution(String)
+2020-04-16 15:45:03.507 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - <==      Total: 16
+2020-04-16 15:45:10.685 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
+2020-04-16 15:45:10.686 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution(String)
+2020-04-16 15:45:10.690 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - <==      Total: 16
+2020-04-16 15:45:13.633 [http-nio-80-exec-1] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
+2020-04-16 15:45:13.634 [http-nio-80-exec-1] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution11(String)
+2020-04-16 15:45:13.635 [http-nio-80-exec-1] DEBUG com.liv.dao.DictMapper.select - <==      Total: 0
+2020-04-16 15:46:59.576 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 15:48:28.858 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 16:37:04.095 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 16:38:48.956 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 16:39:29.766 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: insert into desktop (ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID ) values (?, ?, ?, ?, ?, ? ) 
+2020-04-16 16:39:29.792 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Long), 0(Integer), string(String), 0(Integer), 0(Integer), 0(Long)
+2020-04-16 16:39:29.852 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-16 16:39:50.884 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateByPrimaryKey - ==>  Preparing: update desktop set SORT = ?, ALIAS = ?, DEL = ?, ISDEFAULT = ?, USER_ID = ? where ID = ? 
+2020-04-16 16:39:50.885 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateByPrimaryKey - ==> Parameters: 0(Integer), 222(String), 0(Integer), 0(Integer), 0(Long), 0(Long)
+2020-04-16 16:39:50.886 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateByPrimaryKey - <==    Updates: 0
+2020-04-16 16:40:02.212 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateByPrimaryKey - ==>  Preparing: update desktop set SORT = ?, ALIAS = ?, DEL = ?, ISDEFAULT = ?, USER_ID = ? where ID = ? 
+2020-04-16 16:40:02.212 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateByPrimaryKey - ==> Parameters: 0(Integer), 222(String), 0(Integer), 0(Integer), 0(Long), 1(Long)
+2020-04-16 16:40:02.288 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateByPrimaryKey - <==    Updates: 1
+2020-04-16 16:40:14.973 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.select - ==>  Preparing: select ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID from desktop order by sort 
+2020-04-16 16:40:14.973 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.select - ==> Parameters: 
+2020-04-16 16:40:14.995 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.select - <==      Total: 1
+2020-04-16 16:40:24.437 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==>  Preparing: delete from desktop where ID = ? 
+2020-04-16 16:40:24.438 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==> Parameters: 1(Long)
+2020-04-16 16:40:24.499 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - <==    Updates: 1
+2020-04-16 16:40:33.240 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.select - ==>  Preparing: select ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID from desktop order by sort 
+2020-04-16 16:40:33.241 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.select - ==> Parameters: 
+2020-04-16 16:40:33.242 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.select - <==      Total: 0
+2020-04-16 18:38:42.949 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:42:35.037 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:43:02.671 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:43:12.183 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==>  Preparing: delete from desktop where ID = ? 
+2020-04-16 18:43:12.212 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==> Parameters: 2(Long)
+2020-04-16 18:43:12.215 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - <==    Updates: 0
+2020-04-16 18:44:39.131 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:46:54.991 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:47:50.879 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:48:39.539 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:48:49.503 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:49:51.476 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:50:22.240 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==>  Preparing: delete from desktop where ID = ? 
+2020-04-16 18:50:22.262 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==> Parameters: 1(Long)
+2020-04-16 18:50:22.264 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - <==    Updates: 0
+2020-04-16 18:50:27.327 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==>  Preparing: delete from desktop where ID = ? 
+2020-04-16 18:50:27.328 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==> Parameters: 1(Long)
+2020-04-16 18:50:27.329 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - <==    Updates: 0
+2020-04-16 18:51:25.379 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:52:15.791 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 18:54:06.234 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 19:15:17.623 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 19:15:44.509 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==>  Preparing: delete from desktop where ID = ? 
+2020-04-16 19:15:44.532 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==> Parameters: 1(Long)
+2020-04-16 19:15:44.534 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - <==    Updates: 0
+2020-04-16 19:16:51.138 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==>  Preparing: delete from desktop where ID = ? 
+2020-04-16 19:16:51.139 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - ==> Parameters: 1(Long)
+2020-04-16 19:16:51.140 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.deleteByPrimaryKey - <==    Updates: 0
+2020-04-16 19:17:53.918 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 19:21:05.331 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 19:33:15.985 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 19:34:54.014 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 19:37:27.648 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 19:37:58.349 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: insert into desktop (ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID ) values (?, ?, ?, ?, ?, ? ) 
+2020-04-16 19:37:58.384 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Long), 0(Integer), (String), 0(Integer), 0(Integer), 0(Long)
+2020-04-16 19:37:58.676 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-16 20:03:16.467 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 20:03:32.895 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 20:06:37.516 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 20:07:12.541 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-16 20:08:56.192 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE

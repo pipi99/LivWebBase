@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>前端组件</title>
+		<link rel="stylesheet" href="../../plugins/element-ui/lib/theme-chalk/index.css">
+		<link rel="stylesheet" type="text/css" href="./kymf_wb01.css"/>
+	</head>
+	<body>
+	<div id="app">
+		<el-row type="flex" justify="start" align="top" :gutter="15" v-for="(row, index) in frames"  style="margin-top: 10px;">
+		  <el-col :span="3" v-for="(col, index) in row"  >
+		    <el-card :body-style="{ padding: '0px' ,backgroundColor:'#e5f0ff'}" >
+			  <span class="title">{{col.name}}</span>
+		      <img :src="col.logo" class="image">
+		      <div style="padding: 14px;">
+				<div>{{col.remark}}</div>
+		        <div class="bottom clearfix">
+		          <el-link :href="col.url" target="_blank">官方网址</el-link>
+				  <el-dropdown @command="handleCommand" style="float: right;" v-if="col.others">
+				    <span class="el-dropdown-link">
+				      其他网址<i class="el-icon-arrow-down el-icon--right"></i>
+				    </span>
+				    <el-dropdown-menu slot="dropdown" >
+				      <el-dropdown-item :command="m.href" v-for="(m, index) in col.others" >{{m.name}}</el-dropdown-item>
+				    </el-dropdown-menu>
+				  </el-dropdown>
+		        </div>
+		      </div>
+		    </el-card>
+		  </el-col>
+		  
+		</el-row>
+	</div>
+	</body>
+	<!-- import Vue before Element -->
+	<script src="../../plugins/vue/dist/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="../../plugins/element-ui/lib/index.js"></script>
+	<script>
+	  new Vue({
+	    el: '#app',
+		  data: function() {
+			return { 
+				frames:[
+					[
+						{"name":"ElementUI","url":"https://element.eleme.cn/#/zh-CN","logo":"https://element.eleme.cn/static/theme-index-red.c8e136e.png","remark":"一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库"},
+						{"name":"jQuery UI","url":"https://jqueryui.com/","logo":"https://jqueryui.com/jquery-wp-content/themes/jquery/content/books/jquery-ui-in-action.jpg","remark":"基于Jquery的开源网页用户界面代码库","others":[{"name":"中文网","href":"https://www.jqueryui.org.cn/"}]},
+						{"name":"Ant Design of Vue","url":"https://www.antdv.com/docs/vue/introduce-cn/","logo":"./img/antd-vue.svg","remark":"这里是 Ant Design 的 Vue 实现，开发和服务于企业级后台产品。",
+							"others":[
+								{"name":"Ant Design","href":"https://ant.design/docs/spec/introduce-cn"},
+								{"name":"Ant Design Library@Axure","href":"http://library.ant.design/"}
+							],
+						},
+						{"name":"Ant Motion","url":"https://motion.ant.design/index-cn","logo":"./img/ant-motion.svg","remark":"使用 Ant Motion 能够快速在 React 框架中使用动画。我们提供了单项，组合动画，以及整套解决方案"},
+						
+					],
+					[
+						{"name":"echarts","url":"https://echarts.apache.org/zh/index.html","logo":"https://echarts.apache.org/zh/images/logo.png","remark":"ECharts，一个使用 JavaScript 实现的开源可视化库，底层依赖矢量图形库 ZRender，提供直观，交互丰富，可高度个性化定制的数据可视化图表。"},
+						{"name":"AntV","url":"https://antv.gitee.io/zh","logo":"https://gw.alipayobjects.com/zos/antfincdn/FLrTNDvlna/antv.png","remark":"AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。"},
+						{"name":"AntV G2","url":"https://antv-g2.gitee.io/zh","logo":"https://gw.alipayobjects.com/zos/antfincdn/FLrTNDvlna/antv.png","remark":"G2 一套面向常规统计图表，以数据驱动的高交互可视化图形语法，具有高度的易用性和扩展性。使用 G2，你可以无需关注图表各种繁琐的实现细节，一条语句即可使用 Canvas 或 SVG 构建出各种各样的可交互的统计图表"},
+						{"name":"AntV G2Plot","url":"https://antv-g2plot.gitee.io/zh","logo":"https://gw.alipayobjects.com/zos/antfincdn/FLrTNDvlna/antv.png","remark":"G2Plot 是开箱即用、易于配置、具有良好视觉和交互体验的通用统计图表库。"},
+					],
+				]
+			}
+		  },
+		  methods: {
+			  handleCommand(command) {
+				  window.open(command);
+			  }
+		  },
+		  mounted() {
+		  },
+	  })
+	</script>
+</html>

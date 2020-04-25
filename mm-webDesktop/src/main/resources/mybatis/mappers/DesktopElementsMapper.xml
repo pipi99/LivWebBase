@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liv.dao.DesktopElementsMapper">
+  <resultMap id="BaseResultMap" type="com.liv.dao.datamodel.DesktopElements">
+    
+    <!-- 主键 -->
+    <result column="ID" jdbcType="BIGINT" property="id" />
+    
+    <!-- 名称 -->
+    <result column="TITLE" jdbcType="VARCHAR" property="title" />
+    
+    <!-- 位置 -->
+    <result column="LOCATION" jdbcType="INTEGER" property="location" />
+    
+    <!-- 位置，所占网格的下标数组 a1,a2,a3.. -->
+    <result column="INDEXLOCATIONARR" jdbcType="VARCHAR" property="indexlocationarr" />
+    
+    <!-- 网格坐标，  x,y -->
+    <result column="SIZE_XY" jdbcType="VARCHAR" property="sizeXy" />
+    
+    <!-- 图标 -->
+    <result column="ICONS" jdbcType="VARCHAR" property="icons" />
+    
+    <!-- 是否可删除 1是  0否 -->
+    <result column="ALLOWDEL" jdbcType="INTEGER" property="allowdel" />
+    
+    <!-- 是否允许重命名  1 是 0否 -->
+    <result column="ALLOWRENAME" jdbcType="INTEGER" property="allowrename" />
+    
+    <!-- 是否可拖动 1是  0否 -->
+    <result column="ALLOWDRAG" jdbcType="INTEGER" property="allowdrag" />
+    
+    <!-- 是否允许切换页面  1是 0否 -->
+    <result column="ALLOWSWITCHPAGE" jdbcType="INTEGER" property="allowswitchpage" />
+    
+    <!-- 外键，桌面ID -->
+    <result column="DESKTOP_ID" jdbcType="BIGINT" property="desktopId" />
+    
+    <!-- 内连接，外键 上级目录ID -->
+    <result column="PARENT_FOLDERID" jdbcType="BIGINT" property="parentFolderid" />
+    
+    <!-- 文件夹级别1，2，3，4 限制最多4级 -->
+    <result column="DEEP" jdbcType="INTEGER" property="deep" />
+    
+    <!-- 链接 -->
+    <result column="IFRAMEURL" jdbcType="VARCHAR" property="iframeurl" />
+    
+    <!-- 桌面元素类型：folder ,app ,widget -->
+    <result column="WIDGET_TYPE" jdbcType="VARCHAR" property="widgetType" />
+  </resultMap>
+  <insert id="insert">
+    insert into desktop_elements (ID, TITLE, LOCATION, 
+      INDEXLOCATIONARR, SIZE_XY, ICONS, 
+      ALLOWDEL, ALLOWRENAME, ALLOWDRAG, 
+      ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, 
+      DEEP, IFRAMEURL, WIDGET_TYPE
+      )
+    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{location,jdbcType=INTEGER}, 
+      #{indexlocationarr,jdbcType=VARCHAR}, #{sizeXy,jdbcType=VARCHAR}, #{icons,jdbcType=VARCHAR}, 
+      #{allowdel,jdbcType=INTEGER}, #{allowrename,jdbcType=INTEGER}, #{allowdrag,jdbcType=INTEGER}, 
+      #{allowswitchpage,jdbcType=INTEGER}, #{desktopId,jdbcType=BIGINT}, #{parentFolderid,jdbcType=BIGINT}, 
+      #{deep,jdbcType=INTEGER}, #{iframeurl,jdbcType=VARCHAR}, #{widgetType,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, 
+    ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE
+    from desktop_elements
+  </select>
+  
+  <!-- ### 以上代码由MBG + CommentPlugin自动生成, 生成时间: 2020-04-17 09:38:11 ### -->
+
+
+
+  <!-- Your codes goes here!!! -->
+  
+</mapper>

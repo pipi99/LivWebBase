@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="liv-auth" />
+        <module name="liv-api" />
+        <module name="mm-webDesktop" />
+        <module name="alcohol" />
+        <module name="gis-server-0.1" />
+        <module name="gis-client" />
+        <module name="mybatis-generator-lombok-plugin" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="alcohol" options="-parameters" />
+      <module name="gis-client" options="-parameters" />
+      <module name="gis-server-0.1" options="-parameters" />
+      <module name="liv-api" options="-parameters" />
+      <module name="liv-auth" options="-parameters" />
+      <module name="mm-webDesktop" options="-parameters" />
+      <module name="mybatis-generator-lombok-plugin" options="" />
+    </option>
+  </component>
+</project>

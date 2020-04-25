@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liv.dao.DictMapper">
+  <resultMap id="BaseResultMap" type="com.liv.dao.datamodel.Dict">
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="DICTTYPE" jdbcType="VARCHAR" property="dicttype" />
+    <result column="DCODE" jdbcType="VARCHAR" property="dcode" />
+    <result column="DNAME" jdbcType="VARCHAR" property="dname" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from dict
+    where ID = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.liv.dao.datamodel.Dict">
+    insert into dict (ID, DICTTYPE, DCODE,
+      DNAME, REMARK)
+    values (#{id,jdbcType=BIGINT}, #{dicttype,jdbcType=VARCHAR}, #{dcode,jdbcType=VARCHAR},
+      #{dname,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.liv.dao.datamodel.Dict">
+    update dict
+    set DICTTYPE = #{dicttype,jdbcType=VARCHAR},
+      DCODE = #{dcode,jdbcType=VARCHAR},
+      DNAME = #{dname,jdbcType=VARCHAR},
+      REMARK = #{remark,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, DICTTYPE, DCODE, DNAME, REMARK
+    from dict
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, DICTTYPE, DCODE, DNAME, REMARK
+    from dict
+  </select>
+  <select id="select" parameterType="com.liv.dao.datamodel.Dict" resultMap="BaseResultMap">
+    select ID, DICTTYPE, DCODE, DNAME, REMARK
+    from dict
+    <where>
+      <if test="dicttype!='' and dicttype!=null ">
+        and DICTTYPE =#{dicttype}
+      </if>
+    </where>
+  </select>
+</mapper>

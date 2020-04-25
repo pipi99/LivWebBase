@@ -1,0 +1,349 @@
+2020-04-17 09:19:33.474 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 09:22:17.837 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 09:34:51.062 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 09:36:09.250 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 09:36:17.148 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.insert - ==>  Preparing: insert into Desktop_Subject (ID, SUBJECT, BGCOLOR, BGIMG, USER_ID, DESKTOP_RESOLUTION ) values (?, ?, ?, ?, ?, ? ) 
+2020-04-17 09:36:17.178 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.insert - ==> Parameters: 0(Long), 0(Integer), string(String), 0(Integer), 0(Long), string(String)
+2020-04-17 09:36:17.258 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.insert - <==    Updates: 1
+2020-04-17 11:13:17.573 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 11:13:53.353 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?) 
+2020-04-17 11:13:53.378 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - ==> Parameters: desktopresolution(String)
+2020-04-17 11:13:53.441 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - <==      Total: 16
+2020-04-17 11:14:24.728 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?) 
+2020-04-17 11:14:24.728 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - ==> Parameters: desktopsubject(String)
+2020-04-17 11:14:24.730 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - <==      Total: 2
+2020-04-17 11:15:18.077 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 11:15:37.557 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?) 
+2020-04-17 11:15:37.595 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - ==> Parameters: desktopresolution(String)
+2020-04-17 11:15:37.633 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - <==      Total: 16
+2020-04-17 11:26:13.268 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 11:26:31.654 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?) 
+2020-04-17 11:26:31.686 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - ==> Parameters: desktopresolution(String)
+2020-04-17 11:26:31.716 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - <==      Total: 16
+2020-04-17 11:33:37.587 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 11:34:04.914 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.selectOne - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-04-17 11:34:04.947 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.selectOne - ==> Parameters: 0(Long)
+2020-04-17 11:34:04.978 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.selectOne - <==      Total: 2
+2020-04-17 11:35:16.410 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 11:35:32.724 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-04-17 11:35:32.751 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 0(Long)
+2020-04-17 11:35:32.776 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 2
+2020-04-17 11:35:58.085 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopSubjectMapper.insert - ==>  Preparing: INSERT INTO Desktop_Subject ( subject, bgcolor, bgimg, user_id, desktop_resolution ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 11:35:58.086 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopSubjectMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Long), string(String)
+2020-04-17 11:35:58.146 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopSubjectMapper.insert - <==    Updates: 1
+2020-04-17 11:36:14.476 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==>  Preparing: UPDATE Desktop_Subject SET subject=?, bgcolor=?, bgimg=?, user_id=?, desktop_resolution=? WHERE id=? 
+2020-04-17 11:36:14.477 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==> Parameters: 0(Integer), 1(String), 0(Integer), 0(Long), 1(String), 0(Long)
+2020-04-17 11:36:14.519 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - <==    Updates: 0
+2020-04-17 11:36:24.515 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==>  Preparing: UPDATE Desktop_Subject SET subject=?, bgcolor=?, bgimg=?, user_id=?, desktop_resolution=? WHERE id=? 
+2020-04-17 11:36:24.516 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==> Parameters: 0(Integer), 1(String), 0(Integer), 0(Long), 1(String), 1(Long)
+2020-04-17 11:36:24.590 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - <==    Updates: 1
+2020-04-17 11:37:19.083 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 11:42:15.462 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 11:43:12.706 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 11:43:12.740 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Integer), 0(Long)
+2020-04-17 11:43:12.796 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 11:43:30.945 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateById - ==>  Preparing: UPDATE Desktop SET sort=?, alias=?, del=?, isdefault=?, user_id=? WHERE id=? 
+2020-04-17 11:43:30.952 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateById - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Integer), 0(Long), 0(Long)
+2020-04-17 11:43:30.954 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateById - <==    Updates: 0
+2020-04-17 11:43:37.552 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE (USER_ID = ?) 
+2020-04-17 11:43:37.553 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-17 11:43:37.563 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 2
+2020-04-17 11:43:47.328 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.deleteById - ==>  Preparing: DELETE FROM Desktop WHERE id=? 
+2020-04-17 11:43:47.329 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.deleteById - ==> Parameters: 0(Long)
+2020-04-17 11:43:47.330 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.deleteById - <==    Updates: 0
+2020-04-17 11:43:49.131 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.deleteById - ==>  Preparing: DELETE FROM Desktop WHERE id=? 
+2020-04-17 11:43:49.131 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.deleteById - ==> Parameters: 0(Long)
+2020-04-17 11:43:49.132 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.deleteById - <==    Updates: 0
+2020-04-17 11:43:53.433 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.deleteById - ==>  Preparing: DELETE FROM Desktop WHERE id=? 
+2020-04-17 11:43:53.434 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.deleteById - ==> Parameters: 1(Long)
+2020-04-17 11:43:53.435 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.deleteById - <==    Updates: 0
+2020-04-17 11:44:09.088 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.deleteById - ==>  Preparing: DELETE FROM Desktop WHERE id=? 
+2020-04-17 11:44:09.089 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.deleteById - ==> Parameters: 2(Long)
+2020-04-17 11:44:09.142 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.deleteById - <==    Updates: 1
+2020-04-17 11:44:13.713 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.deleteById - ==>  Preparing: DELETE FROM Desktop WHERE id=? 
+2020-04-17 11:44:13.713 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.deleteById - ==> Parameters: 3(Long)
+2020-04-17 11:44:13.768 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.deleteById - <==    Updates: 1
+2020-04-17 11:44:20.010 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE (USER_ID = ?) 
+2020-04-17 11:44:20.011 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-17 11:44:20.012 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 0
+2020-04-17 17:06:12.231 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 17:06:32.783 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?) 
+2020-04-17 17:06:32.813 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - ==> Parameters: desktopresolution(String)
+2020-04-17 17:06:32.847 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - <==      Total: 16
+2020-04-17 17:07:09.433 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 17:10:39.111 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.insert - ==>  Preparing: INSERT INTO Desktop_Subject ( subject, bgcolor, bgimg, user_id, desktop_resolution ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 17:10:39.146 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Long), string(String)
+2020-04-17 17:10:39.204 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopSubjectMapper.insert - <==    Updates: 1
+2020-04-17 17:10:46.876 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==>  Preparing: UPDATE Desktop_Subject SET subject=?, bgcolor=?, bgimg=?, user_id=?, desktop_resolution=? WHERE id=? 
+2020-04-17 17:10:46.882 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Long), string(String), 0(Long)
+2020-04-17 17:10:46.885 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - <==    Updates: 0
+2020-04-17 17:10:49.257 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==>  Preparing: UPDATE Desktop_Subject SET subject=?, bgcolor=?, bgimg=?, user_id=?, desktop_resolution=? WHERE id=? 
+2020-04-17 17:10:49.258 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Long), string(String), 0(Long)
+2020-04-17 17:10:49.259 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - <==    Updates: 0
+2020-04-17 17:10:49.822 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==>  Preparing: UPDATE Desktop_Subject SET subject=?, bgcolor=?, bgimg=?, user_id=?, desktop_resolution=? WHERE id=? 
+2020-04-17 17:10:49.823 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Long), string(String), 0(Long)
+2020-04-17 17:10:49.824 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - <==    Updates: 0
+2020-04-17 17:10:50.014 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==>  Preparing: UPDATE Desktop_Subject SET subject=?, bgcolor=?, bgimg=?, user_id=?, desktop_resolution=? WHERE id=? 
+2020-04-17 17:10:50.015 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Long), string(String), 0(Long)
+2020-04-17 17:10:50.016 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - <==    Updates: 0
+2020-04-17 17:10:50.171 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==>  Preparing: UPDATE Desktop_Subject SET subject=?, bgcolor=?, bgimg=?, user_id=?, desktop_resolution=? WHERE id=? 
+2020-04-17 17:10:50.172 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Long), string(String), 0(Long)
+2020-04-17 17:10:50.173 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - <==    Updates: 0
+2020-04-17 17:10:50.325 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==>  Preparing: UPDATE Desktop_Subject SET subject=?, bgcolor=?, bgimg=?, user_id=?, desktop_resolution=? WHERE id=? 
+2020-04-17 17:10:50.326 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - ==> Parameters: 0(Integer), string(String), 0(Integer), 0(Long), string(String), 0(Long)
+2020-04-17 17:10:50.327 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopSubjectMapper.updateById - <==    Updates: 0
+2020-04-17 17:11:06.028 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-04-17 17:11:06.028 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 0(Long)
+2020-04-17 17:11:06.038 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 3
+2020-04-17 17:24:55.281 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 17:25:26.172 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 17:25:59.440 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.deleteById - ==>  Preparing: DELETE FROM Desktop WHERE id=? 
+2020-04-17 17:25:59.464 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.deleteById - ==> Parameters: 0(Long)
+2020-04-17 17:25:59.467 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.deleteById - <==    Updates: 0
+2020-04-17 17:39:09.536 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 17:39:43.578 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==>  Preparing: INSERT INTO Desktop_Elements ( title, location, indexlocationarr, size_xy, icons, allowdel, allowrename, allowdrag, allowswitchpage, desktop_id, parent_folderid, deep, iframeurl, widget_type ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-04-17 17:39:43.604 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==> Parameters: string(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 0(Long), 0(Long), 0(Integer), string(String), string(String)
+2020-04-17 17:40:57.093 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==>  Preparing: INSERT INTO Desktop_Elements ( title, location, indexlocationarr, size_xy, icons, allowdel, allowrename, allowdrag, allowswitchpage, desktop_id, parent_folderid, deep, iframeurl, widget_type ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-04-17 17:40:57.094 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==> Parameters: string(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 0(Long), 0(Long), 0(Integer), string(String), string(String)
+2020-04-17 17:40:57.129 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.insert - <==    Updates: 1
+2020-04-17 17:41:05.744 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.selectList - ==>  Preparing: SELECT id,title,location,indexlocationarr,size_xy,icons,allowdel,allowrename,allowdrag,allowswitchpage,desktop_id,parent_folderid,deep,iframeurl,widget_type FROM Desktop_Elements WHERE (USER_ID = ?) 
+2020-04-17 17:41:05.744 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.selectList - ==> Parameters: 0(Long)
+2020-04-17 18:25:55.368 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 18:27:31.455 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:31.483 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:31.771 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:41.322 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:41.323 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:41.373 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:41.373 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:41.381 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:41.396 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:41.438 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:41.438 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:41.455 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:42.934 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:42.935 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:42.965 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:43.617 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:43.618 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:43.672 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:43.984 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:43.985 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:44.074 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:44.208 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:44.208 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:44.264 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:44.371 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:44.371 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:44.389 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:44.510 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:44.511 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:44.531 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:44.646 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:44.647 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:44.663 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:44.910 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:44.910 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:44.964 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:45.051 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:45.052 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:45.072 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:45.204 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:45.205 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:45.222 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:45.338 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:45.339 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:45.364 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:45.436 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:45.438 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:45.457 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:45.628 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:45.628 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:45.656 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:45.942 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:45.942 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:45.991 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:46.075 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:46.076 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:46.097 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:46.307 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:46.308 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:46.332 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:46.367 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:46.368 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:46.389 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:46.501 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:46.502 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:46.524 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:27:46.669 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: INSERT INTO Desktop ( sort, alias, del, isdefault, user_id ) VALUES ( ?, ?, ?, ?, ? ) 
+2020-04-17 18:27:46.670 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Integer), string(String), 0(Integer), 1(Integer), 0(Long)
+2020-04-17 18:27:46.689 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
+2020-04-17 18:53:05.235 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 18:55:30.727 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 18:55:45.810 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:55:45.839 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:55:45.885 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 23
+2020-04-17 18:55:45.888 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and iddefault=0 
+2020-04-17 18:55:45.889 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 7(Long)
+2020-04-17 18:56:13.158 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:56:13.158 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:56:13.159 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 0
+2020-04-17 18:56:13.160 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and iddefault=0 
+2020-04-17 18:56:13.161 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 7(Long)
+2020-04-17 18:56:22.389 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 18:57:19.214 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:57:19.239 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:57:19.242 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 0
+2020-04-17 18:57:19.244 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:57:19.245 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 7(Long)
+2020-04-17 18:57:19.284 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:57:54.440 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:57:54.440 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:57:54.521 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 4
+2020-04-17 18:57:54.522 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:57:54.522 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:57:54.546 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:57:59.013 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:57:59.014 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:57:59.067 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:57:59.068 [http-nio-80-exec-3] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:57:59.068 [http-nio-80-exec-3] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:57:59.112 [http-nio-80-exec-3] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:57:59.777 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:57:59.778 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:57:59.862 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:57:59.863 [http-nio-80-exec-4] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:57:59.863 [http-nio-80-exec-4] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:57:59.888 [http-nio-80-exec-4] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:00.355 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:00.355 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:00.404 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:00.404 [http-nio-80-exec-5] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:00.405 [http-nio-80-exec-5] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:00.429 [http-nio-80-exec-5] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:00.823 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:00.824 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:00.871 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:00.871 [http-nio-80-exec-6] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:00.871 [http-nio-80-exec-6] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:00.896 [http-nio-80-exec-6] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:01.226 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:01.226 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:01.271 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:01.272 [http-nio-80-exec-7] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:01.272 [http-nio-80-exec-7] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:01.322 [http-nio-80-exec-7] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:01.393 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:01.393 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:01.413 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:01.414 [http-nio-80-exec-8] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:01.416 [http-nio-80-exec-8] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:01.439 [http-nio-80-exec-8] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:01.554 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:01.554 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:01.579 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:01.579 [http-nio-80-exec-9] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:01.580 [http-nio-80-exec-9] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:01.606 [http-nio-80-exec-9] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:01.708 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:01.708 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:01.729 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:01.729 [http-nio-80-exec-10] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:01.729 [http-nio-80-exec-10] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:01.755 [http-nio-80-exec-10] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:01.846 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:01.847 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:01.871 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:01.871 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:01.872 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:01.897 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:06.643 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:06.644 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:06.706 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:06.706 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:06.707 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:06.747 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:07.246 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:07.247 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:07.298 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:07.299 [http-nio-80-exec-3] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:07.300 [http-nio-80-exec-3] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:07.347 [http-nio-80-exec-3] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:07.745 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:07.745 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:07.798 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:07.799 [http-nio-80-exec-4] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:07.800 [http-nio-80-exec-4] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:07.821 [http-nio-80-exec-4] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:07.832 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:07.832 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:07.856 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:07.857 [http-nio-80-exec-5] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:07.857 [http-nio-80-exec-5] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:07.879 [http-nio-80-exec-5] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:08.386 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:08.387 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:08.456 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:08.457 [http-nio-80-exec-6] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:08.457 [http-nio-80-exec-6] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:08.480 [http-nio-80-exec-6] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:08.742 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:08.743 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:08.765 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:08.765 [http-nio-80-exec-7] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:08.766 [http-nio-80-exec-7] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:08.788 [http-nio-80-exec-7] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:08.902 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:08.902 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:08.923 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:08.924 [http-nio-80-exec-8] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:08.924 [http-nio-80-exec-8] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:08.947 [http-nio-80-exec-8] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:09.038 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:09.038 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:09.065 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:09.065 [http-nio-80-exec-9] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:09.066 [http-nio-80-exec-9] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:09.097 [http-nio-80-exec-9] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:09.168 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:09.168 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:09.189 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:09.190 [http-nio-80-exec-10] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:09.190 [http-nio-80-exec-10] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:09.213 [http-nio-80-exec-10] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:09.312 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:09.312 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:09.331 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:09.332 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:09.332 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:09.355 [http-nio-80-exec-1] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:09.392 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:09.392 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:09.415 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:09.415 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:09.416 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:09.438 [http-nio-80-exec-2] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 18:58:09.469 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==>  Preparing: update desktop set ISDEFAULT = 0 where isdefault =1 
+2020-04-17 18:58:09.469 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - ==> Parameters: 
+2020-04-17 18:58:09.498 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.updateNotDefault - <==    Updates: 1
+2020-04-17 18:58:09.498 [http-nio-80-exec-3] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==>  Preparing: update desktop set ISDEFAULT = 1 where ID = ? and isdefault=0 
+2020-04-17 18:58:09.499 [http-nio-80-exec-3] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - ==> Parameters: 26(Long)
+2020-04-17 18:58:09.521 [http-nio-80-exec-3] DEBUG c.liv.dao.DesktopMapper.updateDefaultByPrimaryKey - <==    Updates: 1
+2020-04-17 19:04:11.829 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 19:04:40.859 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.deleteById - ==>  Preparing: UPDATE Desktop SET del=1 WHERE id=? AND del=0 
+2020-04-17 19:04:40.886 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.deleteById - ==> Parameters: 7(Long)
+2020-04-17 19:04:40.953 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.deleteById - <==    Updates: 1
+2020-04-17 19:04:55.233 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.deleteById - ==>  Preparing: UPDATE Desktop SET del=1 WHERE id=? AND del=0 
+2020-04-17 19:04:55.233 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.deleteById - ==> Parameters: 7(Long)
+2020-04-17 19:04:55.234 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.deleteById - <==    Updates: 0
+2020-04-17 19:05:04.851 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.deleteById - ==>  Preparing: UPDATE Desktop SET del=1 WHERE id=? AND del=0 
+2020-04-17 19:05:04.851 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.deleteById - ==> Parameters: 8(Long)
+2020-04-17 19:05:04.911 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.deleteById - <==    Updates: 1
+2020-04-17 19:05:17.030 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ? AND DEL <> ?) ORDER BY sort ASC 
+2020-04-17 19:05:17.030 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long), 1(Integer)
+2020-04-17 19:05:17.061 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 21
+2020-04-17 19:06:40.416 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-17 19:07:04.560 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-04-17 19:07:04.588 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==> Parameters: 0(Long), string(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 0(Long), 0(Long), 0(Integer), string(String), string(String)
+2020-04-17 19:07:04.648 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.insert - <==    Updates: 1
+2020-04-17 19:47:59.684 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
