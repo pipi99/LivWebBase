@@ -3,7 +3,7 @@ package com.liv.service.impl;
 import com.liv.dao.DesktopElementsMapper;
 import com.liv.dao.datamodel.DesktopElements;
 import com.liv.service.DesktopElementsService;
-import com.liv.web.base.BaseService;
+import com.liv.web.api.base.BaseService;
 import org.springframework.stereotype.Service;
 
 /**

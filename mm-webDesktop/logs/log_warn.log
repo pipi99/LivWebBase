@@ -30,7 +30,7 @@
 2020-04-18 14:11:23.049 [main] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.liv.dao.DesktopMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
 2020-04-18 14:11:23.101 [main] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.liv.dao.DesktopSubjectMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
 2020-04-18 14:11:23.151 [main] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.liv.dao.DictMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
-2020-04-18 14:12:37.405 [http-nio-80-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.liv.web.exception.GlobalExceptionHandler#exceptionHandler(Exception)
+2020-04-18 14:12:37.405 [http-nio-80-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler GlobalExceptionHandler#exceptionHandler(Exception)
 java.lang.NullPointerException: null
 	at org.springframework.web.util.UrlPathHelper.removeSemicolonContentInternal(UrlPathHelper.java:531)
 	at org.springframework.web.util.UrlPathHelper.removeSemicolonContent(UrlPathHelper.java:527)
@@ -89,7 +89,7 @@ java.lang.NullPointerException: null
 2020-04-18 14:12:48.352 [main] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.liv.dao.DesktopMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
 2020-04-18 14:12:48.410 [main] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.liv.dao.DesktopSubjectMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
 2020-04-18 14:12:48.462 [main] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.liv.dao.DictMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
-2020-04-18 14:14:31.395 [http-nio-80-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.liv.web.exception.GlobalExceptionHandler#exceptionHandler(Exception)
+2020-04-18 14:14:31.395 [http-nio-80-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler GlobalExceptionHandler#exceptionHandler(Exception)
 java.lang.NullPointerException: null
 	at org.springframework.web.util.UrlPathHelper.removeSemicolonContentInternal(UrlPathHelper.java:531)
 	at org.springframework.web.util.UrlPathHelper.removeSemicolonContent(UrlPathHelper.java:527)

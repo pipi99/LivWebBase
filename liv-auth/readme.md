@@ -4,13 +4,12 @@
     取消 session ，使用 jwttoken ,缓存到 cookie，每次访问刷新token。
     如果 无法缓存到 cookie或者是App 前端可根据登录返回的值和每次访问返回的 header,自行处理token，请求数据时带上即可
     因为session取消，subject需要与token绑定，每次访问的时候，系统自动根据token将对应的subject绑定到当前线程。
-  
+    shiro读取其他配置为空：https://blog.csdn.net/wuxuyang_7788/article/details/70141812
 二、搭建参考网址：
   
-    中文教程：zhttp://www.w3cschool.cn/shiro/ac781ife.html
+    中文教程：http://www.w3cschool.cn/shiro/ac781ife.html
     加密：https://www.cnblogs.com/mozq/p/11761896.html
     按钮控制：https://blog.csdn.net/kity9420/article/details/102330886
-    缓存切换：https://blog.csdn.net/s674334235/article/details/82593899
 
 三、常用权限注解
     
@@ -35,7 +34,18 @@
     
     表示当前 Subject 需要权限 user：a 或 user：b。 
 
-  
+开发说明：
+
+    缓存工具类:com.liv.shiro.cache.CacheFactory
+    
+   ###自定义配置
+   ```yaml
+    liv:
+      mapProps:
+        usecache: ehcache  # redis  或者 ehcache,使用 redis还是ehcache作为缓存，如果是redis,配置redis相关服务
+        log-fail-retry-times: 10   #密码错误重试次数
+   ```
+    
 
  包路径说明：
  controller : 控制器

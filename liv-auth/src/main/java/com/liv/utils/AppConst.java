@@ -1,5 +1,9 @@
 package com.liv.utils;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,26 +15,37 @@ import javax.servlet.http.HttpServletRequest;
  * @date 2020.4.20  17:01
  * @email 453826286@qq.com
  */
+@Component
 public class AppConst {
+    @Autowired
+    private LivPropertiesUtils livPropertiesUtils;
+
     /**用户登录失败重试次数*/
-    public static final Integer LOG_RETRY_TIMES = 5;
+    public static Integer LOG_FAIL_RETRY_TIMES = 5;
+    /**用户登录失败锁定时常*/
+    public static Integer USER_LOGIN_FAIL_LOCKED_TIME = 10;
+    /**用户登录会话时常(分钟)*/
+    public static Integer USER_LOGIN_TIMEOUTS = 30;
+    /**用户每次访问系统是否刷新token的值*/
+    public static String USER_LOGIN_TOKEN_RENEWAL_ONACCESS = "false";
 
     //request请求头属性
-    public static final String REQUEST_AUTH_HEADER="x-auth-token";
+    public static String REQUEST_AUTH_HEADER="x-auth-token";
 
     //JWT-account
-    public static final String ACCOUNT = "account";
+    public static String ACCOUNT = "account";
     //JWT-currentTimeMillis
-    public final static String CURRENT_TIME_MILLIS = "currentTimeMillis";
+    public static String CURRENT_TIME_MILLIS = "currentTimeMillis";
 
-    //Shiro redis 前缀
-    public static final String PREFIX_SHIRO_CACHE = "storyweb-bp:cache:";
-    //redis-key-前缀-shiro:refresh_token
-    public final static String PREFIX_SHIRO_REFRESH_TOKEN = "storyweb-bp:refresh_token:";
 
-    public final static String SHIRO_AUTHENTICATIONCACHENAME = "shiro-AuthenticationCacheName";
-    public final static String SHIRO_AUTHORIZATIONCACHENAME = "shiro-AuthorizationCacheName";
+    @PostConstruct
+    private void constInit(){
+        LOG_FAIL_RETRY_TIMES = livPropertiesUtils.getMapProps().get("user-login-fail-retry-times")==null?LOG_FAIL_RETRY_TIMES:Integer.parseInt(livPropertiesUtils.getMapProps().get("user-login-fail-retry-times"));
+        USER_LOGIN_TIMEOUTS = livPropertiesUtils.getMapProps().get("user-login-timeouts")==null?USER_LOGIN_TIMEOUTS:Integer.parseInt(livPropertiesUtils.getMapProps().get("user-login-timeouts"));
+        USER_LOGIN_TOKEN_RENEWAL_ONACCESS = livPropertiesUtils.getMapProps().get("user-login-token-renewal-onaccess")==null?USER_LOGIN_TOKEN_RENEWAL_ONACCESS:livPropertiesUtils.getMapProps().get("user-login-token-renewal-onaccess");
+        USER_LOGIN_FAIL_LOCKED_TIME = livPropertiesUtils.getMapProps().get("user-login-fail-locked-time")==null?USER_LOGIN_FAIL_LOCKED_TIME:Integer.parseInt(livPropertiesUtils.getMapProps().get("user-login-fail-locked-time"));
 
+    }
     /**
      * @Author: LiV
      * @Date: 2020.4.22 16:05

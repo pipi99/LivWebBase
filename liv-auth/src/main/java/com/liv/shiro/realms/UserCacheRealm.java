@@ -2,14 +2,18 @@ package com.liv.shiro.realms;
 
 import com.liv.dao.datamodel.User;
 import com.liv.service.UserService;
+import com.liv.utils.AppConst;
+import com.liv.web.api.utils.LivDateUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
+
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * @author LiV
@@ -43,7 +47,7 @@ public class UserCacheRealm extends AuthorizingRealm {
         //根据用户名查找角色，请根据需求实现
         String username = (String) principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo authorizationInfo =  new SimpleAuthorizationInfo();
-//        authorizationInfo.addRole("admin");
+        authorizationInfo.addRole("admin");
         authorizationInfo.addRole("user");
         return authorizationInfo;
     }
@@ -54,9 +58,6 @@ public class UserCacheRealm extends AuthorizingRealm {
         User user = userService.findByUserName(username);
         if(user == null) {
             throw new UnknownAccountException("账号不存在!");//没找到帐号
-        }
-        if("1".equals(user.getLocked())) {
-            throw new LockedAccountException("账号已被锁定（10分钟）,请联系管理员，或者稍后再试!"); //帐号锁定
         }
 
         /**

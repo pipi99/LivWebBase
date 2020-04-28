@@ -430,7 +430,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 16:39:29.616 [http-nio-80-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 2020-04-16 18:38:42.944 [main] INFO  com.liv.App - Starting App on LW with PID 11208 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:38:42.950 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:38:44.358 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$b34d635a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:38:44.358 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$b34d635a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:38:44.390 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:38:46.418 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:38:46.428 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -454,7 +454,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:39:56.684 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
 2020-04-16 18:42:35.032 [main] INFO  com.liv.App - Starting App on LW with PID 8044 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:42:35.038 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:42:36.582 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$ce90c3a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:42:36.582 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$ce90c3a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:42:36.612 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:42:38.667 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:42:38.678 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -478,7 +478,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:42:42.225 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
 2020-04-16 18:43:02.667 [main] INFO  com.liv.App - Starting App on LW with PID 17952 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:43:02.672 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:43:04.216 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$9fff7eee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:43:04.216 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$9fff7eee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:43:04.263 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:43:06.406 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:43:06.420 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -503,7 +503,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:43:12.005 [http-nio-80-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 2020-04-16 18:44:39.126 [main] INFO  com.liv.App - Starting App on LW with PID 15712 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:44:39.132 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:44:40.646 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$5194ba73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:44:40.646 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$5194ba73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:44:40.681 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:44:42.726 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:44:42.738 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -527,7 +527,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:44:48.661 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
 2020-04-16 18:46:54.988 [main] INFO  com.liv.App - Starting App on LW with PID 6708 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:46:54.992 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:46:56.424 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$7b0db804] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:46:56.424 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$7b0db804] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:46:56.517 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:46:58.823 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:46:58.834 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -551,7 +551,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:47:01.355 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
 2020-04-16 18:47:50.840 [main] INFO  com.liv.App - Starting App on LW with PID 7380 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:47:50.880 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:47:52.280 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$ce90c3a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:47:52.280 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$ce90c3a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:47:52.327 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:47:54.371 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:47:54.385 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -575,7 +575,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:47:57.231 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
 2020-04-16 18:48:39.535 [main] INFO  com.liv.App - Starting App on LW with PID 10076 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:48:39.539 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:48:41.163 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$63493104] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:48:41.163 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$63493104] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:48:41.195 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:48:43.959 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:48:43.971 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -585,7 +585,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:48:44.079 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4451 ms
 2020-04-16 18:48:49.459 [main] INFO  com.liv.App - Starting App on LW with PID 8088 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:48:49.503 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:48:51.083 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$759ade2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:48:51.083 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$759ade2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:48:51.123 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:48:53.200 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:48:53.211 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -609,7 +609,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:48:55.219 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
 2020-04-16 18:49:51.473 [main] INFO  com.liv.App - Starting App on LW with PID 17928 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:49:51.476 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:49:52.930 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$a3b51d99] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:49:52.930 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$a3b51d99] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:49:52.961 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:49:55.097 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:49:55.108 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -634,7 +634,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:50:22.097 [http-nio-80-exec-6] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 2020-04-16 18:51:25.375 [main] INFO  com.liv.App - Starting App on LW with PID 6452 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:51:25.379 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:51:26.977 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$97c5ac08] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:51:26.977 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$97c5ac08] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:51:27.014 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:51:29.137 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:51:29.147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -658,7 +658,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:51:31.450 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
 2020-04-16 18:52:15.788 [main] INFO  com.liv.App - Starting App on LW with PID 10264 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:52:15.792 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:52:17.168 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$5ca7381c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:52:17.168 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$5ca7381c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:52:17.201 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:52:19.204 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:52:19.214 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -682,7 +682,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:52:37.830 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
 2020-04-16 18:54:06.228 [main] INFO  com.liv.App - Starting App on LW with PID 15968 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 18:54:06.235 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 18:54:07.696 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$f7510d10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 18:54:07.696 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$f7510d10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:54:07.731 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 18:54:09.852 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 18:54:09.863 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -706,7 +706,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 18:54:14.166 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
 2020-04-16 19:15:17.619 [main] INFO  com.liv.App - Starting App on LW with PID 17368 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 19:15:17.624 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 19:15:19.173 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$9fff7eee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 19:15:19.173 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$9fff7eee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:15:19.223 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:15:21.218 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 19:15:21.229 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -731,7 +731,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 19:15:44.354 [http-nio-80-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 2020-04-16 19:17:53.914 [main] INFO  com.liv.App - Starting App on LW with PID 2444 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 19:17:53.919 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 19:17:55.452 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$303b4a1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 19:17:55.452 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$303b4a1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:17:55.487 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:17:57.611 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 19:17:57.621 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -755,7 +755,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 19:18:12.458 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
 2020-04-16 19:21:05.328 [main] INFO  com.liv.App - Starting App on LW with PID 5320 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 19:21:05.332 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 19:21:07.134 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$f7510d10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 19:21:07.134 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$f7510d10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:21:07.185 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:21:09.227 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 19:21:09.238 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -779,11 +779,11 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 19:21:13.693 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
 2020-04-16 19:33:15.981 [main] INFO  com.liv.App - Starting App on LW with PID 16604 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 19:33:15.986 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 19:33:17.603 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$a254b3fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 19:33:17.603 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$a254b3fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:33:17.656 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:34:54.011 [main] INFO  com.liv.App - Starting App on LW with PID 8940 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 19:34:54.014 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 19:34:55.543 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$d1c5efae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 19:34:55.543 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$d1c5efae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:34:55.586 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:34:57.661 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 19:34:57.676 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -807,7 +807,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 19:35:15.738 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
 2020-04-16 19:37:27.645 [main] INFO  com.liv.App - Starting App on LW with PID 19064 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 19:37:27.648 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 19:37:29.287 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$6ded7aed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 19:37:29.287 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$6ded7aed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:37:29.332 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 19:37:31.604 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 19:37:31.620 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -831,7 +831,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 19:37:58.164 [http-nio-80-exec-10] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 2020-04-16 20:03:16.463 [main] INFO  com.liv.App - Starting App on LW with PID 11032 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 20:03:16.467 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 20:03:17.925 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$13f4a6e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 20:03:17.925 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$13f4a6e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:03:17.957 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:03:20.346 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 20:03:20.358 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -851,7 +851,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 20:03:22.063 [main] INFO  com.liv.App - Started App in 6.293 seconds (JVM running for 6.807)
 2020-04-16 20:03:32.891 [main] INFO  com.liv.App - Starting App on LW with PID 16396 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 20:03:32.895 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 20:03:34.478 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$151b42ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 20:03:34.478 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$151b42ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:03:34.528 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:03:37.049 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 20:03:37.061 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -874,11 +874,11 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 20:04:35.177 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
 2020-04-16 20:06:37.479 [main] INFO  com.liv.App - Starting App on LW with PID 3604 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 20:06:37.516 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 20:06:39.301 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$94b08663] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 20:06:39.301 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$94b08663] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:06:39.355 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:07:12.538 [main] INFO  com.liv.App - Starting App on LW with PID 932 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 20:07:12.542 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 20:07:14.094 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$89175b90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 20:07:14.094 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$89175b90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:07:14.128 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:07:16.226 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 20:07:16.242 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
@@ -901,7 +901,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-04-16 20:07:39.905 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
 2020-04-16 20:08:56.189 [main] INFO  com.liv.App - Starting App on LW with PID 16848 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
 2020-04-16 20:08:56.193 [main] INFO  com.liv.App - The following profiles are active: dev
-2020-04-16 20:08:57.637 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [com.liv.web.config.ValidateConfig$$EnhancerBySpringCGLIB$$fde4e993] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-16 20:08:57.637 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$fde4e993] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:08:57.672 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-04-16 20:08:59.776 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
 2020-04-16 20:08:59.788 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]

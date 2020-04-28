@@ -3,10 +3,9 @@ package com.liv.controller;
 import com.liv.dao.UserMapper;
 import com.liv.dao.datamodel.User;
 import com.liv.service.UserService;
-import com.liv.service.impl.UserServiceImpl;
-import com.liv.web.annotation.ValidResult;
-import com.liv.web.base.BaseController;
-import com.liv.web.base.ResultBody;
+import com.liv.web.api.annotation.ValidResult;
+import com.liv.web.api.base.BaseController;
+import com.liv.web.api.base.ResultBody;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -16,7 +15,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 /**
  * @Author: LiV

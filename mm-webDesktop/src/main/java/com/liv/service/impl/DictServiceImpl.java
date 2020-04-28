@@ -1,10 +1,9 @@
 package com.liv.service.impl;
 
 import com.liv.dao.DictMapper;
-import com.liv.dao.datamodel.DesktopSubject;
 import com.liv.dao.datamodel.Dict;
 import com.liv.service.DictService;
-import com.liv.web.base.BaseService;
+import com.liv.web.api.base.BaseService;
 import org.springframework.stereotype.Service;
 
 /**

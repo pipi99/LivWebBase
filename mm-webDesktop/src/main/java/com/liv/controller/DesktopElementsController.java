@@ -1,23 +1,16 @@
 package com.liv.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.liv.dao.DesktopElementsMapper;
-import com.liv.dao.DesktopMapper;
-import com.liv.dao.datamodel.DesktopElements;
 import com.liv.dao.datamodel.DesktopElements;
 import com.liv.service.DesktopElementsService;
-import com.liv.service.impl.DesktopElementsServiceImpl;
-import com.liv.service.impl.DesktopServiceImpl;
-import com.liv.web.base.BaseController;
-import com.liv.web.base.ResultBody;
+import com.liv.web.api.base.BaseController;
+import com.liv.web.api.base.ResultBody;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 /**
  * @Author: LiV

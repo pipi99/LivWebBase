@@ -119,6 +119,14 @@ public class User implements Serializable {
      * @Description: 是否锁定  1是 0否
      **/
     private String locked;
+
+    /**
+     * 锁定时间
+     *
+     * Nullable:  true
+     */
+    private Date locktime;
+
     public String getCredentialsSalt(){
         return this.userName+this.salt;
     }

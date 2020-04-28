@@ -25,7 +25,8 @@ create table USER
    CREATE_DATE          date                           null comment '创建日期',
    PASSWORD             varchar(100)                      null comment '密码',
    SALT                 varchar(256)                      null comment '盐',
-   LOCKED               varchar(8)                        null comment '是否锁定  1是  0否'
+   LOCKED               varchar(8)                        null comment '是否锁定  1是  0否',
+   LOCKTIME             timestamp                        null comment '锁定时间'
 ) comment '用户信息表';
 
 ```

@@ -1,16 +1,20 @@
 package com.liv.shiro.stateless;
 
 import com.google.common.collect.Lists;
+import com.liv.shiro.cache.CacheFactory;
+import com.liv.shiro.cache.RedisCacheManager;
 import com.liv.shiro.realms.UserCacheRealm;
 import com.liv.shiro.realms.UserRealm;
 import com.liv.shiro.stateless.filters.StatelessAuthcFilterFactoryBean;
 import com.liv.shiro.stateless.jwt.JwtProperties;
 import com.liv.utils.AppConst;
+import com.liv.utils.LivPropertiesUtils;
 import com.liv.utils.PasswordHelper;
 import org.apache.shiro.authc.credential.CredentialsMatcher;
 import org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy;
 import org.apache.shiro.authc.pam.ModularRealmAuthenticator;
 import org.apache.shiro.authz.ModularRealmAuthorizer;
+import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
 import org.apache.shiro.mgt.DefaultSubjectDAO;
@@ -22,14 +26,23 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.mgt.DefaultWebSubjectFactory;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.MethodInvokingFactoryBean;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.cache.ehcache.EhCacheFactoryBean;
+import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.filter.DelegatingFilterProxy;
 
+import javax.annotation.Resource;
 import javax.servlet.DispatcherType;
 import java.util.List;
 
@@ -43,8 +56,11 @@ import java.util.List;
  */
 
 @Configuration
-@EnableConfigurationProperties({JwtProperties.class})
+@EnableConfigurationProperties({JwtProperties.class, LivPropertiesUtils.class})
 public class StatelessShiroConfig {
+    @Autowired
+    private LivPropertiesUtils livPropertiesUtils;
+
     /**
      * @Author: LiV
      * @Date: 2020.4.23 09:01
@@ -120,7 +136,7 @@ public class StatelessShiroConfig {
     @Bean(name="securityManager")
     public DefaultWebSecurityManager securityManager() {
         DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
-        manager.setCacheManager(ehCacheManager());
+        manager.setCacheManager(cacheManager());
 
         //在全局级别为所有Subject 禁用Session
         DefaultSubjectDAO dao = (DefaultSubjectDAO)manager.getSubjectDAO();
@@ -197,7 +213,7 @@ public class StatelessShiroConfig {
         UserRealm statelessRealm = new UserRealm();
         statelessRealm.setCredentialsMatcher(credentialsMatcher());
         statelessRealm.setCachingEnabled(false);
-        statelessRealm.setCacheManager(ehCacheManager());
+        statelessRealm.setCacheManager(cacheManager());
         return statelessRealm;
     }
 
@@ -212,16 +228,16 @@ public class StatelessShiroConfig {
         realm.setCredentialsMatcher(credentialsMatcher());
         realm.setCachingEnabled(true);
         realm.setAuthorizationCachingEnabled(true);
-        realm.setAuthorizationCacheName(AppConst.SHIRO_AUTHORIZATIONCACHENAME);
+        realm.setAuthorizationCacheName(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME);
         realm.setAuthenticationCachingEnabled(true);
-        realm.setAuthenticationCacheName(AppConst.SHIRO_AUTHENTICATIONCACHENAME);
-        realm.setCacheManager(ehCacheManager());
+        realm.setAuthenticationCacheName(CacheFactory.SHIRO_AUTHENTICATIONCACHENAME);
+        realm.setCacheManager(cacheManager());
         return realm;
     }
 
 
     @Bean
-    public LifecycleBeanPostProcessor lifecycleBeanPostProcessor() {return new LifecycleBeanPostProcessor();}
+    public static LifecycleBeanPostProcessor lifecycleBeanPostProcessor() {return new LifecycleBeanPostProcessor();}
 
     /**
      * @Author: LiV
@@ -229,14 +245,35 @@ public class StatelessShiroConfig {
      * @Description: //这里的规则需要与  passwordHelper中 新增用户的密码加密规则 一致  ,用户密码校验的 时候用
      **/
     @Bean(name="credentialsMatcher")
-    public CredentialsMatcher credentialsMatcher() { return PasswordHelper.getMatcher(ehCacheManager()); }
+    public CredentialsMatcher credentialsMatcher() { return PasswordHelper.getMatcher(cacheManager()); }
 
-    @Bean
-    public EhCacheManager ehCacheManager(){
-        EhCacheManager cacheManager = new EhCacheManager();
-        cacheManager.setCacheManagerConfigFile("classpath:shiro/ehcache.xml");
-        return cacheManager;
+
+    /***缓存配置 -redis还是ehcache========================================**/
+
+    @Bean(name = "shiroCacheManager")
+    public CacheManager cacheManager(){
+        String usecache = livPropertiesUtils.getMapProps().get("usecache");
+        if("redis".equals(usecache)){
+            return new RedisCacheManager();
+        }else{
+            EhCacheManager cacheManager = new EhCacheManager();
+            cacheManager.setCacheManagerConfigFile("classpath:ehcache.xml");
+            return cacheManager;
+        }
+
     }
+
+    /**
+     * 设置为共享模式
+     * @return
+     */
+    @Bean
+    public EhCacheManagerFactoryBean ehCacheManagerFactoryBean() {
+        EhCacheManagerFactoryBean cacheManagerFactoryBean = new EhCacheManagerFactoryBean();
+        cacheManagerFactoryBean.setShared(true);
+        return cacheManagerFactoryBean;
+    }
+
 
 
 }

@@ -1,4 +1,4 @@
-2020-04-17 09:21:03.879 [http-nio-80-exec-3] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-17 09:21:03.879 [http-nio-80-exec-3] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -54,9 +54,9 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-17 09:21:28.181 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:ResultBody(code=10000, message=参数校验异常!, result=null)
-2020-04-17 09:22:41.988 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:ResultBody(code=10000, message=参数校验异常!, result=[名称不能够为空])
-2020-04-17 09:35:41.848 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-17 09:21:28.181 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:ResultBody(code=10000, message=参数校验异常!, result=null)
+2020-04-17 09:22:41.988 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:ResultBody(code=10000, message=参数校验异常!, result=[名称不能够为空])
+2020-04-17 09:35:41.848 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.liv.dao.DesktopSubjectMapper.insert
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
@@ -109,7 +109,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-17 11:34:04.986 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-17 11:34:04.986 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
 	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
@@ -118,7 +118,7 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:108)
 	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
 	at com.sun.proxy.$Proxy86.selectOne(Unknown Source)
-	at com.liv.web.base.BaseService.selectOne(BaseService.java:99)
+	at BaseService.selectOne(BaseService.java:99)
 	at com.liv.controller.DesktopSubjectController.find(DesktopSubjectController.java:32)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -214,7 +214,7 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
 	... 32 common frames omitted
-2020-04-17 17:39:43.750 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-17 17:39:43.750 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.dao.DataIntegrityViolationException: 
 ### Error updating database.  Cause: java.sql.SQLException: Field 'ID' doesn't have a default value
 ### The error may exist in com/liv/dao/DesktopElementsMapper.java (best guess)
@@ -306,7 +306,7 @@ Caused by: java.sql.SQLException: Field 'ID' doesn't have a default value
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
 	... 53 common frames omitted
-2020-04-17 17:41:05.746 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-17 17:41:05.746 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.jdbc.BadSqlGrammarException: 
 ### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'USER_ID' in 'where clause'
 ### The error may exist in com/liv/dao/DesktopElementsMapper.java (best guess)
@@ -401,7 +401,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'USER_ID' in 'where 
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
 	... 54 common frames omitted
-2020-04-17 18:28:15.543 [http-nio-80-exec-5] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-17 18:28:15.543 [http-nio-80-exec-5] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.liv.dao.DesktopMapper.updateNotDefault
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
@@ -569,7 +569,7 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: codegenerator.De
 	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
 	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
 	... 78 common frames omitted
-2020-04-17 18:55:45.968 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-17 18:55:45.968 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'iddefault' in 'where clause'
 ### The error may exist in file [E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes\mybatis\mappers\DesktopMapper.xml]
@@ -660,7 +660,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'iddefault' in 'wher
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
 	... 53 common frames omitted
-2020-04-17 18:56:13.162 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-17 18:56:13.162 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'iddefault' in 'where clause'
 ### The error may exist in file [E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes\mybatis\mappers\DesktopMapper.xml]

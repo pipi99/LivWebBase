@@ -6,7 +6,145 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e8cbb32-05ee-4327-a714-746abb7f4f6d" name="Default Changelist" comment="" />
+    <list default="true" id="2e8cbb32-05ee-4327-a714-746abb7f4f6d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/cache/FastJsonRedisSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/cache/ObjectByteRedisSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/cache/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/utils/LivDateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/utils/RedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/cache/CacheFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/cache/RedisCacheManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/cache/ShiroRedisCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/utils/LivPropertiesUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/annotation/ValidResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/annotation/ValidResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/annotation/ValidResultInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/annotation/ValidResultInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/base/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/base/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/base/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/base/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/base/CommonEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/base/ResultBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/base/ResultBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/config/PageHelperConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/config/PageHelperConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/config/ValidateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/config/ValidateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/config/WebMvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/exception/IBaseMessageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/exception/IBaseMessageInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/exception/InterfaceErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/exception/InterfaceErrorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/exception/LivExceptionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/exception/LivExceptionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/exception/ValidateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/exception/ValidateException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/utils/LivCllectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/utils/LivCllectionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/utils/LivContextUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/utils/LivContextUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/LivWebBase.jar" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/target/LivWebBase.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/annotation/ValidResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/annotation/ValidResultInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/base/BaseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/base/BaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/base/CommonEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/base/ResultBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/config/MybatisPlusConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/config/PageHelperConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/config/ValidateConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/config/WebMvcConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/exception/IBaseMessageInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/exception/InterfaceErrorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/exception/LivExceptionStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/exception/ValidateException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/utils/LivCllectionUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/classes/com/liv/web/utils/LivContextUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/surefire-reports/TEST-com.liv.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/target/surefire-reports/TEST-com.liv.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api/target/surefire-reports/com.liv.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api/target/surefire-reports/com.liv.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/sql.md" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/sql.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/controller/LoginStatelessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/controller/LoginStatelessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/dao/datamodel/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/dao/datamodel/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/EhcacheConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/ShiroConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/ShiroUrlFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/cache/ResourceMenuCacheAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/ByteSourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/ByteSourceUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/RetryLimitHashedCredentialsMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/RetryLimitHashedCredentialsMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/SimpleByteSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/SimpleByteSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/UserCacheRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/UserCacheRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/stateless/StatelessShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/stateless/StatelessShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/stateless/filters/StatelessAccessControlFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/stateless/filters/StatelessAccessControlFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/stateless/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/stateless/jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/utils/AppConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/utils/AppConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/utils/PasswordHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/utils/PasswordHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/dev/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/dev/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/resources/shiro/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/controller/LoginStatelessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/controller/LoginStatelessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/dao/datamodel/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/dao/datamodel/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/EhcacheConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/ShiroConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/ShiroUrlFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/realms/ByteSourceUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/realms/ByteSourceUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/realms/RetryLimitHashedCredentialsMatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/realms/RetryLimitHashedCredentialsMatcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/realms/SimpleByteSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/realms/SimpleByteSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/realms/UserCacheRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/realms/UserCacheRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/stateless/StatelessSessionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/stateless/StatelessSessionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/stateless/StatelessShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/stateless/StatelessShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/stateless/filters/StatelessAccessControlFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/stateless/filters/StatelessAccessControlFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/stateless/jwt/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/shiro/stateless/jwt/JwtUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/utils/AppConst.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/utils/AppConst.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/utils/PasswordHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/utils/PasswordHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/shiro/ehcache.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/controller/LoginStatelessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/controller/LoginStatelessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/dao/datamodel/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/dao/datamodel/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/EhcacheConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/ShiroConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/ShiroUrlFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/realms/ByteSourceUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/realms/ByteSourceUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/realms/RetryLimitHashedCredentialsMatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/realms/RetryLimitHashedCredentialsMatcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/realms/SimpleByteSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/realms/SimpleByteSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/realms/UserCacheRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/realms/UserCacheRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/stateless/StatelessSessionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/stateless/StatelessSessionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/stateless/StatelessShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/stateless/StatelessShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/stateless/filters/StatelessAccessControlFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/stateless/filters/StatelessAccessControlFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/stateless/jwt/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/shiro/stateless/jwt/JwtUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/utils/AppConst.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/utils/AppConst.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/utils/PasswordHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/com/liv/utils/PasswordHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/classes/shiro/ehcache.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/lib/liv-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/liv-auth/WEB-INF/lib/liv-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/error/log-error-2020-04-15.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/error/log-error-2020-04-15.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/error/log-error-2020-04-16.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/error/log-error-2020-04-16.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/error/log-error-2020-04-17.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/error/log-error-2020-04-17.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/info/log-info-2020-04-16.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/info/log-info-2020-04-16.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/info/log-info-2020-04-17.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/info/log-info-2020-04-17.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/log_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/log_error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/log_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/log_info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/log_warn.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/log_warn.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/warn/log-warn-2020-04-15.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/warn/log-warn-2020-04-15.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/logs/warn/log-warn-2020-04-16.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/logs/warn/log-warn-2020-04-16.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopElementsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopElementsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopSubjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DictController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DictController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DesktopElementsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DesktopElementsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DesktopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DesktopServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DesktopSubjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DesktopSubjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DictServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DictServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +177,14 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/gis-client/livol" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="E:\workspace\wg\LivWebBase\.idea" />
+      </set>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -84,32 +229,39 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/liv-auth/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/dev" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.12792969" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources\templates" />
-      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\webapp" />
-      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\java\com\liv\dao" />
-      <recent name="E:\workspace\wg\LivWebBase\mm-webDesktop\src\main\java\com\liv\validation" />
-      <recent name="E:\workspace\wg\LivWebBase\mm-webDesktop\src\main\java\com\liv\dao" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources" />
+      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources\profiles\dev" />
+      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources\configfiles" />
+      <recent name="E:\workspace\wg\LivWebBase\mm-webDesktop\src\main\resources\mybatis\mappers" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.liv.utils" />
+      <recent name="com.liv.shiro.cache" />
+      <recent name="com.liv.web.api.cache" />
       <recent name="com.liv.shiro" />
       <recent name="com.liv.shiro.stateless" />
-      <recent name="com.liv.controller" />
-      <recent name="com.liv.domainmodel" />
-      <recent name="com.liv.service.impl" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workspace\wg\LivWebBase\mm-webDesktop\src\main\resources\mybatis\mappers" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources\profiles\dev" />
+      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources" />
+      <recent name="E:\workspace\wg\LivWebBase\liv-api\src\main\resources" />
+      <recent name="E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\cache" />
+      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources\configfiles" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat_auth">
@@ -393,6 +545,11 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -429,7 +586,12 @@
       <workItem from="1587180429803" duration="12006000" />
       <workItem from="1587204616189" duration="38324000" />
       <workItem from="1587344426717" duration="147061000" />
-      <workItem from="1587787712144" duration="985000" />
+      <workItem from="1587787712144" duration="14049000" />
+      <workItem from="1587820783623" duration="11836000" />
+      <workItem from="1587861897786" duration="29130000" />
+      <workItem from="1587966010840" duration="16148000" />
+      <workItem from="1588034267274" duration="1211000" />
+      <workItem from="1588062714318" duration="8903000" />
     </task>
     <servers />
   </component>
@@ -472,10 +634,11 @@
       <screen x="0" y="0" width="1920" height="988" />
     </state>
     <state x="701" y="296" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.988@0.0.1920.988" timestamp="1587209075678" />
-    <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1587719116251">
+    <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1587887543608">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587719116251" />
+    <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587887543608" />
+    <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019@0.0.1920.1019" timestamp="1587826562914" />
     <state x="765" y="188" key="#com.intellij.ide.util.MemberChooser/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585192954403" />
     <state x="-1155" y="206" key="#com.intellij.ide.util.MemberChooser/0.0.1920.988/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1587118450680" />
     <state x="765" y="194" key="#com.intellij.ide.util.MemberChooser/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587431948599" />
@@ -492,22 +655,26 @@
     <state x="-1430" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.988/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1587115233961" />
     <state x="529" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1586937747426" />
     <state x="529" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586834961975" />
-    <state x="715" y="202" width="789" height="596" key="#xdebugger.evaluate" timestamp="1587692618744">
+    <state x="312" y="253" width="1207" height="596" key="#xdebugger.evaluate" timestamp="1588068395325">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="715" y="202" width="789" height="596" key="#xdebugger.evaluate/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587692618744" />
+    <state x="312" y="253" width="1207" height="596" key="#xdebugger.evaluate/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588068395325" />
     <state x="715" y="196" key="#xdebugger.evaluate/0.0.1920.988@0.0.1920.988" timestamp="1587345585194" />
+    <state width="417" height="466" key="DebuggerActiveHint" timestamp="1588069557134">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state width="417" height="466" key="DebuggerActiveHint/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588069557134" />
     <state x="740" y="250" key="FileChooserDialogImpl" timestamp="1587622735642">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state x="740" y="250" key="FileChooserDialogImpl/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587622735642" />
     <state x="740" y="235" key="FileChooserDialogImpl/0.0.1920.958@0.0.1920.958" timestamp="1584503741385" />
     <state x="740" y="242" key="FileChooserDialogImpl/0.0.1920.988@0.0.1920.988" timestamp="1585447089090" />
-    <state width="1877" height="320" key="GridCell.Tab.0.bottom" timestamp="1587721505091">
+    <state width="1664" height="283" key="GridCell.Tab.0.bottom" timestamp="1588071253047">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="320" key="GridCell.Tab.0.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505091" />
-    <state width="1664" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873649" />
+    <state width="1664" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071253047" />
+    <state width="1877" height="320" key="GridCell.Tab.0.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="132" key="GridCell.Tab.0.bottom/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585304531584" />
     <state width="1522" height="134" key="GridCell.Tab.0.bottom/0.0.1920.958@0.0.1920.958" timestamp="1584527723746" />
@@ -515,11 +682,11 @@
     <state width="1670" height="387" key="GridCell.Tab.0.bottom/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638009" />
     <state width="1670" height="402" key="GridCell.Tab.0.bottom/0.0.1920.988@0.0.1920.988" timestamp="1587348158024" />
-    <state width="1877" height="320" key="GridCell.Tab.0.center" timestamp="1587721505091">
+    <state width="1664" height="283" key="GridCell.Tab.0.center" timestamp="1588071253047">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="320" key="GridCell.Tab.0.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505091" />
-    <state width="1664" height="322" key="GridCell.Tab.0.center/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873649" />
+    <state width="1664" height="283" key="GridCell.Tab.0.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071253047" />
+    <state width="1877" height="320" key="GridCell.Tab.0.center/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990382" />
     <state width="1877" height="132" key="GridCell.Tab.0.center/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585304531583" />
     <state width="1522" height="134" key="GridCell.Tab.0.center/0.0.1920.958@0.0.1920.958" timestamp="1584527723746" />
@@ -527,11 +694,11 @@
     <state width="1670" height="387" key="GridCell.Tab.0.center/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638008" />
     <state width="1670" height="402" key="GridCell.Tab.0.center/0.0.1920.988@0.0.1920.988" timestamp="1587348158024" />
-    <state width="1877" height="320" key="GridCell.Tab.0.left" timestamp="1587721505091">
+    <state width="1664" height="283" key="GridCell.Tab.0.left" timestamp="1588071253047">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="320" key="GridCell.Tab.0.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505091" />
-    <state width="1664" height="322" key="GridCell.Tab.0.left/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873648" />
+    <state width="1664" height="283" key="GridCell.Tab.0.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071253047" />
+    <state width="1877" height="320" key="GridCell.Tab.0.left/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990382" />
     <state width="1877" height="132" key="GridCell.Tab.0.left/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585304531583" />
     <state width="1522" height="134" key="GridCell.Tab.0.left/0.0.1920.958@0.0.1920.958" timestamp="1584527723746" />
@@ -539,11 +706,11 @@
     <state width="1670" height="387" key="GridCell.Tab.0.left/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638007" />
     <state width="1670" height="402" key="GridCell.Tab.0.left/0.0.1920.988@0.0.1920.988" timestamp="1587348158024" />
-    <state width="1877" height="320" key="GridCell.Tab.0.right" timestamp="1587721505091">
+    <state width="1664" height="283" key="GridCell.Tab.0.right" timestamp="1588071253047">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="320" key="GridCell.Tab.0.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505091" />
-    <state width="1664" height="322" key="GridCell.Tab.0.right/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873649" />
+    <state width="1664" height="283" key="GridCell.Tab.0.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071253047" />
+    <state width="1877" height="320" key="GridCell.Tab.0.right/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="132" key="GridCell.Tab.0.right/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585304531583" />
     <state width="1522" height="134" key="GridCell.Tab.0.right/0.0.1920.958@0.0.1920.958" timestamp="1584527723746" />
@@ -551,115 +718,115 @@
     <state width="1670" height="387" key="GridCell.Tab.0.right/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638009" />
     <state width="1670" height="402" key="GridCell.Tab.0.right/0.0.1920.988@0.0.1920.988" timestamp="1587348158024" />
-    <state width="1664" height="306" key="GridCell.Tab.1.bottom" timestamp="1587721505087">
+    <state width="1664" height="283" key="GridCell.Tab.1.bottom" timestamp="1588071287620">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.1.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505087" />
-    <state width="1664" height="322" key="GridCell.Tab.1.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1587715945647" />
+    <state width="1664" height="283" key="GridCell.Tab.1.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071287620" />
+    <state width="1664" height="395" key="GridCell.Tab.1.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="272" key="GridCell.Tab.1.bottom/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1584957591398" />
     <state width="1522" height="367" key="GridCell.Tab.1.bottom/0.0.1920.958@0.0.1920.958" timestamp="1584512264108" />
     <state width="1670" height="387" key="GridCell.Tab.1.bottom/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.1.bottom/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638012" />
     <state width="1670" height="402" key="GridCell.Tab.1.bottom/0.0.1920.988@0.0.1920.988" timestamp="1587348157893" />
-    <state width="1664" height="306" key="GridCell.Tab.1.center" timestamp="1587721505087">
+    <state width="1664" height="283" key="GridCell.Tab.1.center" timestamp="1588071287620">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.1.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505087" />
-    <state width="1664" height="322" key="GridCell.Tab.1.center/0.0.1920.1019@0.0.1920.1019" timestamp="1587715945647" />
+    <state width="1664" height="283" key="GridCell.Tab.1.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071287620" />
+    <state width="1664" height="395" key="GridCell.Tab.1.center/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="272" key="GridCell.Tab.1.center/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1584957591398" />
     <state width="1522" height="367" key="GridCell.Tab.1.center/0.0.1920.958@0.0.1920.958" timestamp="1584512264107" />
     <state width="1670" height="387" key="GridCell.Tab.1.center/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.1.center/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638011" />
     <state width="1670" height="402" key="GridCell.Tab.1.center/0.0.1920.988@0.0.1920.988" timestamp="1587348157893" />
-    <state width="1664" height="306" key="GridCell.Tab.1.left" timestamp="1587721505087">
+    <state width="1664" height="283" key="GridCell.Tab.1.left" timestamp="1588071287619">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.1.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505087" />
-    <state width="1664" height="322" key="GridCell.Tab.1.left/0.0.1920.1019@0.0.1920.1019" timestamp="1587715945647" />
+    <state width="1664" height="283" key="GridCell.Tab.1.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071287619" />
+    <state width="1664" height="395" key="GridCell.Tab.1.left/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="272" key="GridCell.Tab.1.left/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1584957591398" />
     <state width="1522" height="367" key="GridCell.Tab.1.left/0.0.1920.958@0.0.1920.958" timestamp="1584512264107" />
     <state width="1670" height="387" key="GridCell.Tab.1.left/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.1.left/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638010" />
     <state width="1670" height="402" key="GridCell.Tab.1.left/0.0.1920.988@0.0.1920.988" timestamp="1587348157893" />
-    <state width="1664" height="306" key="GridCell.Tab.1.right" timestamp="1587721505087">
+    <state width="1664" height="283" key="GridCell.Tab.1.right" timestamp="1588071287620">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.1.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505087" />
-    <state width="1664" height="322" key="GridCell.Tab.1.right/0.0.1920.1019@0.0.1920.1019" timestamp="1587715945647" />
+    <state width="1664" height="283" key="GridCell.Tab.1.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071287620" />
+    <state width="1664" height="395" key="GridCell.Tab.1.right/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="272" key="GridCell.Tab.1.right/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1584957591398" />
     <state width="1522" height="367" key="GridCell.Tab.1.right/0.0.1920.958@0.0.1920.958" timestamp="1584512264108" />
     <state width="1670" height="387" key="GridCell.Tab.1.right/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.1.right/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638011" />
     <state width="1670" height="402" key="GridCell.Tab.1.right/0.0.1920.988@0.0.1920.988" timestamp="1587348157893" />
-    <state width="1664" height="306" key="GridCell.Tab.2.bottom" timestamp="1587721505088">
+    <state width="1664" height="283" key="GridCell.Tab.2.bottom" timestamp="1588071252860">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.2.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505088" />
-    <state width="1664" height="322" key="GridCell.Tab.2.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873650" />
+    <state width="1664" height="283" key="GridCell.Tab.2.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071252860" />
+    <state width="1664" height="395" key="GridCell.Tab.2.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1522" height="367" key="GridCell.Tab.2.bottom/0.0.1920.958@0.0.1920.958" timestamp="1584512264108" />
     <state width="1670" height="387" key="GridCell.Tab.2.bottom/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149759" />
     <state width="1670" height="402" key="GridCell.Tab.2.bottom/0.0.1920.988@0.0.1920.988" timestamp="1587348157894" />
-    <state width="1664" height="306" key="GridCell.Tab.2.center" timestamp="1587721505088">
+    <state width="1664" height="283" key="GridCell.Tab.2.center" timestamp="1588071252860">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.2.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505088" />
-    <state width="1664" height="322" key="GridCell.Tab.2.center/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873650" />
+    <state width="1664" height="283" key="GridCell.Tab.2.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071252860" />
+    <state width="1664" height="395" key="GridCell.Tab.2.center/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1522" height="367" key="GridCell.Tab.2.center/0.0.1920.958@0.0.1920.958" timestamp="1584512264108" />
     <state width="1670" height="387" key="GridCell.Tab.2.center/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149759" />
     <state width="1670" height="402" key="GridCell.Tab.2.center/0.0.1920.988@0.0.1920.988" timestamp="1587348157894" />
-    <state width="1664" height="306" key="GridCell.Tab.2.left" timestamp="1587721505087">
+    <state width="1664" height="283" key="GridCell.Tab.2.left" timestamp="1588071252860">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.2.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505087" />
-    <state width="1664" height="322" key="GridCell.Tab.2.left/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873650" />
+    <state width="1664" height="283" key="GridCell.Tab.2.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071252860" />
+    <state width="1664" height="395" key="GridCell.Tab.2.left/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1522" height="367" key="GridCell.Tab.2.left/0.0.1920.958@0.0.1920.958" timestamp="1584512264108" />
     <state width="1670" height="387" key="GridCell.Tab.2.left/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1670" height="402" key="GridCell.Tab.2.left/0.0.1920.988@0.0.1920.988" timestamp="1587348157893" />
-    <state width="1664" height="306" key="GridCell.Tab.2.right" timestamp="1587721505088">
+    <state width="1664" height="283" key="GridCell.Tab.2.right" timestamp="1588071252860">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.2.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505088" />
-    <state width="1664" height="322" key="GridCell.Tab.2.right/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873650" />
+    <state width="1664" height="283" key="GridCell.Tab.2.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071252860" />
+    <state width="1664" height="395" key="GridCell.Tab.2.right/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1522" height="367" key="GridCell.Tab.2.right/0.0.1920.958@0.0.1920.958" timestamp="1584512264108" />
     <state width="1670" height="387" key="GridCell.Tab.2.right/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149759" />
     <state width="1670" height="402" key="GridCell.Tab.2.right/0.0.1920.988@0.0.1920.988" timestamp="1587348157894" />
-    <state width="1664" height="306" key="GridCell.Tab.3.bottom" timestamp="1587721505088">
+    <state width="1664" height="283" key="GridCell.Tab.3.bottom" timestamp="1588071252860">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.3.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505088" />
-    <state width="1664" height="322" key="GridCell.Tab.3.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873650" />
+    <state width="1664" height="283" key="GridCell.Tab.3.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071252860" />
+    <state width="1664" height="395" key="GridCell.Tab.3.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516886118" />
     <state width="1670" height="387" key="GridCell.Tab.3.bottom/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587369692549" />
     <state width="1670" height="263" key="GridCell.Tab.3.bottom/0.0.1920.988@0.0.1920.988" timestamp="1587345941941" />
-    <state width="1664" height="306" key="GridCell.Tab.3.center" timestamp="1587721505088">
+    <state width="1664" height="283" key="GridCell.Tab.3.center" timestamp="1588071252860">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.3.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505088" />
-    <state width="1664" height="322" key="GridCell.Tab.3.center/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873650" />
+    <state width="1664" height="283" key="GridCell.Tab.3.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071252860" />
+    <state width="1664" height="395" key="GridCell.Tab.3.center/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516886118" />
     <state width="1670" height="387" key="GridCell.Tab.3.center/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587369692549" />
     <state width="1670" height="263" key="GridCell.Tab.3.center/0.0.1920.988@0.0.1920.988" timestamp="1587345941941" />
-    <state width="1664" height="306" key="GridCell.Tab.3.left" timestamp="1587721505088">
+    <state width="1664" height="283" key="GridCell.Tab.3.left" timestamp="1588071252860">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.3.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505088" />
-    <state width="1664" height="322" key="GridCell.Tab.3.left/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873650" />
+    <state width="1664" height="283" key="GridCell.Tab.3.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071252860" />
+    <state width="1664" height="395" key="GridCell.Tab.3.left/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516886117" />
     <state width="1670" height="387" key="GridCell.Tab.3.left/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587369692549" />
     <state width="1670" height="263" key="GridCell.Tab.3.left/0.0.1920.988@0.0.1920.988" timestamp="1587345941940" />
-    <state width="1664" height="306" key="GridCell.Tab.3.right" timestamp="1587721505088">
+    <state width="1664" height="283" key="GridCell.Tab.3.right" timestamp="1588071252860">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1664" height="306" key="GridCell.Tab.3.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587721505088" />
-    <state width="1664" height="322" key="GridCell.Tab.3.right/0.0.1920.1019@0.0.1920.1019" timestamp="1587715873650" />
+    <state width="1664" height="283" key="GridCell.Tab.3.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588071252860" />
+    <state width="1664" height="395" key="GridCell.Tab.3.right/0.0.1920.1019@0.0.1920.1019" timestamp="1587832656305" />
     <state width="1670" height="392" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516886118" />
     <state width="1670" height="387" key="GridCell.Tab.3.right/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587369692549" />
     <state width="1670" height="263" key="GridCell.Tab.3.right/0.0.1920.988@0.0.1920.988" timestamp="1587345941941" />
@@ -676,15 +843,20 @@
     <state x="461" y="121" key="SettingsEditor/0.0.1920.958@0.0.1920.958" timestamp="1584509139887" />
     <state x="461" y="125" key="SettingsEditor/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586762519549" />
     <state x="461" y="125" key="SettingsEditor/0.0.1920.988@0.0.1920.988" timestamp="1585399190080" />
-    <state x="640" y="322" key="com.intellij.ide.util.TipDialog" timestamp="1587787816420">
+    <state x="640" y="322" key="com.intellij.ide.util.TipDialog" timestamp="1588062864141">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="640" y="322" key="com.intellij.ide.util.TipDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1587787816420" />
+    <state x="640" y="322" key="com.intellij.ide.util.TipDialog/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588062864141" />
+    <state x="640" y="322" key="com.intellij.ide.util.TipDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1587821165169" />
     <state x="640" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585125595732" />
     <state x="640" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.958@0.0.1920.958" timestamp="1584579616827" />
     <state x="640" y="312" key="com.intellij.ide.util.TipDialog/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587084798252" />
     <state x="640" y="312" key="com.intellij.ide.util.TipDialog/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586749641229" />
     <state x="640" y="312" key="com.intellij.ide.util.TipDialog/0.0.1920.988@0.0.1920.988" timestamp="1587204998486" />
+    <state x="752" y="426" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587870944092">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="752" y="426" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587870944092" />
     <state x="92" y="92" width="1736" height="804" key="dock-window-1" timestamp="1587273719655">
       <screen x="0" y="0" width="1920" height="988" />
     </state>
@@ -718,11 +890,11 @@
     <state x="616" y="234" key="run.anything.popup/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587454644341" />
     <state x="-1304" y="241" width="672" height="677" key="run.anything.popup/0.0.1920.988/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1587120877973" />
     <state x="616" y="227" key="run.anything.popup/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587354402200" />
-    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup" timestamp="1587712552710">
+    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup" timestamp="1588063117565">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1587712552710" />
-    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup/0.0.1920.1019@0.0.1920.1019" timestamp="1587607843688" />
+    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1588063117565" />
+    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup/0.0.1920.1019@0.0.1920.1019" timestamp="1587831585437" />
     <state x="623" y="204" width="672" height="678" key="search.everywhere.popup/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585209700627" />
     <state x="-1297" y="223" width="672" height="744" key="search.everywhere.popup/0.0.1920.988/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1587126674610" />
     <state x="623" y="210" width="672" height="700" key="search.everywhere.popup/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587372799596" />
@@ -738,7 +910,7 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/annotation/ValidResultInterceptor.java</url>
+          <url>file://$PROJECT_DIR$/liv-api/src/main/java/com/liv/web/api/annotation/ValidResultInterceptor.java</url>
           <line>30</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -749,8 +921,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/UserCacheRealm.java</url>
-          <line>43</line>
+          <line>47</line>
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/UserCacheRealm.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/UserRealm.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/stateless/filters/StatelessAccessControlFilter.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/controller/LoginStatelessController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/UserCacheRealm.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/RetryLimitHashedCredentialsMatcher.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/RetryLimitHashedCredentialsMatcher.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

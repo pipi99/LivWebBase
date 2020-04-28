@@ -4,9 +4,12 @@ E:\workspace\wg\LivWebBase\liv-api\src\main\java\codegenerator\CodeGenerator.jav
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\annotation\ValidResultInterceptor.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\base\BaseController.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\base\BaseService.java
+E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\cache\EhcacheConfig.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\exception\GlobalExceptionHandler.java
+E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\utils\RedisUtils.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\base\ResultBody.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\config\PageHelperConfig.java
+E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\utils\SerializeUtils.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\exception\ValidateException.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\utils\LivContextUtils.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\utils\LivCllectionUtils.java
@@ -17,3 +20,4 @@ E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\config\SwaggerConfi
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\config\ValidateConfig.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\config\MybatisPlusConfig.java
 E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\base\CommonEnum.java
+E:\workspace\wg\LivWebBase\liv-api\src\main\java\com\liv\web\cache\RedisConfig.java

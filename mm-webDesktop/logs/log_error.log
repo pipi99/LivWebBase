@@ -1,4 +1,4 @@
-2020-04-18 13:42:24.090 [http-nio-80-exec-7] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-18 13:42:24.090 [http-nio-80-exec-7] ERROR GlobalExceptionHandler - 发生异常！原因是:
 javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotEmpty' validating type 'java.lang.Long'. Check configuration for 'desktopId'
 	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:108)
 	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:140)
@@ -55,7 +55,7 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-18 14:12:37.389 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-18 14:12:37.389 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 ### The error may exist in com/liv/dao/DesktopMapper.java (best guess)
@@ -162,7 +162,7 @@ Caused by: java.lang.InterruptedException: null
 	at com.alibaba.druid.pool.DruidDataSource.takeLast(DruidDataSource.java:2111)
 	at com.alibaba.druid.pool.DruidDataSource.getConnectionInternal(DruidDataSource.java:1620)
 	... 77 common frames omitted
-2020-04-18 14:14:31.380 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-18 14:14:31.380 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 ### The error may exist in com/liv/dao/DesktopMapper.java (best guess)
@@ -269,7 +269,7 @@ Caused by: java.lang.InterruptedException: null
 	at com.alibaba.druid.pool.DruidDataSource.takeLast(DruidDataSource.java:2111)
 	at com.alibaba.druid.pool.DruidDataSource.getConnectionInternal(DruidDataSource.java:1620)
 	... 77 common frames omitted
-2020-04-18 14:15:37.033 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-18 14:15:37.033 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -325,7 +325,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-18 18:44:49.102 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-18 18:44:49.102 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)

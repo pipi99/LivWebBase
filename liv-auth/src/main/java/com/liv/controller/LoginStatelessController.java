@@ -3,26 +3,20 @@ package com.liv.controller;
 import com.liv.dao.UserMapper;
 import com.liv.dao.datamodel.User;
 import com.liv.service.UserService;
-import com.liv.shiro.stateless.jwt.JwtUtil;
+import com.liv.shiro.cache.CacheFactory;
 import com.liv.utils.AppConst;
-import com.liv.web.base.BaseController;
-import com.liv.web.base.ResultBody;
-import com.liv.web.exception.LivExceptionStatus;
-import com.liv.web.utils.LivContextUtils;
+import com.liv.web.api.base.BaseController;
+import com.liv.web.api.base.ResultBody;
+import com.liv.web.api.exception.LivExceptionStatus;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.DisabledAccountException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.cache.Cache;
-import org.apache.shiro.cache.ehcache.EhCacheManager;
-import org.apache.shiro.subject.Subject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -55,8 +49,15 @@ public class LoginStatelessController extends BaseController<UserMapper, User, U
         } catch (DisabledAccountException e) {
             rb = ResultBody.error(LivExceptionStatus.UNAUTHORIZED,e.getMessage());
         } catch (IncorrectCredentialsException e) {
+
+            //密码校验失败时执行这个exception，锁定后执行 mather中的exception
             int retryrtimes = getRetryTimes(username);
-            String retrymsg = retryrtimes>0?retryrtimes+"次后将被锁定！":"账号已锁定！（10分钟后重试）";
+            String retrymsg = retryrtimes+"次后将被锁定！";
+            /**次数用完，直接锁定账号*/
+            if(retryrtimes<=0){
+                retrymsg = "账号已被锁定（"+ AppConst.USER_LOGIN_FAIL_LOCKED_TIME +"分钟）,请联系管理员，或者稍后再试!";
+                service.lock(username);
+            }
             rb = ResultBody.error(LivExceptionStatus.UNAUTHORIZED,"密码错误！"+ retrymsg);
         } catch (Throwable e) {
             rb = ResultBody.error(LivExceptionStatus.UNAUTHORIZED,"未知错误！"+e.getMessage());
@@ -65,10 +66,9 @@ public class LoginStatelessController extends BaseController<UserMapper, User, U
     }
 
     private int getRetryTimes(String username){
-        EhCacheManager cacheManager = LivContextUtils.getBean(EhCacheManager.class);
-        Cache<String, AtomicInteger> passwordRetryCache = cacheManager.getCache("passwordRetryCache");
+        Cache<String, AtomicInteger> passwordRetryCache =  CacheFactory.getPasswordRetryCache();
         AtomicInteger retryCount = passwordRetryCache.get(username);
-        int retryrtimes = AppConst.LOG_RETRY_TIMES-retryCount.intValue();
+        int retryrtimes = AppConst.LOG_FAIL_RETRY_TIMES-retryCount.intValue();
         return retryrtimes;
     }
 

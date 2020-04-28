@@ -50,14 +50,7 @@
             <artifactId>shiro-all</artifactId>
             <version>1.5.2</version>
         </dependency>
-        <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-cache</artifactId>
-        </dependency>
+
 
         <!--公共引入的包都在这里了-->
         <dependency>

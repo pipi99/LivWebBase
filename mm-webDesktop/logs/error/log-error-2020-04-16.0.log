@@ -2239,7 +2239,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 15:47:21.443 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 15:47:21.443 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:
 java.lang.Exception: 测试异常
 	at com.liv.controller.DictController.list(DictController.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2284,7 +2284,7 @@ java.lang.Exception: 测试异常
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 15:47:53.148 [http-nio-80-exec-6] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 15:47:53.148 [http-nio-80-exec-6] ERROR GlobalExceptionHandler - 发生异常！原因是:
 java.lang.Exception: 测试异常
 	at com.liv.controller.DictController.list(DictController.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2329,7 +2329,7 @@ java.lang.Exception: 测试异常
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 15:48:12.838 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 15:48:12.838 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:
 java.lang.Exception: 测试异常
 	at com.liv.controller.DictController.list(DictController.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2392,7 +2392,7 @@ Action:
 
 Consider defining a bean of type 'com.liv.web.base.LivBaseMapper' in your configuration.
 
-2020-04-16 18:41:21.236 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 18:41:21.236 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -2448,7 +2448,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 18:42:00.805 [http-nio-80-exec-5] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 18:42:00.805 [http-nio-80-exec-5] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
 	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:421)
@@ -2489,7 +2489,7 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:42:04.757 [http-nio-80-exec-7] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 18:42:04.757 [http-nio-80-exec-7] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
 	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:421)
@@ -2530,7 +2530,7 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:42:42.252 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 18:42:42.252 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
 	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:421)
@@ -2571,7 +2571,7 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:43:19.665 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 18:43:19.665 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -2627,7 +2627,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 18:44:48.751 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 18:44:48.751 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -2676,7 +2676,7 @@ javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:47:01.469 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 18:47:01.469 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -2725,7 +2725,7 @@ javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:47:57.319 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 18:47:57.319 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -2810,7 +2810,7 @@ javax.servlet.ServletException: Could not resolve view with name 'desktop/delete
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:48:55.487 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 18:48:55.487 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -2895,7 +2895,7 @@ javax.servlet.ServletException: Could not resolve view with name 'desktop/delete
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:50:06.509 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 18:50:06.509 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -2980,7 +2980,7 @@ javax.servlet.ServletException: Could not resolve view with name 'desktop/delete
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:50:13.315 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 18:50:13.315 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3059,7 +3059,7 @@ javax.servlet.ServletException: Could not resolve view with name 'desktop/delete
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:50:15.251 [http-nio-80-exec-3] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 18:50:15.251 [http-nio-80-exec-3] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3138,7 +3138,7 @@ javax.servlet.ServletException: Could not resolve view with name 'desktop/delete
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:50:15.426 [http-nio-80-exec-4] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 18:50:15.426 [http-nio-80-exec-4] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3217,7 +3217,7 @@ javax.servlet.ServletException: Could not resolve view with name 'desktop/delete
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:50:15.578 [http-nio-80-exec-5] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 18:50:15.578 [http-nio-80-exec-5] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3296,7 +3296,7 @@ javax.servlet.ServletException: Could not resolve view with name 'desktop/delete
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:50:32.259 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 18:50:32.259 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -3430,7 +3430,7 @@ javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:52:37.926 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 18:52:37.926 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -3528,7 +3528,7 @@ javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 18:54:14.247 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 18:54:14.247 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -3626,7 +3626,7 @@ javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:15:34.328 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 19:15:34.328 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -3675,7 +3675,7 @@ javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:16:53.985 [http-nio-80-exec-7] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 19:16:53.985 [http-nio-80-exec-7] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -3724,7 +3724,7 @@ javax.validation.ConstraintViolationException: delete.id: Id不能为空1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:18:12.505 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:18:12.505 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id2' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3767,7 +3767,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:18:13.604 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:18:13.604 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id2' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3810,7 +3810,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:18:13.805 [http-nio-80-exec-3] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:18:13.805 [http-nio-80-exec-3] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id2' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3853,7 +3853,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:18:13.960 [http-nio-80-exec-5] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:18:13.960 [http-nio-80-exec-5] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id2' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3896,7 +3896,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:18:14.135 [http-nio-80-exec-4] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:18:14.135 [http-nio-80-exec-4] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id2' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3939,7 +3939,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:18:29.078 [http-nio-80-exec-7] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:18:29.078 [http-nio-80-exec-7] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -3982,7 +3982,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:18:36.244 [http-nio-80-exec-8] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:18:36.244 [http-nio-80-exec-8] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -4025,7 +4025,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:21:13.724 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:13.724 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -4068,7 +4068,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:21:18.904 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:18.904 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -4111,7 +4111,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:21:19.334 [http-nio-80-exec-3] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:19.334 [http-nio-80-exec-3] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -4154,7 +4154,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:21:19.502 [http-nio-80-exec-5] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:19.502 [http-nio-80-exec-5] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -4197,7 +4197,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:21:19.677 [http-nio-80-exec-4] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:19.677 [http-nio-80-exec-4] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -4240,7 +4240,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:21:19.829 [http-nio-80-exec-6] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:19.829 [http-nio-80-exec-6] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -4283,7 +4283,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:21:19.933 [http-nio-80-exec-7] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:19.933 [http-nio-80-exec-7] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -4326,7 +4326,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:21:27.310 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:27.310 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete？id="
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4382,7 +4382,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete？id="
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:21:36.790 [http-nio-80-exec-10] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:36.790 [http-nio-80-exec-10] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete？id="
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4438,7 +4438,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete？id="
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:21:43.122 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:21:43.122 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'id2' is not present
 	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
@@ -4481,7 +4481,7 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required L
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:21:50.034 [http-nio-80-exec-3] ERROR com.liv.web.exception.GlobalExceptionHandler - 参数校验异常！原因是:
+2020-04-16 19:21:50.034 [http-nio-80-exec-3] ERROR GlobalExceptionHandler - 参数校验异常！原因是:
 javax.validation.ConstraintViolationException: delete.id: Id不能为空1, delete.id2: Id2不能为空1
 	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:117)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
@@ -4530,7 +4530,7 @@ javax.validation.ConstraintViolationException: delete.id: Id不能为空1, delet
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:35:15.780 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:15.780 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4586,7 +4586,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:17.365 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:17.365 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4642,7 +4642,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:17.716 [http-nio-80-exec-3] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:17.716 [http-nio-80-exec-3] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4698,7 +4698,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:17.900 [http-nio-80-exec-4] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:17.900 [http-nio-80-exec-4] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4754,7 +4754,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:18.316 [http-nio-80-exec-5] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:18.316 [http-nio-80-exec-5] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4810,7 +4810,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:18.542 [http-nio-80-exec-6] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:18.542 [http-nio-80-exec-6] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4866,7 +4866,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:18.741 [http-nio-80-exec-7] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:18.741 [http-nio-80-exec-7] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4922,7 +4922,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:18.926 [http-nio-80-exec-8] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:18.926 [http-nio-80-exec-8] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -4978,7 +4978,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:19.116 [http-nio-80-exec-9] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:19.116 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -5034,7 +5034,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:24.021 [http-nio-80-exec-10] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:24.021 [http-nio-80-exec-10] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
@@ -5090,7 +5090,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693)
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
 	... 39 common frames omitted
-2020-04-16 19:35:34.008 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:34.008 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
 	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:421)
@@ -5131,7 +5131,7 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 19:35:36.868 [http-nio-80-exec-3] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 19:35:36.868 [http-nio-80-exec-3] ERROR GlobalExceptionHandler - 发生异常！原因是:
 org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
 	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:213)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:421)
@@ -5172,8 +5172,8 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-04-16 20:04:35.348 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
-2020-04-16 20:07:40.104 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
-2020-04-16 20:07:47.398 [http-nio-80-exec-2] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
-2020-04-16 20:07:47.448 [http-nio-80-exec-3] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:
-2020-04-16 20:09:31.436 [http-nio-80-exec-1] ERROR com.liv.web.exception.GlobalExceptionHandler - 发生异常！原因是:ResultBody(code=10000, message=参数校验异常!, result=[名称不能够为空])
+2020-04-16 20:04:35.348 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 20:07:40.104 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 20:07:47.398 [http-nio-80-exec-2] ERROR GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 20:07:47.448 [http-nio-80-exec-3] ERROR GlobalExceptionHandler - 发生异常！原因是:
+2020-04-16 20:09:31.436 [http-nio-80-exec-1] ERROR GlobalExceptionHandler - 发生异常！原因是:ResultBody(code=10000, message=参数校验异常!, result=[名称不能够为空])

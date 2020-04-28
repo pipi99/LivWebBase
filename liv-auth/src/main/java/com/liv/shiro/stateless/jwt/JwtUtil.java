@@ -5,8 +5,10 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.liv.shiro.cache.CacheFactory;
 import com.liv.utils.AppConst;
 import org.apache.shiro.cache.Cache;
+import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
@@ -32,8 +34,6 @@ public class JwtUtil {
 
     @Autowired
     JwtProperties jwtProperties;
-    @Autowired
-    private EhCacheManager cacheManager;
 
     private static Cache<String, PrincipalCollection> subjectCache;
     private static JwtUtil jwtUtil;
@@ -42,7 +42,13 @@ public class JwtUtil {
     public void init() {
         jwtUtil = this;
         jwtUtil.jwtProperties = this.jwtProperties;
-        jwtUtil.subjectCache = this.cacheManager.getCache("subjectCache");
+    }
+
+    private static JwtUtil getJwtUtil(){
+        if(jwtUtil.subjectCache == null){
+            jwtUtil.subjectCache = CacheFactory.getLoginSuccessSubjectCache();
+        }
+        return jwtUtil;
     }
 
     /**
@@ -53,7 +59,7 @@ public class JwtUtil {
     public static boolean verify(String token) {
         boolean result = false;
         try{
-            String secret = getClaim(token, AppConst.ACCOUNT) + jwtUtil.jwtProperties.secretKey;
+            String secret = getClaim(token, AppConst.ACCOUNT) + getJwtUtil().jwtProperties.secretKey;
             Algorithm algorithm = Algorithm.HMAC256(secret);
             JWTVerifier verifier = JWT.require(algorithm).build();
             DecodedJWT jwt = verifier.verify(token);
@@ -100,9 +106,9 @@ public class JwtUtil {
      */
     public static String sign(String account) {
         // 帐号加JWT私钥加密
-        String secret = account + jwtUtil.jwtProperties.getSecretKey();
+        String secret = account + getJwtUtil().jwtProperties.getSecretKey();
         // 此处过期时间，单位：毫秒
-        Date date = new Date(System.currentTimeMillis() + jwtUtil.jwtProperties.getTokenExpireTime()*60*1000l);
+        Date date = new Date(System.currentTimeMillis() + getJwtUtil().jwtProperties.getTokenExpireTime()*60*1000l);
         Algorithm algorithm = Algorithm.HMAC256(secret);
 
         return JWT.create()
@@ -117,12 +123,12 @@ public class JwtUtil {
      * @param token
      * @return
      */
-    public static String renewal(String token) {
+    private static String renewal(String token) {
         String account = getClaim(token,AppConst.ACCOUNT);
         // 帐号加JWT私钥加密
-        String secret = account + jwtUtil.jwtProperties.getSecretKey();
+        String secret = account + getJwtUtil().jwtProperties.getSecretKey();
         // 此处过期时间，单位：毫秒
-        Date date = new Date(System.currentTimeMillis() + jwtUtil.jwtProperties.getTokenExpireTime()*60*1000l);
+        Date date = new Date(System.currentTimeMillis() + getJwtUtil().jwtProperties.getTokenExpireTime()*60*1000l);
         Algorithm algorithm = Algorithm.HMAC256(secret);
 
         return JWT.create()
@@ -137,9 +143,14 @@ public class JwtUtil {
      * @Date: 2020.4.22 18:23
      * @Description: token处理
      **/
-    public static void tokenStore(HttpServletResponse response,String  jwttoken,boolean renewal){
+    public static String tokenStore(HttpServletResponse response,String  jwttoken,boolean renewal){
         jwttoken = renewal?renewal(jwttoken):jwttoken;
+        if(renewal){
+            jwttoken = renewal(jwttoken);
+        }
+        //重新生成token
         cookieHeaderToken( response,jwttoken);
+        return jwttoken;
     }
 
 

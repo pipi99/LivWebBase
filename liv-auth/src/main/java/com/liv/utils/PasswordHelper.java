@@ -3,6 +3,7 @@ package com.liv.utils;
 import com.liv.dao.datamodel.User;
 import com.liv.shiro.realms.RetryLimitHashedCredentialsMatcher;
 import org.apache.shiro.authc.credential.CredentialsMatcher;
+import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
@@ -39,9 +40,9 @@ public class PasswordHelper {
      * @Date: 2020.4.19 17:08
      * @Description: 用户密码加密
      **/
-    public static CredentialsMatcher getMatcher(EhCacheManager ehCacheManager) {
+    public static CredentialsMatcher getMatcher(CacheManager cacheManager) {
         //这里的规则需要与  passwordHelper中一致
-        RetryLimitHashedCredentialsMatcher matcher = new RetryLimitHashedCredentialsMatcher(ehCacheManager);
+        RetryLimitHashedCredentialsMatcher matcher = new RetryLimitHashedCredentialsMatcher();
         matcher.setHashAlgorithmName(algorithmName);//不设置算法名称将报错
         //是Hex编码的还是Base64编码的。对应SimpleHash的toHex()和toBase64()
         matcher.setStoredCredentialsHexEncoded(true);

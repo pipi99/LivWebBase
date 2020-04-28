@@ -79,7 +79,7 @@ Caused by: java.lang.ClassNotFoundException: javax.servlet.ServletContext
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
 	... 23 common frames omitted
 2020-04-15 16:58:17.706 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
-org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.IllegalArgumentException: Can not create TypeBinding for class com.liv.web.config.SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.IllegalArgumentException: Can not create TypeBinding for class SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:185)
 	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
@@ -95,7 +95,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
 	at com.liv.App.main(App.java:11)
-Caused by: java.lang.IllegalArgumentException: Can not create TypeBinding for class com.liv.web.config.SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
+Caused by: java.lang.IllegalArgumentException: Can not create TypeBinding for class SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
 	at com.fasterxml.classmate.TypeBindings.create(TypeBindings.java:91)
 	at com.fasterxml.classmate.TypeResolver.resolve(TypeResolver.java:167)
 	at springfox.documentation.spring.web.plugins.Docket$4.apply(Docket.java:516)
@@ -114,7 +114,7 @@ Caused by: java.lang.IllegalArgumentException: Can not create TypeBinding for cl
 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
 	... 14 common frames omitted
 2020-04-15 17:02:04.535 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
-org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.IllegalArgumentException: Can not create TypeBinding for class com.liv.web.config.SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.IllegalArgumentException: Can not create TypeBinding for class SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:185)
 	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
@@ -130,7 +130,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
 	at com.liv.App.main(App.java:11)
-Caused by: java.lang.IllegalArgumentException: Can not create TypeBinding for class com.liv.web.config.SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
+Caused by: java.lang.IllegalArgumentException: Can not create TypeBinding for class SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
 	at com.fasterxml.classmate.TypeBindings.create(TypeBindings.java:91)
 	at com.fasterxml.classmate.TypeResolver.resolve(TypeResolver.java:167)
 	at springfox.documentation.spring.web.plugins.Docket$4.apply(Docket.java:516)

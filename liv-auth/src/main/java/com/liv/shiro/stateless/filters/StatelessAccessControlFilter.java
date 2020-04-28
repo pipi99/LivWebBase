@@ -5,22 +5,20 @@ import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.liv.service.UserService;
 import com.liv.shiro.stateless.jwt.JwtUtil;
 import com.liv.utils.AppConst;
-import com.liv.web.base.ResultBody;
-import com.liv.web.exception.LivExceptionStatus;
+import com.liv.web.api.base.ResultBody;
+import com.liv.web.api.exception.LivExceptionStatus;
+import com.liv.web.api.utils.LivContextUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.web.filter.AccessControlFilter;
-import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.http.HttpMethod;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.lang.reflect.Method;
 
 /**
  * @author LiV
@@ -85,7 +83,7 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
                     return false;
                 }else {
                     //token续签
-//                    JwtUtil.tokenStore(WebUtils.toHttp(response),token,true);
+                    LivContextUtils.getBean("userService", UserService.class).reDologinSuccess(WebUtils.toHttp(response),token);
                     return true;
                 }
             }
