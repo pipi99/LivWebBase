@@ -59,33 +59,3 @@
 
  
  
- 
- 
- 
- DDL
-```mysql
-
-drop table if exists T_USER;
-
-/*==============================================================*/
-/* Table: T_USER                                                */
-/*==============================================================*/
-create table T_USER 
-(
-   USER_ID              bigint                         not null,
-   USER_NAME            char(36)                       null,
-   ORG_ID               bigint                         null,
-   LOGIN_NAME           char(100)                      null,
-   MOBILE               int                            null,
-   EMAIL                char(100)                      null,
-   GENDER               char(1)                        null,
-   DEGREE               int                            null,
-   BIRTHDAY             date                           null,
-   PHOTO                char(50)                       null,
-   CREATE_DATE          date                           null,
-   PASSWORD             char(100)                      null,
-   LOGFAIL_TIMES        int                            null,
-   constraint PK_T_USER primary key clustered (USER_ID)
-);
-
-```
