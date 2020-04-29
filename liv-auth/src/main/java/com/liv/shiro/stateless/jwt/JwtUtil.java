@@ -76,6 +76,7 @@ public class JwtUtil {
      * @Description: 当前用绑定线程
      **/
     private static boolean bindSubject(String  jwttoken){
+        /****每次必须绑定登录用户到线程中，否则无法控制权限***/
         PrincipalCollection principalCollection = subjectCache.get(jwttoken);
         if (principalCollection != null) {
             Subject subject = new Subject.Builder().principals(principalCollection).authenticated(principalCollection!=null).buildSubject();

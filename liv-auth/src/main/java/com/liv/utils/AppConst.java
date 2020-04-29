@@ -1,5 +1,7 @@
 package com.liv.utils;
 
+import com.liv.shiro.cache.RedisCacheExprie;
+import com.liv.shiro.cache.RedisCacheManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -44,7 +46,6 @@ public class AppConst {
         USER_LOGIN_TIMEOUTS = livPropertiesUtils.getMapProps().get("user-login-timeouts")==null?USER_LOGIN_TIMEOUTS:Integer.parseInt(livPropertiesUtils.getMapProps().get("user-login-timeouts"));
         USER_LOGIN_TOKEN_RENEWAL_ONACCESS = livPropertiesUtils.getMapProps().get("user-login-token-renewal-onaccess")==null?USER_LOGIN_TOKEN_RENEWAL_ONACCESS:livPropertiesUtils.getMapProps().get("user-login-token-renewal-onaccess");
         USER_LOGIN_FAIL_LOCKED_TIME = livPropertiesUtils.getMapProps().get("user-login-fail-locked-time")==null?USER_LOGIN_FAIL_LOCKED_TIME:Integer.parseInt(livPropertiesUtils.getMapProps().get("user-login-fail-locked-time"));
-
     }
     /**
      * @Author: LiV

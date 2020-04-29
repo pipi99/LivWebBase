@@ -16,13 +16,13 @@ import java.util.concurrent.TimeUnit;
  * @date 2020.4.25  22:33
  * @email 453826286@qq.com
  */
-public class ShiroRedisCache<K,V> implements Cache<K,V>  {
+public class RedisShiroCache<K,V> implements Cache<K,V>  {
     private String prefix = "";
 
     /***一个星期**/
     private int exprieTimes = 604800;
 
-    public ShiroRedisCache(RedisCacheManager.REDIS_CACHE_EXPRIE e){
+    public RedisShiroCache(RedisCacheExprie e){
         this.prefix = e.getValue() + ":";
         this.exprieTimes = e.getExprieTimes()*60;   // 单位换算成 秒
     }
@@ -36,7 +36,7 @@ public class ShiroRedisCache<K,V> implements Cache<K,V>  {
         //更新key过期时间
         V v = (V) RedisUtils.get(strk);
         if(v!=null){
-            RedisCacheManager.REDIS_CACHE_EXPRIE.refreshKeysExpries(strk);
+            RedisCacheExprie.refreshKeysExpries(strk);
         }
         return v;
 

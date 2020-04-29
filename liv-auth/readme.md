@@ -38,12 +38,16 @@
 
     缓存工具类:com.liv.shiro.cache.CacheFactory
     
-   ###自定义配置
+   ###自定义配置项
    ```yaml
-    liv:
-      mapProps:
-        usecache: ehcache  # redis  或者 ehcache,使用 redis还是ehcache作为缓存，如果是redis,配置redis相关服务
-        log-fail-retry-times: 10   #密码错误重试次数
+    
+liv:
+  mapProps:
+    usecache: redis  # redis  或者 ehcache,使用 redis还是ehcache
+    user-login-fail-retry-times: 2   #用户登录失败重试次数
+    user-login-fail-locked-time: 1   #用户登录失败锁定时常(分钟)
+    user-login-timeouts: 1   #用户登录会话时常（分钟）
+    user-login-token-renewal-onaccess: true  #用户每次访问是重新生成 token
    ```
     
 

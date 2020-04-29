@@ -248,7 +248,7 @@ public class StatelessShiroConfig {
     public CredentialsMatcher credentialsMatcher() { return PasswordHelper.getMatcher(cacheManager()); }
 
 
-    /***缓存配置 -redis还是ehcache========================================**/
+    /***缓存配置 -redis还是ehcache====读取application.yml中的配置====================================**/
 
     @Bean(name = "shiroCacheManager")
     public CacheManager cacheManager(){
@@ -256,8 +256,10 @@ public class StatelessShiroConfig {
         if("redis".equals(usecache)){
             return new RedisCacheManager();
         }else{
-            EhCacheManager cacheManager = new EhCacheManager();
-            cacheManager.setCacheManagerConfigFile("classpath:ehcache.xml");
+//            EhCacheManager cacheManager = new EhCacheManager();
+//            cacheManager.setCacheManagerConfigFile("classpath:ehcache.xml");
+            //这里使用自定义的ehcachemanager,确保能读取 application中的过期时间配置
+            com.liv.shiro.cache.EhCacheManager cacheManager = new com.liv.shiro.cache.EhCacheManager();
             return cacheManager;
         }
 

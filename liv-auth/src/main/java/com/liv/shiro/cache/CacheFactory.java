@@ -14,6 +14,7 @@ import org.apache.shiro.cache.CacheManager;
  * @email 453826286@qq.com
  */
 public class CacheFactory {
+    public static boolean cacheInit = false;
     //Shiro 缓存 前缀
     public static final String PREFIX_SHIRO_CACHE = "storyweb-bp:cache:";
     public final static String PREFIX_SHIRO_REFRESH_TOKEN = "storyweb-bp:refresh_token:";
@@ -41,7 +42,22 @@ public class CacheFactory {
      * @Description: 获取shiro的缓存管理里工具
      **/
     public static CacheManager getCacheManger(){
-        return LivContextUtils.getBean("shiroCacheManager",CacheManager.class);
+
+        /***初始化一次 cache的配置，否则无法加载 yml中用户配置***/
+        CacheManager cacheManager = LivContextUtils.getBean("shiroCacheManager",CacheManager.class);
+        if(!cacheInit){
+            cacheInit = true;
+            //使用的redis
+            if(cacheManager instanceof RedisCacheManager){
+                //初始化枚举
+                RedisCacheExprie.init();
+            }
+            //使用的ehcache
+            if(cacheManager instanceof com.liv.shiro.cache.EhCacheManager){
+                ((com.liv.shiro.cache.EhCacheManager)cacheManager).initCacheConfig();
+            }
+        }
+        return cacheManager;
     }
 
     /**
