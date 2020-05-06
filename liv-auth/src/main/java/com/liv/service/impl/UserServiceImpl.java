@@ -6,22 +6,28 @@ import com.liv.dao.datamodel.User;
 import com.liv.service.UserService;
 import com.liv.shiro.cache.CacheFactory;
 import com.liv.shiro.realms.RetryLimitHashedCredentialsMatcher;
+import com.liv.shiro.realms.UserCacheRealm;
 import com.liv.shiro.stateless.jwt.JwtUtil;
 import com.liv.utils.AppConst;
 import com.liv.utils.PasswordHelper;
 import com.liv.web.api.base.BaseService;
+import com.liv.web.api.base.ResultBody;
 import com.liv.web.api.utils.LivContextUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
+import org.apache.shiro.mgt.RealmSecurityManager;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
+import org.apache.shiro.web.util.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
@@ -87,11 +93,30 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
      * @Description: 退出系统
      **/
     @Override
-    public String logout() {
+    public void logout() {
+        Subject subject = SecurityUtils.getSubject();
 
-        return null;
+        //清空token缓存
+        CacheFactory.getCache(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME).remove(subject.getPrincipal());
+        CacheFactory.getCache(CacheFactory.SHIRO_AUTHENTICATIONCACHENAME).remove(subject.getPrincipal());
+
+        //退出的话还是用 response中的token，request中的有可能已经被更新，与缓存中不一致
+        CacheFactory.getLoginSuccessSubjectCache().remove(getResponseToken());
+
+        //这特么有毛用
+        subject.logout();
     }
 
+    /**
+     * 获取请求中的token,首先从请求头中获取,如果没有,则尝试从请求参数中获取
+     *
+     * @return
+     */
+    private String getResponseToken() {
+        HttpServletResponse httpRep = LivContextUtils.getResponse();
+        String token = httpRep.getHeader(AppConst.REQUEST_AUTH_HEADER);
+        return token;
+    }
 
     /**
      * @Author: LiV
@@ -100,7 +125,7 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
      **/
     public boolean reg(User user){
         PasswordHelper.encryptNewUserPassword(user);
-        return this.mapper().insert(user)>0;
+        return mapper.insert(user)>0;
     }
 
     /**
@@ -112,7 +137,7 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
     public User findByUserName(String username) {
         QueryWrapper<User> qw = new QueryWrapper<>();
         qw.eq("user_name",username);
-        List<User> user = mapper().selectList(qw);
+        List<User> user = mapper.selectList(qw);
         if(user != null&&user.size()>0) {
             return user.get(0);
         }

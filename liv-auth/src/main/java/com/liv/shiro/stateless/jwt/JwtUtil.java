@@ -171,8 +171,8 @@ public class JwtUtil {
         response.addCookie(cookie);
 
         //header
-        response.setHeader("Access-Control-Expose-Headers", "access_token");
-        response.setHeader("access_token", jwttoken);
+        response.setHeader("Access-Control-Expose-Headers", AppConst.REQUEST_AUTH_HEADER);
+        response.setHeader(AppConst.REQUEST_AUTH_HEADER, jwttoken);
     }
 
 

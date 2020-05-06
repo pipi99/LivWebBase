@@ -21,6 +21,7 @@ import org.springframework.context.annotation.Lazy;
  * @date 2020.4.19  18:27
  * @email 453826286@qq.com
  */
+@Deprecated
 public class UserRealm extends AuthorizingRealm {
 
     @Override

@@ -14,7 +14,12 @@ import org.apache.shiro.cache.CacheManager;
  * @email 453826286@qq.com
  */
 public class CacheFactory {
-    public static boolean cacheInit = false;
+    /**
+     * 因为spring容器的配置文件加载顺序与业务所需不匹配，
+     * 这里需要 判断一下是否已经读取了yml中的配置信息，使得自定义配置生效
+     **/
+    public static boolean cacheConfigInit = false;
+
     //Shiro 缓存 前缀
     public static final String PREFIX_SHIRO_CACHE = "storyweb-bp:cache:";
     public final static String PREFIX_SHIRO_REFRESH_TOKEN = "storyweb-bp:refresh_token:";
@@ -45,8 +50,8 @@ public class CacheFactory {
 
         /***初始化一次 cache的配置，否则无法加载 yml中用户配置***/
         CacheManager cacheManager = LivContextUtils.getBean("shiroCacheManager",CacheManager.class);
-        if(!cacheInit){
-            cacheInit = true;
+        if(!cacheConfigInit){
+            cacheConfigInit = true;
             //使用的redis
             if(cacheManager instanceof RedisCacheManager){
                 //初始化枚举

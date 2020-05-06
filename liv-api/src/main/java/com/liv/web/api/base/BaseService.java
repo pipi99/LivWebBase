@@ -9,6 +9,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
@@ -29,8 +30,11 @@ public class BaseService<M extends com.baomidou.mybatisplus.core.mapper.BaseMapp
      * @Date: 2020.4.16 10:09
      * @Description: service调用  mapper().XXX
      **/
-    protected M mapper(){
-        return (M)getBaseMapper();
+    protected M mapper;
+
+    @PostConstruct
+    private void mapper(){
+        this.mapper = (M)getBaseMapper();
     }
 
 }

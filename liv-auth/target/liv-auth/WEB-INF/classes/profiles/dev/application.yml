@@ -40,7 +40,7 @@ mybatis:
   mapper-locations: classpath:mybatis/mappers/**/*.xml       # mapper映射文件
 
 token:
-  #  token过期时间，单位分钟
+  #  token过期时间，单位秒
   tokenExpireTime: 604800 # token有效时长，7天，这个jwt的有效期，默认设置不用修改，不得小于 会话有效期
   #  token加密密钥
   secretKey: storywebkey
@@ -50,8 +50,8 @@ logging:
 
 liv:
   mapProps:
-    usecache: ehcache  #值为 redis / ehcache,使用 redis还是ehcache
+    usecache: redis  #值为 redis / ehcache,使用 redis还是ehcache
     user-login-fail-retry-times: 5   #用户登录失败重试次数
     user-login-fail-locked-time: 10   #用户登录失败锁定时常(分钟)
     user-login-timeouts: 1   #用户登录会话时常（分钟）
-    user-login-token-renewal-onaccess: true  #用户每次访问是重新生成 token
+    user-login-token-renewal-onaccess: true  #值为 true / false, 用户每次访问是重新生成 token,也就是token用一次即失效

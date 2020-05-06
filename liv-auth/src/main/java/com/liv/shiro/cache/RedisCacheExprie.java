@@ -79,7 +79,7 @@ public enum RedisCacheExprie {
     /**
      * @Author: LiV
      * @Date: 2020.4.28 19:28
-     * @Description: APPConst 加载完成 执行初始化,AppConst
+     * @Description: APPConst 加载完成 执行初始化,CacheFactory
      **/
     public static void init(){
         //密码错误锁定时常

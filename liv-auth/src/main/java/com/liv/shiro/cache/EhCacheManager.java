@@ -26,7 +26,7 @@ public class EhCacheManager extends org.apache.shiro.cache.ehcache.EhCacheManage
     /**
      * @Author: LiV
      * @Date: 2020.4.29 17:04
-     * @Description: 配置文件加载完成后需调用一次，否则无法获取到配置文件的配置数据
+     * @Description: 配置文件加载完成后需调用一次，否则无法获取到配置文件的配置数据CacheFactory
      **/
     public void initCacheConfig(){
         Configuration configuration = new Configuration();

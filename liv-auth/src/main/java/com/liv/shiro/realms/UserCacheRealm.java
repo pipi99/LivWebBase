@@ -68,4 +68,10 @@ public class UserCacheRealm extends AuthorizingRealm {
         ai.setCredentialsSalt(ByteSourceUtils.bytes(user.getCredentialsSalt())); //盐是用户名+随机数
         return ai;
     }
+
+    @Override
+    public void doClearCache(org.apache.shiro.subject.PrincipalCollection principals) {
+        super.doClearCache(principals);
+    }
+
 }

@@ -19,6 +19,6 @@ public interface UserService extends IService<User>{
     public void unlock(String username);
     public void lock(String username);
     public String dologin(String username,String password);
-    public String logout();
+    public void logout();
     public void reDologinSuccess(HttpServletResponse response, String token);
 }

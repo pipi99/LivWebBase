@@ -28,8 +28,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @email 453826286@qq.com
  */
 @RestController
-@Api(tags = "无状态用户登录管理")
-public class LoginStatelessController extends BaseController<UserMapper, User, UserService> {
+@Api(tags = "用户登录管理")
+public class LoginController extends BaseController<UserMapper, User, UserService> {
     /**
      * post表单提交，登录
      * @param username
@@ -37,7 +37,7 @@ public class LoginStatelessController extends BaseController<UserMapper, User, U
      * @return
      */
     @ApiOperation(value = "用户登录", notes="用户登录")
-    @PostMapping("/dologin")
+    @PostMapping("/login")
     public ResultBody login(String username, String password) {
         ResultBody rb = null;
         try {
@@ -79,7 +79,7 @@ public class LoginStatelessController extends BaseController<UserMapper, User, U
     @ApiOperation(value = "用户退出", notes="用户退出")
     @GetMapping("/logout")
     public ResultBody logout() {
-        SecurityUtils.getSubject().logout();
+        service.logout();
         return ResultBody.success("退出成功");
     }
 

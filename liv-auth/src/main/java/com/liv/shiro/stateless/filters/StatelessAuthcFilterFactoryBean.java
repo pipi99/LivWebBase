@@ -24,11 +24,11 @@ public class StatelessAuthcFilterFactoryBean {
     public static ShiroFilterFactoryBean getShiroFilterFactoryBean(DefaultWebSecurityManager defaultWebSecurityManager){
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         bean.setSecurityManager(defaultWebSecurityManager);
-        bean.setLoginUrl("/dologin");
+        bean.setLoginUrl("/login");
 
         Map<String, Filter> filters = new LinkedHashMap<>();
 
-        //shiro配置过滤规则少量的话可以用hashMap,数量多了要用LinkedHashMap,保证有序，原因未知
+        //shiro配置过滤规则少量的话可以用hashMap,数量多了要用LinkedHashMap,保证有序
         Map<String, String> chains = new LinkedHashMap<>();
 
         /**无需登录直接访问*/
@@ -43,13 +43,10 @@ public class StatelessAuthcFilterFactoryBean {
         chains.put("/webjars/**", "anon");
         chains.put("/configuration/ui", "anon");
         chains.put("/configuration/security", "anon");
-        chains.put("/open/**", "anon");
-        chains.put("/logout", "anon");
 
         /**验证是否登录*/
         filters.put("StatelessAuthcFilter",  new StatelessAccessControlFilter());
         chains.put("/**", "StatelessAuthcFilter");
-
 
         bean.setFilters(filters);
         bean.setFilterChainDefinitionMap(chains);

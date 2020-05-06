@@ -31,7 +31,7 @@ public abstract class BaseController<M extends com.baomidou.mybatisplus.core.map
     protected TService service;
 
     @PostConstruct
-    protected void service(){
+    private void service(){
         this.service = (TService)this._b_s;
     }
     /**
