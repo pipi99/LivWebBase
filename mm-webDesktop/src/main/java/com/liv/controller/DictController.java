@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.liv.dao.DictMapper;
 import com.liv.dao.datamodel.Dict;
 import com.liv.service.DictService;
-import com.liv.web.api.base.BaseController;
+import com.liv.web.api.base.base.BaseController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -31,6 +31,6 @@ public class DictController extends BaseController<DictMapper,Dict, DictService>
     public List<Dict> list(@PathVariable("dicttype") String dicttype) throws Exception {
         QueryWrapper<Dict> qw = new QueryWrapper<>();
         qw.eq("dicttype",dicttype);
-        return service().list(qw);
+        return service.list(qw);
     }
 }

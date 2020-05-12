@@ -95,7 +95,7 @@ drop table if exists DESKTOP_ELEMENTS;
 /*==============================================================*/
 create table DESKTOP_ELEMENTS 
 (
-   ID                   bigint                         not null comment '主键',
+   ID                   bigint                         not null primary key auto_increment comment '主键',
    TITLE                varchar(128)                   null comment '名称',
    LOCATION             int                            null comment '位置',
    INDEXLOCATIONARR     varchar(128)                   null comment '位置，所占网格的下标数组 a1,a2,a3..',
@@ -113,5 +113,60 @@ create table DESKTOP_ELEMENTS
 ) comment '桌面元素，文件夹，APP,挂件等';
 
 
+drop table if exists MENUS;
+
+/*==============================================================*/
+/* Table: MENUS                                                 */
+/*==============================================================*/
+create table MENUS 
+(
+   ID                   bigint                         not null primary key auto_increment  comment '主键',
+   TITLE                varchar(128)                   null comment '名称',
+   PID                  int                            null comment '上级ID',
+   ICONS                varchar(16)                    null comment '图标',
+   ISLEAF               int                            null comment '是否叶子节点',
+   USER_ID              bigint                         null comment '用户ID'
+)comment '菜单表，应用商店';
+
+drop table if exists MESSAGES;
+
+/*==============================================================*/
+/* Table: MESSAGES                                              */
+/*==============================================================*/
+create table MESSAGES 
+(
+   ID                   bigint                         not null primary key auto_increment comment '主键',
+   TITLE                varchar(128)                   null comment '名称',
+   CONTENT              varchar(2048)                  null comment '内容',
+   USER_IDS             varchar(2048)                  null comment '通知用户',
+   URL                  varchar(2048)                    null comment '链接',
+   MSG_FROM               varchar(512)                 null comment '消息来源描述',
+   DAYS             int                            null comment '有效期(天)  默认为  0 永不过期',
+   CREATEDATE           date                           null comment '消息日期',
+   MSG_EXPIRE               int                            null comment '是否过期 1是 0否   默认为 0 否',
+   READ_USER_IDS        bigint                         null comment '已读用户',
+   ICONS                varchar(128)                   null comment '图标'
+) comment '消息通知';
+
+
+drop table if exists HIS_MESSAGES;
+
+/*==============================================================*/
+/* Table: HIS_MESSAGES                                              */
+/*==============================================================*/
+create table HIS_MESSAGES 
+(
+   ID                   bigint                         not null primary key auto_increment comment '主键',
+   TITLE                varchar(128)                   null comment '名称',
+   CONTENT              varchar(2048)                  null comment '内容',
+   USER_IDS             varchar(2048)                  null comment '通知用户',
+   URL                  varchar(2048)                    null comment '链接',
+   MSG_FROM               varchar(512)                 null comment '消息来源描述',
+   DAYS             int                            null comment '有效期(天)  默认为  0 永不过期',
+   CREATEDATE           date                           null comment '消息日期',
+   MSG_EXPIRE               int                            null comment '是否过期 1是 0否   默认为 0 否',
+   READ_USER_IDS        bigint                         null comment '已读用户',
+   ICONS                varchar(128)                   null comment '图标'
+) comment '消息通知,历史消息表';
 
 ```

@@ -8,8 +8,8 @@ import com.liv.dao.datamodel.DesktopElements;
 import com.liv.domainmodel.DesktopDO;
 import com.liv.domainmodel.DesktopElementsDO;
 import com.liv.service.DesktopService;
-import com.liv.web.api.utils.LivCllectionUtils;
-import com.liv.web.api.base.BaseService;
+import com.liv.web.api.base.utils.LivCllectionUtils;
+import com.liv.web.api.base.base.BaseService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,8 +44,8 @@ public class DesktopServiceImpl extends BaseService<DesktopMapper,Desktop > impl
      */
     @Override
     public boolean setDefault(Long id) {
-            mapper().updateNotDefault();
-        return mapper().updateDefaultByPrimaryKey(id)>0;
+            mapper.updateNotDefault();
+        return mapper.updateDefaultByPrimaryKey(id)>0;
     }
 
     /**
@@ -74,7 +74,7 @@ public class DesktopServiceImpl extends BaseService<DesktopMapper,Desktop > impl
         QueryWrapper<Desktop> qw = new QueryWrapper<>();
         qw.eq("USER_ID",userId);
         qw.orderByAsc("sort");
-        List<Desktop> desktopList = mapper().selectList(qw);
+        List<Desktop> desktopList = mapper.selectList(qw);
 
         //Entity to DO
         List<DesktopDO> dos= desktopList.stream().map(item ->{

@@ -55,7 +55,7 @@
         <!--公共引入的包都在这里了-->
         <dependency>
             <groupId>com.liv</groupId>
-            <artifactId>liv-api</artifactId>
+            <artifactId>liv-api-base</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

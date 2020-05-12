@@ -7,7 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="liv-api" />
+        <module name="liv-api-auth" />
+        <module name="liv-api-base" />
         <module name="mm-webDesktop" />
         <module name="alcohol" />
         <module name="mybatis-generator-lombok-plugin" />
@@ -22,7 +23,8 @@
       <module name="alcohol" options="-parameters" />
       <module name="gis-client" options="-parameters" />
       <module name="gis-server-0.1" options="-parameters" />
-      <module name="liv-api" options="-parameters" />
+      <module name="liv-api-auth" options="-parameters" />
+      <module name="liv-api-base" options="-parameters" />
       <module name="liv-auth" options="-parameters" />
       <module name="mm-webDesktop" options="-parameters" />
       <module name="mybatis-generator-lombok-plugin" options="" />

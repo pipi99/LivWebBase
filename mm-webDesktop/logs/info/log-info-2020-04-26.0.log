@@ -1,0 +1,460 @@
+2020-04-18 11:53:58.522 [main] INFO  com.liv.App - Starting App on LW with PID 17928 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 11:53:58.531 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 11:54:00.976 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$17f111f4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 11:54:01.003 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 11:54:02.926 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 11:54:02.962 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 11:54:02.964 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 11:54:02.964 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 11:54:03.090 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 11:54:03.090 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4397 ms
+2020-04-18 11:54:07.448 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 11:54:07.637 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 11:54:07.667 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 11:54:07.708 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 11:54:07.953 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 11:54:07.963 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 11:54:07.971 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 11:54:07.983 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 11:54:07.983 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 11:54:07.991 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 11:54:08.027 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 11:54:08.070 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 11:54:08.070 [main] INFO  com.liv.App - Started App in 10.712 seconds (JVM running for 11.315)
+2020-04-18 11:55:03.965 [http-nio-80-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 11:55:03.965 [http-nio-80-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 11:55:03.971 [http-nio-80-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2020-04-18 11:55:14.987 [http-nio-80-exec-5] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 12:09:30.171 [main] INFO  com.liv.App - Starting App on LW with PID 10884 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 12:09:30.179 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 12:09:31.561 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$e4ea5bf5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 12:09:31.592 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 12:09:33.539 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 12:09:33.547 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 12:09:33.547 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 12:09:33.547 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 12:09:33.643 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 12:09:33.643 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3416 ms
+2020-04-18 12:09:37.458 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 12:09:37.614 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 12:09:37.646 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 12:09:37.670 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 12:09:37.866 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 12:09:37.876 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 12:09:37.878 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 12:09:37.888 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 12:09:37.888 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 12:09:37.896 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 12:09:37.909 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 12:09:37.940 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 12:09:37.948 [main] INFO  com.liv.App - Started App in 8.358 seconds (JVM running for 8.794)
+2020-04-18 12:10:07.501 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 12:10:07.502 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 12:10:07.508 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2020-04-18 12:10:17.954 [http-nio-80-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 13:36:31.339 [main] INFO  com.liv.App - Starting App on LW with PID 15828 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 13:36:31.344 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 13:36:33.012 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$bf4a6be2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 13:36:33.050 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 13:36:35.066 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 13:36:35.077 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 13:36:35.078 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 13:36:35.078 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 13:36:35.168 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 13:36:35.168 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3771 ms
+2020-04-18 13:36:39.187 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 13:36:39.354 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 13:36:39.398 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 13:36:39.425 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 13:36:39.630 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 13:36:39.638 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 13:36:39.644 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 13:36:39.661 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 13:36:39.665 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 13:36:39.675 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 13:36:39.696 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 13:36:39.725 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 13:36:39.729 [main] INFO  com.liv.App - Started App in 9.034 seconds (JVM running for 9.499)
+2020-04-18 13:37:10.144 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 13:37:10.145 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 13:37:10.154 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-04-18 13:37:18.214 [http-nio-80-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 13:45:03.600 [main] INFO  com.liv.App - Starting App on LW with PID 3464 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 13:45:03.636 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 13:45:04.964 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$77c5f879] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 13:45:04.998 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 13:45:06.974 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 13:45:06.985 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 13:45:06.986 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 13:45:06.986 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 13:45:07.088 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 13:45:07.089 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3398 ms
+2020-04-18 13:45:11.082 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 13:45:11.247 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 13:45:11.282 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 13:45:11.310 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 13:45:11.525 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 13:45:11.534 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 13:45:11.539 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 13:45:11.552 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 13:45:11.556 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 13:45:11.566 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 13:45:11.591 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 13:45:11.618 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 13:45:11.621 [main] INFO  com.liv.App - Started App in 8.559 seconds (JVM running for 8.999)
+2020-04-18 13:45:16.937 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 13:45:16.938 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 13:45:16.947 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-04-18 13:45:17.250 [http-nio-80-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 13:48:24.311 [main] INFO  com.liv.App - Starting App on LW with PID 10576 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 13:48:24.315 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 13:48:25.744 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$fab153cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 13:48:25.777 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 13:48:27.773 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 13:48:27.783 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 13:48:27.784 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 13:48:27.784 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 13:48:27.877 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 13:48:27.877 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3497 ms
+2020-04-18 13:48:31.886 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 13:48:32.056 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 13:48:32.093 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 13:48:32.121 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 13:48:32.346 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 13:48:32.355 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 13:48:32.360 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 13:48:32.374 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 13:48:32.379 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 13:48:32.387 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 13:48:32.406 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 13:48:32.435 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 13:48:32.438 [main] INFO  com.liv.App - Started App in 8.826 seconds (JVM running for 9.29)
+2020-04-18 13:48:38.270 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 13:48:38.271 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 13:48:38.278 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-04-18 13:48:47.029 [http-nio-80-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 13:52:52.788 [main] INFO  com.liv.App - Starting App on LW with PID 11084 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 13:52:52.792 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 13:52:54.267 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$e4ea5bf5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 13:52:54.303 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 13:52:56.324 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 13:52:56.337 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 13:52:56.338 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 13:52:56.338 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 13:52:56.433 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 13:52:56.434 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3543 ms
+2020-04-18 13:53:00.350 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 13:53:00.527 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 13:53:00.553 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 13:53:00.583 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 13:53:00.814 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 13:53:00.824 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 13:53:00.828 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 13:53:00.841 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 13:53:00.845 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 13:53:00.853 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 13:53:00.875 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 13:53:00.901 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 13:53:00.904 [main] INFO  com.liv.App - Started App in 8.651 seconds (JVM running for 9.093)
+2020-04-18 13:53:12.166 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 13:53:12.167 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 13:53:12.174 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-04-18 13:53:18.365 [http-nio-80-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 14:01:12.771 [main] INFO  com.liv.App - Starting App on LW with PID 7156 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 14:01:12.777 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 14:01:14.289 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$b7d6a83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:01:14.319 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:01:16.147 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 14:01:16.159 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 14:01:16.160 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 14:01:16.160 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 14:01:16.250 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 14:01:16.250 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3377 ms
+2020-04-18 14:01:20.356 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 14:01:20.527 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 14:01:20.563 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 14:01:20.597 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 14:01:20.836 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 14:01:20.847 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 14:01:20.853 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 14:01:20.864 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 14:01:20.867 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 14:01:20.876 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 14:01:20.898 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 14:01:20.931 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 14:01:20.936 [main] INFO  com.liv.App - Started App in 9.202 seconds (JVM running for 10.862)
+2020-04-18 14:01:23.869 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 14:01:23.870 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 14:01:23.879 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-04-18 14:01:24.089 [http-nio-80-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 14:11:08.969 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2020-04-18 14:11:09.051 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-04-18 14:11:18.455 [main] INFO  com.liv.App - Starting App on LW with PID 13128 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 14:11:18.462 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 14:11:20.217 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$6742dd1e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:11:20.257 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:11:22.228 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 14:11:22.241 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 14:11:22.242 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 14:11:22.242 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 14:11:22.349 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 14:11:22.349 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3809 ms
+2020-04-18 14:11:26.567 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 14:11:26.755 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 14:11:26.792 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 14:11:26.823 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 14:11:27.097 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 14:11:27.107 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 14:11:27.112 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 14:11:27.125 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 14:11:27.129 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 14:11:27.136 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 14:11:27.162 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 14:11:27.204 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 14:11:27.209 [main] INFO  com.liv.App - Started App in 9.615 seconds (JVM running for 10.204)
+2020-04-18 14:11:34.999 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 14:11:34.999 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 14:11:35.009 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-04-18 14:11:35.359 [http-nio-80-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 14:12:33.880 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2020-04-18 14:12:33.894 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-04-18 14:12:43.465 [main] INFO  com.liv.App - Starting App on LW with PID 17912 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 14:12:43.470 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 14:12:45.489 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$ad19831c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:12:45.525 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:12:47.545 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 14:12:47.558 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 14:12:47.559 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 14:12:47.559 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 14:12:47.682 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 14:12:47.682 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4144 ms
+2020-04-18 14:12:51.933 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 14:12:52.118 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 14:12:52.161 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 14:12:52.195 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 14:12:52.456 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 14:12:52.469 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 14:12:52.475 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 14:12:52.490 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 14:12:52.494 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 14:12:52.503 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 14:12:52.526 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 14:12:52.570 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 14:12:52.575 [main] INFO  com.liv.App - Started App in 9.943 seconds (JVM running for 10.618)
+2020-04-18 14:12:57.846 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 14:12:57.846 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 14:12:57.853 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-04-18 14:12:58.055 [http-nio-80-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 14:14:27.836 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2020-04-18 14:14:27.854 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-04-18 14:14:51.363 [main] INFO  com.liv.App - Starting App on LW with PID 6388 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 14:14:51.370 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 14:14:53.796 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$b7d6a83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:14:53.832 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:14:55.845 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 14:14:55.861 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 14:14:55.862 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 14:14:55.863 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 14:14:55.970 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 14:14:55.971 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4518 ms
+2020-04-18 14:15:00.246 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 14:15:00.404 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 14:15:00.437 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 14:15:00.469 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 14:15:00.691 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 14:15:00.701 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 14:15:00.706 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 14:15:00.720 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 14:15:00.723 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 14:15:00.731 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 14:15:00.753 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 14:15:00.804 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 14:15:00.809 [main] INFO  com.liv.App - Started App in 10.325 seconds (JVM running for 11.171)
+2020-04-18 14:15:36.971 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 14:15:36.971 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 14:15:36.980 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-04-18 14:15:50.146 [http-nio-80-exec-8] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 14:30:55.940 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2020-04-18 14:30:55.953 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-04-18 14:31:07.341 [main] INFO  com.liv.App - Starting App on LW with PID 15600 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 14:31:07.344 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 14:31:08.513 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$270e4af4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:31:08.532 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:31:10.313 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 14:31:10.327 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 14:31:10.328 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 14:31:10.328 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 14:31:10.430 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 14:31:10.431 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3037 ms
+2020-04-18 14:31:14.360 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 14:31:14.531 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 14:31:14.561 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 14:31:14.593 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 14:31:14.803 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 14:31:14.813 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 14:31:14.819 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 14:31:14.831 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 14:31:14.834 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 14:31:14.840 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 14:31:14.860 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 14:31:14.892 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 14:31:14.896 [main] INFO  com.liv.App - Started App in 8.093 seconds (JVM running for 8.525)
+2020-04-18 14:31:21.327 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 14:31:21.328 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 14:31:21.337 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-04-18 14:31:29.429 [http-nio-80-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 14:33:41.259 [main] INFO  com.liv.App - Starting App on LW with PID 11320 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 14:33:41.263 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 14:33:42.612 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$f02534ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:33:42.651 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:33:44.680 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 14:33:44.693 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 14:33:44.694 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 14:33:44.694 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 14:33:44.797 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 14:33:44.797 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3474 ms
+2020-04-18 14:33:48.786 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 14:33:48.959 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 14:33:48.987 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 14:33:49.012 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 14:33:49.235 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 14:33:49.242 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 14:33:49.246 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 14:33:49.260 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 14:33:49.263 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 14:33:49.269 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 14:33:49.288 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 14:33:49.319 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 14:33:49.324 [main] INFO  com.liv.App - Started App in 8.722 seconds (JVM running for 9.207)
+2020-04-18 14:33:52.864 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 14:33:52.864 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 14:33:52.872 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-04-18 14:36:33.379 [main] INFO  com.liv.App - Starting App on LW with PID 10656 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 14:36:33.383 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 14:36:34.837 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$3e1783e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:36:34.866 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:36:36.911 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 14:36:36.926 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 14:36:36.928 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 14:36:36.928 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 14:36:37.028 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 14:36:37.028 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3552 ms
+2020-04-18 14:36:41.127 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 14:36:41.312 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 14:36:41.346 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 14:36:41.378 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 14:36:41.635 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 14:36:41.646 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 14:36:41.650 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 14:36:41.665 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 14:36:41.670 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 14:36:41.678 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 14:36:41.701 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 14:36:41.742 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 14:36:41.746 [main] INFO  com.liv.App - Started App in 8.901 seconds (JVM running for 9.342)
+2020-04-18 14:36:45.976 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 14:36:45.977 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 14:36:45.988 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2020-04-18 14:38:36.517 [main] INFO  com.liv.App - Starting App on LW with PID 7256 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 14:38:36.522 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 14:38:37.953 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$6d97a6f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:38:37.984 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:38:40.100 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 14:38:40.114 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 14:38:40.115 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 14:38:40.116 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 14:38:40.211 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 14:38:40.212 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3601 ms
+2020-04-18 14:38:44.117 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 14:38:44.252 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 14:38:44.275 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 14:38:44.301 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 14:38:44.547 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 14:38:44.558 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 14:38:44.565 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 14:38:44.584 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 14:38:44.591 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 14:38:44.602 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 14:38:44.634 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 14:38:44.673 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 14:38:44.677 [main] INFO  com.liv.App - Started App in 8.733 seconds (JVM running for 9.207)
+2020-04-18 14:38:47.126 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 14:38:47.126 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 14:38:47.134 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-04-18 14:42:41.961 [main] INFO  com.liv.App - Starting App on LW with PID 15412 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 14:42:41.965 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 14:42:43.352 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$b9013319] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:42:43.382 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 14:42:45.362 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 14:42:45.373 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 14:42:45.374 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 14:42:45.374 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 14:42:45.466 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 14:42:45.466 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3413 ms
+2020-04-18 14:42:49.381 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 14:42:49.561 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 14:42:49.600 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 14:42:49.633 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 14:42:49.864 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 14:42:49.871 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 14:42:49.875 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 14:42:49.886 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 14:42:49.889 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 14:42:49.895 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 14:42:49.915 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 14:42:49.946 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 14:42:49.949 [main] INFO  com.liv.App - Started App in 8.509 seconds (JVM running for 8.969)
+2020-04-18 14:42:52.853 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 14:42:52.854 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 14:42:52.861 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-04-18 14:44:43.621 [http-nio-80-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-04-18 18:40:46.607 [main] INFO  com.liv.App - Starting App on LW with PID 1816 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 18:40:46.659 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 18:40:48.941 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$5dc49e56] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 18:40:48.973 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 18:40:51.307 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 18:40:51.315 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 18:40:51.315 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 18:40:51.315 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 18:40:51.429 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 18:40:51.429 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4621 ms
+2020-04-18 18:40:56.033 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 18:40:56.241 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 18:40:56.293 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 18:40:56.329 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 18:40:56.689 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 18:40:56.705 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 18:40:56.705 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 18:40:56.729 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 18:40:56.737 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 18:40:56.745 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 18:40:56.801 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 18:40:56.857 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 18:40:56.857 [main] INFO  com.liv.App - Started App in 11.806 seconds (JVM running for 12.989)
+2020-04-18 18:43:45.003 [main] INFO  com.liv.App - Starting App on LW with PID 14088 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-04-18 18:43:45.003 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-04-18 18:43:46.281 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validateConfig' of type [ValidateConfig$$EnhancerBySpringCGLIB$$a9ef2f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 18:43:46.313 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-18 18:43:48.336 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+2020-04-18 18:43:48.344 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2020-04-18 18:43:48.344 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-04-18 18:43:48.344 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-18 18:43:48.440 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring embedded WebApplicationContext
+2020-04-18 18:43:48.440 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3381 ms
+2020-04-18 18:43:52.512 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-18 18:43:52.678 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-18 18:43:52.704 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-18 18:43:52.744 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-18 18:43:52.960 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-04-18 18:43:52.968 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2020-04-18 18:43:52.976 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2020-04-18 18:43:52.984 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_2
+2020-04-18 18:43:52.992 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2020-04-18 18:43:53.000 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: listUsingGET_1
+2020-04-18 18:43:53.024 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+2020-04-18 18:43:53.048 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
+2020-04-18 18:43:53.056 [main] INFO  com.liv.App - Started App in 8.6 seconds (JVM running for 9.05)
+2020-04-18 18:44:49.025 [http-nio-80-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-18 18:44:49.025 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-18 18:44:49.033 [http-nio-80-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-04-18 18:45:03.146 [http-nio-80-exec-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited

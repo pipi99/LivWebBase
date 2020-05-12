@@ -4,8 +4,8 @@ import com.liv.dao.DesktopMapper;
 import com.liv.dao.datamodel.Desktop;
 import com.liv.domainmodel.DesktopDO;
 import com.liv.service.DesktopService;
-import com.liv.web.api.base.BaseController;
-import com.liv.web.api.base.ResultBody;
+import com.liv.web.api.base.base.BaseController;
+import com.liv.web.api.base.base.ResultBody;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -29,31 +29,31 @@ public class DesktopController extends BaseController<DesktopMapper,Desktop, Des
     @ApiImplicitParam(name = "userId", value = "当前登录用户ID", required = true, dataType = "String", paramType = "path",defaultValue = "0")
     @GetMapping(value="/{userId}")
     public List<DesktopDO> list(@PathVariable("userId") Long userId) throws Exception {
-        return service().findByUserId(userId);
+        return service.findByUserId(userId);
     }
 
     @ApiOperation(value = "保存用户桌面", notes="用户初始登录没有用户桌面，默认新增一个")
     @PostMapping(value="/save")
     public ResultBody save(@RequestBody(required = true) @Valid Desktop d, BindingResult result) {
         validateResult(result);
-        return ResultBody.success(service().save(d));
+        return ResultBody.success(service.save(d));
     }
 
     @ApiOperation(value = "更新用户桌面", notes="用户更新用户桌面,根据主键id更新")
     @PutMapping(value="/update")
     public ResultBody update(@RequestBody(required = true) Desktop d) {
-        return ResultBody.success(service().updateById(d));
+        return ResultBody.success(service.updateById(d));
     }
 
     @ApiOperation(value = "设置为默认桌面", notes="设置为默认桌面,根据主键id更新")
     @PutMapping(value="/setDefault/{id}")
     public ResultBody setDefault(@PathVariable("id") Long id) {
-        return ResultBody.success(service().setDefault(id));
+        return ResultBody.success(service.setDefault(id));
     }
 
     @ApiOperation(value = "逻辑删除用户桌面", notes="逻辑删除用户桌面,根据主键id删除")
     @DeleteMapping(value="/remove/{id}")
     public ResultBody delete(@PathVariable("id") Long id){
-        return ResultBody.success(service().removeById(id));
+        return ResultBody.success(service.removeById(id));
     }
 }
