@@ -2,6 +2,8 @@ package com.liv.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.liv.dao.datamodel.User;
+import com.liv.domainmodel.UserDO;
+import org.apache.shiro.authc.UsernamePasswordToken;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -19,6 +21,8 @@ public interface UserService extends IService<User>{
     public void unlock(String username);
     public void lock(String username);
     public String dologin(String username,String password);
+    public String dologin(UsernamePasswordToken token,HttpServletResponse response);
     public void logout();
+    public UserDO getCurUser();
     public void reDologinSuccess(HttpServletResponse response, String token);
 }

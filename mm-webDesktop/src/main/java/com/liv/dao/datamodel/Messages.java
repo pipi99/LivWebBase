@@ -1,10 +1,13 @@
 package com.liv.dao.datamodel;
 
-import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -14,12 +17,14 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@TableName(value = "MESSAGES")
 public class Messages implements Serializable {
     /**
      * 主键
      *
      * Nullable:  false
      */
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -27,6 +32,7 @@ public class Messages implements Serializable {
      *
      * Nullable:  true
      */
+    @NotBlank(message = "消息名称不能为空")
     private String title;
 
     /**
@@ -34,14 +40,8 @@ public class Messages implements Serializable {
      *
      * Nullable:  true
      */
+    @NotBlank(message = "消息内容不能为空")
     private String content;
-
-    /**
-     * 通知用户
-     *
-     * Nullable:  true
-     */
-    private String userIds;
 
     /**
      * 链接
@@ -55,14 +55,15 @@ public class Messages implements Serializable {
      *
      * Nullable:  true
      */
+    @NotBlank(message = "消息来源不能为空")
     private String msgFrom;
 
     /**
-     * 有效期(天)  默认为  0 永不过期
+     * 有效期(天)  默认为  -1 永不过期
      *
      * Nullable:  true
      */
-    private Integer days;
+    private Integer days=-1;
 
     /**
      * 消息日期
@@ -77,14 +78,7 @@ public class Messages implements Serializable {
      * Nullable:  true
      */
     @TableLogic(value = "0",delval = "1")
-    private Integer msgExpire;
-
-    /**
-     * 已读用户
-     *
-     * Nullable:  true
-     */
-    private Long readUserIds;
+    private Integer msgExpire=0;
 
     /**
      * 图标
@@ -92,6 +86,15 @@ public class Messages implements Serializable {
      * Nullable:  true
      */
     private String icons;
+
+    /**
+     * @Author: LiV
+     * @Date: 2020.5.15 09:55
+     * @Description: 逻辑字段，存入消息时的用户ID,多个逗号分隔
+     **/
+    @TableField(exist = false)
+    @NotEmpty(message = "通知用户不能为空")
+    private String userIds;
 
     private static final long serialVersionUID = 1L;
 }

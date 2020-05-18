@@ -1,0 +1,275 @@
+2020-05-13 11:19:31.028 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 11:36:04.077 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 14:49:53.834 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 14:50:29.507 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 14:50:29.534 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 14:50:29.559 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 14:50:29.582 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 14:50:29.583 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 14:50:29.585 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 14:50:38.285 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-05-13 14:50:38.286 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 0(Long)
+2020-05-13 14:50:38.290 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 0
+2020-05-13 14:50:52.630 [http-nio-80-exec-2] DEBUG com.liv.dao.MenusMapper.selectList - ==>  Preparing: SELECT id,pid,title,isleaf,icons,user_id FROM Menus WHERE (USER_ID = ?) 
+2020-05-13 14:50:52.631 [http-nio-80-exec-2] DEBUG com.liv.dao.MenusMapper.selectList - ==> Parameters: 0(Long)
+2020-05-13 14:50:52.635 [http-nio-80-exec-2] DEBUG com.liv.dao.MenusMapper.selectList - <==      Total: 1
+2020-05-13 14:52:20.398 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-05-13 14:52:20.399 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 0(Long)
+2020-05-13 14:52:20.401 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 0
+2020-05-13 15:11:55.215 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 15:14:37.048 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 15:18:27.622 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:18:27.656 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:18:27.687 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:19:55.751 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:19:55.752 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:19:55.755 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:23:22.560 [http-nio-80-exec-2] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:23:22.562 [http-nio-80-exec-2] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aaa(String)
+2020-05-13 15:23:22.566 [http-nio-80-exec-2] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 0
+2020-05-13 15:23:26.884 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:23:26.885 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:23:26.887 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:23:45.753 [http-nio-80-exec-4] DEBUG com.liv.dao.DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?) 
+2020-05-13 15:23:45.754 [http-nio-80-exec-4] DEBUG com.liv.dao.DictMapper.selectList - ==> Parameters: desktopresolution(String)
+2020-05-13 15:23:45.766 [http-nio-80-exec-4] DEBUG com.liv.dao.DictMapper.selectList - <==      Total: 16
+2020-05-13 15:24:08.665 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:24:08.666 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:24:08.669 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:24:28.397 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:24:28.400 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:24:28.405 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:25:50.079 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:25:50.080 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:25:50.084 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:25:55.807 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:25:55.809 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:25:55.815 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:26:02.604 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?) 
+2020-05-13 15:26:02.605 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - ==> Parameters: desktopresolution(String)
+2020-05-13 15:26:02.608 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.selectList - <==      Total: 16
+2020-05-13 15:27:45.165 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-05-13 15:27:45.166 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 0(Long)
+2020-05-13 15:27:45.170 [http-nio-80-exec-6] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 0
+2020-05-13 15:29:08.286 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:29:08.288 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:29:08.301 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:29:13.048 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:29:13.049 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:29:13.055 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:29:29.316 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:29:29.318 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:29:29.323 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:29:32.486 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:29:32.487 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:29:32.489 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:30:01.830 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:30:01.835 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:30:01.842 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:30:02.891 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:30:02.895 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:30:02.903 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:30:03.407 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:30:03.408 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:30:03.410 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:30:03.581 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user 
+2020-05-13 15:30:03.581 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: 
+2020-05-13 15:30:03.592 [http-nio-80-exec-1] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 4
+2020-05-13 15:31:25.840 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:31:25.842 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:31:25.845 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:31:26.834 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:31:26.835 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:31:26.839 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:31:27.352 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 15:31:27.353 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 15:31:27.355 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 15:31:27.504 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user 
+2020-05-13 15:31:27.504 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: 
+2020-05-13 15:31:27.507 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 4
+2020-05-13 16:43:53.311 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 16:43:53.312 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 16:43:53.315 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 16:43:53.468 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 16:43:53.469 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 16:43:53.478 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 16:44:23.250 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 16:44:23.250 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 16:44:23.252 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 16:44:28.084 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 16:44:28.084 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 16:44:28.088 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 16:45:09.012 [http-nio-80-exec-6] DEBUG com.liv.dao.MenusMapper.selectList - ==>  Preparing: SELECT id,pid,title,isleaf,icons,user_id FROM Menus WHERE (USER_ID = ?) 
+2020-05-13 16:45:09.012 [http-nio-80-exec-6] DEBUG com.liv.dao.MenusMapper.selectList - ==> Parameters: 0(Long)
+2020-05-13 16:45:09.016 [http-nio-80-exec-6] DEBUG com.liv.dao.MenusMapper.selectList - <==      Total: 1
+2020-05-13 16:48:30.017 [http-nio-80-exec-7] DEBUG com.liv.dao.MenusMapper.selectList - ==>  Preparing: SELECT id,pid,title,isleaf,icons,user_id FROM Menus WHERE (USER_ID = ?) 
+2020-05-13 16:48:30.018 [http-nio-80-exec-7] DEBUG com.liv.dao.MenusMapper.selectList - ==> Parameters: 0(Long)
+2020-05-13 16:48:30.022 [http-nio-80-exec-7] DEBUG com.liv.dao.MenusMapper.selectList - <==      Total: 1
+2020-05-13 16:49:02.371 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 16:49:02.373 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 16:49:02.377 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 16:49:06.280 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 16:49:06.281 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 16:49:06.284 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 16:49:14.308 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?) 
+2020-05-13 16:49:14.309 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - ==> Parameters: desktopresolution(String)
+2020-05-13 16:49:14.313 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - <==      Total: 16
+2020-05-13 16:49:46.793 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 16:49:46.795 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 16:49:46.807 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 16:49:53.804 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user 
+2020-05-13 16:49:53.805 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: 
+2020-05-13 16:49:53.812 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 4
+2020-05-13 17:14:26.496 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 17:15:41.325 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:15:41.355 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:15:41.384 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:15:45.103 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:15:45.105 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:15:45.113 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:15:59.533 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:15:59.534 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:15:59.536 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:16:20.420 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:16:20.421 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 17:16:20.425 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:16:48.312 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user 
+2020-05-13 17:16:48.313 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: 
+2020-05-13 17:16:48.320 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 4
+2020-05-13 17:17:31.066 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:17:31.067 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 17:17:31.070 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:17:31.074 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:17:31.075 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 17:17:31.078 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:17:42.016 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:17:42.018 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 17:17:42.023 [http-nio-80-exec-3] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:24:42.673 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 17:26:01.066 [http-nio-80-exec-2] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:26:01.095 [http-nio-80-exec-2] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:26:01.125 [http-nio-80-exec-2] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:26:32.631 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:26:32.632 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:26:32.636 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:26:32.640 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:26:32.642 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:26:32.643 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:26:32.659 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:26:32.660 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:26:32.661 [http-nio-80-exec-9] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:26:59.755 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:26:59.756 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:26:59.757 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:36:47.880 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 17:39:37.990 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:39:38.020 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:39:38.050 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:40:05.960 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 17:40:53.025 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:40:53.068 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:40:53.103 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:40:58.196 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 17:40:58.198 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 17:40:58.205 [http-nio-80-exec-8] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 17:41:12.145 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
+2020-05-13 17:41:12.146 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-05-13 17:41:12.190 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 6
+2020-05-13 17:41:12.255 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
+2020-05-13 17:41:12.256 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-05-13 17:41:12.506 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
+2020-05-13 17:58:48.576 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 17:58:58.188 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 18:00:26.278 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:00:26.326 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 18:00:26.372 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:00:26.410 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:00:26.411 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 18:00:26.415 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:08:01.542 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 18:12:28.544 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:12:28.577 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 18:12:28.612 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:12:28.637 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:12:28.638 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 18:12:28.639 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:12:40.451 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:12:40.452 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 18:12:40.456 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:12:40.483 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-05-13 18:12:40.483 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 5(Long)
+2020-05-13 18:12:40.485 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 0
+2020-05-13 18:13:14.540 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:13:14.541 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 18:13:14.543 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:13:14.546 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:13:14.546 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 18:13:14.548 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:13:26.566 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:13:26.567 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 18:13:26.570 [http-nio-80-exec-7] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:13:26.579 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-05-13 18:13:26.580 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 7(Long)
+2020-05-13 18:13:26.583 [http-nio-80-exec-7] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 0
+2020-05-13 18:17:15.944 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-05-13 18:17:15.945 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 7(Long)
+2020-05-13 18:17:15.947 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 1
+2020-05-13 18:24:57.726 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 18:27:12.416 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:27:12.456 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 18:27:12.495 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:27:12.523 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:27:12.524 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 18:27:12.528 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:27:16.938 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:27:16.940 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: aa(String)
+2020-05-13 18:27:16.943 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:27:16.969 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-05-13 18:27:16.970 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 5(Long)
+2020-05-13 18:27:16.972 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 0
+2020-05-13 18:29:52.352 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:29:52.353 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 18:29:52.355 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:29:52.358 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:29:52.359 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 18:29:52.360 [http-nio-80-exec-4] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:29:57.850 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:29:57.850 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 18:29:57.853 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:29:57.860 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
+2020-05-13 18:29:57.861 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 7(Long)
+2020-05-13 18:29:57.863 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 1
+2020-05-13 18:30:57.987 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
+2020-05-13 18:30:57.988 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 7(Long)
+2020-05-13 18:30:57.991 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 0
+2020-05-13 18:30:57.996 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
+2020-05-13 18:30:57.997 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 7(Long)
+2020-05-13 18:30:58.000 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 0
+2020-05-13 18:31:28.035 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-13 18:32:57.710 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:32:57.737 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 18:32:57.763 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:32:57.783 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:32:57.783 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 18:32:57.785 [http-nio-80-exec-6] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:34:05.325 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - ==>  Preparing: SELECT user_id,user_name,org_id,alias,mobile,email,gender,degree,birthday,photo,create_date,password,salt,locked,locktime FROM auth.user WHERE (user_name = ?) 
+2020-05-13 18:34:05.326 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - ==> Parameters: bb(String)
+2020-05-13 18:34:05.329 [http-nio-80-exec-10] DEBUG com.liv.dao.UserMapper.selectList - <==      Total: 1
+2020-05-13 18:34:05.358 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
+2020-05-13 18:34:05.358 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 7(Long)
+2020-05-13 18:34:05.361 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 0
+2020-05-13 18:34:05.368 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
+2020-05-13 18:34:05.369 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 7(Long)
+2020-05-13 18:34:05.370 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 0
+2020-05-13 18:34:07.642 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
+2020-05-13 18:34:07.643 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 7(Long)
+2020-05-13 18:34:07.644 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 0
+2020-05-13 18:34:07.646 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
+2020-05-13 18:34:07.647 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 7(Long)
+2020-05-13 18:34:07.648 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 0
+2020-05-13 18:36:05.537 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
+2020-05-13 18:36:05.537 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 7(Long)
+2020-05-13 18:36:05.544 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 6
+2020-05-13 18:36:05.599 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
+2020-05-13 18:36:05.600 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 7(Long)
+2020-05-13 18:36:05.602 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3

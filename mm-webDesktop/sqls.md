@@ -138,35 +138,26 @@ create table MESSAGES
    ID                   bigint                         not null primary key auto_increment comment '主键',
    TITLE                varchar(128)                   null comment '名称',
    CONTENT              varchar(2048)                  null comment '内容',
-   USER_IDS             varchar(2048)                  null comment '通知用户',
    URL                  varchar(2048)                    null comment '链接',
    MSG_FROM               varchar(512)                 null comment '消息来源描述',
    DAYS             int                            null comment '有效期(天)  默认为  0 永不过期',
    CREATEDATE           date                           null comment '消息日期',
    MSG_EXPIRE               int                            null comment '是否过期 1是 0否   默认为 0 否',
-   READ_USER_IDS        bigint                         null comment '已读用户',
    ICONS                varchar(128)                   null comment '图标'
 ) comment '消息通知';
 
-
-drop table if exists HIS_MESSAGES;
+drop table if exists MESSAGES_USERS;
 
 /*==============================================================*/
-/* Table: HIS_MESSAGES                                              */
+/* Table: 用户消息关联关系表                                        */
 /*==============================================================*/
-create table HIS_MESSAGES 
+create table MESSAGES_USERS 
 (
    ID                   bigint                         not null primary key auto_increment comment '主键',
-   TITLE                varchar(128)                   null comment '名称',
-   CONTENT              varchar(2048)                  null comment '内容',
-   USER_IDS             varchar(2048)                  null comment '通知用户',
-   URL                  varchar(2048)                    null comment '链接',
-   MSG_FROM               varchar(512)                 null comment '消息来源描述',
-   DAYS             int                            null comment '有效期(天)  默认为  0 永不过期',
-   CREATEDATE           date                           null comment '消息日期',
-   MSG_EXPIRE               int                            null comment '是否过期 1是 0否   默认为 0 否',
-   READ_USER_IDS        bigint                         null comment '已读用户',
-   ICONS                varchar(128)                   null comment '图标'
-) comment '消息通知,历史消息表';
+   USER_ID              bigint                         null comment '用户ID',
+   MESSAGE_ID           bigint                         null comment '消息ID'
+) comment '用户消息关联关系表';
+
+
 
 ```

@@ -1,9 +1,12 @@
 package com.liv.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.liv.dao.DesktopMapper;
 import com.liv.dao.datamodel.Desktop;
+import com.liv.dao.datamodel.DesktopSubject;
 import com.liv.domainmodel.DesktopDO;
 import com.liv.service.DesktopService;
+import com.liv.utils.UserUtils;
 import com.liv.web.api.base.base.BaseController;
 import com.liv.web.api.base.base.ResultBody;
 import io.swagger.annotations.Api;
@@ -26,9 +29,16 @@ import java.util.List;
 public class DesktopController extends BaseController<DesktopMapper,Desktop, DesktopService> {
 
     @ApiOperation(value = "查询用户桌面", notes="根据给定的用户ID 查询用户桌面")
-    @ApiImplicitParam(name = "userId", value = "当前登录用户ID", required = true, dataType = "String", paramType = "path",defaultValue = "0")
+    @ApiImplicitParam(name = "userId", value = "用户ID", required = true, dataType = "String", paramType = "path",defaultValue = "0")
     @GetMapping(value="/{userId}")
     public List<DesktopDO> list(@PathVariable("userId") Long userId) throws Exception {
+        return service.findByUserId(userId);
+    }
+
+    @ApiOperation(value = "查询当前用户桌面", notes="查询当前用户桌面")
+    @GetMapping(value="/currUser")
+    public List<DesktopDO> listCurrUser() throws Exception {
+        Long userId =  UserUtils.getCurrentUesr().getUser().getUserId();
         return service.findByUserId(userId);
     }
 

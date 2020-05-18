@@ -6,7 +6,7 @@
     因为session取消，subject需要与token绑定，每次访问的时候，系统自动根据token将对应的subject绑定到当前线程。
     shiro读取其他配置为空：https://blog.csdn.net/wuxuyang_7788/article/details/70141812
 二、搭建参考网址：
-  
+    前端: https://d2.pub/zh/doc/d2-admin/     https://github.com/d2-projects
     中文教程：http://www.w3cschool.cn/shiro/ac781ife.html
     加密：https://www.cnblogs.com/mozq/p/11761896.html
     按钮控制：https://blog.csdn.net/kity9420/article/details/102330886

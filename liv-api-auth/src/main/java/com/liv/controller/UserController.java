@@ -33,7 +33,7 @@ public class UserController extends BaseController<UserMapper, User, UserService
         SecurityUtils.getSubject().checkRole("admin");
         return ResultBody.success(service.getById(userId));
     }
-    @RequiresRoles("admin")
+
     @ApiOperation(value = "查询用户列表", notes="查询用户列表")
     @GetMapping(value="/list")
     public ResultBody list() throws Exception {
@@ -52,6 +52,12 @@ public class UserController extends BaseController<UserMapper, User, UserService
     @ValidResult
     public ResultBody save(@RequestBody(required = true) @Valid User d, BindingResult result) {
         return ResultBody.success(service.save(d));
+    }
+
+    @ApiOperation(value = "获取当前登录用户", notes="获取当前登录用户")
+    @GetMapping(value="/getCurrUser")
+    public ResultBody getCurrUser() {
+        return ResultBody.success(service.getCurUser().getUser());
     }
 //
 //    @ApiOperation(value = "更新用户", notes="用户更新用户,根据主键id更新")

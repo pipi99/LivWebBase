@@ -3,7 +3,9 @@ package com.liv.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.liv.dao.UserMapper;
 import com.liv.dao.datamodel.User;
+import com.liv.domainmodel.UserDO;
 import com.liv.service.UserService;
+import com.liv.shiro.ShiroRoles;
 import com.liv.shiro.cache.CacheFactory;
 import com.liv.shiro.realms.RetryLimitHashedCredentialsMatcher;
 import com.liv.shiro.stateless.jwt.JwtUtil;
@@ -13,6 +15,7 @@ import com.liv.web.api.base.base.BaseService;
 import com.liv.web.api.base.utils.LivContextUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Service;
@@ -41,7 +44,15 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, password);
         //执行登录
         user.login(usernamePasswordToken);
-        return dologinSuccess( user) ;
+        return dologinSuccess( user,LivContextUtils.getResponse()) ;
+    }
+
+    @Override
+    public String dologin(UsernamePasswordToken token,HttpServletResponse response) {
+        Subject user = SecurityUtils.getSubject();
+        //执行登录
+        user.login(token);
+        return dologinSuccess( user,response) ;
     }
 
     /**
@@ -49,10 +60,15 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
      * @Date: 2020.4.27 16:02
      * @Description: 登录成功的操作
      **/
-    private String dologinSuccess(Subject user) {
+    private String dologinSuccess(Subject user,HttpServletResponse response) {
+        //清空token缓存// 这里确保用户退出重新登录后，都能重新读取用户角色权限并缓存
+        CacheFactory.getCache(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME).remove(user.getPrincipal());
+        CacheFactory.getCache(CacheFactory.SHIRO_AUTHENTICATIONCACHENAME).remove(user.getPrincipal());
+
+        //生成token
         String jwttoken = JwtUtil.sign((String)user.getPrincipals().getPrimaryPrincipal());
         //返回token到reponse
-        JwtUtil.tokenStore(LivContextUtils.getResponse(),jwttoken,false);
+        JwtUtil.tokenStore(response,jwttoken,false);
         //缓存用户登录信息
         PrincipalCollection principalCollection = user.getPrincipals();
         CacheFactory.getLoginSuccessSubjectCache().put(jwttoken,principalCollection);
@@ -93,6 +109,16 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
 
         //这特么有毛用
         subject.logout();
+    }
+
+    @Override
+    public UserDO getCurUser() {
+        Subject user = SecurityUtils.getSubject();
+        //这里判断用户是否已登录// 判断是否有USER角色，判断角色的动作可以初始化缓存，使得后续可以获取到用户信息
+        if(user.isAuthenticated()&&user.hasRole(ShiroRoles.USER)){
+            return (UserDO)CacheFactory.getCache(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME).get(user.getPrincipal()+"");
+        }
+        return null;
     }
 
     /**

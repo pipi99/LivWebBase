@@ -1,16 +1,19 @@
 package com.liv.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.liv.dao.DesktopElementsMapper;
 import com.liv.dao.datamodel.DesktopElements;
 import com.liv.service.DesktopElementsService;
 import com.liv.web.api.base.base.BaseController;
 import com.liv.web.api.base.base.ResultBody;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 /**
  * @Author: LiV
@@ -19,17 +22,17 @@ import javax.validation.Valid;
  **/
 @RestController
 @RequestMapping(value = "desktopelements")
-@Api(tags = "用户桌面元素元素")
+@Api(tags = "桌面元素")
 public class DesktopElementsController extends BaseController<DesktopElementsMapper, DesktopElements, DesktopElementsService> {
 
-//    @ApiOperation(value = "查询用户桌面元素", notes="根据给定的用户ID 查询用户桌面元素")
-//    @ApiImplicitParam(name = "userId", value = "当前登录用户ID", required = true, dataType = "String", paramType = "path",defaultValue = "0")
-//    @GetMapping(value="/{userId}")
-//    public List<DesktopElements> list(@PathVariable("userId") Long userId) {
-//        QueryWrapper<DesktopElements> qw = new QueryWrapper<>();
-//        qw.eq("USER_ID",userId);
-//        return service.list(qw);
-//    }
+    @ApiOperation(value = "查询桌面元素", notes="根据给定的桌面ID 查询桌面元素")
+    @ApiImplicitParam(name = "desktopId", value = "桌面ID", required = true, dataType = "String", paramType = "path",defaultValue = "0")
+    @GetMapping(value="/{desktopId}")
+    public List<DesktopElements> list(@PathVariable("desktopId") Long desktopId) {
+        QueryWrapper<DesktopElements> qw = new QueryWrapper<>();
+        qw.eq("DESKTOP_ID",desktopId);
+        return service.list(qw);
+    }
 
     @ApiOperation(value = "保存用户桌面元素", notes="用户初始登录没有用户桌面元素，默认新增一个")
     @PostMapping(value="/save")

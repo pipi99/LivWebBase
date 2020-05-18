@@ -1,12 +1,16 @@
 package com.liv.shiro.realms;
 
 import com.liv.dao.datamodel.User;
+import com.liv.domainmodel.UserDO;
 import com.liv.service.UserService;
+import com.liv.shiro.ShiroRoles;
+import com.liv.viewmodel.UserVO;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 
@@ -41,9 +45,15 @@ public class UserCacheRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         //根据用户名查找角色，请根据需求实现
         String username = (String) principals.getPrimaryPrincipal();
-        SimpleAuthorizationInfo authorizationInfo =  new SimpleAuthorizationInfo();
-        authorizationInfo.addRole("admin");
-        authorizationInfo.addRole("user");
+//        SimpleAuthorizationInfo authorizationInfo =  new SimpleAuthorizationInfo();
+        UserDO authorizationInfo = new UserDO();
+        UserVO vo = new UserVO();
+        BeanUtils.copyProperties(userService.findByUserName(username),vo);
+        authorizationInfo.setUser(vo);
+
+
+        //每个人都具有用户角色 // 在初始登录需要获取用户信息的情况下，可以使用此角色，以便缓存用户信息
+        authorizationInfo.addRole(ShiroRoles.USER);
         return authorizationInfo;
     }
 

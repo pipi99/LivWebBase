@@ -1,7 +1,9 @@
 package com.liv.shiro.stateless.filters;
 
+import com.liv.utils.AppConst;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.filter.authc.AnonymousFilter;
+import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import javax.servlet.Filter;
 import java.util.LinkedHashMap;
@@ -33,6 +35,11 @@ public class StatelessAuthcFilterFactoryBean {
 
         /**无需登录直接访问*/
         filters.put("anon",  new AnonymousFilter());
+        /**验证是否登录*/
+        filters.put("StatelessAuthcFilter",  new StatelessAccessControlFilter());
+
+
+        //路径的填写排除工程上下文
         //swagger
         chains.put("/swagger-ui.html", "anon");
         chains.put("/swagger-ui.html/**", "anon");
@@ -44,9 +51,11 @@ public class StatelessAuthcFilterFactoryBean {
         chains.put("/configuration/ui", "anon");
         chains.put("/configuration/security", "anon");
 
-        /**验证是否登录*/
-        filters.put("StatelessAuthcFilter",  new StatelessAccessControlFilter());
         chains.put("/**", "StatelessAuthcFilter");
+
+        /**自动弹出登录框*/
+        filters.put("basicAuth",  new StatelessBasicHttpAuthenticationFilter());
+        chains.put("/**", "basicAuth");
 
         bean.setFilters(filters);
         bean.setFilterChainDefinitionMap(chains);

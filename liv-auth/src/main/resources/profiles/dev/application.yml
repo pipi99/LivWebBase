@@ -1,5 +1,7 @@
 server:
-  port: 80
+  port: 81
+  servlet:
+    context-path: /livauth
   tomcat:
     uri-encoding: UTF-8
 
@@ -51,6 +53,7 @@ logging:
 liv:
   mapProps:
     usecache: ehcache  #值为 redis / ehcache,使用 redis还是ehcache
+    enable-basic-auth: false  #值为 true / false,是否使用basic方式登录（未登录时，自动弹出登录框）
     user-login-fail-retry-times: 5   #用户登录失败重试次数
     user-login-fail-locked-time: 10   #用户登录失败锁定时常(分钟)
     user-login-timeouts: 1   #用户登录会话时常（分钟）

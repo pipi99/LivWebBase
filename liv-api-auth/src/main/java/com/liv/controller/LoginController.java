@@ -2,7 +2,9 @@ package com.liv.controller;
 
 import com.liv.dao.UserMapper;
 import com.liv.dao.datamodel.User;
+import com.liv.domainmodel.UserDO;
 import com.liv.service.UserService;
+import com.liv.shiro.ShiroRoles;
 import com.liv.shiro.cache.CacheFactory;
 import com.liv.utils.AppConst;
 import com.liv.web.api.base.base.BaseController;
@@ -14,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.DisabledAccountException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.cache.Cache;
 import org.springframework.web.bind.annotation.*;
 
@@ -80,6 +83,16 @@ public class LoginController extends BaseController<UserMapper, User, UserServic
      * 退出
      * @return
      */
+    @ApiOperation(value = "获取当前登录用户信息", notes="获取当前登录用户信息")
+    @GetMapping("/getCurUser")
+    public ResultBody getCurUser() {
+        return ResultBody.success(service.getCurUser());
+    }
+
+    /**
+     * 退出
+     * @return
+     */
     @ApiOperation(value = "用户退出", notes="用户退出")
     @GetMapping("/logout")
     public ResultBody logout() {
@@ -88,10 +101,10 @@ public class LoginController extends BaseController<UserMapper, User, UserServic
     }
 
     /**
-     * 解除admin 用户的限制登录
-     * 写死的 方便测试
-     * @return
-     */
+     * @Author: LiV
+     * @Date: 2020.5.13 14:55
+     * @Description: 用户的限制登录
+     **/
     @GetMapping("/unlock/{username}")
     @ApiOperation(value = "解锁用户", notes="解锁用户")
     public ResultBody unlockAccount(@PathVariable("username") String username){
