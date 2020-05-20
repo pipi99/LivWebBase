@@ -1,5 +1,5 @@
-2020-05-11 16:55:46.049 [main] INFO  com.liv.App - Starting App on LW with PID 15836 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
-2020-05-11 16:55:46.120 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-05-11 16:55:46.049 [main] INFO  App - Starting App on LW with PID 15836 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-05-11 16:55:46.120 [main] INFO  App - The following profiles are active: dev
 2020-05-11 16:55:48.468 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
 2020-05-11 16:55:48.471 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-05-11 16:55:48.505 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
@@ -16,8 +16,8 @@
 2020-05-11 16:55:54.392 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-05-11 16:56:52.973 [main] INFO  com.liv.App - Starting App on LW with PID 4512 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
-2020-05-11 16:56:52.978 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-05-11 16:56:52.973 [main] INFO  App - Starting App on LW with PID 4512 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-05-11 16:56:52.978 [main] INFO  App - The following profiles are active: dev
 2020-05-11 16:56:54.580 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
 2020-05-11 16:56:54.585 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-05-11 16:56:54.635 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
@@ -34,8 +34,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-05-11 16:56:59.500 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-05-11 17:11:30.128 [main] INFO  com.liv.App - Starting App on LW with PID 13608 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
-2020-05-11 17:11:30.133 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-05-11 17:11:30.128 [main] INFO  App - Starting App on LW with PID 13608 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-05-11 17:11:30.133 [main] INFO  App - The following profiles are active: dev
 2020-05-11 17:11:31.666 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
 2020-05-11 17:11:31.670 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-05-11 17:11:31.716 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
@@ -52,8 +52,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-05-11 17:11:36.187 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-05-11 17:31:00.344 [main] INFO  com.liv.App - Starting App on LW with PID 19368 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
-2020-05-11 17:31:00.348 [main] INFO  com.liv.App - The following profiles are active: dev
+2020-05-11 17:31:00.344 [main] INFO  App - Starting App on LW with PID 19368 (E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes started by LW in E:\workspace\wg\LivWebBase)
+2020-05-11 17:31:00.348 [main] INFO  App - The following profiles are active: dev
 2020-05-11 17:31:02.269 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
 2020-05-11 17:31:02.284 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-05-11 17:31:02.348 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 0 Redis repository interfaces.
@@ -94,7 +94,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-05-11 17:31:09.627 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
 2020-05-11 17:31:09.638 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
 2020-05-11 17:31:09.708 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path '/mmdesk'
-2020-05-11 17:31:09.712 [main] INFO  com.liv.App - Started App in 10.049 seconds (JVM running for 10.671)
+2020-05-11 17:31:09.712 [main] INFO  App - Started App in 10.049 seconds (JVM running for 10.671)
 2020-05-11 17:31:56.197 [http-nio-80-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/mmdesk] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-05-11 17:31:56.198 [http-nio-80-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-05-11 17:31:56.228 [http-nio-80-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 29 ms

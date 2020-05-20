@@ -14,9 +14,11 @@
         <module name="mybatis-generator-lombok-plugin" />
         <module name="gis-server-0.1" />
         <module name="gis-client" />
-        <module name="liv-auth" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="liv-auth" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

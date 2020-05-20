@@ -1,16 +1,16 @@
-2020-05-11 16:55:46.117 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-05-11 16:56:52.978 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-05-11 17:11:30.131 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-05-11 17:31:00.348 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-05-11 17:32:08.682 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-05-11 17:32:08.714 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-05-11 17:32:08.800 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 6
-2020-05-11 17:32:08.945 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-05-11 17:32:08.946 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-05-11 17:32:08.948 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-05-11 17:34:17.073 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?) 
-2020-05-11 17:34:17.074 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - ==> Parameters: desktopresolution(String)
-2020-05-11 17:34:17.104 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.selectList - <==      Total: 16
-2020-05-11 17:35:05.420 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?) 
-2020-05-11 17:35:05.421 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - ==> Parameters: 0(Long)
-2020-05-11 17:35:05.426 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopSubjectMapper.selectList - <==      Total: 0
+2020-05-11 16:55:46.117 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-11 16:56:52.978 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-11 17:11:30.131 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-11 17:31:00.348 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-05-11 17:32:08.682 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-05-11 17:32:08.714 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-05-11 17:32:08.800 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 6
+2020-05-11 17:32:08.945 [http-nio-80-exec-3] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-05-11 17:32:08.946 [http-nio-80-exec-3] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-05-11 17:32:08.948 [http-nio-80-exec-3] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-05-11 17:34:17.073 [http-nio-80-exec-10] DEBUG DictMapper.selectList - ==>  Preparing: SELECT id,dicttype,dcode,dname,remark FROM dict WHERE (dicttype = ?)
+2020-05-11 17:34:17.074 [http-nio-80-exec-10] DEBUG DictMapper.selectList - ==> Parameters: desktopresolution(String)
+2020-05-11 17:34:17.104 [http-nio-80-exec-10] DEBUG DictMapper.selectList - <==      Total: 16
+2020-05-11 17:35:05.420 [http-nio-80-exec-1] DEBUG DesktopSubjectMapper.selectList - ==>  Preparing: SELECT id,subject,bgcolor,bgimg,user_id,desktop_resolution FROM Desktop_Subject WHERE (USER_ID = ?)
+2020-05-11 17:35:05.421 [http-nio-80-exec-1] DEBUG DesktopSubjectMapper.selectList - ==> Parameters: 0(Long)
+2020-05-11 17:35:05.426 [http-nio-80-exec-1] DEBUG DesktopSubjectMapper.selectList - <==      Total: 0

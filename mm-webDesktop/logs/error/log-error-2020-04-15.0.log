@@ -1,5 +1,5 @@
 2020-04-15 16:51:57.646 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.liv.App]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.servlet.support.SpringBootServletInitializer
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [App]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:319)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
@@ -12,7 +12,7 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
-	at com.liv.App.main(App.java:11)
+	at App.main(App.java:11)
 Caused by: java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:164)
 	at org.springframework.context.annotation.ConfigurationClassParser.retrieveBeanMethodMetadata(ConfigurationClassParser.java:402)
@@ -39,7 +39,7 @@ Caused by: java.lang.ClassNotFoundException: javax.servlet.ServletContext
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
 	... 23 common frames omitted
 2020-04-15 16:53:36.711 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.liv.App]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.servlet.support.SpringBootServletInitializer
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [App]; nested exception is java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:319)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
@@ -52,7 +52,7 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
-	at com.liv.App.main(App.java:11)
+	at App.main(App.java:11)
 Caused by: java.lang.IllegalStateException: Failed to introspect annotated methods on class org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 	at org.springframework.core.type.StandardAnnotationMetadata.getAnnotatedMethods(StandardAnnotationMetadata.java:164)
 	at org.springframework.context.annotation.ConfigurationClassParser.retrieveBeanMethodMetadata(ConfigurationClassParser.java:402)
@@ -94,7 +94,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
-	at com.liv.App.main(App.java:11)
+	at App.main(App.java:11)
 Caused by: java.lang.IllegalArgumentException: Can not create TypeBinding for class SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
 	at com.fasterxml.classmate.TypeBindings.create(TypeBindings.java:91)
 	at com.fasterxml.classmate.TypeResolver.resolve(TypeResolver.java:167)
@@ -129,7 +129,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'd
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
-	at com.liv.App.main(App.java:11)
+	at App.main(App.java:11)
 Caused by: java.lang.IllegalArgumentException: Can not create TypeBinding for class SwaggerConfig$DeferredResult with 1 type parameter: class expects 0
 	at com.fasterxml.classmate.TypeBindings.create(TypeBindings.java:91)
 	at com.fasterxml.classmate.TypeResolver.resolve(TypeResolver.java:167)

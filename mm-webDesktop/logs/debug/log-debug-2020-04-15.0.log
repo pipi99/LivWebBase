@@ -1,38 +1,38 @@
-2020-04-15 16:51:57.155 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 16:53:36.244 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 16:58:12.217 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:01:59.131 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:04:01.749 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:04:14.493 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:04:55.356 [http-nio-80-exec-5] DEBUG com.liv.dao.DictMapper.selectAll - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict 
-2020-04-15 17:04:55.380 [http-nio-80-exec-5] DEBUG com.liv.dao.DictMapper.selectAll - ==> Parameters: 
-2020-04-15 17:04:55.403 [http-nio-80-exec-5] DEBUG com.liv.dao.DictMapper.selectAll - <==      Total: 16
-2020-04-15 17:04:56.923 [http-nio-80-exec-6] DEBUG com.liv.dao.DictMapper.selectAll - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict 
-2020-04-15 17:04:56.923 [http-nio-80-exec-6] DEBUG com.liv.dao.DictMapper.selectAll - ==> Parameters: 
-2020-04-15 17:04:56.926 [http-nio-80-exec-6] DEBUG com.liv.dao.DictMapper.selectAll - <==      Total: 16
-2020-04-15 17:09:38.672 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:16:49.285 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:17:41.489 [http-nio-80-exec-2] DEBUG com.liv.dao.DictMapper.selectAll - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict 
-2020-04-15 17:17:41.517 [http-nio-80-exec-2] DEBUG com.liv.dao.DictMapper.selectAll - ==> Parameters: 
-2020-04-15 17:17:41.550 [http-nio-80-exec-2] DEBUG com.liv.dao.DictMapper.selectAll - <==      Total: 16
-2020-04-15 17:22:25.887 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:23:10.841 [http-nio-80-exec-3] DEBUG com.liv.dao.DictMapper.selectAll - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict 
-2020-04-15 17:23:10.865 [http-nio-80-exec-3] DEBUG com.liv.dao.DictMapper.selectAll - ==> Parameters: 
-2020-04-15 17:23:10.894 [http-nio-80-exec-3] DEBUG com.liv.dao.DictMapper.selectAll - <==      Total: 16
-2020-04-15 17:50:05.883 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:57:22.864 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:58:02.176 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 17:58:30.765 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
-2020-04-15 17:58:30.791 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution(String)
-2020-04-15 17:58:30.920 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - <==      Total: 16
-2020-04-15 17:58:54.464 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
-2020-04-15 17:58:54.465 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution(String)
-2020-04-15 17:58:54.469 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - <==      Total: 16
-2020-04-15 18:00:15.232 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 18:00:31.827 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-15 18:01:02.287 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
-2020-04-15 18:01:02.315 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopresolution(String)
-2020-04-15 18:01:02.349 [http-nio-80-exec-9] DEBUG com.liv.dao.DictMapper.select - <==      Total: 16
-2020-04-15 18:01:38.437 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =? 
-2020-04-15 18:01:38.438 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - ==> Parameters: desktopsubject(String)
-2020-04-15 18:01:38.439 [http-nio-80-exec-10] DEBUG com.liv.dao.DictMapper.select - <==      Total: 0
+2020-04-15 16:51:57.155 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 16:53:36.244 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 16:58:12.217 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:01:59.131 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:04:01.749 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:04:14.493 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:04:55.356 [http-nio-80-exec-5] DEBUG DictMapper.selectAll - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict
+2020-04-15 17:04:55.380 [http-nio-80-exec-5] DEBUG DictMapper.selectAll - ==> Parameters:
+2020-04-15 17:04:55.403 [http-nio-80-exec-5] DEBUG DictMapper.selectAll - <==      Total: 16
+2020-04-15 17:04:56.923 [http-nio-80-exec-6] DEBUG DictMapper.selectAll - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict
+2020-04-15 17:04:56.923 [http-nio-80-exec-6] DEBUG DictMapper.selectAll - ==> Parameters:
+2020-04-15 17:04:56.926 [http-nio-80-exec-6] DEBUG DictMapper.selectAll - <==      Total: 16
+2020-04-15 17:09:38.672 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:16:49.285 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:17:41.489 [http-nio-80-exec-2] DEBUG DictMapper.selectAll - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict
+2020-04-15 17:17:41.517 [http-nio-80-exec-2] DEBUG DictMapper.selectAll - ==> Parameters:
+2020-04-15 17:17:41.550 [http-nio-80-exec-2] DEBUG DictMapper.selectAll - <==      Total: 16
+2020-04-15 17:22:25.887 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:23:10.841 [http-nio-80-exec-3] DEBUG DictMapper.selectAll - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict
+2020-04-15 17:23:10.865 [http-nio-80-exec-3] DEBUG DictMapper.selectAll - ==> Parameters:
+2020-04-15 17:23:10.894 [http-nio-80-exec-3] DEBUG DictMapper.selectAll - <==      Total: 16
+2020-04-15 17:50:05.883 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:57:22.864 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:58:02.176 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 17:58:30.765 [http-nio-80-exec-9] DEBUG DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =?
+2020-04-15 17:58:30.791 [http-nio-80-exec-9] DEBUG DictMapper.select - ==> Parameters: desktopresolution(String)
+2020-04-15 17:58:30.920 [http-nio-80-exec-9] DEBUG DictMapper.select - <==      Total: 16
+2020-04-15 17:58:54.464 [http-nio-80-exec-10] DEBUG DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =?
+2020-04-15 17:58:54.465 [http-nio-80-exec-10] DEBUG DictMapper.select - ==> Parameters: desktopresolution(String)
+2020-04-15 17:58:54.469 [http-nio-80-exec-10] DEBUG DictMapper.select - <==      Total: 16
+2020-04-15 18:00:15.232 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 18:00:31.827 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-15 18:01:02.287 [http-nio-80-exec-9] DEBUG DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =?
+2020-04-15 18:01:02.315 [http-nio-80-exec-9] DEBUG DictMapper.select - ==> Parameters: desktopresolution(String)
+2020-04-15 18:01:02.349 [http-nio-80-exec-9] DEBUG DictMapper.select - <==      Total: 16
+2020-04-15 18:01:38.437 [http-nio-80-exec-10] DEBUG DictMapper.select - ==>  Preparing: select ID, DICTTYPE, DCODE, DNAME, REMARK from dict WHERE DICTTYPE =?
+2020-04-15 18:01:38.438 [http-nio-80-exec-10] DEBUG DictMapper.select - ==> Parameters: desktopsubject(String)
+2020-04-15 18:01:38.439 [http-nio-80-exec-10] DEBUG DictMapper.select - <==      Total: 0

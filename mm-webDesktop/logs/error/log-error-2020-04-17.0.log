@@ -57,7 +57,7 @@ Caused by: java.lang.NumberFormatException: For input string: "delete"
 2020-04-17 09:21:28.181 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:ResultBody(code=10000, message=参数校验异常!, result=null)
 2020-04-17 09:22:41.988 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:ResultBody(code=10000, message=参数校验异常!, result=[名称不能够为空])
 2020-04-17 09:35:41.848 [http-nio-80-exec-9] ERROR GlobalExceptionHandler - 发生异常！原因是:
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.liv.dao.DesktopSubjectMapper.insert
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): DesktopSubjectMapper.insert
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
@@ -66,7 +66,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:92)
 	at com.sun.proxy.$Proxy84.insert(Unknown Source)
 	at com.liv.web.base.LivBaseService.insert(LivBaseService.java:47)
-	at com.liv.controller.DesktopSubjectController.save(DesktopSubjectController.java:40)
+	at DesktopSubjectController.save(DesktopSubjectController.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,7 +119,7 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
 	at com.sun.proxy.$Proxy86.selectOne(Unknown Source)
 	at BaseService.selectOne(BaseService.java:99)
-	at com.liv.controller.DesktopSubjectController.find(DesktopSubjectController.java:32)
+	at DesktopSubjectController.find(DesktopSubjectController.java:32)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -171,7 +171,7 @@ Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one re
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
 	... 49 common frames omitted
 2020-04-17 17:25:02.696 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'desktopElementsController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'desktopElementsServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.liv.dao.DesktopElementsMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'desktopElementsController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'desktopElementsServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'DesktopElementsMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
@@ -191,8 +191,8 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
-	at com.liv.App.main(App.java:12)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'desktopElementsServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.liv.dao.DesktopElementsMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at App.main(App.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'desktopElementsServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'DesktopElementsMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
@@ -208,7 +208,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
 	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.liv.dao.DesktopElementsMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'DesktopElementsMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1695)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1253)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
@@ -218,7 +218,7 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 org.springframework.dao.DataIntegrityViolationException: 
 ### Error updating database.  Cause: java.sql.SQLException: Field 'ID' doesn't have a default value
 ### The error may exist in com/liv/dao/DesktopElementsMapper.java (best guess)
-### The error may involve com.liv.dao.DesktopElementsMapper.insert-Inline
+### The error may involve DesktopElementsMapper.insert-Inline
 ### The error occurred while setting parameters
 ### SQL: INSERT INTO Desktop_Elements  ( title, location, indexlocationarr, size_xy, icons, allowdel, allowrename, allowdrag, allowswitchpage, desktop_id, parent_folderid, deep, iframeurl, widget_type )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
 ### Cause: java.sql.SQLException: Field 'ID' doesn't have a default value
@@ -236,8 +236,8 @@ org.springframework.dao.DataIntegrityViolationException:
 	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
-	at com.liv.service.impl.DesktopElementsServiceImpl$$EnhancerBySpringCGLIB$$44991585.save(<generated>)
-	at com.liv.controller.DesktopElementsController.save(DesktopElementsController.java:44)
+	at DesktopElementsServiceImpl$$EnhancerBySpringCGLIB$$44991585.save(<generated>)
+	at DesktopElementsController.save(DesktopElementsController.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -329,8 +329,8 @@ org.springframework.jdbc.BadSqlGrammarException:
 	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
-	at com.liv.service.impl.DesktopElementsServiceImpl$$EnhancerBySpringCGLIB$$44991585.list(<generated>)
-	at com.liv.controller.DesktopElementsController.list(DesktopElementsController.java:37)
+	at DesktopElementsServiceImpl$$EnhancerBySpringCGLIB$$44991585.list(<generated>)
+	at DesktopElementsController.list(DesktopElementsController.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -402,7 +402,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'USER_ID' in 'where 
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
 	... 54 common frames omitted
 2020-04-17 18:28:15.543 [http-nio-80-exec-5] ERROR GlobalExceptionHandler - 发生异常！原因是:
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.liv.dao.DesktopMapper.updateNotDefault
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): DesktopMapper.updateNotDefault
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
 	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedMapperMethod$0(MybatisMapperProxy.java:101)
@@ -410,12 +410,12 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedMapperMethod(MybatisMapperProxy.java:100)
 	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:95)
 	at com.sun.proxy.$Proxy88.updateNotDefault(Unknown Source)
-	at com.liv.service.impl.DesktopServiceImpl.setDefault(DesktopServiceImpl.java:29)
-	at com.liv.service.impl.DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
+	at DesktopServiceImpl.setDefault(DesktopServiceImpl.java:29)
+	at DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
-	at com.liv.service.impl.DesktopServiceImpl$$EnhancerBySpringCGLIB$$65a6dd99.setDefault(<generated>)
-	at com.liv.controller.DesktopController.setDefault(DesktopController.java:55)
+	at DesktopServiceImpl$$EnhancerBySpringCGLIB$$65a6dd99.setDefault(<generated>)
+	at DesktopController.setDefault(DesktopController.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -479,7 +479,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
-	at com.liv.App.main(App.java:12)
+	at App.main(App.java:12)
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'desktopServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'desktopMapper' defined in file [E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes\com\liv\dao\DesktopMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes\mybatis\mappers\DesktopElementsMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\workspace\wg\LivWebBase\mm-webDesktop\target\classes\mybatis\mappers\DesktopElementsMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'codegenerator.DesktopElements'.  Cause: java.lang.ClassNotFoundException: Cannot find class: codegenerator.DesktopElements
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
@@ -587,12 +587,12 @@ org.springframework.jdbc.BadSqlGrammarException:
 	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:65)
 	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
 	at com.sun.proxy.$Proxy88.updateDefaultByPrimaryKey(Unknown Source)
-	at com.liv.service.impl.DesktopServiceImpl.setDefault(DesktopServiceImpl.java:30)
-	at com.liv.service.impl.DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
+	at DesktopServiceImpl.setDefault(DesktopServiceImpl.java:30)
+	at DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
-	at com.liv.service.impl.DesktopServiceImpl$$EnhancerBySpringCGLIB$$881435e8.setDefault(<generated>)
-	at com.liv.controller.DesktopController.setDefault(DesktopController.java:55)
+	at DesktopServiceImpl$$EnhancerBySpringCGLIB$$881435e8.setDefault(<generated>)
+	at DesktopController.setDefault(DesktopController.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -678,12 +678,12 @@ org.springframework.jdbc.BadSqlGrammarException:
 	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:65)
 	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
 	at com.sun.proxy.$Proxy88.updateDefaultByPrimaryKey(Unknown Source)
-	at com.liv.service.impl.DesktopServiceImpl.setDefault(DesktopServiceImpl.java:30)
-	at com.liv.service.impl.DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
+	at DesktopServiceImpl.setDefault(DesktopServiceImpl.java:30)
+	at DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
-	at com.liv.service.impl.DesktopServiceImpl$$EnhancerBySpringCGLIB$$881435e8.setDefault(<generated>)
-	at com.liv.controller.DesktopController.setDefault(DesktopController.java:55)
+	at DesktopServiceImpl$$EnhancerBySpringCGLIB$$881435e8.setDefault(<generated>)
+	at DesktopController.setDefault(DesktopController.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

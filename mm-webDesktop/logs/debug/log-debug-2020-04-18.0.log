@@ -1,164 +1,164 @@
-2020-04-18 11:53:58.528 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 11:55:15.230 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 11:55:15.273 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 11:55:15.363 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 21
-2020-04-18 11:55:15.365 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 11:55:15.367 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 11:55:15.392 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 0
-2020-04-18 12:03:41.580 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 12:03:41.581 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 12:03:41.585 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 21
-2020-04-18 12:03:41.586 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 12:03:41.587 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 12:03:41.588 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 0
-2020-04-18 12:03:49.524 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 12:03:49.524 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 12:03:49.527 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 21
-2020-04-18 12:03:49.528 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 12:03:49.528 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 12:03:49.529 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 0
-2020-04-18 12:09:30.179 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 12:10:18.113 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 12:10:18.144 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 12:10:18.186 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 21
-2020-04-18 12:10:18.192 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 12:10:18.193 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 12:10:18.196 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 0
-2020-04-18 13:36:31.343 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 13:37:18.372 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 13:37:18.401 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 13:37:18.431 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 0
-2020-04-18 13:37:18.500 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 13:37:18.501 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 13:37:18.514 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 21
-2020-04-18 13:40:09.308 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: insert into desktop (ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID ) values (?, ?, ?, ?, ?, ? ) 
-2020-04-18 13:40:09.311 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Long), 0(Integer), 桌面1(String), 0(Integer), 0(Integer), 0(Long)
-2020-04-18 13:40:09.338 [http-nio-80-exec-10] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
-2020-04-18 13:40:19.449 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: insert into desktop (ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID ) values (?, ?, ?, ?, ?, ? ) 
-2020-04-18 13:40:19.450 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Long), 1(Integer), 桌面2(String), 0(Integer), 0(Integer), 0(Long)
-2020-04-18 13:40:19.505 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
-2020-04-18 13:40:29.312 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.insert - ==>  Preparing: insert into desktop (ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID ) values (?, ?, ?, ?, ?, ? ) 
-2020-04-18 13:40:29.313 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.insert - ==> Parameters: 0(Long), 2(Integer), 桌面3(String), 0(Integer), 0(Integer), 0(Long)
-2020-04-18 13:40:29.364 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.insert - <==    Updates: 1
-2020-04-18 13:40:36.602 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 13:40:36.603 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 13:40:36.605 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 0
-2020-04-18 13:40:36.608 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 13:40:36.609 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 13:40:36.611 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 13:45:03.636 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 13:45:17.413 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-04-18 13:45:17.440 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==> Parameters: 0(Long), string(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), null, 0(Integer), string(String), app(String)
-2020-04-18 13:45:17.495 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.insert - <==    Updates: 1
-2020-04-18 13:45:58.084 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-04-18 13:45:58.086 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==> Parameters: 0(Long), app2(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), null, 0(Integer), string(String), app(String)
-2020-04-18 13:45:58.365 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.insert - <==    Updates: 1
-2020-04-18 13:46:16.139 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-04-18 13:46:16.141 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==> Parameters: 0(Long), folder1(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), null, 0(Integer), string(String), folder(String)
-2020-04-18 13:46:16.208 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.insert - <==    Updates: 1
-2020-04-18 13:48:24.314 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 13:48:47.182 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 13:48:47.210 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 13:48:47.244 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 3
-2020-04-18 13:48:47.361 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 13:48:47.361 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 13:48:47.363 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 13:50:23.082 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-04-18 13:50:23.084 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==> Parameters: 0(Long), app3-1(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), 3(Long), 0(Integer), string(String), app(String)
-2020-04-18 13:50:23.369 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.insert - <==    Updates: 1
-2020-04-18 13:50:34.060 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 13:50:34.061 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 13:50:34.064 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 4
-2020-04-18 13:50:34.067 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 13:50:34.067 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 13:50:34.070 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 13:52:52.792 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 13:53:18.509 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 13:53:18.536 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 13:53:18.576 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 4
-2020-04-18 13:53:18.691 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 13:53:18.692 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 13:53:18.694 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 14:01:12.777 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 14:01:24.293 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:01:24.329 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:01:24.370 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 4
-2020-04-18 14:03:03.519 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 14:03:03.520 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 14:03:03.523 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 14:03:17.227 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:03:17.228 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:03:17.230 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 4
-2020-04-18 14:08:30.436 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 14:08:30.437 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 14:08:30.441 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 14:10:20.729 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:10:20.729 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:10:20.732 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 4
-2020-04-18 14:10:51.230 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 14:10:51.230 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 14:10:51.232 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 14:10:53.636 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:10:53.637 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:10:53.642 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 4
-2020-04-18 14:11:07.151 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 14:11:07.151 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 14:11:07.153 [http-nio-80-exec-5] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 14:11:18.461 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 14:11:35.553 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:11:35.583 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:11:35.620 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 4
-2020-04-18 14:12:43.470 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 14:12:58.222 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:12:58.248 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:12:58.279 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 4
-2020-04-18 14:14:51.369 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 14:15:50.301 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:15:50.331 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:15:50.363 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 4
-2020-04-18 14:15:54.097 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 14:15:54.097 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 14:15:54.099 [http-nio-80-exec-8] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 14:16:44.337 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-04-18 14:16:44.339 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==> Parameters: 0(Long), string(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), 4(Long), 0(Integer), string(String), string(String)
-2020-04-18 14:16:44.628 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.insert - <==    Updates: 1
-2020-04-18 14:16:52.250 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:16:52.250 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:16:52.252 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 5
-2020-04-18 14:16:56.338 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 14:16:56.339 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 14:16:56.342 [http-nio-80-exec-2] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 14:17:26.193 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-04-18 14:17:26.194 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.insert - ==> Parameters: 0(Long), string(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), 3(Long), 0(Integer), string(String), string(String)
-2020-04-18 14:17:26.473 [http-nio-80-exec-3] DEBUG com.liv.dao.DesktopElementsMapper.insert - <==    Updates: 1
-2020-04-18 14:17:34.129 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:17:34.129 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:17:34.132 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 6
-2020-04-18 14:17:37.470 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 14:17:37.471 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 14:17:37.472 [http-nio-80-exec-4] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 14:31:07.343 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 14:31:29.575 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:31:29.601 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:31:29.642 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 6
-2020-04-18 14:31:29.784 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 14:31:29.785 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 14:31:29.786 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 14:33:41.262 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 14:36:33.382 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 14:38:36.522 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 14:42:41.964 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 14:44:43.750 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 14:44:43.776 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 14:44:43.807 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 6
-2020-04-18 14:44:43.936 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 14:44:43.936 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 14:44:43.938 [http-nio-80-exec-1] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
-2020-04-18 18:40:46.639 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 18:43:45.003 [main] DEBUG com.liv.App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-04-18 18:45:03.359 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?) 
-2020-04-18 18:45:03.389 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
-2020-04-18 18:45:03.426 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopElementsMapper.listByUserId - <==      Total: 6
-2020-04-18 18:45:03.612 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC 
-2020-04-18 18:45:03.613 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - ==> Parameters: 0(Long)
-2020-04-18 18:45:03.616 [http-nio-80-exec-9] DEBUG com.liv.dao.DesktopMapper.selectList - <==      Total: 3
+2020-04-18 11:53:58.528 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 11:55:15.230 [http-nio-80-exec-5] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 11:55:15.273 [http-nio-80-exec-5] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 11:55:15.363 [http-nio-80-exec-5] DEBUG DesktopMapper.selectList - <==      Total: 21
+2020-04-18 11:55:15.365 [http-nio-80-exec-5] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 11:55:15.367 [http-nio-80-exec-5] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 11:55:15.392 [http-nio-80-exec-5] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 0
+2020-04-18 12:03:41.580 [http-nio-80-exec-8] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 12:03:41.581 [http-nio-80-exec-8] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 12:03:41.585 [http-nio-80-exec-8] DEBUG DesktopMapper.selectList - <==      Total: 21
+2020-04-18 12:03:41.586 [http-nio-80-exec-8] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 12:03:41.587 [http-nio-80-exec-8] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 12:03:41.588 [http-nio-80-exec-8] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 0
+2020-04-18 12:03:49.524 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 12:03:49.524 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 12:03:49.527 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - <==      Total: 21
+2020-04-18 12:03:49.528 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 12:03:49.528 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 12:03:49.529 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 0
+2020-04-18 12:09:30.179 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 12:10:18.113 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 12:10:18.144 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 12:10:18.186 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - <==      Total: 21
+2020-04-18 12:10:18.192 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 12:10:18.193 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 12:10:18.196 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 0
+2020-04-18 13:36:31.343 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 13:37:18.372 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 13:37:18.401 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 13:37:18.431 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 0
+2020-04-18 13:37:18.500 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 13:37:18.501 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 13:37:18.514 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - <==      Total: 21
+2020-04-18 13:40:09.308 [http-nio-80-exec-10] DEBUG DesktopMapper.insert - ==>  Preparing: insert into desktop (ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID ) values (?, ?, ?, ?, ?, ? )
+2020-04-18 13:40:09.311 [http-nio-80-exec-10] DEBUG DesktopMapper.insert - ==> Parameters: 0(Long), 0(Integer), 桌面1(String), 0(Integer), 0(Integer), 0(Long)
+2020-04-18 13:40:09.338 [http-nio-80-exec-10] DEBUG DesktopMapper.insert - <==    Updates: 1
+2020-04-18 13:40:19.449 [http-nio-80-exec-1] DEBUG DesktopMapper.insert - ==>  Preparing: insert into desktop (ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID ) values (?, ?, ?, ?, ?, ? )
+2020-04-18 13:40:19.450 [http-nio-80-exec-1] DEBUG DesktopMapper.insert - ==> Parameters: 0(Long), 1(Integer), 桌面2(String), 0(Integer), 0(Integer), 0(Long)
+2020-04-18 13:40:19.505 [http-nio-80-exec-1] DEBUG DesktopMapper.insert - <==    Updates: 1
+2020-04-18 13:40:29.312 [http-nio-80-exec-3] DEBUG DesktopMapper.insert - ==>  Preparing: insert into desktop (ID, SORT, ALIAS, DEL, ISDEFAULT, USER_ID ) values (?, ?, ?, ?, ?, ? )
+2020-04-18 13:40:29.313 [http-nio-80-exec-3] DEBUG DesktopMapper.insert - ==> Parameters: 0(Long), 2(Integer), 桌面3(String), 0(Integer), 0(Integer), 0(Long)
+2020-04-18 13:40:29.364 [http-nio-80-exec-3] DEBUG DesktopMapper.insert - <==    Updates: 1
+2020-04-18 13:40:36.602 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 13:40:36.603 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 13:40:36.605 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 0
+2020-04-18 13:40:36.608 [http-nio-80-exec-2] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 13:40:36.609 [http-nio-80-exec-2] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 13:40:36.611 [http-nio-80-exec-2] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 13:45:03.636 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 13:45:17.413 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2020-04-18 13:45:17.440 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.insert - ==> Parameters: 0(Long), string(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), null, 0(Integer), string(String), app(String)
+2020-04-18 13:45:17.495 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.insert - <==    Updates: 1
+2020-04-18 13:45:58.084 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2020-04-18 13:45:58.086 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.insert - ==> Parameters: 0(Long), app2(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), null, 0(Integer), string(String), app(String)
+2020-04-18 13:45:58.365 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.insert - <==    Updates: 1
+2020-04-18 13:46:16.139 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2020-04-18 13:46:16.141 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.insert - ==> Parameters: 0(Long), folder1(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), null, 0(Integer), string(String), folder(String)
+2020-04-18 13:46:16.208 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.insert - <==    Updates: 1
+2020-04-18 13:48:24.314 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 13:48:47.182 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 13:48:47.210 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 13:48:47.244 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 3
+2020-04-18 13:48:47.361 [http-nio-80-exec-3] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 13:48:47.361 [http-nio-80-exec-3] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 13:48:47.363 [http-nio-80-exec-3] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 13:50:23.082 [http-nio-80-exec-4] DEBUG DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2020-04-18 13:50:23.084 [http-nio-80-exec-4] DEBUG DesktopElementsMapper.insert - ==> Parameters: 0(Long), app3-1(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), 3(Long), 0(Integer), string(String), app(String)
+2020-04-18 13:50:23.369 [http-nio-80-exec-4] DEBUG DesktopElementsMapper.insert - <==    Updates: 1
+2020-04-18 13:50:34.060 [http-nio-80-exec-8] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 13:50:34.061 [http-nio-80-exec-8] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 13:50:34.064 [http-nio-80-exec-8] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 4
+2020-04-18 13:50:34.067 [http-nio-80-exec-8] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 13:50:34.067 [http-nio-80-exec-8] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 13:50:34.070 [http-nio-80-exec-8] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 13:52:52.792 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 13:53:18.509 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 13:53:18.536 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 13:53:18.576 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 4
+2020-04-18 13:53:18.691 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 13:53:18.692 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 13:53:18.694 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 14:01:12.777 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 14:01:24.293 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:01:24.329 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:01:24.370 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 4
+2020-04-18 14:03:03.519 [http-nio-80-exec-1] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 14:03:03.520 [http-nio-80-exec-1] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 14:03:03.523 [http-nio-80-exec-1] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 14:03:17.227 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:03:17.228 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:03:17.230 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 4
+2020-04-18 14:08:30.436 [http-nio-80-exec-2] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 14:08:30.437 [http-nio-80-exec-2] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 14:08:30.441 [http-nio-80-exec-2] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 14:10:20.729 [http-nio-80-exec-4] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:10:20.729 [http-nio-80-exec-4] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:10:20.732 [http-nio-80-exec-4] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 4
+2020-04-18 14:10:51.230 [http-nio-80-exec-4] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 14:10:51.230 [http-nio-80-exec-4] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 14:10:51.232 [http-nio-80-exec-4] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 14:10:53.636 [http-nio-80-exec-5] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:10:53.637 [http-nio-80-exec-5] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:10:53.642 [http-nio-80-exec-5] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 4
+2020-04-18 14:11:07.151 [http-nio-80-exec-5] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 14:11:07.151 [http-nio-80-exec-5] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 14:11:07.153 [http-nio-80-exec-5] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 14:11:18.461 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 14:11:35.553 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:11:35.583 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:11:35.620 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 4
+2020-04-18 14:12:43.470 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 14:12:58.222 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:12:58.248 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:12:58.279 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 4
+2020-04-18 14:14:51.369 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 14:15:50.301 [http-nio-80-exec-8] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:15:50.331 [http-nio-80-exec-8] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:15:50.363 [http-nio-80-exec-8] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 4
+2020-04-18 14:15:54.097 [http-nio-80-exec-8] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 14:15:54.097 [http-nio-80-exec-8] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 14:15:54.099 [http-nio-80-exec-8] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 14:16:44.337 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2020-04-18 14:16:44.339 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.insert - ==> Parameters: 0(Long), string(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), 4(Long), 0(Integer), string(String), string(String)
+2020-04-18 14:16:44.628 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.insert - <==    Updates: 1
+2020-04-18 14:16:52.250 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:16:52.250 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:16:52.252 [http-nio-80-exec-2] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 5
+2020-04-18 14:16:56.338 [http-nio-80-exec-2] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 14:16:56.339 [http-nio-80-exec-2] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 14:16:56.342 [http-nio-80-exec-2] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 14:17:26.193 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.insert - ==>  Preparing: insert into desktop_elements (ID, TITLE, LOCATION, INDEXLOCATIONARR, SIZE_XY, ICONS, ALLOWDEL, ALLOWRENAME, ALLOWDRAG, ALLOWSWITCHPAGE, DESKTOP_ID, PARENT_FOLDERID, DEEP, IFRAMEURL, WIDGET_TYPE ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2020-04-18 14:17:26.194 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.insert - ==> Parameters: 0(Long), string(String), 0(Integer), string(String), string(String), string(String), 0(Integer), 0(Integer), 0(Integer), 0(Integer), 1(Long), 3(Long), 0(Integer), string(String), string(String)
+2020-04-18 14:17:26.473 [http-nio-80-exec-3] DEBUG DesktopElementsMapper.insert - <==    Updates: 1
+2020-04-18 14:17:34.129 [http-nio-80-exec-4] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:17:34.129 [http-nio-80-exec-4] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:17:34.132 [http-nio-80-exec-4] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 6
+2020-04-18 14:17:37.470 [http-nio-80-exec-4] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 14:17:37.471 [http-nio-80-exec-4] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 14:17:37.472 [http-nio-80-exec-4] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 14:31:07.343 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 14:31:29.575 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:31:29.601 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:31:29.642 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 6
+2020-04-18 14:31:29.784 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 14:31:29.785 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 14:31:29.786 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 14:33:41.262 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 14:36:33.382 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 14:38:36.522 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 14:42:41.964 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 14:44:43.750 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 14:44:43.776 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 14:44:43.807 [http-nio-80-exec-1] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 6
+2020-04-18 14:44:43.936 [http-nio-80-exec-1] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 14:44:43.936 [http-nio-80-exec-1] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 14:44:43.938 [http-nio-80-exec-1] DEBUG DesktopMapper.selectList - <==      Total: 3
+2020-04-18 18:40:46.639 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 18:43:45.003 [main] DEBUG App - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-18 18:45:03.359 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==>  Preparing: select t.* from desktop_elements t where exists (select id from desktop d where d.id = t.desktop_id and d.user_id=?)
+2020-04-18 18:45:03.389 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - ==> Parameters: 0(Long)
+2020-04-18 18:45:03.426 [http-nio-80-exec-9] DEBUG DesktopElementsMapper.listByUserId - <==      Total: 6
+2020-04-18 18:45:03.612 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==>  Preparing: SELECT id,sort,alias,del,isdefault,user_id FROM Desktop WHERE del=0 AND (USER_ID = ?) ORDER BY sort ASC
+2020-04-18 18:45:03.613 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - ==> Parameters: 0(Long)
+2020-04-18 18:45:03.616 [http-nio-80-exec-9] DEBUG DesktopMapper.selectList - <==      Total: 3

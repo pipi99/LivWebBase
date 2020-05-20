@@ -59,7 +59,7 @@ javax.validation.UnexpectedTypeException: HV000030: No validator could be found 
 org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 ### The error may exist in com/liv/dao/DesktopMapper.java (best guess)
-### The error may involve com.liv.dao.DesktopMapper.selectList
+### The error may involve DesktopMapper.selectList
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
@@ -70,12 +70,12 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:78)
 	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
 	at com.sun.proxy.$Proxy91.selectList(Unknown Source)
-	at com.liv.service.impl.DesktopServiceImpl.findByUserId(DesktopServiceImpl.java:79)
-	at com.liv.service.impl.DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
+	at DesktopServiceImpl.findByUserId(DesktopServiceImpl.java:79)
+	at DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
-	at com.liv.service.impl.DesktopServiceImpl$$EnhancerBySpringCGLIB$$cf95af41.findByUserId(<generated>)
-	at com.liv.controller.DesktopController.list(DesktopController.java:33)
+	at DesktopServiceImpl$$EnhancerBySpringCGLIB$$cf95af41.findByUserId(<generated>)
+	at DesktopController.list(DesktopController.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -121,7 +121,7 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 ### The error may exist in com/liv/dao/DesktopMapper.java (best guess)
-### The error may involve com.liv.dao.DesktopMapper.selectList
+### The error may involve DesktopMapper.selectList
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
@@ -166,7 +166,7 @@ Caused by: java.lang.InterruptedException: null
 org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 ### The error may exist in com/liv/dao/DesktopMapper.java (best guess)
-### The error may involve com.liv.dao.DesktopMapper.selectList
+### The error may involve DesktopMapper.selectList
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
@@ -177,12 +177,12 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:78)
 	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96)
 	at com.sun.proxy.$Proxy91.selectList(Unknown Source)
-	at com.liv.service.impl.DesktopServiceImpl.findByUserId(DesktopServiceImpl.java:79)
-	at com.liv.service.impl.DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
+	at DesktopServiceImpl.findByUserId(DesktopServiceImpl.java:79)
+	at DesktopServiceImpl$$FastClassBySpringCGLIB$$ba6af1ec.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
-	at com.liv.service.impl.DesktopServiceImpl$$EnhancerBySpringCGLIB$$255c44e4.findByUserId(<generated>)
-	at com.liv.controller.DesktopController.list(DesktopController.java:33)
+	at DesktopServiceImpl$$EnhancerBySpringCGLIB$$255c44e4.findByUserId(<generated>)
+	at DesktopController.list(DesktopController.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -228,7 +228,7 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 ### The error may exist in com/liv/dao/DesktopMapper.java (best guess)
-### The error may involve com.liv.dao.DesktopMapper.selectList
+### The error may involve DesktopMapper.selectList
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)

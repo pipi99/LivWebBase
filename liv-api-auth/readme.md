@@ -36,7 +36,7 @@
 
 开发说明：
 
-    缓存工具类:com.liv.shiro.cache.CacheFactory
+    缓存工具类:CacheFactory
     
    ###自定义配置项 ，引用此工程的话，有以下配置信息需要指定（开发环境下）,
    * 默认使用redis缓存，在引用的工程里需指定redis的配置信息；

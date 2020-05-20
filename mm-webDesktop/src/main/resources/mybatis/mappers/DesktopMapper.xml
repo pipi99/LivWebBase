@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.liv.dao.DesktopMapper">
-  <resultMap id="BaseResultMap" type="com.liv.dao.datamodel.Desktop">
+<mapper namespace="com.liv.web.api.dao.DesktopMapper">
+  <resultMap id="BaseResultMap" type="com.liv.web.api.dao.datamodel.Desktop">
     <id column="ID" jdbcType="BIGINT" property="id" />
     <result column="SORT" jdbcType="INTEGER" property="sort" />
     <result column="ALIAS" jdbcType="VARCHAR" property="alias" />
@@ -13,7 +13,7 @@
     delete from desktop
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.liv.dao.datamodel.Desktop">
+  <insert id="insert" parameterType="com.liv.web.api.dao.datamodel.Desktop">
     insert into desktop (ID, SORT, ALIAS,
       DEL, ISDEFAULT, USER_ID
       )
@@ -21,7 +21,7 @@
       #{del,jdbcType=INTEGER}, #{isdefault,jdbcType=INTEGER}, #{userId,jdbcType=BIGINT}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.liv.dao.datamodel.Desktop">
+  <update id="updateByPrimaryKey" parameterType="com.liv.web.api.dao.datamodel.Desktop">
     update desktop
     set SORT = #{sort,jdbcType=INTEGER},
       ALIAS = #{alias,jdbcType=VARCHAR},
