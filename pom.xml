@@ -7,11 +7,11 @@
     <module>alcohol</module>
       <module>gis-server-0.1</module>
       <module>gis-client</module>
-      <module>liv-auth</module>
       <module>liv-api-base</module>
       <module>liv-api-auth</module>
       <module>mm-webDesktop</module>
       <module>mybatis-generator-lombok-plugin</module>
+    <module>liv-auth</module>
   </modules>
 
   <parent>

@@ -8,17 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="liv-api-auth" />
+        <module name="liv-auth" />
         <module name="liv-api-base" />
         <module name="mm-webDesktop" />
         <module name="alcohol" />
-        <module name="mybatis-generator-lombok-plugin" />
         <module name="gis-server-0.1" />
         <module name="gis-client" />
+        <module name="mybatis-generator-lombok-plugin" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="liv-auth" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
