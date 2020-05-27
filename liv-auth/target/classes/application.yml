@@ -38,8 +38,10 @@ spring:
     timeout: 30000
 
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
-  mapper-locations: classpath:mybatis/mappers/**/*.xml       # mapper映射文件
+  config-location: classpath*:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  mapper-locations: classpath*:mybatis/mappers/**/*.xml       # mapper映射文件
+mybatis-plus:
+  mapper-locations: classpath*:mybatis/mappers/**/*.xml
 
 token:
   #  token过期时间，单位秒
@@ -53,8 +55,7 @@ logging:
 liv:
   mapProps:
     usecache: ehcache  #值为 redis / ehcache,使用 redis还是ehcache
-    enable-basic-auth: false  #值为 true / false,是否使用basic方式登录（未登录时，自动弹出登录框）
     user-login-fail-retry-times: 5   #用户登录失败重试次数
     user-login-fail-locked-time: 10   #用户登录失败锁定时常(分钟)
-    user-login-timeouts: 1   #用户登录会话时常（分钟）
+    user-login-timeouts: 10   #用户登录会话时常（分钟）
     user-login-token-renewal-onaccess: true  #值为 true / false, 用户每次访问是重新生成 token,也就是token用一次即失效

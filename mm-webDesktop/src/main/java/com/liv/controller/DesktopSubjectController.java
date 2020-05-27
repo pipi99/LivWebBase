@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.liv.api.auth.dao.DesktopSubjectMapper;
 import com.liv.api.auth.dao.datamodel.DesktopSubject;
 import com.liv.api.auth.service.DesktopSubjectService;
-import com.liv.api.auth.utils.UserUtils;
+import com.liv.api.auth.utils.ApiAuthUtils;
 import com.liv.api.auth.web.api.base.base.BaseController;
 import com.liv.api.auth.web.api.base.base.ResultBody;
 import com.liv.api.auth.service.UserService;
@@ -40,7 +40,7 @@ public class DesktopSubjectController extends BaseController<DesktopSubjectMappe
     @ApiOperation(value = "查询当前用户桌面主题", notes="查询当前登录用户的桌面主题")
     @GetMapping(value="/currUser")
     public List<DesktopSubject> findCurrUser() {
-        Long userId =  UserUtils.getCurrentUesr().getUser().getUserId();
+        Long userId =  ApiAuthUtils.getCurrentUesr().getUser().getUserId();
         QueryWrapper<DesktopSubject> qw = new QueryWrapper<>();
         qw.eq("USER_ID",userId);
         return service.list(qw);

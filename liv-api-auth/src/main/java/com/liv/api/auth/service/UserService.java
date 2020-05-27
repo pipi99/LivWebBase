@@ -25,4 +25,5 @@ public interface UserService extends IService<User>{
     public void logout();
     public UserDO getCurUser();
     public void reDologinSuccess(HttpServletResponse response, String token);
+    public void clearCache();
 }

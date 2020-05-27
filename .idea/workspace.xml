@@ -7,322 +7,129 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e8cbb32-05ee-4327-a714-746abb7f4f6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/datamodel/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/test/java/com/liv/api/auth/LoginLogoutTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/controller/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/dao/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/dao/datamodel/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/domainmodel/UserDO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/ShiroRoles.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/cache/CacheFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/cache/EhCacheManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/cache/RedisCacheExprie.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/cache/RedisCacheManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/realms/ByteSourceUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/realms/SimpleByteSource$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/realms/SimpleByteSource$BytesHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/realms/UserCacheRealm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/realms/UserRealm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/StatelessDefaultSubjectFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/StatelessSessionManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/filters/StatelessAccessControlFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/filters/StatelessAuthcFilterFactoryBean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/filters/StatelessBasicHttpAuthenticationFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/jwt/JwtProperties.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/utils/PasswordHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/utils/UserUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-auth/target/test-classes/com/liv/api/auth/LoginLogoutTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/annotation/ValidResultInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/base/BaseService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/base/CommonEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/cache/FastJsonRedisSerializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/cache/RedisConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/codegenerate/MessagesMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/config/MybatisPlusConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/config/SwaggerConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/exception/IBaseMessageInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/exception/InterfaceErrorController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/exception/LivExceptionStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/exception/ValidateException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-api-base/target/test-classes/com/liv/api/auth/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/logs/log_debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/logs/log_error.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/logs/log_info.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/logs/log_warn.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/sql.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/mybatis/mappers/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/dev/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/pro/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/pro/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/test/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/test/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/webapp/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/src/test/resources/shiro.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/META-INF/liv-auth.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/META-INF/resources/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/META-INF/resources/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/META-INF/resources/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/META-INF/resources/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/mybatis/mappers/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/classes/mybatis/mybatis.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/test-classes/META-INF/liv-auth.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liv-auth/target/test-classes/shiro.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DictServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/MessagesUsersServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/controller.java.btl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/controller.java.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/controller.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/entity.java.btl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/entity.java.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/entity.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/entity.kt.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/entity.kt.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/mapper.java.btl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/mapper.java.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/mapper.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/mapper.xml.btl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/mapper.xml.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/mapper.xml.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/service.java.btl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/service.java.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/service.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/serviceImpl.java.btl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/serviceImpl.java.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/templates/serviceImpl.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/main/resources/mybatis/mappers/OrganMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code-generator/src/test/java/com/liv/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/MenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/datamodel/Groups.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/datamodel/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/datamodel/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/datamodel/RolePermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/domainmodel/PermissionDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/MenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/PermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/impl/PermissionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/permission/BitAndWildPermissionResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/permission/BitPermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/permission/LivRolePermissionResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/PermissionsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessPermissionsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/resources/mybatis/mappers/ApiAuthRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-auth/src/main/resources/mybatis/mappers/ApiAuthUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/LivCommonException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/controller/OrganController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/dao/OrganMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/dao/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/dao/datamodel/Organ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/dao/datamodel/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/service/OrganService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/service/impl/OrganServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alcohol/src/main/java/com/liv/web/api/Alcohol8899.java" beforeDir="false" afterPath="$PROJECT_DIR$/alcohol/src/main/java/com/liv/api/auth/Alcohol8899.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/GisServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/GisServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/base/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/base/CommonEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/base/LivBaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/base/LivBaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/base/ResultBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/base/ResultBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/config/LivConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/config/LivConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/controller/TilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/controller/TilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/dao/TilesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/dao/TilesDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/entity/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/entity/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/exception/IBaseErrorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/exception/IBaseErrorInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/exception/LivException.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/exception/LivException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/exception/LivExceptionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/exception/LivExceptionStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/service/TilesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/service/TilesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/service/impl/TilesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/service/impl/TilesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/util/GisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/util/GisUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/web/api/util/ImageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/java/com/liv/api/auth/util/ImageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis-server-0.1/src/main/resources/mybatis/mappers/TilesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gis-server-0.1/src/main/resources/mybatis/mappers/TilesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/dao/datamodel/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/dao/datamodel/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/domainmodel/UserDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/domainmodel/UserDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/ShiroRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/ShiroRoles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/cache/CacheFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/cache/CacheFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/cache/EhCacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/cache/EhCacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/cache/RedisCacheExprie.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/cache/RedisCacheExprie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/cache/RedisCacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/cache/RedisCacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/cache/RedisShiroCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/cache/RedisShiroCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/realms/ByteSourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/realms/ByteSourceUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/realms/RetryLimitHashedCredentialsMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/realms/RetryLimitHashedCredentialsMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/realms/SimpleByteSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/realms/SimpleByteSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/realms/UserCacheRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/realms/UserCacheRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/realms/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/realms/UserRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/stateless/StatelessDefaultSubjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/StatelessDefaultSubjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/stateless/StatelessSessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/StatelessSessionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/stateless/StatelessShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/StatelessShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/stateless/filters/StatelessAccessControlFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessAccessControlFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/stateless/filters/StatelessAuthcFilterFactoryBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessAuthcFilterFactoryBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/stateless/filters/StatelessBasicHttpAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessBasicHttpAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/stateless/jwt/JwtProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/jwt/JwtProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/shiro/stateless/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/jwt/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/utils/AppConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/utils/AppConst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/utils/LivPropertiesUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/utils/LivPropertiesUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/utils/PasswordHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/utils/PasswordHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/utils/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/utils/UserUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/web/api/viewmodel/UserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/viewmodel/UserVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/test/java/com/liv/web/api/LoginLogoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/test/java/com/liv/web/api/LoginLogoutTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/web/api/dao/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/dao/datamodel/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/web/api/dao/datamodel/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/domainmodel/UserDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/ShiroRoles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/cache/CacheFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/cache/EhCacheManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/cache/RedisCacheExprie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/cache/RedisCacheManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/cache/RedisShiroCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/cache/RedisShiroCache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/realms/ByteSourceUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/realms/RetryLimitHashedCredentialsMatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/realms/RetryLimitHashedCredentialsMatcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/realms/SimpleByteSource$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/realms/SimpleByteSource$BytesHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/realms/SimpleByteSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/realms/SimpleByteSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/realms/UserCacheRealm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/realms/UserRealm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/stateless/StatelessDefaultSubjectFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/stateless/StatelessSessionManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/stateless/StatelessShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/StatelessShiroConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/stateless/filters/StatelessAccessControlFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/stateless/filters/StatelessAuthcFilterFactoryBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/stateless/filters/StatelessBasicHttpAuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/stateless/jwt/JwtProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/shiro/stateless/jwt/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/jwt/JwtUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/utils/AppConst.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/utils/AppConst.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/utils/LivPropertiesUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/utils/LivPropertiesUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/utils/PasswordHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/utils/UserUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/web/api/viewmodel/UserVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/viewmodel/UserVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/test-classes/com/liv/web/api/LoginLogoutTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/test-classes/com/liv/web/api/LoginLogoutTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/codegenerate/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/codegenerate/Messages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/codegenerate/MessagesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/codegenerate/MessagesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/codegenerate/MessagesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/codegenerate/MessagesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/annotation/ValidResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/annotation/ValidResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/annotation/ValidResultInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/annotation/ValidResultInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/base/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/base/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/base/BaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/base/CommonEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/base/CommonEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/base/ResultBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/base/ResultBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/cache/FastJsonRedisSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/cache/FastJsonRedisSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/cache/ObjectByteRedisSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/cache/ObjectByteRedisSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/cache/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/cache/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/config/PageHelperConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/config/PageHelperConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/config/ValidateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/config/ValidateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/config/WebMvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/exception/IBaseMessageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/IBaseMessageInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/exception/InterfaceErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/InterfaceErrorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/exception/LivExceptionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/LivExceptionStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/exception/ValidateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/ValidateException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/utils/LivCllectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/utils/LivCllectionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/utils/LivContextUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/utils/LivContextUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/utils/LivDateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/utils/LivDateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/web/api/web/api/base/utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/utils/RedisUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/src/test/java/com/liv/web/api/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/test/java/com/liv/api/auth/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/codegenerate/Messages.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/codegenerate/Messages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/codegenerate/MessagesMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/annotation/ValidResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/annotation/ValidResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/annotation/ValidResultInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/base/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/base/BaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/base/BaseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/base/CommonEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/base/ResultBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/base/ResultBody.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/cache/FastJsonRedisSerializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/cache/ObjectByteRedisSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/cache/ObjectByteRedisSerializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/cache/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/config/MybatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/config/PageHelperConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/config/PageHelperConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/config/ValidateConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/config/ValidateConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/config/WebMvcConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/config/WebMvcConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/exception/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/exception/IBaseMessageInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/exception/InterfaceErrorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/exception/LivExceptionStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/exception/ValidateException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/utils/LivCllectionUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/utils/LivCllectionUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/utils/LivContextUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/utils/LivContextUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/utils/LivDateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/utils/LivDateUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/web/api/web/api/base/utils/RedisUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/utils/RedisUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liv-api-base/target/test-classes/com/liv/web/api/AppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/controller/DesktopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/controller/DesktopElementsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopElementsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/controller/DesktopSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopSubjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/controller/DictController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DictController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/controller/MenusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/MenusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/controller/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/MessagesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/DesktopElementsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/DesktopElementsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/DesktopMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/DesktopMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/DesktopSubjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/DesktopSubjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/DictMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/DictMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/MenusMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/MenusMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/MessagesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/MessagesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/MessagesUsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/MessagesUsersMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/datamodel/Desktop.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/datamodel/Desktop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/datamodel/DesktopElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/datamodel/DesktopElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/datamodel/DesktopSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/datamodel/DesktopSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/datamodel/Dict.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/datamodel/Dict.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/datamodel/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/datamodel/Menus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/datamodel/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/datamodel/Messages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/dao/datamodel/MessagesUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/dao/datamodel/MessagesUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/domainmodel/DesktopDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/domainmodel/DesktopDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/domainmodel/DesktopElementsDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/domainmodel/DesktopElementsDO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/DesktopElementsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/DesktopElementsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/DesktopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/DesktopService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/DesktopSubjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/DesktopSubjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/DictService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/DictService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/MenusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/MenusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/MessagesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/MessagesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/MessagesUsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/MessagesUsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/impl/DesktopElementsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DesktopElementsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/impl/DesktopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DesktopServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/impl/DesktopSubjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/DesktopSubjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/impl/DictServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/impl/MenusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/MenusServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/impl/MessagesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/MessagesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/service/impl/MessagesUsersServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/task/MessagesTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/task/MessagesTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/validation/GroupA.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/validation/GroupA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/web/api/viewmodel/MessagesVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/viewmodel/MessagesVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/resources/mybatis/mappers/DesktopElementsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/resources/mybatis/mappers/DesktopElementsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/resources/mybatis/mappers/DesktopMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/resources/mybatis/mappers/DesktopMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/resources/mybatis/mappers/DesktopSubjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/resources/mybatis/mappers/DesktopSubjectMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/resources/mybatis/mappers/DictMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/resources/mybatis/mappers/DictMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/META-INF/resources/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/META-INF/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/controller/DesktopController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/controller/DesktopElementsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/controller/DesktopSubjectController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/controller/DictController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/controller/MenusController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/controller/MessagesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/DesktopElementsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/DesktopMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/DesktopSubjectMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/DictMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/MenusMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/MessagesMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/MessagesUsersMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/datamodel/Desktop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/datamodel/DesktopElements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/datamodel/DesktopSubject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/datamodel/Dict.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/datamodel/Menus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/datamodel/Messages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/dao/datamodel/MessagesUsers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/domainmodel/DesktopDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/domainmodel/DesktopElementsDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/DesktopElementsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/DesktopService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/DesktopSubjectService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/DictService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/MenusService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/MessagesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/MessagesUsersService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/impl/DesktopElementsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/impl/DesktopServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/impl/DesktopSubjectServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/impl/DictServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/impl/MenusServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/impl/MessagesServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/service/impl/MessagesUsersServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/task/MessagesTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/validation/GroupA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/com/liv/viewmodel/MessagesVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/dev/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/mybatis/mappers/DesktopElementsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/mybatis/mappers/DesktopMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/mybatis/mappers/DesktopSubjectMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/mybatis/mappers/DictMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mm-webDesktop/target/classes/mybatis/mybatis.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/mybatis/mybatis.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/ShiroRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/ShiroRoles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/cache/CacheFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/cache/CacheFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/cache/RedisCacheExprie.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/cache/RedisCacheExprie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/realms/UserCacheRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/realms/UserCacheRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/StatelessShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/StatelessShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessAccessControlFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessAccessControlFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessAuthcFilterFactoryBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/AuthcFilterFactoryBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessBasicHttpAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessBasicHttpAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/jwt/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/jwt/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/utils/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/utils/ApiAuthUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/src/main/resources/mybatis/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/mybatis/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/ShiroRoles.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/ShiroRoles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/cache/CacheFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/cache/CacheFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/cache/RedisCacheExprie.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/cache/RedisCacheExprie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/realms/UserCacheRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/realms/UserCacheRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/StatelessShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/StatelessShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/filters/StatelessAccessControlFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/filters/StatelessAccessControlFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/filters/StatelessAuthcFilterFactoryBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/filters/StatelessBasicHttpAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/filters/StatelessBasicHttpAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/jwt/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/shiro/stateless/jwt/JwtUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/com/liv/api/auth/utils/UserUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-auth/target/classes/mybatis/mappers/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/codegenerator/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/liv/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/codegenerator/readme!!!!!!!.md" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/liv/readme!!!!!!!.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/codegenerate/Messages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/codegenerate/MessagesMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/codegenerate/MessagesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/config/WebMvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/InterfaceErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/InterfaceErrorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/LivExceptionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/LivExceptionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/resources/mybatis/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/mybatis/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/src/main/resources/mybatis/generatorConfig_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/mybatis/generatorConfig_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/codegenerator/CodeGenerator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/codegenerator/CodeGenerator$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/codegenerator/CodeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/codegenerate/Messages.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/codegenerate/MessagesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/config/WebMvcConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/config/WebMvcConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/exception/InterfaceErrorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/exception/InterfaceErrorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/exception/LivExceptionStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/liv-api-base/target/classes/com/liv/api/base/exception/LivExceptionStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/mybatis/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-api-base/target/classes/mybatis/generatorConfig_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/sql.md" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/sql.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/dao/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/dao/datamodel/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/dev/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/src/main/resources/profiles/dev/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/liv-auth/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/web/api/dao/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liv-auth/target/classes/com/liv/web/api/dao/datamodel/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/DesktopSubjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/MenusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/MenusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/controller/MessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/MessagesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mm-webDesktop/src/main/java/com/liv/service/impl/MessagesServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -415,7 +222,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/liv-auth/src/main/java/com/liv/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/dao" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.12792969" />
@@ -426,28 +233,41 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\wg\LivWebBase\liv-api-auth\src\main\java\com\liv\api\auth\dao" />
+      <recent name="E:\workspace\wg\LivWebBase\liv-api-auth\src\main\resources\mybatis\mappers" />
+      <recent name="E:\workspace\wg\LivWebBase\code-generator\src\main\resources" />
+      <recent name="E:\workspace\wg\LivWebBase\code-generator\src\main\java\com\liv" />
+      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\java\com\liv\service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.liv.api.auth.shiro.stateless.filters" />
+      <recent name="com.liv.api.auth.service.impl" />
+      <recent name="com.liv.api.auth.service" />
+      <recent name="com.liv.api.auth.dao" />
+      <recent name="com.liv.api.auth.dao.datamodel" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources" />
       <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources\profiles\dev" />
       <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources\configfiles" />
       <recent name="E:\workspace\wg\LivWebBase\mm-webDesktop\src\main\resources\mybatis\mappers" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.liv.controller" />
-      <recent name="com.liv.viewmodel" />
-      <recent name="com.liv.service.impl" />
-      <recent name="com.liv.service" />
-      <recent name="com.liv.dao" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\java\com\liv\service" />
-      <recent name="E:\workspace\wg\LivWebBase\liv-api-auth\src\main\java\com\liv" />
-      <recent name="E:\workspace\wg\LivWebBase\mm-webDesktop\src\main\resources\profiles\dev" />
-      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources\profiles\dev" />
-      <recent name="E:\workspace\wg\LivWebBase\liv-auth\src\main\resources" />
-    </key>
   </component>
   <component name="RunManager" selected="Application.App (1)">
+    <configuration name="ApiAuthUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liv.api.auth.utils.ApiAuthUtils" />
+      <module name="liv-api-auth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liv.api.auth.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.liv.App" />
       <module name="liv-auth" />
@@ -474,18 +294,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginLogoutTest.testHelloworld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="liv-auth" />
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liv.CodeGenerator" />
+      <module name="code-generator" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.liv.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.liv" />
-      <option name="MAIN_CLASS_NAME" value="com.liv.LoginLogoutTest" />
-      <option name="METHOD_NAME" value="testHelloworld" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -499,19 +316,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.liv.web.api.App" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="liv-auth" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.liv.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.liv.App" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -703,18 +507,18 @@
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="Application.App (1)" />
-      <item itemvalue="JUnit.LoginLogoutTest.testHelloworld" />
-      <item itemvalue="Spring Boot.App" />
+      <item itemvalue="Application.CodeGenerator" />
+      <item itemvalue="Application.ApiAuthUtils" />
       <item itemvalue="Spring Boot.App (1)" />
       <item itemvalue="Tomcat Server.Tomcat_auth" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App (1)" />
+        <item itemvalue="Application.ApiAuthUtils" />
+        <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="Spring Boot.App (1)" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Spring Boot.App" />
-        <item itemvalue="JUnit.LoginLogoutTest.testHelloworld" />
       </list>
     </recent_temporary>
   </component>
@@ -781,7 +585,11 @@
       <workItem from="1589763791877" duration="8575000" />
       <workItem from="1589853270741" duration="2541000" />
       <workItem from="1589935015773" duration="4655000" />
-      <workItem from="1589955451747" duration="5817000" />
+      <workItem from="1589955451747" duration="10255000" />
+      <workItem from="1590022323563" duration="16978000" />
+      <workItem from="1590372376307" duration="12221000" />
+      <workItem from="1590454172707" duration="34315000" />
+      <workItem from="1590540442721" duration="34177000" />
     </task>
     <servers />
   </component>
@@ -804,9 +612,10 @@
       <screen x="0" y="0" width="1920" height="958" />
     </state>
     <state x="552" y="137" key="#Notifications/0.0.1920.958@0.0.1920.958" timestamp="1584498124080" />
-    <state x="552" y="175" key="#Project_Structure" timestamp="1587209095375">
-      <screen x="0" y="0" width="1920" height="988" />
+    <state x="552" y="180" key="#Project_Structure" timestamp="1589967610364">
+      <screen x="0" y="0" width="1920" height="1019" />
     </state>
+    <state x="552" y="180" key="#Project_Structure/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589967610364" />
     <state x="552" y="170" key="#Project_Structure/0.0.1920.958@0.0.1920.958" timestamp="1584508136717" />
     <state x="552" y="175" key="#Project_Structure/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587032994955" />
     <state x="552" y="175" key="#Project_Structure/0.0.1920.988@0.0.1920.988" timestamp="1587209095375" />
@@ -825,10 +634,10 @@
       <screen x="0" y="0" width="1920" height="988" />
     </state>
     <state x="701" y="296" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.988@0.0.1920.988" timestamp="1587209075678" />
-    <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1589513796197">
+    <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1590583848169">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589513796197" />
+    <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590583848169" />
     <state x="765" y="200" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019@0.0.1920.1019" timestamp="1587826562914" />
     <state x="765" y="188" key="#com.intellij.ide.util.MemberChooser/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585192954403" />
     <state x="-1155" y="206" key="#com.intellij.ide.util.MemberChooser/0.0.1920.988/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1587118450680" />
@@ -846,30 +655,30 @@
     <state x="-1430" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.988/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1587115233961" />
     <state x="529" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1586937747426" />
     <state x="529" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586834961975" />
-    <state x="312" y="253" width="1207" height="596" key="#xdebugger.evaluate" timestamp="1589364119122">
+    <state x="312" y="253" width="1207" height="596" key="#xdebugger.evaluate" timestamp="1590497254062">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="312" y="253" width="1207" height="596" key="#xdebugger.evaluate/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589364119122" />
+    <state x="312" y="253" width="1207" height="596" key="#xdebugger.evaluate/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590497254062" />
     <state x="312" y="253" key="#xdebugger.evaluate/0.0.1920.1019@0.0.1920.1019" timestamp="1589268937191" />
     <state x="715" y="196" key="#xdebugger.evaluate/0.0.1920.988@0.0.1920.988" timestamp="1587345585194" />
-    <state x="241" y="101" key="CommitChangelistDialog2" timestamp="1589513059831">
+    <state x="241" y="101" key="CommitChangelistDialog2" timestamp="1590477053013">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="241" y="101" key="CommitChangelistDialog2/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589513059831" />
-    <state width="491" height="466" key="DebuggerActiveHint" timestamp="1589358164425">
+    <state x="241" y="101" key="CommitChangelistDialog2/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590477053013" />
+    <state width="491" height="466" key="DebuggerActiveHint" timestamp="1590583519398">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="491" height="466" key="DebuggerActiveHint/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589358164425" />
+    <state width="491" height="466" key="DebuggerActiveHint/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590583519398" />
     <state x="740" y="250" key="FileChooserDialogImpl" timestamp="1589954741953">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state x="740" y="250" key="FileChooserDialogImpl/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589954741953" />
     <state x="740" y="235" key="FileChooserDialogImpl/0.0.1920.958@0.0.1920.958" timestamp="1584503741385" />
     <state x="740" y="242" key="FileChooserDialogImpl/0.0.1920.988@0.0.1920.988" timestamp="1585447089090" />
-    <state width="1877" height="421" key="GridCell.Tab.0.bottom" timestamp="1589963792036">
+    <state width="1877" height="310" key="GridCell.Tab.0.bottom" timestamp="1590584663769">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="421" key="GridCell.Tab.0.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589963792036" />
+    <state width="1877" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590584663769" />
     <state width="1877" height="398" key="GridCell.Tab.0.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1589277350050" />
     <state width="1670" height="392" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="132" key="GridCell.Tab.0.bottom/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585304531584" />
@@ -878,10 +687,10 @@
     <state width="1670" height="387" key="GridCell.Tab.0.bottom/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638009" />
     <state width="1670" height="402" key="GridCell.Tab.0.bottom/0.0.1920.988@0.0.1920.988" timestamp="1587348158024" />
-    <state width="1877" height="421" key="GridCell.Tab.0.center" timestamp="1589963792035">
+    <state width="1877" height="310" key="GridCell.Tab.0.center" timestamp="1590584663769">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="421" key="GridCell.Tab.0.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589963792035" />
+    <state width="1877" height="310" key="GridCell.Tab.0.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590584663769" />
     <state width="1877" height="398" key="GridCell.Tab.0.center/0.0.1920.1019@0.0.1920.1019" timestamp="1589277350049" />
     <state width="1670" height="392" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990382" />
     <state width="1877" height="132" key="GridCell.Tab.0.center/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585304531583" />
@@ -890,10 +699,10 @@
     <state width="1670" height="387" key="GridCell.Tab.0.center/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638008" />
     <state width="1670" height="402" key="GridCell.Tab.0.center/0.0.1920.988@0.0.1920.988" timestamp="1587348158024" />
-    <state width="1877" height="421" key="GridCell.Tab.0.left" timestamp="1589963792035">
+    <state width="1877" height="310" key="GridCell.Tab.0.left" timestamp="1590584663769">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="421" key="GridCell.Tab.0.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589963792035" />
+    <state width="1877" height="310" key="GridCell.Tab.0.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590584663769" />
     <state width="1877" height="398" key="GridCell.Tab.0.left/0.0.1920.1019@0.0.1920.1019" timestamp="1589277350049" />
     <state width="1670" height="392" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990382" />
     <state width="1877" height="132" key="GridCell.Tab.0.left/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585304531583" />
@@ -902,10 +711,10 @@
     <state width="1670" height="387" key="GridCell.Tab.0.left/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638007" />
     <state width="1670" height="402" key="GridCell.Tab.0.left/0.0.1920.988@0.0.1920.988" timestamp="1587348158024" />
-    <state width="1877" height="421" key="GridCell.Tab.0.right" timestamp="1589963792035">
+    <state width="1877" height="310" key="GridCell.Tab.0.right" timestamp="1590584663769">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="421" key="GridCell.Tab.0.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589963792035" />
+    <state width="1877" height="310" key="GridCell.Tab.0.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590584663769" />
     <state width="1877" height="398" key="GridCell.Tab.0.right/0.0.1920.1019@0.0.1920.1019" timestamp="1589277350050" />
     <state width="1670" height="392" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="132" key="GridCell.Tab.0.right/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585304531583" />
@@ -914,10 +723,10 @@
     <state width="1670" height="387" key="GridCell.Tab.0.right/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638009" />
     <state width="1670" height="402" key="GridCell.Tab.0.right/0.0.1920.988@0.0.1920.988" timestamp="1587348158024" />
-    <state width="1877" height="212" key="GridCell.Tab.1.bottom" timestamp="1589955224264">
+    <state width="1877" height="310" key="GridCell.Tab.1.bottom" timestamp="1590584663770">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.1.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589955224264" />
+    <state width="1877" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590584663770" />
     <state width="1877" height="398" key="GridCell.Tab.1.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1589277350050" />
     <state width="1670" height="392" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="272" key="GridCell.Tab.1.bottom/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1584957591398" />
@@ -925,10 +734,10 @@
     <state width="1670" height="387" key="GridCell.Tab.1.bottom/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.1.bottom/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638012" />
     <state width="1670" height="402" key="GridCell.Tab.1.bottom/0.0.1920.988@0.0.1920.988" timestamp="1587348157893" />
-    <state width="1877" height="212" key="GridCell.Tab.1.center" timestamp="1589955224264">
+    <state width="1877" height="310" key="GridCell.Tab.1.center" timestamp="1590584663769">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.1.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589955224264" />
+    <state width="1877" height="310" key="GridCell.Tab.1.center/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590584663769" />
     <state width="1877" height="398" key="GridCell.Tab.1.center/0.0.1920.1019@0.0.1920.1019" timestamp="1589277350050" />
     <state width="1670" height="392" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="272" key="GridCell.Tab.1.center/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1584957591398" />
@@ -936,10 +745,10 @@
     <state width="1670" height="387" key="GridCell.Tab.1.center/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.1.center/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638011" />
     <state width="1670" height="402" key="GridCell.Tab.1.center/0.0.1920.988@0.0.1920.988" timestamp="1587348157893" />
-    <state width="1877" height="212" key="GridCell.Tab.1.left" timestamp="1589955224264">
+    <state width="1877" height="310" key="GridCell.Tab.1.left" timestamp="1590584663769">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.1.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589955224264" />
+    <state width="1877" height="310" key="GridCell.Tab.1.left/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590584663769" />
     <state width="1877" height="398" key="GridCell.Tab.1.left/0.0.1920.1019@0.0.1920.1019" timestamp="1589277350050" />
     <state width="1670" height="392" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="272" key="GridCell.Tab.1.left/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1584957591398" />
@@ -947,10 +756,10 @@
     <state width="1670" height="387" key="GridCell.Tab.1.left/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587433149758" />
     <state width="1877" height="321" key="GridCell.Tab.1.left/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855638010" />
     <state width="1670" height="402" key="GridCell.Tab.1.left/0.0.1920.988@0.0.1920.988" timestamp="1587348157893" />
-    <state width="1877" height="212" key="GridCell.Tab.1.right" timestamp="1589955224264">
+    <state width="1877" height="310" key="GridCell.Tab.1.right" timestamp="1590584663770">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.1.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589955224264" />
+    <state width="1877" height="310" key="GridCell.Tab.1.right/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590584663770" />
     <state width="1877" height="398" key="GridCell.Tab.1.right/0.0.1920.1019@0.0.1920.1019" timestamp="1589277350050" />
     <state width="1670" height="392" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1587516990383" />
     <state width="1877" height="272" key="GridCell.Tab.1.right/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1584957591398" />
@@ -1044,11 +853,11 @@
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state x="759" y="287" key="chooseDestDirectoryDialog/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589955856751" />
-    <state x="640" y="322" key="com.intellij.ide.util.TipDialog" timestamp="1589955455605">
+    <state x="640" y="322" key="com.intellij.ide.util.TipDialog" timestamp="1590540500245">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="640" y="322" key="com.intellij.ide.util.TipDialog/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589955455605" />
-    <state x="640" y="322" key="com.intellij.ide.util.TipDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1589763867063" />
+    <state x="640" y="322" key="com.intellij.ide.util.TipDialog/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590540500245" />
+    <state x="640" y="322" key="com.intellij.ide.util.TipDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1590386805373" />
     <state x="640" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585125595732" />
     <state x="640" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.958@0.0.1920.958" timestamp="1584579616827" />
     <state x="640" y="312" key="com.intellij.ide.util.TipDialog/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1587084798252" />
@@ -1079,10 +888,10 @@
       <screen x="0" y="0" width="1920" height="988" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1920.988/-1920.0.1920.1050@0.0.1920.988" timestamp="1586942672874" />
-    <state x="334" y="184" key="new project wizard" timestamp="1589961304498">
+    <state x="334" y="184" key="new project wizard" timestamp="1589964097913">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="334" y="184" key="new project wizard/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589961304498" />
+    <state x="334" y="184" key="new project wizard/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589964097913" />
     <state x="334" y="173" key="new project wizard/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585105344488" />
     <state x="334" y="173" key="new project wizard/0.0.1920.958@0.0.1920.958" timestamp="1584499268962" />
     <state x="334" y="178" key="new project wizard/0.0.1920.988/1920.0.1920.1050@0.0.1920.988" timestamp="1586855636652" />
@@ -1096,10 +905,10 @@
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state x="552" y="168" key="scopes/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589956136777" />
-    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup" timestamp="1589962468610">
+    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup" timestamp="1590581807465">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1589962468610" />
+    <state x="623" y="217" width="672" height="722" key="search.everywhere.popup/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1590581807465" />
     <state x="623" y="217" width="672" height="722" key="search.everywhere.popup/0.0.1920.1019@0.0.1920.1019" timestamp="1589252807216" />
     <state x="623" y="204" width="672" height="678" key="search.everywhere.popup/0.0.1920.958/1920.0.1920.1040@0.0.1920.958" timestamp="1585209700627" />
     <state x="-1297" y="223" width="672" height="744" key="search.everywhere.popup/0.0.1920.988/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1587126674610" />
@@ -1134,6 +943,31 @@
           <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/shiro/realms/UserCacheRealm.java</url>
           <line>42</line>
           <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-auth/src/main/java/com/liv/auth/controller/OrganController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/service/impl/RoleServiceImpl.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-api-auth/src/main/java/com/liv/api/auth/shiro/stateless/filters/StatelessPermissionsFilter.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/InterfaceErrorController.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/liv-api-base/src/main/java/com/liv/api/base/exception/InterfaceErrorController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="170" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

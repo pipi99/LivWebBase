@@ -2,7 +2,7 @@ package com.liv.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.google.common.collect.Lists;
-import com.liv.api.auth.utils.UserUtils;
+import com.liv.api.auth.utils.ApiAuthUtils;
 import com.liv.api.base.base.BaseService;
 import com.liv.dao.MessagesMapper;
 import com.liv.dao.datamodel.Messages;
@@ -55,7 +55,7 @@ public class MessagesServiceImpl extends BaseService<MessagesMapper, Messages> i
      */
     @Override
     public boolean view(Long messageId) throws Exception {
-        Long userId = UserUtils.getCurrentUesr().getUser().getUserId();
+        Long userId = ApiAuthUtils.getCurrentUesr().getUser().getUserId();
         QueryWrapper<MessagesUsers> qw = new QueryWrapper<>();
         qw.eq("MESSAGE_ID",messageId);
         qw.eq("USER_ID",userId);

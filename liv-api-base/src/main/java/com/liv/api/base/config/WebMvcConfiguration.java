@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -77,6 +78,17 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         StringHttpMessageConverter converter = new StringHttpMessageConverter(Charset.forName("UTF-8"));
         return converter;
     }
+
+    /**
+     * 监听器：监听HTTP请求事件
+     * 解决RequestContextHolder.getRequestAttributes()空指针问题
+     * @return
+     */
+    @Bean
+    public RequestContextListener requestContextListener(){
+        return new RequestContextListener();
+    }
+
     /**
      * 跨域过滤器
      *

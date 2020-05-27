@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liv.api.auth.dao.RoleMapper">
+
+    <select id="findByGroupIds" resultType="com.liv.api.auth.dao.datamodel.Role">
+        select
+            r.role_name as roleName,
+            r.role_alias as roleAlias,
+            r.ROLE_ID as roleId ,
+            r.create_date as createDate ,
+            r.description
+        from
+            auth.role r,auth.GROUP_ROLE gr
+        where
+            r.ROLE_ID = gr.role_id and r.DEL=0
+                and gr.group_id IN
+                <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+                    #{id}
+                </foreach>
+    </select>
+
+    <select id="findPermissionAndResources" resultType="com.liv.api.auth.domainmodel.PermissionDO">
+        select
+            a.permission_id as permissionId,
+            permission,
+            resource_id as resourceId,
+            menu_id as menuId,
+            menu_name as menuName,
+            parent_id as parentId,
+            description,
+            m_url as mUrl
+        from
+          auth.PERMISSION_RESOURCE a,auth.MENU b,auth.ROLE_PERMISSION c
+        where
+            a.resource_id=b.MENU_ID and a.permission_id = c.permission_id and c.role_id=#{roleId}
+    </select>
+</mapper>

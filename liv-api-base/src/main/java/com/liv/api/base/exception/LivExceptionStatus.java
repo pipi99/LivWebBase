@@ -15,7 +15,7 @@ public enum LivExceptionStatus implements IBaseMessageInfo {
     NOT_FOUND("无效路径",404),
 
     VALIDATE_FAIL("参数校验异常!", 10000),
-    BAD_REQUEST("错误的请求",10002),
+//    BAD_REQUEST("错误的请求",10002),
     INTERNAL_SERVER_ERROR("服务器内部错误!", 500),
     NULL_POINT("空指针!", 500);
 

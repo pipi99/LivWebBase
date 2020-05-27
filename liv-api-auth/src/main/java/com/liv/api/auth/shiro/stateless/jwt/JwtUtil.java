@@ -7,6 +7,7 @@ import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.liv.api.auth.shiro.cache.CacheFactory;
 import com.liv.api.auth.utils.AppConst;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
@@ -55,6 +56,9 @@ public class JwtUtil {
      * @return
      */
     public static boolean verify(String token) {
+        if(StringUtils.isEmpty(token)){
+            return false;
+        }
         boolean result = false;
         try{
             String secret = getClaim(token, AppConst.ACCOUNT) + getJwtUtil().jwtProperties.secretKey;

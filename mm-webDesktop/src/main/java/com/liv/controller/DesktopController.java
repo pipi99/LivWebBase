@@ -1,6 +1,6 @@
 package com.liv.controller;
 
-import com.liv.api.auth.utils.UserUtils;
+import com.liv.api.auth.utils.ApiAuthUtils;
 import com.liv.api.base.base.BaseController;
 import com.liv.api.base.base.ResultBody;
 import com.liv.dao.DesktopMapper;
@@ -36,7 +36,7 @@ public class DesktopController extends BaseController<DesktopMapper, Desktop, De
     @ApiOperation(value = "查询当前用户桌面", notes="查询当前用户桌面")
     @GetMapping(value="/currUser")
     public List<DesktopDO> listCurrUser() throws Exception {
-        Long userId =  UserUtils.getCurrentUesr().getUser().getUserId();
+        Long userId =  ApiAuthUtils.getCurrentUesr().getUser().getUserId();
         return service.findByUserId(userId);
     }
 

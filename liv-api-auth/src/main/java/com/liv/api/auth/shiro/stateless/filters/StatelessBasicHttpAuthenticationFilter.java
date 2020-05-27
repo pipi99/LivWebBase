@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletRequest;
  * @author LiV
  * @Title:
  * @Package com.liv.shiro.stateless
- * @Description: 每次请求都验证token ,判断是否登录
- * @date 2020.4.21  16:04
+ * @Description: 每次请求都验证token ,判断是否登录 ，支持basic 登录
+  @date 2020.4.21  16:04
  * @email 453826286@qq.com
  */
 
@@ -37,13 +37,12 @@ public class StatelessBasicHttpAuthenticationFilter extends BasicHttpAuthenticat
         String token = getRequestToken(request);
         boolean tokenIsAvaliable = JwtUtil.verify(token);
         /**正常访问的链接，判断token是否有效*/
-        if (ObjectUtils.isEmpty(token)||!tokenIsAvaliable) {
-            return false;
-        }else{
+        if (tokenIsAvaliable) {
             //token续签
-            LivContextUtils.getBean("apiUserService", UserService.class).reDologinSuccess(WebUtils.toHttp(response),token);
+//            LivContextUtils.getBean("apiUserService", UserService.class).reDologinSuccess(WebUtils.toHttp(response),token);
             return true;
         }
+        return false;
     }
 
     @Override

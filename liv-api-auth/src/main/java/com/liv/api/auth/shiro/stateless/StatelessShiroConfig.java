@@ -1,7 +1,9 @@
 package com.liv.api.auth.shiro.stateless;
 
 import com.google.common.collect.Lists;
-import com.liv.api.auth.shiro.stateless.filters.StatelessAuthcFilterFactoryBean;
+import com.liv.api.auth.shiro.permission.BitAndWildPermissionResolver;
+import com.liv.api.auth.shiro.permission.LivRolePermissionResolver;
+import com.liv.api.auth.shiro.stateless.filters.AuthcFilterFactoryBean;
 import com.liv.api.auth.shiro.stateless.jwt.JwtProperties;
 import com.liv.api.auth.shiro.cache.CacheFactory;
 import com.liv.api.auth.shiro.cache.RedisCacheManager;
@@ -105,7 +107,7 @@ public class StatelessShiroConfig {
 
     /*** 这个即是上边调用的shiroFilter过滤器，也就是shiro配置的过滤器*/
     @Bean(name = "stateLessShiroFilter")
-    public ShiroFilterFactoryBean stateLessShiroFilter()  {return StatelessAuthcFilterFactoryBean.getShiroFilterFactoryBean(securityManager()); }
+    public ShiroFilterFactoryBean stateLessShiroFilter()  {return AuthcFilterFactoryBean.getShiroFilterFactoryBean(securityManager()); }
 
     /**
      * @Author: LiV
@@ -165,6 +167,11 @@ public class StatelessShiroConfig {
     public ModularRealmAuthorizer ModularRealmAuthorizer(){
         ModularRealmAuthorizer authorizer = new ModularRealmAuthorizer();
         authorizer.setRealms(getRealms());
+
+        //通配符或者二进制
+        authorizer.setPermissionResolver(new BitAndWildPermissionResolver());
+        authorizer.setRolePermissionResolver(new LivRolePermissionResolver());
+
         return authorizer;
     }
     private List<Realm> getRealms(){

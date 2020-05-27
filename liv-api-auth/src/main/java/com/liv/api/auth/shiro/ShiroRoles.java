@@ -15,6 +15,11 @@ public interface ShiroRoles {
     public static String SYSMAN ="SYSMAN";
     /**用户角色*/
     public static String USER ="USER";
-    /**人员角色*/
-    public static String HUMAN ="HUMAN";
+    /**访客角色*/
+    public static String GUEST ="GUEST";
+
+    /**匿名角色，某些特殊情况使用，默认每个用户都有*/
+    public static String ANONYMOUS ="ANONYMOUS";
+
+
 }

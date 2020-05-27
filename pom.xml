@@ -12,6 +12,7 @@
       <module>mm-webDesktop</module>
       <module>mybatis-generator-lombok-plugin</module>
     <module>liv-auth</module>
+    <module>code-generator</module>
   </modules>
 
   <parent>

@@ -6,7 +6,7 @@ import com.liv.api.auth.web.api.base.base.ResultBody;
 import com.liv.api.auth.dao.MessagesMapper;
 import com.liv.api.auth.dao.datamodel.Messages;
 import com.liv.api.auth.service.MessagesService;
-import com.liv.api.auth.utils.UserUtils;
+import com.liv.api.auth.utils.ApiAuthUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -35,7 +35,7 @@ public class MessagesController extends BaseController<MessagesMapper,Messages, 
     @ApiOperation(value = "查询当前登录用户消息通知", notes="查询当前登录用户消息通知")
     @GetMapping(value="/listCurrUser")
     public ResultBody list() throws Exception {
-        Long userId = UserUtils.getCurrentUesr().getUser().getUserId();
+        Long userId = ApiAuthUtils.getCurrentUesr().getUser().getUserId();
         return ResultBody.success(service.findByUserId(userId));
     }
 

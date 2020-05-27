@@ -19,10 +19,6 @@ public class CacheFactory {
      **/
     public static boolean cacheConfigInit = false;
 
-    //Shiro 缓存 前缀
-    public static final String PREFIX_SHIRO_CACHE = "storyweb-bp:cache:";
-    public final static String PREFIX_SHIRO_REFRESH_TOKEN = "storyweb-bp:refresh_token:";
-
     //用户登录信息缓存
     public final static String SHIRO_AUTHENTICATIONCACHENAME = "shiro-cache:AuthenticationCacheName";
     public final static String SHIRO_AUTHORIZATIONCACHENAME = "shiro-cache:AuthorizationCacheName";
@@ -31,6 +27,8 @@ public class CacheFactory {
     public final static String PASSWORD_RETRY_CACHE = "shiro-cache:password-retry-cache";
     //用户登录
     public final static String LOGIN_SUCCESS_SUBJECT_CACHE = "shiro-cache:login-success-subject-cache";
+    //角色权限缓存
+    public final static String ROLE_PERMISSION_CACHE = "shiro-cache:role-permission-cache";
 
     /**
      * @Author: LiV

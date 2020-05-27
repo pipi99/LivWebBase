@@ -24,7 +24,7 @@ import java.io.IOException;
  * @author LiV
  * @Title:
  * @Package com.liv.shiro.stateless
- * @Description: 每次请求都验证token ,判断是否登录
+ * @Description: 每次请求都验证token ,判断是否登录 , 支持 api 登录
  * @date 2020.4.21  16:04
  * @email 453826286@qq.com
  */
@@ -37,18 +37,9 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
      * @Date: 2020.4.22 08:46
      * @Description: 是否允许访问，默认不允许，交由  addcessDenied 判断token
      **/
-    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue)  {
-//        //检查url是否设置了角色参数
-//        String[] roles = (String[])mappedValue;
-//        if(roles == null) {
-//            return true;//如果没有设置角色参数，默认成功
-//        }
-//        for(String role : roles) {
-//            //当前用户是否有角色
-//            if(getSubject(request, response).hasRole(role)) {
-//                return true;
-//            }
-//        }
+    @Override
+    protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {
+
         return false;//跳到onAccessDenied处理
     }
 
@@ -57,36 +48,33 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
      * @Date: 2020.4.22 10:42
      * @Description: 被上一个方法拒绝后调用，验证token
      **/
+    @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
         String token = getRequestToken(request);
         boolean tokenIsAvaliable = JwtUtil.verify(token);
-        /**判断当前请求是不是 登录请求地址，并且是未登录状态*/
-         if (isLoginRequest(request, response)&&(ObjectUtils.isEmpty(token)||!tokenIsAvaliable)) {
+        //有效token
+        if(tokenIsAvaliable){
+            /**又是登录请求，已登录系统，无需再登录*/
+            if(isLoginRequest(request, response)){
+                remindHasLogin(response);
+                return false;
+            }else {
+                //token续签
+                LivContextUtils.getBean("apiUserService", UserService.class).reDologinSuccess(WebUtils.toHttp(response),token);
+                return true;
+            }
+        }else if (isLoginRequest(request, response)) {
             /**用来判断当前请求的方法是不是POST，*/
             if (WebUtils.toHttp(request).getMethod().equals(HttpMethod.POST.name())) {
                 return true;
             }else {
+                remindPOST(response); //提醒用户使用POST登录系统
                 return false;
             }
-        }else {
-            //失效或者未登录
-             /**正常访问的链接，判断token是否有效*/
-            if (ObjectUtils.isEmpty(token)||!tokenIsAvaliable) {
-                remindLogin(response); //提醒用户登录系统
-                //返回false终止filter链
-                return false ;
-
-            }else{
-                /**又是登录请求，已登录系统，无需再登录*/
-                if(isLoginRequest(request, response)){
-                    remindHasLogin(response);
-                    return false;
-                }else {
-                    //token续签
-                    LivContextUtils.getBean("userService", UserService.class).reDologinSuccess(WebUtils.toHttp(response),token);
-                    return true;
-                }
-            }
+        }else{
+            remindLogin(response); //提醒用户登录系统
+            //返回false终止filter链
+            return false ;
         }
     }
 
@@ -112,6 +100,18 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
         httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         httpResponse.setContentType("text/html;charset=utf-8");
         httpResponse.getWriter().write(JSON.toJSONString(ResultBody.error(LivExceptionStatus.UNAUTHORIZED,"请登录系统！")));
+    }
+
+    /**
+     * @Author: LiV
+     * @Date: 2020.4.22 10:43
+     * @Description: 用户未登录，返回403
+     **/
+    private void remindPOST(ServletResponse response) throws IOException {
+        HttpServletResponse httpResponse = WebUtils.toHttp(response);
+        httpResponse.setStatus(HttpServletResponse.SC_FORBIDDEN);
+        httpResponse.setContentType("text/html;charset=utf-8");
+        httpResponse.getWriter().write(JSON.toJSONString(ResultBody.error(LivExceptionStatus.FORBIDDEN,"请使用POST请求登录系统！")));
     }
 
     /**

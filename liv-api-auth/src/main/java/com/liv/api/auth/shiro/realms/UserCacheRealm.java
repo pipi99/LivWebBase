@@ -1,6 +1,8 @@
 package com.liv.api.auth.shiro.realms;
 
+import com.liv.api.auth.dao.datamodel.Role;
 import com.liv.api.auth.domainmodel.UserDO;
+import com.liv.api.auth.service.RoleService;
 import com.liv.api.auth.shiro.ShiroRoles;
 import com.liv.api.auth.viewmodel.UserVO;
 import com.liv.api.auth.dao.datamodel.User;
@@ -12,6 +14,8 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
+
+import java.util.List;
 
 /**
  * @author LiV
@@ -34,6 +38,10 @@ public class UserCacheRealm extends AuthorizingRealm {
     @Lazy
     private UserService userService;
 
+    @Autowired
+    @Lazy
+    private RoleService roleService;
+
     @Override
     public boolean supports(AuthenticationToken token) {
         //仅支持UsernamePasswordToken类型的Token
@@ -44,15 +52,32 @@ public class UserCacheRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         //根据用户名查找角色，请根据需求实现
         String username = (String) principals.getPrimaryPrincipal();
-//        SimpleAuthorizationInfo authorizationInfo =  new SimpleAuthorizationInfo();
+
+        //获取当前用户
         UserDO authorizationInfo = new UserDO();
-        UserVO vo = new UserVO();
-        BeanUtils.copyProperties(userService.findByUserName(username),vo);
-        authorizationInfo.setUser(vo);
+        UserVO user = new UserVO();
+        BeanUtils.copyProperties(userService.findByUserName(username),user);
+        authorizationInfo.setUser(user);
 
+        /**用户角色**/
+        List<Role> roleList = roleService.getUserRoles(user.getUserId());
+        for (int i = 0; i <roleList.size() ; i++) {
+            authorizationInfo.addRole(roleList.get(i).getRoleName());
+        }
 
-        //每个人都具有用户角色 // 在初始登录需要获取用户信息的情况下，可以使用此角色，以便缓存用户信息
-        authorizationInfo.addRole(ShiroRoles.USER);
+        /**用户组角色**/
+        roleList = roleService.getGroupRoles(user.getUserId());
+        for (int i = 0; i <roleList.size() ; i++) {
+            authorizationInfo.addRole(roleList.get(i).getRoleName());
+        }
+
+        /**用户权限(本用户名作为角色)**/
+        //用户名 作为本用户唯一角色，支持用户权限
+        authorizationInfo.addRole(user.getUserName());
+
+        //**** 赋予任意角色在初始登录需要获取用户信息的情况下，可以使用此角色，以便shiro缓存用户信息
+        //见 UserServiceImpl.getCurUser()
+        authorizationInfo.addRole(ShiroRoles.ANONYMOUS);
         return authorizationInfo;
     }
 
