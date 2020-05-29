@@ -2,6 +2,7 @@ package com.liv.api.auth.shiro.permission;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.google.common.collect.Lists;
+import com.liv.api.auth.dao.datamodel.Actions;
 import com.liv.api.auth.dao.datamodel.Menu;
 import com.liv.api.auth.dao.datamodel.User;
 import com.liv.api.auth.domainmodel.PermissionDO;
@@ -11,9 +12,11 @@ import com.liv.api.auth.service.RoleService;
 import com.liv.api.auth.shiro.ShiroRoles;
 import com.liv.api.auth.shiro.cache.CacheFactory;
 import com.liv.api.auth.utils.ApiAuthUtils;
+import com.liv.api.auth.utils.AppConst;
 import com.liv.api.auth.viewmodel.UserVO;
 import com.liv.api.base.utils.LivContextUtils;
 import lombok.SneakyThrows;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.Permission;
 import org.apache.shiro.authz.permission.AllPermission;
 import org.apache.shiro.authz.permission.RolePermissionResolver;
@@ -71,7 +74,7 @@ public class LivRolePermissionResolver implements RolePermissionResolver {
 
                 //用菜单的url作为通配符号
                 String resourceFlag = ApiAuthUtils.getInstance(LivContextUtils.getRequest()).getPermissionStrByUrl(menu.getMUrl());
-                BitPermission BitPermission = new BitPermission("+"+resourceFlag+"+1023");
+                BitPermission BitPermission = new BitPermission("+"+resourceFlag+"+"+ AppConst.MAX_BIT_PERMISSION);
                 permissions.add(BitPermission);
             }
 
@@ -86,9 +89,7 @@ public class LivRolePermissionResolver implements RolePermissionResolver {
                 PermissionDO userPermission = userPermissions.get(i);
 
                 //用菜单的url作为通配符号
-                String resourceFlag = ApiAuthUtils.getInstance(LivContextUtils.getRequest()).getPermissionStrByUrl(userPermission.getMUrl());
-                BitPermission BitPermission = new BitPermission("+"+resourceFlag+"+"+userPermission.getPermission());
-                permissions.add(BitPermission);
+                permissions.addAll(createBitPermission(userPermission));
             }
         //角色权限
         }else{
@@ -101,9 +102,7 @@ public class LivRolePermissionResolver implements RolePermissionResolver {
                 PermissionDO rolePermission = rolePermissionList.get(i);
 
                 //用菜单的url作为通配符号
-                String resourceFlag = ApiAuthUtils.getInstance(LivContextUtils.getRequest()).getPermissionStrByUrl(rolePermission.getMUrl());
-                BitPermission BitPermission = new BitPermission("+"+resourceFlag+"+"+rolePermission.getPermission());
-                permissions.add(BitPermission);
+                permissions.addAll(createBitPermission(rolePermission));
             }
         }
 
@@ -111,6 +110,35 @@ public class LivRolePermissionResolver implements RolePermissionResolver {
         CacheFactory.getCache(CacheFactory.ROLE_PERMISSION_CACHE).put(roleString,permissions);
 
         return permissions;
+    }
+
+    private List<BitPermission> createBitPermission(PermissionDO permission){
+        List<BitPermission> bitPermissions = Lists.newArrayList();
+        //用菜单的url作为通配符号
+        if(StringUtils.isNotEmpty(permission.getMUrl())){
+            BitPermission BitPermission = createBitPermission(permission.getMUrl());
+            bitPermissions.add(BitPermission);
+        }
+
+        //按钮的url
+        List<Actions> actions = permission.getActions();
+        if(actions!=null&&actions.size()>0){
+            for (int i = 0; i < actions.size(); i++) {
+                Actions actions1 = actions.get(i);
+                if(StringUtils.isNotEmpty(actions1.getActionUrl())){
+                    bitPermissions.add(createBitPermission(actions1.getActionUrl()));
+                }
+
+            }
+        }
+        return bitPermissions;
+    }
+
+    private BitPermission createBitPermission(String url){
+        //用菜单的url作为通配符号
+        String resourceFlag = ApiAuthUtils.getInstance(LivContextUtils.getRequest()).getPermissionStrByUrl(url);
+        BitPermission BitPermission = new BitPermission("+"+resourceFlag+"+"+ AppConst.MAX_BIT_PERMISSION);
+        return BitPermission;
     }
 
 }

@@ -3,6 +3,7 @@ package com.liv.api.base.annotation;
 import com.google.common.collect.Lists;
 import com.liv.api.base.exception.ValidateException;
 import com.liv.api.base.utils.LivContextUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -24,6 +25,7 @@ import java.util.List;
 
 @Aspect
 @Component
+@Slf4j
 public class ValidResultInterceptor {
     public ValidResultInterceptor() {
     }

@@ -53,16 +53,8 @@ public class ApiAuthUtils {
             url = url.substring(url.indexOf("/")+1);
         }
 
-        String context = request.getServletContext().getContextPath().replace("/","");
-        if(url.startsWith(context)){
-            url = url.replace(context,"");
-        }
-
-        if(url.startsWith("/")){
-            url = url.substring(url.indexOf("/")+1);
-        }
-
-        return url.replaceAll("/","_").replace(context,"");
+        return url.replaceAll("/","_");
     }
+
 
 }

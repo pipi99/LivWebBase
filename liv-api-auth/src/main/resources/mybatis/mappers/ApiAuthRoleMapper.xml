@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.liv.api.auth.dao.RoleMapper">
-
+    <resultMap id="PermissionDOResultMap" type="com.liv.api.auth.domainmodel.PermissionDO">
+        <id property="permissionId" column="permission_id" />
+        <result property="permission" column="permission" />
+        <result property="menuId" column="menu_id" />
+        <result property="menuName" column="menu_name" />
+        <result property="parentId" column="parent_id" />
+        <result property="description" column="description" />
+        <result property="mUrl" column="m_url" />
+        <collection property="actions" column="menu_id"  javaType="ArrayList" ofType="com.liv.api.auth.dao.datamodel.Actions">
+            <id property="actionId" column="ACTION_ID" />
+            <result property="menuId" column="MENU_ID" />
+            <result property="actionName" column="ACTION_NAME" />
+            <result property="description" column="A_DESCRIPTION" />
+            <result property="permission" column="A_PERMISSION" />
+            <result property="actionUrl" column="ACTION_URL" />
+            <result property="actionFun" column="ACTION_FUN" />
+        </collection>
+    </resultMap>
     <select id="findByGroupIds" resultType="com.liv.api.auth.dao.datamodel.Role">
         select
             r.role_name as roleName,
@@ -19,19 +36,30 @@
                 </foreach>
     </select>
 
-    <select id="findPermissionAndResources" resultType="com.liv.api.auth.domainmodel.PermissionDO">
+    <select id="findPermissionAndResources" resultMap="PermissionDOResultMap">
         select
-            a.permission_id as permissionId,
-            permission,
-            resource_id as resourceId,
-            menu_id as menuId,
-            menu_name as menuName,
-            parent_id as parentId,
-            description,
-            m_url as mUrl
+            a.permission_id ,
+            a.permission,
+            resource_id ,
+            b.menu_id ,
+            menu_name ,
+            parent_id ,
+            b.description,
+            m_url ,
+
+            d.ACTION_ID ,
+            d.permission as A_PERMISSION,
+            d.description as a_description,
+            d.ACTION_NAME,
+            d.ACTION_URL ,
+            d.ACTION_FUN
+
         from
-          auth.PERMISSION_RESOURCE a,auth.MENU b,auth.ROLE_PERMISSION c
+          auth.ROLE_PERMISSION c
+          inner join  auth.PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
+          inner join auth.MENU b on a.resource_id=b.MENU_ID
+          left join auth.actions d on b.menu_id=d.menu_id
         where
-            a.resource_id=b.MENU_ID and a.permission_id = c.permission_id and c.role_id=#{roleId}
+          c.role_id=#{roleId}
     </select>
 </mapper>

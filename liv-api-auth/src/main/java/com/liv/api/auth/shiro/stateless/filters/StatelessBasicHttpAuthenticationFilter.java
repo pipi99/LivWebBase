@@ -34,7 +34,7 @@ public class StatelessBasicHttpAuthenticationFilter extends BasicHttpAuthenticat
      **/
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue)  {
-        String token = getRequestToken(request);
+        String token = LivContextUtils.getRequestToken(WebUtils.toHttp(request));
         boolean tokenIsAvaliable = JwtUtil.verify(token);
         /**正常访问的链接，判断token是否有效*/
         if (tokenIsAvaliable) {
@@ -60,26 +60,5 @@ public class StatelessBasicHttpAuthenticationFilter extends BasicHttpAuthenticat
         }
         // 如果没有抛出异常则代表登入成功，返回true
         return true;
-    }
-
-    /**
-     * 获取请求中的token,首先从请求头中获取,如果没有,则尝试从请求参数中获取
-     *
-     * @param request
-     * @return
-     */
-    private String getRequestToken(ServletRequest request) {
-        HttpServletRequest httpReq = WebUtils.toHttp(request);
-
-        String token = AppConst.getCookieJwtToken(httpReq);
-
-        if (StringUtils.isBlank(token)) {
-            token = httpReq.getHeader(AppConst.REQUEST_AUTH_HEADER);
-        }
-
-        if (StringUtils.isBlank(token)) {
-            token = httpReq.getParameter(AppConst.REQUEST_AUTH_HEADER);
-        }
-        return token;
     }
 }

@@ -3,12 +3,14 @@ package com.liv.api.auth.controller;
 import com.liv.api.auth.dao.datamodel.User;
 import com.liv.api.auth.service.UserService;
 import com.liv.api.auth.dao.UserMapper;
+import com.liv.api.base.annotation.AvoidDuplicateSubmission;
 import com.liv.api.base.annotation.ValidResult;
 import com.liv.api.base.base.BaseController;
 import com.liv.api.base.base.ResultBody;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -22,12 +24,13 @@ import javax.validation.Valid;
  **/
 @RestController("api_auth_UserController")
 
-@RequestMapping(value = "/api/user")
+@RequestMapping(value = "/p/api/user")
 @Api(tags = "AUTH_用户管理")
+@Slf4j
 public class UserController extends BaseController<UserMapper, User, UserService> {
     @ApiOperation(value = "根据ID查询用户", notes="根据给定的用户ID 查询用户")
     @ApiImplicitParam(name = "userId", value = "当前登录用户ID", required = true, dataType = "String", paramType = "path",defaultValue = "1")
-    @GetMapping(value="/getById/{userId}")
+    @GetMapping(value="/p/getById/{userId}")
     public ResultBody getById(@PathVariable("userId") Long userId) throws Exception {
         SecurityUtils.getSubject().checkRole("admin");
         return ResultBody.success(service.getById(userId));
@@ -49,7 +52,7 @@ public class UserController extends BaseController<UserMapper, User, UserService
     @ApiOperation(value = "新增用户", notes="新增用户")
     @PostMapping(value="/save")
     @ValidResult
-    public ResultBody save(@RequestBody(required = true) @Valid User d, BindingResult result) {
+    public ResultBody save(@RequestBody(required = true) @Valid User d, BindingResult result) throws InterruptedException {
         return ResultBody.success(service.save(d));
     }
 

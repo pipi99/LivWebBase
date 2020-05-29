@@ -9,13 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="liv-api-auth" />
         <module name="code-generator" />
-        <module name="liv-auth" />
         <module name="liv-api-base" />
         <module name="mm-webDesktop" />
         <module name="alcohol" />
+        <module name="mybatis-generator-lombok-plugin" />
         <module name="gis-server-0.1" />
         <module name="gis-client" />
-        <module name="mybatis-generator-lombok-plugin" />
+        <module name="liv-auth" />
       </profile>
     </annotationProcessing>
   </component>

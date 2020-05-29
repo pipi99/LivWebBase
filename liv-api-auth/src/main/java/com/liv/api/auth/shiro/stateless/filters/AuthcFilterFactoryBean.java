@@ -44,24 +44,33 @@ public class AuthcFilterFactoryBean {
 //        chains.put("/swagger-ui.html", "anon");
 //        chains.put("/swagger-ui.html/**", "anon");
         /**自动弹出登录框*/
-        chains.put("/swagger-ui.html", "anon");
-        chains.put("/swagger-ui.html/**", "anon");
-        chains.put("/swagger-resources/**", "anon");
-        chains.put("/swagger/**", "anon");
-        chains.put("/v2/**", "anon");
-        chains.put("/v2/**", "anon");
-        chains.put("/webjars/**", "anon");
-        chains.put("/configuration/ui", "anon");
-        chains.put("/configuration/security", "anon");
+        chains.put("/swagger-ui.html", "BasicHttpAuthenticationFilter");
+        chains.put("/swagger-ui.html/**", "BasicHttpAuthenticationFilter");
+        chains.put("/swagger-resources/**", "BasicHttpAuthenticationFilter");
+        chains.put("/swagger/**", "BasicHttpAuthenticationFilter");
+        chains.put("/v2/**", "BasicHttpAuthenticationFilter");
+        chains.put("/v2/**", "BasicHttpAuthenticationFilter");
+        chains.put("/webjars/**", "BasicHttpAuthenticationFilter");
+        chains.put("/configuration/ui", "BasicHttpAuthenticationFilter");
+        chains.put("/configuration/security", "BasicHttpAuthenticationFilter");
         chains.put("/csrf", "anon");
-        chains.put("/logout", "anon");
+
+        /**无需登录访问**/
         chains.put("/**/*.js", "anon");
         chains.put("/**/*.png", "anon");
         chains.put("/**/*.jpg", "anon");
         chains.put("/**/*.css", "anon");
+        //无需登录即可访问的链接
+        chains.put("/g/**", "anon");
 
 
-        chains.put("/**", "BasicHttpAuthenticationFilter,StatelessAuthcFilter,PermissionsFilter");
+
+        //登录后授权访问的链接
+        chains.put("/p/**", "StatelessAuthcFilter,PermissionsFilter");
+        chains.put("/**/p/**", "StatelessAuthcFilter,PermissionsFilter");
+
+        //登录后访问的链接
+        chains.put("/**", "StatelessAuthcFilter");
 
         bean.setFilters(filters);
         bean.setFilterChainDefinitionMap(chains);

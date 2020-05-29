@@ -54,7 +54,7 @@ logging:
 
 liv:
   mapProps:
-    usecache: ehcache  #值为 redis / ehcache,使用 redis还是ehcache
+    usecache: redis  #值为 redis / ehcache,使用 redis还是ehcache
     user-login-fail-retry-times: 5   #用户登录失败重试次数
     user-login-fail-locked-time: 10   #用户登录失败锁定时常(分钟)
     user-login-timeouts: 10   #用户登录会话时常（分钟）

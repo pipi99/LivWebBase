@@ -95,7 +95,8 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
         //清空 角色权限缓存
         Cache roleCache = CacheFactory.getCache(CacheFactory.ROLE_PERMISSION_CACHE);
         if(subject.isAuthenticated()){
-            List<Role> roles = roleService.getUserRoles(ApiAuthUtils.getCurrentUser().getUser().getUserId());
+            User user = findByUserName(subject.getPrincipal().toString());
+            List<Role> roles = roleService.getUserRoles(user.getUserId());
             for (int i = 0; i < roles.size(); i++) {
                 roleCache.remove(roles.get(i).getRoleName());
             }
@@ -147,7 +148,7 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
         Subject user = SecurityUtils.getSubject();
         //这里判断用户是否已登录// 判断是否有ANONYMOUS角色，判断角色的动作可以初始化缓存，使得后续可以获取到用户信息
         if(user.isAuthenticated()&&user.hasRole(ShiroRoles.ANONYMOUS)){
-            return (UserDO)CacheFactory.getCache(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME).get(user.getPrincipal()+"");
+            return (UserDO)CacheFactory.getCache(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME).get(user.getPrincipal());
         }
         return null;
     }
@@ -159,7 +160,7 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
      */
     private String getResponseToken() {
         HttpServletResponse httpRep = LivContextUtils.getResponse();
-        String token = httpRep.getHeader(AppConst.REQUEST_AUTH_HEADER);
+        String token = httpRep.getHeader(LivContextUtils.REQUEST_AUTH_HEADER);
         return token;
     }
 

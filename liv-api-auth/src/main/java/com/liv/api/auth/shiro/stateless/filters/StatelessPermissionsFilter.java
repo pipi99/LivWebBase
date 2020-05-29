@@ -28,6 +28,10 @@ import java.io.IOException;
  * @Title:
  * @Package com.liv.shiro.stateless
  * @Description: 权限filter ，验证权限
+ *
+ * 1、根据当前访问地址与用户维护的菜单按钮地址进行匹配是否有访问权限
+ * 2、当访问地址未维护为菜单和按钮配置地址的，则登录即可访问。不做角色权限判断。
+ *
  * @date 2020.4.21  16:04
  * @email 453826286@qq.com
  */
@@ -43,14 +47,13 @@ public class StatelessPermissionsFilter extends PermissionsAuthorizationFilter {
     @Override
     public boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws IOException {
 
-
         Subject subject = SecurityUtils.getSubject();
-        String urlPermissionFlag = WebUtils.toHttp(request).getRequestURI();
+        String urlPermissionFlag = WebUtils.toHttp(request).getServletPath();
         urlPermissionFlag = ApiAuthUtils.getInstance(WebUtils.toHttp(request)).getPermissionStrByUrl(urlPermissionFlag);
 
         //默认0位上是查看权限
         if(!StringUtils.isEmpty(urlPermissionFlag)){
-            //菜单权限过滤
+            //菜单权限过滤  //根据url判断是否有权限
             try{
                 subject.checkPermission("+"+urlPermissionFlag+"+1");
             }catch (Exception e){
@@ -73,26 +76,5 @@ public class StatelessPermissionsFilter extends PermissionsAuthorizationFilter {
         httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         httpResponse.setContentType("text/html;charset=utf-8");
         httpResponse.getWriter().write(JSON.toJSONString(ResultBody.error(LivExceptionStatus.UNAUTHORIZED,"你没有访问"+url+"的权限！")));
-    }
-
-    /**
-     * 获取请求中的token,首先从请求头中获取,如果没有,则尝试从请求参数中获取
-     *
-     * @param request
-     * @return
-     */
-    private String getRequestToken(ServletRequest request) {
-        HttpServletRequest httpReq = WebUtils.toHttp(request);
-
-        String token = AppConst.getCookieJwtToken(httpReq);
-
-        if (StringUtils.isBlank(token)) {
-            token = httpReq.getHeader(AppConst.REQUEST_AUTH_HEADER);
-        }
-
-        if (StringUtils.isBlank(token)) {
-            token = httpReq.getParameter(AppConst.REQUEST_AUTH_HEADER);
-        }
-        return token;
     }
 }

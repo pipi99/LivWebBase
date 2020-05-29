@@ -50,7 +50,7 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
      **/
     @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
-        String token = getRequestToken(request);
+        String token = LivContextUtils.getRequestToken(WebUtils.toHttp(request));
         boolean tokenIsAvaliable = JwtUtil.verify(token);
         //有效token
         if(tokenIsAvaliable){
@@ -114,24 +114,4 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
         httpResponse.getWriter().write(JSON.toJSONString(ResultBody.error(LivExceptionStatus.FORBIDDEN,"请使用POST请求登录系统！")));
     }
 
-    /**
-     * 获取请求中的token,首先从请求头中获取,如果没有,则尝试从请求参数中获取
-     *
-     * @param request
-     * @return
-     */
-    private String getRequestToken(ServletRequest request) {
-        HttpServletRequest httpReq = WebUtils.toHttp(request);
-
-        String token = AppConst.getCookieJwtToken(httpReq);
-
-        if (StringUtils.isBlank(token)) {
-            token = httpReq.getHeader(AppConst.REQUEST_AUTH_HEADER);
-        }
-
-        if (StringUtils.isBlank(token)) {
-            token = httpReq.getParameter(AppConst.REQUEST_AUTH_HEADER);
-        }
-        return token;
-    }
 }

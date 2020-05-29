@@ -3,12 +3,13 @@ package com.liv.api.auth.domainmodel;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.liv.api.auth.dao.datamodel.Actions;
 import io.swagger.annotations.ApiModel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Table: user
@@ -31,7 +32,7 @@ public class PermissionDO implements Serializable {
      *
      * Nullable:  true
      */
-    private String permission;
+    private int permission;
     /**
      * 资源ID
      *
@@ -65,5 +66,26 @@ public class PermissionDO implements Serializable {
      * 菜单链接
      **/
     private String mUrl;
+
+    /**
+     * 菜单下的所有权限操作
+     **/
+    @Getter(AccessLevel.NONE)
+    private List<Actions> actions;
+
+    public List<Actions> getActions() {
+        if(actions!=null&&actions.size()>0){
+            Iterator<Actions> it = actions.iterator();
+            while (it.hasNext()){
+                Actions action = it.next();
+                //无权限
+                if((this.permission&action.getPermission())==0){
+                    it.remove();
+                }
+            }
+        }
+        return this.actions;
+    }
+
     private static final long serialVersionUID = 1L;
 }

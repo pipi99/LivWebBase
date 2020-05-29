@@ -1,6 +1,7 @@
 package com.liv.api.auth.shiro.stateless;
 
 import com.liv.api.auth.utils.AppConst;
+import com.liv.api.base.utils.LivContextUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.SessionContext;
@@ -29,7 +30,7 @@ public class StatelessSessionManager extends DefaultWebSessionManager {
     /**
      * token交互
      */
-    public final static String TOKEN_NAME = AppConst.REQUEST_AUTH_HEADER, HEADER_TOKEN_NAME = AppConst.REQUEST_AUTH_HEADER;
+    public final static String TOKEN_NAME = LivContextUtils.REQUEST_AUTH_HEADER, HEADER_TOKEN_NAME = LivContextUtils.REQUEST_AUTH_HEADER;
 
 
     @Override

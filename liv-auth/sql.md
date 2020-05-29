@@ -167,4 +167,21 @@ create table GROUP_ROLE
    GROUP_ID             bigint                         null comment '用户组ID'
 ) comment '用户组';
 
+
+drop table if exists ACTIONS;
+
+/*==============================================================*/
+/* Table: ACTIONS                                               */
+/*==============================================================*/
+create table ACTIONS 
+(
+   ACTION_ID            bigint                         not null primary key auto_increment comment '主键',
+   MENU_ID              bigint                         null comment '所属菜单',
+   ACTION_NAME          varchar(200)                   null comment '操作名称',
+   DESCRIPTION          varchar(200)                   null comment '操作说明',
+   PERMISSION           int                            null comment '权限位 1-32   ',
+   ACTION_URL           varchar(2000)                  null comment '权限字符串操作链接（rest风格需要指定参数以前部分）',
+   ACTION_FUN           varchar(2000)                  null comment '操作函数'
+) comment '菜单操作（按钮）';
+
 ```

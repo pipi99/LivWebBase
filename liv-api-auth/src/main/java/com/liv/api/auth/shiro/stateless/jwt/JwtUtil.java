@@ -7,6 +7,7 @@ import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.liv.api.auth.shiro.cache.CacheFactory;
 import com.liv.api.auth.utils.AppConst;
+import com.liv.api.base.utils.LivContextUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.subject.PrincipalCollection;
@@ -164,7 +165,7 @@ public class JwtUtil {
      **/
     public static void cookieHeaderToken(HttpServletResponse response,String  jwttoken){
         //Cookie存储token
-        Cookie cookie = new Cookie(AppConst.REQUEST_AUTH_HEADER, jwttoken);
+        Cookie cookie = new Cookie(LivContextUtils.REQUEST_AUTH_HEADER, jwttoken);
         //值大于0, 将cookie存储于本地磁盘, 过期后删除；值小于0, cookie不会保存于本地, 浏览器会话结束后, 将会删除
         cookie.setMaxAge(-1);
         cookie.setHttpOnly(true);
@@ -173,8 +174,8 @@ public class JwtUtil {
         response.addCookie(cookie);
 
         //header
-        response.setHeader("Access-Control-Expose-Headers", AppConst.REQUEST_AUTH_HEADER);
-        response.setHeader(AppConst.REQUEST_AUTH_HEADER, jwttoken);
+        response.setHeader("Access-Control-Expose-Headers", LivContextUtils.REQUEST_AUTH_HEADER);
+        response.setHeader(LivContextUtils.REQUEST_AUTH_HEADER, jwttoken);
     }
 
 

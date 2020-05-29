@@ -11,8 +11,8 @@ import com.liv.api.auth.shiro.cache.EhCacheManager;
 import com.liv.api.auth.shiro.realms.UserCacheRealm;
 import com.liv.api.auth.shiro.realms.UserRealm;
 import com.liv.api.auth.utils.AppConst;
-import com.liv.api.auth.utils.LivPropertiesUtils;
 import com.liv.api.auth.utils.PasswordHelper;
+import com.liv.api.base.utils.LivPropertiesUtils;
 import org.apache.shiro.authc.credential.CredentialsMatcher;
 import org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy;
 import org.apache.shiro.authc.pam.ModularRealmAuthenticator;
@@ -28,6 +28,7 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.mgt.DefaultWebSubjectFactory;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.MethodInvokingFactoryBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -37,6 +38,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.web.filter.DelegatingFilterProxy;
 
+import javax.annotation.Resource;
 import javax.servlet.DispatcherType;
 import java.util.List;
 
@@ -52,6 +54,9 @@ import java.util.List;
 @Configuration
 @EnableConfigurationProperties({JwtProperties.class, LivPropertiesUtils.class})
 public class StatelessShiroConfig {
+
+    @Resource(type = com.liv.api.base.utils.LivPropertiesUtils.class)
+    LivPropertiesUtils livPropertiesUtils;
     /**
      * @Author: LiV
      * @Date: 2020.4.23 09:01
@@ -248,7 +253,8 @@ public class StatelessShiroConfig {
 
     @Bean(name = "shiroCacheManager")
     public CacheManager cacheManager(){
-        if("redis".equals(AppConst.USE_CACHE)){
+        //默认为ehcache
+        if("redis".equals(livPropertiesUtils.getMapProps().get("usecache"))){
             return new RedisCacheManager();
         }else{
 //            EhCacheManager cacheManager = new EhCacheManager();

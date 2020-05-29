@@ -3,6 +3,8 @@ package com.liv.api.base.config;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import com.liv.api.base.utils.LivPropertiesUtils;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -18,7 +20,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/**s
  * @author LiV
  * @Title:
  * @Package com.liv.config
@@ -27,6 +29,7 @@ import java.util.List;
  * @email 453826286@qq.com
  */
 @Configuration
+@EnableConfigurationProperties({ LivPropertiesUtils.class})
 public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     /**
      * @return void

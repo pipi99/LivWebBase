@@ -1,11 +1,10 @@
 package com.liv.api.auth.utils;
 
+import com.liv.api.base.utils.LivPropertiesUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author LiV
@@ -31,12 +30,13 @@ public class AppConst {
     /**用户使用的缓存类型*/
     public static String USE_CACHE = "redis";
 
-    //request请求头属性
-    public static String REQUEST_AUTH_HEADER="x-auth-token";
     //JWT-account
     public static String ACCOUNT = "account";
     //JWT-currentTimeMillis
     public static String CURRENT_TIME_MILLIS = "currentTimeMillis";
+
+    //最大支持的权限位数 。10个权限
+    public static int MAX_BIT_PERMISSION = 1023;
 
 
     @PostConstruct
@@ -47,22 +47,5 @@ public class AppConst {
         USER_LOGIN_FAIL_LOCKED_TIME = livPropertiesUtils.getMapProps().get("user-login-fail-locked-time")==null?USER_LOGIN_FAIL_LOCKED_TIME:Integer.parseInt(livPropertiesUtils.getMapProps().get("user-login-fail-locked-time"));
         USE_CACHE = livPropertiesUtils.getMapProps().get("usecache")==null?USE_CACHE:livPropertiesUtils.getMapProps().get("usecache");
     }
-    /**
-     * @Author: LiV
-     * @Date: 2020.4.22 16:05
-     * @Description: 获取cookie的jwt
-     **/
-    public static String getCookieJwtToken(HttpServletRequest req){
-        Cookie[] cookies = req.getCookies();
-        if(cookies != null){
-            for (Cookie cookie : cookies) {
-                String cookieName = cookie.getName();
-                String cookieValue = cookie.getValue();//根据Cookie的名字获取对应的请求头的值
-                if(REQUEST_AUTH_HEADER.equals(cookieName)){
-                    return cookieValue;
-                }
-            }
-        }
-        return null;
-    }
+
 }
