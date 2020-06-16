@@ -6,6 +6,7 @@
     
 二、搭建参考网址：
     前端: https://d2.pub/zh/doc/d2-admin/     https://github.com/d2-projects
+    https://github.com/greper/d2-crud-plus
     中文教程：http://www.w3cschool.cn/shiro/ac781ife.html
     加密：https://www.cnblogs.com/mozq/p/11761896.html
     按钮控制：https://blog.csdn.net/kity9420/article/details/102330886

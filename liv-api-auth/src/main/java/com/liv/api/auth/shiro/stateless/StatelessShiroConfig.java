@@ -228,10 +228,13 @@ public class StatelessShiroConfig {
         UserCacheRealm realm = new UserCacheRealm();
         realm.setCredentialsMatcher(credentialsMatcher());
         realm.setCachingEnabled(true);
+
         realm.setAuthorizationCachingEnabled(true);
         realm.setAuthorizationCacheName(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME);
+
         realm.setAuthenticationCachingEnabled(true);
         realm.setAuthenticationCacheName(CacheFactory.SHIRO_AUTHENTICATIONCACHENAME);
+
         realm.setCacheManager(cacheManager());
         return realm;
     }

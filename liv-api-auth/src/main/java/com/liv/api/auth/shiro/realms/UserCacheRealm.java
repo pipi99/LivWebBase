@@ -26,10 +26,10 @@ import java.util.List;
  * @email 453826286@qq.com
  */
 public class UserCacheRealm extends AuthorizingRealm {
-
+    public  static final String REAL_NAME = "livUserCacheRealm";
     @Override
     public String getName() {
-        return "livUserCacheRealm";
+        return REAL_NAME;
     }
     /**
      * 注意此处需要添加@Lazy注解，否则UserService缓存注解、事务注解不生效

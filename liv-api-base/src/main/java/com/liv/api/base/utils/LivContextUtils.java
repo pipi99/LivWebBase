@@ -6,6 +6,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
+import org.springframework.util.ReflectionUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -14,6 +15,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.lang.reflect.Method;
 
 /**
  * @author LiV
@@ -75,6 +77,29 @@ public class LivContextUtils implements ApplicationContextAware {
         return getApplicationContext().getBean(name, clazz);
     }
 
+    /**
+     *
+     * @param serviceName
+     * @param methodName
+     * @param params
+     * @return
+     * @throws Exception
+     */
+    public static Object springInvokeMethod(String serviceName, String methodName, Object... params) throws Exception {
+        Object service = getBean(serviceName);
+        Class<? extends Object>[] paramClass = null;
+        if (params != null) {
+            int paramsLength = params.length;
+            paramClass = new Class[paramsLength];
+            for (int i = 0; i < paramsLength; i++) {
+                paramClass[i] = params[i].getClass();
+            }
+        }
+        // 找到方法
+        Method method = ReflectionUtils.findMethod(service.getClass(), methodName, paramClass);
+        // 执行方法
+        return ReflectionUtils.invokeMethod(method, service, params);
+    }
     //request请求头属性
     public static String REQUEST_AUTH_HEADER="x-auth-token";
     /**

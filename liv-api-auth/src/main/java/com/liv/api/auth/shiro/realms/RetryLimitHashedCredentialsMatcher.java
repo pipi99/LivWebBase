@@ -81,6 +81,7 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
         }
         //修改数据库的状态字段为解锁
         user.setLocked("0");
+        user.setLocktime(null);
         userService.updateById(user);
         //密码错误，重试次数
         CacheFactory.getPasswordRetryCache().remove(username);

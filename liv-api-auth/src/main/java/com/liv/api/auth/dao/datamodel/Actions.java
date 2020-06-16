@@ -52,7 +52,10 @@ public class Actions {
      **/
     private Long  menuId;
 
-
+    /**
+     * 图标
+     **/
+    private String icon;
     /**
      * 操作说明
      **/

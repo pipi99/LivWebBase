@@ -2,7 +2,6 @@ package com.liv.auth.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.liv.auth.dao.datamodel.Organ;
-import com.liv.auth.dao.datamodel.User;
 
 /**
  * @author LiV

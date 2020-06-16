@@ -1,32 +1,30 @@
-package com.liv.auth.dao.datamodel;
+package com.liv.api.auth.domainmodel;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiModel;
-import lombok.AllArgsConstructor;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.liv.api.auth.dao.datamodel.User;
+import com.liv.api.base.base.BaseBean;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Table: user
+ * @author LiV
+ * @Title:
+ * @Package com.liv.api.auth.domainmodel
+ * @Description: 用户查询类
+ * @date 2020.6.9  10:11
+ * @email 453826286@qq.com
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ApiModel(value = "User", description = "用户实体")
-@TableName("auth.user")
-public class User implements Serializable {
+public class UserQuery extends BaseBean<User> {
     /**
      * 主键
      *
      * Nullable:  false
      */
-    @TableId
     private Long userId;
 
     /**
@@ -34,7 +32,6 @@ public class User implements Serializable {
      *
      * Nullable:  true
      */
-    @NotBlank(message = "用户名称不能为空")
     private String userName;
 
     /**
@@ -42,7 +39,6 @@ public class User implements Serializable {
      *
      * Nullable:  true
      */
-    @NotEmpty(message = "所属组织机构不能为空")
     private Long orgId;
 
     /**
@@ -50,7 +46,6 @@ public class User implements Serializable {
      *
      * Nullable:  true
      */
-    @NotBlank(message = "姓名不能为空")
     private String alias;
 
     /**
@@ -79,7 +74,7 @@ public class User implements Serializable {
      *
      * Nullable:  true
      */
-    private Integer degree;
+    private String degree;
 
     /**
      * 出生年月日
@@ -103,19 +98,6 @@ public class User implements Serializable {
     private Date createDate;
 
     /**
-     * 密码
-     *
-     * Nullable:  true
-     */
-    @NotBlank(message = "密码不能为空")
-    private String password;
-
-    /**
-     * Nullable:  true
-     */
-    private String salt;
-
-    /**
      * @Author: LiV
      * @Date: 2020.4.19 20:42
      * @Description: 是否锁定  1是 0否
@@ -129,9 +111,13 @@ public class User implements Serializable {
      */
     private Date locktime;
 
-    public String getCredentialsSalt(){
-        return this.userName+this.salt;
-    }
+    @Override
+    public QueryWrapper<User> getQueryWrapper() {
+        QueryWrapper qw = new QueryWrapper();
+        if(StringUtils.isNotEmpty(this.alias)){
+            qw.like("ALIAS",this.alias);
+        }
 
-    private static final long serialVersionUID = 1L;
+        return qw;
+    }
 }

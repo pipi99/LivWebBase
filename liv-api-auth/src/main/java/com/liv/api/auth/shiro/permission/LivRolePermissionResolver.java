@@ -63,20 +63,20 @@ public class LivRolePermissionResolver implements RolePermissionResolver {
 
 
         }else if(ShiroRoles.ANONYMOUS.equalsIgnoreCase(roleString)) {
-            //TODO 任意角色权限  // 拥有不必授权可访问的菜单权限
-            MenuService menuService = LivContextUtils.getBean("apiMenuService", MenuService.class);
-            QueryWrapper<Menu> queryWrapper = new QueryWrapper();
-            queryWrapper.eq("IS_SHARE","1");
-            List<Menu> menus = menuService.list(queryWrapper);
-            //把角色拥有的权限赋拼接通配符赋予角色
-            for (int i = 0; i < menus.size(); i++) {
-                Menu menu = menus.get(i);
-
-                //用菜单的url作为通配符号
-                String resourceFlag = ApiAuthUtils.getInstance(LivContextUtils.getRequest()).getPermissionStrByUrl(menu.getMUrl());
-                BitPermission BitPermission = new BitPermission("+"+resourceFlag+"+"+ AppConst.MAX_BIT_PERMISSION);
-                permissions.add(BitPermission);
-            }
+//
+//            MenuService menuService = LivContextUtils.getBean("apiMenuService", MenuService.class);
+//            QueryWrapper<Menu> queryWrapper = new QueryWrapper();
+//            queryWrapper.eq("ACCESS_CTRL",AppConst.MENU_LOGIN);
+//            List<Menu> menus = menuService.list(queryWrapper);
+//            //把角色拥有的权限赋拼接通配符赋予角色
+//            for (int i = 0; i < menus.size(); i++) {
+//                Menu menu = menus.get(i);
+//
+//                //用菜单的url作为通配符号
+//                String resourceFlag = ApiAuthUtils.getInstance(LivContextUtils.getRequest()).getPermissionStrByUrl(menu.getMUrl());
+//                BitPermission BitPermission = new BitPermission("+"+resourceFlag+"+"+ AppConst.MAX_BIT_PERMISSION);
+//                permissions.add(BitPermission);
+//            }
 
             //用户权限（用户名 模拟角色）
         }else if(roleString.equals(userPermissionsRoleString)){

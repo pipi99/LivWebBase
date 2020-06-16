@@ -70,7 +70,7 @@ public class UserVO implements Serializable {
      *
      * Nullable:  true
      */
-    private Integer degree;
+    private String degree;
 
     /**
      * 出生年月日

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liv.api.auth.dao.MenuMapper">
+    <resultMap id="MenuDOResultMap" type="com.liv.api.auth.domainmodel.MenuDO">
+        <id property="id" column="menu_id" />
+        <result property="permission" column="permission" />
+        <result property="accessCtrl" column="access_ctrl" />
+        <result property="title" column="menu_name" />
+        <result property="parentId" column="parent_id" />
+        <result property="description" column="description" />
+        <result property="path" column="m_url" />
+        <result property="icon" column="icon" />
+        <collection property="actions" column="menu_id"  javaType="ArrayList" ofType="com.liv.api.auth.dao.datamodel.Actions">
+            <id property="actionId" column="ACTION_ID" />
+            <result property="menuId" column="MENU_ID" />
+            <result property="actionName" column="ACTION_NAME" />
+            <result property="description" column="A_DESCRIPTION" />
+            <result property="permission" column="A_PERMISSION" />
+            <result property="actionUrl" column="ACTION_URL" />
+            <result property="actionFun" column="ACTION_FUN" />
+            <result property="icon" column="A_ICON" />
+        </collection>
+    </resultMap>
+    <select id="findCurUserMenus" resultMap="MenuDOResultMap">
+    select
+            a.permission,
+            b.menu_id ,
+            access_ctrl,
+            menu_name ,
+            parent_id ,
+            b.description,
+            b.icon,
+            m_url ,
+
+            d.ACTION_ID ,
+            d.permission as a_permission,
+            d.description as a_description,
+            d.icon as a_icon,
+            d.ACTION_NAME,
+            d.ACTION_URL ,
+            d.ACTION_FUN
+    from
+        auth.USER_PERMISSION c
+        inner join auth.PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
+        inner join auth.MENU b on a.resource_id=b.MENU_ID
+        left join auth.actions d on b.menu_id=d.menu_id
+    where
+        b.ACCESS_CTRL = 'perm'
+          and
+         c.user_id=#{userId}
+    </select>
+
+
+    <select id="findRoleMenus" resultMap="MenuDOResultMap">
+        select
+            a.permission,
+            b.menu_id ,
+            access_ctrl,
+            menu_name ,
+            parent_id ,
+            b.description,
+            b.icon,
+            m_url ,
+
+            d.ACTION_ID ,
+            d.permission as a_permission,
+            d.description as a_description,
+            d.icon as a_icon,
+            d.ACTION_NAME,
+            d.ACTION_URL ,
+            d.ACTION_FUN
+
+        from
+          auth.ROLE_PERMISSION c
+          inner join  auth.PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
+          inner join auth.MENU b on a.resource_id=b.MENU_ID
+          left join auth.actions d on b.menu_id=d.menu_id
+        where
+            b.ACCESS_CTRL = 'perm'
+            and c.role_id IN
+            <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+                #{id}
+            </foreach>
+    </select>
+
+    <select id="findNoPermMenus" resultMap="MenuDOResultMap">
+        select
+        b.menu_id ,
+        menu_name ,
+        access_ctrl,
+        parent_id ,
+        b.description,
+        b.icon,
+        m_url ,
+
+        d.ACTION_ID ,
+        d.permission as a_permission,
+        d.description as a_description,
+        d.icon as a_icon,
+        d.ACTION_NAME,
+        d.ACTION_URL ,
+        d.ACTION_FUN
+
+        from
+        auth.MENU b
+        left join auth.actions d on b.menu_id=d.menu_id
+        where b.ACCESS_CTRL &lt;&gt; 'perm'
+    </select>
+</mapper>

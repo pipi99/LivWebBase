@@ -39,6 +39,12 @@ public class AppConst {
     public static int MAX_BIT_PERMISSION = 1023;
 
 
+    //菜单状态
+    public static String MENU_LOGIN  = "login";// 登录访问
+    public static String MENU_PERM  = "perm";// 授权访问
+    public static String MENU_OPEN  = "open";// 任意访问
+
+
     @PostConstruct
     private void constInit(){
         LOG_FAIL_RETRY_TIMES = livPropertiesUtils.getMapProps().get("user-login-fail-retry-times")==null?LOG_FAIL_RETRY_TIMES:Integer.parseInt(livPropertiesUtils.getMapProps().get("user-login-fail-retry-times"));

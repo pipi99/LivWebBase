@@ -44,7 +44,7 @@ public class ResultBody {
      * @return
      */
     public static ResultBody success() {
-        return success(null);
+        return success("操作成功！");
     }
 
     /**
@@ -96,11 +96,11 @@ public class ResultBody {
     /**
      * 失败
      */
-    public static ResultBody error( String message) {
+    public static ResultBody error( String result) {
         ResultBody rb = new ResultBody();
         rb.setCode(500);
-        rb.setMessage(message);
-        rb.setResult(null);
+        rb.setMessage("操作失败！");
+        rb.setResult(result);
         return rb;
     }
 }

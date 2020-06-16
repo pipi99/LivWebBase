@@ -31,6 +31,7 @@ import java.util.List;
 @Configuration
 @EnableConfigurationProperties({ LivPropertiesUtils.class})
 public class WebMvcConfiguration extends WebMvcConfigurationSupport {
+
     /**
      * @return void
      * @Description 全局fastJson替换

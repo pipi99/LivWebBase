@@ -31,7 +31,7 @@
         where
             r.ROLE_ID = gr.role_id and r.DEL=0
                 and gr.group_id IN
-                <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
+                <foreach collection="list" item="id" index="index" open="(" close=")" separator="," >
                     #{id}
                 </foreach>
     </select>

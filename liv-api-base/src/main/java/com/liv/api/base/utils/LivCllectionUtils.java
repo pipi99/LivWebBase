@@ -61,7 +61,8 @@ public class LivCllectionUtils {
     private static <T> void fillTree(List<T> parentList, List<T> originalList, String keyName, String parentFieldName, String childrenFieldName) throws Exception {
         for (int i = 0; i < parentList.size(); i++) {
             T parent = parentList.get(i);
-            String parentId = BeanUtils.getProperty(parent, keyName);
+            String parentId = BeanUtils.getSimpleProperty(parent, keyName);
+             parentId = BeanUtils.getProperty(parent, keyName);
 
             List<T> childList = null;
             Iterator<T> originalIt = originalList.iterator();
@@ -85,4 +86,6 @@ public class LivCllectionUtils {
             fillTree(childList, originalList, keyName, parentFieldName, childrenFieldName);
         }
     }
+
+
 }

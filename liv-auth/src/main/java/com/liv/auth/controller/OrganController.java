@@ -4,11 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.liv.api.base.annotation.ValidResult;
-import com.liv.api.base.base.BaseController;
 import com.liv.api.base.base.ResultBody;
+import com.liv.api.base.base.BaseController;
 import com.liv.auth.dao.OrganMapper;
 import com.liv.auth.dao.datamodel.Organ;
-import com.liv.auth.dao.datamodel.User;
 import com.liv.auth.service.OrganService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -45,10 +44,10 @@ public class OrganController extends BaseController<OrganMapper, Organ, OrganSer
     }
 
     @ApiOperation(value = "分页查询组织机构列表", notes="分页查询组织机构列表")
-    @PostMapping(value="/pagelist")
-    public IPage<Organ> pagelist(int pageIndex,int pageSize,@RequestBody Organ o) throws Exception {
-        QueryWrapper<Organ> wrapper = new QueryWrapper(o);
-        Page<Organ> page = new Page<>(1,2);
+    @GetMapping(value="/pagelist")
+    public IPage<Organ> pagelist( int pageIndex, int pageSize) throws Exception {
+        QueryWrapper<Organ> wrapper = new QueryWrapper();
+        Page<Organ> page = new Page<>(pageIndex,pageSize);
         IPage<Organ> pageList = service.page(page,wrapper);
         return pageList;
     }
@@ -57,20 +56,30 @@ public class OrganController extends BaseController<OrganMapper, Organ, OrganSer
     @PostMapping(value="/save")
     @ValidResult
     public ResultBody save(@RequestBody(required = true) @Valid Organ d, BindingResult result) {
-        return ResultBody.success(service.save(d));
+        service.save(d);
+        return ResultBody.success("保存成功");
     }
 
     @ApiOperation(value = "更新组织机构", notes="组织机构更新组织机构,根据主键id更新")
     @PutMapping(value="/update")
     @ValidResult
     public ResultBody update(@RequestBody(required = true) @Valid Organ d, BindingResult result) {
-        return ResultBody.success(service.updateById(d));
+        service.updateById(d);
+        return ResultBody.success("修改成功");
     }
 
     @ApiOperation(value = "删除组织机构", notes="删除组织机构,根据主键id删除")
     @DeleteMapping(value="/remove/{id}")
     public ResultBody delete(@PathVariable("id") Long id){
-        return ResultBody.success(service.removeById(id));
+        service.removeById(id);
+        return ResultBody.success("删除成功");
+    }
+
+    @ApiOperation(value = "批量删除组织机构", notes="删除组织机构,根据主键id删除")
+    @PostMapping(value="/remove")
+    public ResultBody delete(@RequestBody List<Long> ids){
+        service.removeByIds(ids);
+        return ResultBody.success("删除成功");
     }
 
 }

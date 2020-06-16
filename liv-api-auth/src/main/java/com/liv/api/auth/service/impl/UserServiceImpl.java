@@ -1,31 +1,41 @@
 package com.liv.api.auth.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.google.common.collect.Lists;
 import com.liv.api.auth.dao.datamodel.Role;
 import com.liv.api.auth.domainmodel.UserDO;
+import com.liv.api.auth.domainmodel.UserQuery;
 import com.liv.api.auth.service.RoleService;
 import com.liv.api.auth.shiro.ShiroRoles;
+import com.liv.api.auth.shiro.realms.UserCacheRealm;
 import com.liv.api.auth.shiro.stateless.jwt.JwtUtil;
 import com.liv.api.auth.dao.UserMapper;
 import com.liv.api.auth.dao.datamodel.User;
 import com.liv.api.auth.service.UserService;
 import com.liv.api.auth.shiro.cache.CacheFactory;
 import com.liv.api.auth.shiro.realms.RetryLimitHashedCredentialsMatcher;
-import com.liv.api.auth.utils.ApiAuthUtils;
 import com.liv.api.auth.utils.AppConst;
 import com.liv.api.auth.utils.PasswordHelper;
+import com.liv.api.auth.viewmodel.UserVO;
 import com.liv.api.base.base.BaseService;
+import com.liv.api.base.base.DataBody;
 import com.liv.api.base.utils.LivContextUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.SimplePrincipalCollection;
 import org.apache.shiro.subject.Subject;
+import org.apache.shiro.web.servlet.ShiroHttpServletResponse;
+import org.apache.shiro.web.util.WebUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -49,18 +59,34 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
     @Override
     public String dologin(String username, String password) {
         Subject user = SecurityUtils.getSubject();
+        //清除缓存
+        clearCache(username);
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, password);
         //执行登录
         user.login(usernamePasswordToken);
-        return dologinSuccess( user, LivContextUtils.getResponse()) ;
+        return dologinSuccess( LivContextUtils.getResponse()) ;
     }
 
     @Override
     public String dologin(UsernamePasswordToken token,HttpServletResponse response) {
-        Subject user = SecurityUtils.getSubject();
+        Subject subject = SecurityUtils.getSubject();
+        //清除缓存
+        clearCache(token.getUsername());
+
+        //////swagger的接口调试，支持随意用户名登录，用户不存在自动创建一个
+        User user = this.findByUserName(token.getUsername());
+        if(user==null){
+            user = new User();
+            user.setUserName(token.getUsername());
+            user.setAlias(token.getUsername());
+            user.setPassword(new String(token.getPassword()));
+            user.setTemp("1");
+            this.reg(user);
+        }
+
         //执行登录
-        user.login(token);
-        return dologinSuccess( user,response) ;
+        subject.login(token);
+        return dologinSuccess( response) ;
     }
 
     /**
@@ -68,9 +94,9 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
      * @Date: 2020.4.27 16:02
      * @Description: 登录成功的操作
      **/
-    private String dologinSuccess(Subject user,HttpServletResponse response) {
-        //清除缓存
-        clearCache();
+    private String dologinSuccess(HttpServletResponse response) {
+
+        Subject user = SecurityUtils.getSubject();
         //生成token
         String jwttoken = JwtUtil.sign((String)user.getPrincipals().getPrimaryPrincipal());
         //返回token到reponse
@@ -86,17 +112,17 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
      * @Date: 2020.5.26 17:14
      * @Description: 清空用户相关缓存
      **/
-    public void clearCache(){
+    public void clearCache(String userName){
         //清空认证缓存
-        Subject subject = SecurityUtils.getSubject();
-        CacheFactory.getCache(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME).remove(subject.getPrincipal());
-        CacheFactory.getCache(CacheFactory.SHIRO_AUTHENTICATIONCACHENAME).remove(subject.getPrincipal());
+        SimplePrincipalCollection principals = new SimplePrincipalCollection(userName,UserCacheRealm.REAL_NAME);
+        CacheFactory.getCache(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME).remove(principals);
+        CacheFactory.getCache(CacheFactory.SHIRO_AUTHENTICATIONCACHENAME).remove(principals);
 
         //清空 角色权限缓存
         Cache roleCache = CacheFactory.getCache(CacheFactory.ROLE_PERMISSION_CACHE);
-        if(subject.isAuthenticated()){
-            User user = findByUserName(subject.getPrincipal().toString());
-            List<Role> roles = roleService.getUserRoles(user.getUserId());
+        Subject user = SecurityUtils.getSubject();
+        if(user.isAuthenticated()){
+            List<Role> roles = roleService.getUserRoles(getCurUser().getUser().getUserId());
             for (int i = 0; i < roles.size(); i++) {
                 roleCache.remove(roles.get(i).getRoleName());
             }
@@ -105,24 +131,52 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
             roleCache.remove(ShiroRoles.GUEST);
             roleCache.remove(ShiroRoles.USER);
             roleCache.remove(ShiroRoles.ANONYMOUS);
-            roleCache.remove(subject.getPrincipal());
+            roleCache.remove(userName);
         }
     }
+
+    @Override
+    public Page<UserVO> pagelist(UserQuery query) {
+        IPage<User> pageList = this.page(query.getPage(),query.getQueryWrapper());
+
+        //最终的结果集  userVo 去除敏感信息
+        List<UserVO> result = Lists.newArrayList();
+        Page<UserVO> resultList = new Page<>();
+        BeanUtils.copyProperties(pageList,resultList);
+        resultList.setRecords(result);
+
+        for (int i = 0; i <pageList.getRecords().size() ; i++) {
+            UserVO user = new UserVO();
+            BeanUtils.copyProperties(pageList.getRecords().get(i),user);
+            result.add(user);
+        }
+        return resultList;
+    }
+
     /**
      * @Author: LiV
      * @Date: 2020.4.27 16:02
      * @Description: 刷新缓存的操作//每次请求需要更新缓存//
      * 参考：StatelessAccessControlFilter.java
      **/
-    public void reDologinSuccess(HttpServletResponse response,String token) {
+    //每次请求返回都携带token
+    public void refreshToken(HttpServletResponse response,String token) {
         boolean renewalToken = "true".equals(AppConst.USER_LOGIN_TOKEN_RENEWAL_ONACCESS);
         //返回token到reponse
-        String newtoken = JwtUtil.tokenStore(response,token,renewalToken);
-        if(renewalToken){
-            //缓存刷新用户登录信息
-            CacheFactory.getLoginSuccessSubjectCache().put(newtoken,CacheFactory.getLoginSuccessSubjectCache().get(token));
-            CacheFactory.getLoginSuccessSubjectCache().remove(token);
-        }
+        JwtUtil.tokenStore(response,token,renewalToken);
+
+    }
+
+
+    /**
+     * @Author: LiV
+     * @Date: 2020.4.27 16:02
+     * @Description: 供反射调用
+     * 参考：tokenInterceptor反射调用
+     **/
+    //每次请求返回都携带token
+    public void refreshToken(ShiroHttpServletResponse response,String token) {
+        refreshToken(WebUtils.toHttp( response),token);
     }
 
     /**
@@ -135,7 +189,10 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
         Subject subject = SecurityUtils.getSubject();
 
         //清除缓存
-        clearCache();
+        if(subject.getPrincipal()!=null){
+            clearCache(subject.getPrincipal().toString());
+        }
+
         //退出的话还是用 response中的token，request中的有可能已经被更新，与缓存中不一致
         CacheFactory.getLoginSuccessSubjectCache().remove(getResponseToken());
 
@@ -148,7 +205,7 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
         Subject user = SecurityUtils.getSubject();
         //这里判断用户是否已登录// 判断是否有ANONYMOUS角色，判断角色的动作可以初始化缓存，使得后续可以获取到用户信息
         if(user.isAuthenticated()&&user.hasRole(ShiroRoles.ANONYMOUS)){
-            return (UserDO)CacheFactory.getCache(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME).get(user.getPrincipal());
+            return (UserDO)CacheFactory.getCache(CacheFactory.SHIRO_AUTHORIZATIONCACHENAME).get(user.getPrincipals());
         }
         return null;
     }
@@ -170,6 +227,7 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
      * @Description: 用户注册
      **/
     public boolean reg(User user){
+        user.setCreateDate(new Date());
         PasswordHelper.encryptNewUserPassword(user);
         return mapper.insert(user)>0;
     }

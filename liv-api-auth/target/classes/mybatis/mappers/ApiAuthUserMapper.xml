@@ -9,6 +9,7 @@
         <result property="parentId" column="parent_id" />
         <result property="description" column="description" />
         <result property="mUrl" column="m_url" />
+        <result property="icon" column="icon" />
         <collection property="actions" column="menu_id"  javaType="ArrayList" ofType="com.liv.api.auth.dao.datamodel.Actions">
             <id property="actionId" column="ACTION_ID" />
             <result property="menuId" column="MENU_ID" />
@@ -17,6 +18,7 @@
             <result property="permission" column="A_PERMISSION" />
             <result property="actionUrl" column="ACTION_URL" />
             <result property="actionFun" column="ACTION_FUN" />
+            <result property="icon" column="A_ICON" />
         </collection>
     </resultMap>
     <select id="findPermissionAndResources" resultMap="PermissionDOResultMap">
@@ -25,6 +27,7 @@
             a.permission,
             resource_id ,
             b.menu_id ,
+            b.icon ,
             menu_name ,
             parent_id ,
             b.description,
@@ -33,6 +36,7 @@
             d.ACTION_ID ,
             d.permission as a_permission,
             d.description as a_description,
+            d.icon as a_icon,
             d.ACTION_NAME,
             d.ACTION_URL ,
             d.ACTION_FUN

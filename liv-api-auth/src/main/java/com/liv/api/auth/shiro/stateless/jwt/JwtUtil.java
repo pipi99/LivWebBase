@@ -6,6 +6,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.liv.api.auth.shiro.cache.CacheFactory;
+import com.liv.api.auth.shiro.stateless.TokenHandle;
 import com.liv.api.auth.utils.AppConst;
 import com.liv.api.base.utils.LivContextUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -81,6 +82,7 @@ public class JwtUtil {
     private static boolean bindSubject(String  jwttoken){
         /****每次必须绑定登录用户到线程中，否则无法控制权限***/
         PrincipalCollection principalCollection = subjectCache.get(jwttoken);
+
         if (principalCollection != null) {
             Subject subject = new Subject.Builder().principals(principalCollection).authenticated(principalCollection!=null).buildSubject();
             ThreadContext.bind(subject);
@@ -147,12 +149,18 @@ public class JwtUtil {
      * @Date: 2020.4.22 18:23
      * @Description: token处理
      **/
-    public static String tokenStore(HttpServletResponse response,String  jwttoken,boolean renewal){
-        jwttoken = renewal?renewal(jwttoken):jwttoken;
+    public static String tokenStore(HttpServletResponse response,String  token,boolean renewal){
+        //重新生成token
+        String jwttoken = token;
+        //设置为 每次请求重新生成token,判断是否没有线程用着当前token
         if(renewal){
             jwttoken = renewal(jwttoken);
+            //缓存刷新用户登录信息
+            CacheFactory.getLoginSuccessSubjectCache().put(jwttoken,CacheFactory.getLoginSuccessSubjectCache().get(token));
+            //延迟15-20秒清除token
+            TokenHandle.clearToken(token);
         }
-        //重新生成token
+
         cookieHeaderToken( response,jwttoken);
         return jwttoken;
     }

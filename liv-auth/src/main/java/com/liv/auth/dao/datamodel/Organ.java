@@ -60,9 +60,9 @@ public class Organ implements Serializable {
     @TableField("DESCRIPTION")
     private String description;
 
-    @ApiModelProperty(value = "数据状态")
-    @TableField("STATE")
-    private String state;
+    @ApiModelProperty(value = "是否删除1 是 0否")
+    @TableField("DEL")
+    private String del;
 
 
 }

@@ -83,4 +83,15 @@ public class EhcacheUtils {
 
         return ehcacheUtils.ehCacheFactory.getCache(key).get(key).getObjectValue();
     }
+
+    /**
+     * 获取普通对象
+     *
+     * @param key 键
+     * @return 对象
+     */
+    public static Object keys(final String key) {
+
+        return ehcacheUtils.ehCacheFactory.getCache(key).getKeys();
+    }
 }

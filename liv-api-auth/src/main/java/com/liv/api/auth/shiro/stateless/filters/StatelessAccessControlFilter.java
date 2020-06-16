@@ -19,6 +19,12 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
 
 /**
  * @author LiV
@@ -32,6 +38,8 @@ import java.io.IOException;
 @Slf4j
 public class StatelessAccessControlFilter extends AccessControlFilter {
 
+
+
     /**
      * @Author: LiV
      * @Date: 2020.4.22 08:46
@@ -39,7 +47,7 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
      **/
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {
-
+//        log.debug("isAccessAllowed");
         return false;//跳到onAccessDenied处理
     }
 
@@ -59,8 +67,8 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
                 remindHasLogin(response);
                 return false;
             }else {
-                //token续签
-                LivContextUtils.getBean("apiUserService", UserService.class).reDologinSuccess(WebUtils.toHttp(response),token);
+                //token设置到 response /cookie ,【根据条件判断是否设置为重新生成】
+                LivContextUtils.getBean("apiUserService",UserService.class).refreshToken(WebUtils.toHttp(response),token);
                 return true;
             }
         }else if (isLoginRequest(request, response)) {

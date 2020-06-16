@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotEmpty;
+
 /**
  * @author LiV
  * @Title:
@@ -34,6 +36,7 @@ public class Menu {
     /**
      * 菜单名称
      **/
+    @NotEmpty(message = "菜单名称不能为空")
     private String menuName;
     /**
      * 上级ID
@@ -49,4 +52,13 @@ public class Menu {
      * 菜单链接
      **/
     private String mUrl;
+    /**
+     * 菜单图标
+     **/
+    private String icon;
+
+    /**
+     * 访问控制：login： 登录后访问。 perm：授权后访问。anon：无需登录或授权访问
+     **/
+    private String accessCtrl;
 }

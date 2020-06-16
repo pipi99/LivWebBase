@@ -1,5 +1,7 @@
 package com.liv.api.auth.dao.datamodel;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
@@ -25,7 +27,7 @@ public class User implements Serializable {
      *
      * Nullable:  false
      */
-    @TableId
+    @TableId(value = "USER_ID", type = IdType.AUTO)
     private Long userId;
 
     /**
@@ -34,6 +36,7 @@ public class User implements Serializable {
      * Nullable:  true
      */
     @NotBlank(message = "用户名称不能为空")
+    @TableField("USER_NAME")
     private String userName;
 
     /**
@@ -41,6 +44,7 @@ public class User implements Serializable {
      *
      * Nullable:  true
      */
+    @TableField("ORG_ID")
     private Long orgId;
 
     /**
@@ -49,6 +53,7 @@ public class User implements Serializable {
      * Nullable:  true
      */
     @NotBlank(message = "姓名不能为空")
+    @TableField("ALIAS")
     private String alias;
 
     /**
@@ -77,7 +82,7 @@ public class User implements Serializable {
      *
      * Nullable:  true
      */
-    private Integer degree;
+    private String degree;
 
     /**
      * 出生年月日
@@ -98,6 +103,7 @@ public class User implements Serializable {
      *
      * Nullable:  true
      */
+    @TableField("CREATE_DATE")
     private Date createDate;
 
     /**
@@ -105,7 +111,6 @@ public class User implements Serializable {
      *
      * Nullable:  true
      */
-    @NotBlank(message = "密码不能为空")
     private String password;
 
     /**
@@ -120,6 +125,10 @@ public class User implements Serializable {
      **/
     private String locked;
 
+    /**
+     * 是否临时用户
+     */
+    private String temp = "0";
     /**
      * 锁定时间
      *
