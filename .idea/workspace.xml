@@ -561,10 +561,10 @@
     <state x="-1205" y="217" key="#xdebugger.evaluate/0.0.1920.1019/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1609214246773" />
     <state x="715" y="211" key="#xdebugger.evaluate/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1609208123007" />
     <state x="715" y="211" key="#xdebugger.evaluate/0.0.1920.1019@0.0.1920.1019" timestamp="1608025955098" />
-    <state x="379" y="101" width="1217" height="817" key="CommitChangelistDialog2" timestamp="1611815745084">
+    <state x="379" y="101" width="1217" height="817" key="CommitChangelistDialog2" timestamp="1611815809313">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
-    <state x="379" y="101" width="1217" height="817" key="CommitChangelistDialog2/0.0.1920.1019/-1920.0.1920.1080@0.0.1920.1019" timestamp="1611815745084" />
+    <state x="379" y="101" width="1217" height="817" key="CommitChangelistDialog2/0.0.1920.1019/-1920.0.1920.1080@0.0.1920.1019" timestamp="1611815809313" />
     <state width="929" height="481" key="DebuggerActiveHint" timestamp="1609317140361">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
@@ -676,11 +676,11 @@
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state width="498" height="468" key="SwitcherDM/0.0.1920.1019/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1609226850297" />
-    <state x="552" y="242" width="817" height="534" key="Vcs.Push.Dialog.v2" timestamp="1611815784390">
+    <state x="552" y="242" width="817" height="534" key="Vcs.Push.Dialog.v2" timestamp="1611815971892">
       <screen x="0" y="0" width="1920" height="1019" />
     </state>
     <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1019/-1920.0.1920.1050@0.0.1920.1019" timestamp="1609117878860" />
-    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1019/-1920.0.1920.1080@0.0.1920.1019" timestamp="1611815784390" />
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1019/-1920.0.1920.1080@0.0.1920.1019" timestamp="1611815971892" />
     <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1019@0.0.1920.1019" timestamp="1607681721532" />
     <state x="698" y="324" key="com.intellij.ide.util.TipDialog" timestamp="1610502915233">
       <screen x="0" y="0" width="1920" height="1019" />
@@ -692,6 +692,10 @@
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1452" y="261" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1019/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1609295173719" />
+    <state x="667" y="300" key="git4idea.merge.GitPullDialog" timestamp="1611815872264">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="667" y="300" key="git4idea.merge.GitPullDialog/0.0.1920.1019/-1920.0.1920.1080@0.0.1920.1019" timestamp="1611815872264" />
     <state x="-1586" y="210" key="new project wizard" timestamp="1609402870163">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
