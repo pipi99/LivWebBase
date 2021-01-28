@@ -4,14 +4,15 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.databind.ser.Serializers;
+import com.liv.api.base.base.BaseBean;
 import io.swagger.annotations.ApiModel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.stream.Collectors;
 
 /**
  * Table: user
@@ -20,14 +21,14 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "User", description = "用户实体")
-@TableName("auth.user")
-public class User implements Serializable {
+@TableName("SP_USER")
+public class User extends BaseBean<User> implements Serializable {
     /**
      * 主键
      *
      * Nullable:  false
      */
-    @TableId(value = "USER_ID", type = IdType.AUTO)
+    @TableId(value = "USER_ID", type = IdType.ASSIGN_ID)
     private Long userId;
 
     /**
@@ -135,6 +136,12 @@ public class User implements Serializable {
      * Nullable:  true
      */
     private Date locktime;
+
+    @TableField(exist = false)
+    private Long[] groupIds;
+
+    @TableField(exist = false)
+    private Long[] roleIds;
 
     public String getCredentialsSalt(){
         return this.userName+this.salt;

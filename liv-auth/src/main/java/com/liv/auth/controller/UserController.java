@@ -29,8 +29,12 @@ import javax.validation.Valid;
 @RequestMapping(value = "/auth/user")
 @Api(tags = "用户管理")
 public class UserController extends BaseController<UserMapper, User, UserService> {
-    @Autowired
+
     LivPropertiesUtils livPropertiesUtils;
+    @Autowired
+    public void setLivPropertiesUtils(LivPropertiesUtils livPropertiesUtils) {
+        this.livPropertiesUtils = livPropertiesUtils;
+    }
 
     @ApiOperation(value = "根据ID查询用户", notes="根据给定的用户ID 查询用户")
     @ApiImplicitParam(name = "userId", value = "当前登录用户ID", required = true, dataType = "String", paramType = "path",defaultValue = "1")
@@ -44,7 +48,7 @@ public class UserController extends BaseController<UserMapper, User, UserService
     @ApiOperation(value = "分页查询用户列表", notes="分页查询用户列表")
     @PostMapping(value="/pagelist")
     public DataBody pagelist(@RequestBody UserQuery query) throws Exception {
-        return DataBody.success(service.pagelist(query));
+        return DataBody.success(service.findUserGroupRole(query));
     }
 
     @ApiOperation(value = "新增用户", notes="新增用户")
@@ -59,16 +63,16 @@ public class UserController extends BaseController<UserMapper, User, UserService
     @PutMapping(value="/update")
     @ValidResult
     public ResultBody update(@RequestBody(required = true)@Valid User u, BindingResult result) throws Exception {
-        User databaseUser = this.service.getById(u.getUserId());
-        u.setPassword(databaseUser.getPassword());
-        return ResultBody.success(service.updateById(u));
+        service.doupdate(u);
+        return ResultBody.success("更新成功");
     }
 
 
     @ApiOperation(value = "删除用户", notes="删除用户,根据主键id删除")
     @DeleteMapping(value="/remove/{id}")
     public ResultBody delete(@PathVariable("id") Long id){
-        return ResultBody.success(service.removeById(id));
+        service.delete(id);
+        return ResultBody.success("删除成功");
     }
 
 }

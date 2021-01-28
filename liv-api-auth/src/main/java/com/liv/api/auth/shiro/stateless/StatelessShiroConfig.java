@@ -28,6 +28,7 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.mgt.DefaultWebSubjectFactory;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
+import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.MethodInvokingFactoryBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -54,6 +55,18 @@ import java.util.List;
 @Configuration
 @EnableConfigurationProperties({JwtProperties.class, LivPropertiesUtils.class})
 public class StatelessShiroConfig {
+
+    /**
+     * @Author: LiV
+     * @Date: 2020.7.8 14:38
+     * @Description: ，@RequiresPermissions这类shiro权限的注解，是DefaultAdvisorAutoProxyCreator这个bean设置之后才会生效
+     **/
+    @Bean
+    public static DefaultAdvisorAutoProxyCreator getDefaultAdvisorAutoProxyCreator(){
+        DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator=new DefaultAdvisorAutoProxyCreator();
+        defaultAdvisorAutoProxyCreator.setUsePrefix(true);
+        return defaultAdvisorAutoProxyCreator;
+    }
 
     @Resource(type = com.liv.api.base.utils.LivPropertiesUtils.class)
     LivPropertiesUtils livPropertiesUtils;

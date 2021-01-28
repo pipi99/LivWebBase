@@ -38,8 +38,6 @@ public class StatelessBasicHttpAuthenticationFilter extends BasicHttpAuthenticat
         boolean tokenIsAvaliable = JwtUtil.verify(token);
         /**正常访问的链接，判断token是否有效*/
         if (tokenIsAvaliable) {
-            //token续签  // accesscontrol 中续签
-//            LivContextUtils.getBean("apiUserService", UserService.class).refreshToken(WebUtils.toHttp(response),token);
             return true;
         }
         return false;

@@ -1,5 +1,6 @@
 package com.liv.api.auth.dao.datamodel;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -20,14 +21,14 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "RolePermission", description = "角色权限实体")
-@TableName("auth.role_permission")
+@TableName("role_permission")
 public class RolePermission implements Serializable {
     /**
      * 主键
      *
      * Nullable:  false
      */
-    @TableId
+    @TableId(type = IdType.ASSIGN_ID)
     private Long permissionId;
 
     /**

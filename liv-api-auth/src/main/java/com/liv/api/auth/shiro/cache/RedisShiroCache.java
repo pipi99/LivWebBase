@@ -10,7 +10,7 @@ import java.util.*;
  * @author LiV
  * @Title:
  * @Package com.liv.shiro.cache
- * @Description:
+ * @Description: redis缓存的shiro实现
  * @date 2020.4.25  22:33
  * @email 453826286@qq.com
  */
@@ -20,7 +20,7 @@ public class RedisShiroCache<K,V> implements Cache<K,V>  {
     /***一个星期**/
     private int exprieTimes = 604800;
 
-    public RedisShiroCache(RedisCacheExprie e){
+    public RedisShiroCache(CacheExpire e){
         this.prefix = e.getValue() + ":";
         this.exprieTimes = e.getExprieTimes()*60;   // 单位换算成 秒
     }
@@ -34,7 +34,7 @@ public class RedisShiroCache<K,V> implements Cache<K,V>  {
         //更新key过期时间
         V v = (V) RedisUtils.get(strk);
         if(v!=null){
-            RedisCacheExprie.refreshKeysExpries(strk);
+            CacheExpire.refreshKeysExpries(strk);
         }
         return v;
 

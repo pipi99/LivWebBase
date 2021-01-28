@@ -10,6 +10,7 @@ import com.liv.api.auth.shiro.stateless.TokenHandle;
 import com.liv.api.auth.utils.AppConst;
 import com.liv.api.base.utils.LivContextUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
@@ -21,6 +22,8 @@ import javax.annotation.PostConstruct;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
+import java.util.UUID;
+
 /**
  * @author LiV
  * @Title:
@@ -36,7 +39,7 @@ public class JwtUtil {
     @Autowired
     JwtProperties jwtProperties;
 
-    private static Cache<String, PrincipalCollection> subjectCache;
+    private static Cache<String, Object> subjectCache;
     private static JwtUtil jwtUtil;
 
     @PostConstruct
@@ -61,17 +64,38 @@ public class JwtUtil {
         if(StringUtils.isEmpty(token)){
             return false;
         }
+
+        String jwtId = getJwtIdByToken(token);
+        if(!token.equals(CacheFactory.getLoginSuccessSubjectCache().get(jwtId) )){
+            return false;
+        }
+
         boolean result = false;
         try{
-            String secret = getClaim(token, AppConst.ACCOUNT) + getJwtUtil().jwtProperties.secretKey;
+            String secret = getClaim(token, AppConst.ACCOUNT) + getJwtUtil().jwtProperties.getSecretKey();
             Algorithm algorithm = Algorithm.HMAC256(secret);
-            JWTVerifier verifier = JWT.require(algorithm).build();
-            DecodedJWT jwt = verifier.verify(token);
+            JWTVerifier verifier = JWT.require(algorithm)
+                .withClaim(AppConst.ACCOUNT, getAccountByToken(token))
+                .withClaim("jwt-id", jwtId)
+                .acceptExpiresAt(System.currentTimeMillis() + getJwtUtil().jwtProperties.getTokenExpireTime()*60*1000)  //JWT 正确的配置续期姿势
+                .build();
+            verifier.verify(token);
+
+            // Redis缓存JWT续期
+            CacheFactory.getLoginSuccessSubjectCache().put(jwtId,token);
+
+            /****每次必须绑定登录用户到线程中，否则无法控制权限***/
+            PrincipalCollection principalCollection = (PrincipalCollection)CacheFactory.getLoginSuccessSubjectCache().get(token);
+            Subject subject = new Subject.Builder().principals(principalCollection).authenticated(true).buildSubject();
+            ThreadContext.bind(subject);
+            CacheFactory.getLoginSuccessSubjectCache().put(token,principalCollection);
+
             result = true;
         }catch(Exception e){
-
+            result = false;
         }
-        return result&&bindSubject(token);
+
+        return result;
     }
 
     /**
@@ -79,16 +103,16 @@ public class JwtUtil {
      * @Date: 2020.4.22 18:23
      * @Description: 当前用绑定线程
      **/
-    private static boolean bindSubject(String  jwttoken){
-        /****每次必须绑定登录用户到线程中，否则无法控制权限***/
-        PrincipalCollection principalCollection = subjectCache.get(jwttoken);
-
-        if (principalCollection != null) {
-            Subject subject = new Subject.Builder().principals(principalCollection).authenticated(principalCollection!=null).buildSubject();
-            ThreadContext.bind(subject);
-        }
-        return principalCollection!=null;
-    }
+//    private static boolean bindSubject(String  jwttoken){
+//        /****每次必须绑定登录用户到线程中，否则无法控制权限***/
+//        PrincipalCollection principalCollection = (PrincipalCollection)CacheFactory.getLoginSuccessSubjectCache().get(jwttoken);
+//
+//        if (principalCollection != null) {
+//            Subject subject = new Subject.Builder().principals(principalCollection).authenticated(principalCollection!=null).buildSubject();
+//            ThreadContext.bind(subject);
+//        }
+//        return principalCollection!=null;
+//    }
 
     /**
      * 获得Token中的信息无需secret解密也能获得
@@ -107,71 +131,37 @@ public class JwtUtil {
 
     /**
      * 生成签名
-     * @param account
      * @return
      */
-    public static String sign(String account) {
+    public static String sign() {
+        Subject user = SecurityUtils.getSubject();
+        String account = (String)user.getPrincipals().getPrimaryPrincipal();
+
+        String jwtId = UUID.randomUUID().toString();                 //JWT 随机ID,做为验证的key
         // 帐号加JWT私钥加密
         String secret = account + getJwtUtil().jwtProperties.getSecretKey();
         // 此处过期时间，单位：毫秒
-        Date date = new Date(System.currentTimeMillis() + getJwtUtil().jwtProperties.getTokenExpireTime()*60*1000l);
+        Date date = new Date(System.currentTimeMillis() + getJwtUtil().jwtProperties.getTokenExpireTime()*60*1000);
         Algorithm algorithm = Algorithm.HMAC256(secret);
 
-        return JWT.create()
+        String token =  JWT.create()
                 .withClaim(AppConst.ACCOUNT, account)
-                .withClaim(AppConst.CURRENT_TIME_MILLIS, String.valueOf(System.currentTimeMillis()))
+                .withClaim("jwt-id", jwtId)
                 .withExpiresAt(date)
                 .sign(algorithm);
+
+        //缓存用户登录信息
+        CacheFactory.getLoginSuccessSubjectCache().put(jwtId,token);
+        CacheFactory.getLoginSuccessSubjectCache().put(token,user.getPrincipals());
+        return token;
     }
-
-    /**
-     * 续签
-     * @param token
-     * @return
-     */
-    private static String renewal(String token) {
-        String account = getClaim(token,AppConst.ACCOUNT);
-        // 帐号加JWT私钥加密
-        String secret = account + getJwtUtil().jwtProperties.getSecretKey();
-        // 此处过期时间，单位：毫秒
-        Date date = new Date(System.currentTimeMillis() + getJwtUtil().jwtProperties.getTokenExpireTime()*60*1000l);
-        Algorithm algorithm = Algorithm.HMAC256(secret);
-
-        return JWT.create()
-                .withClaim(AppConst.ACCOUNT, account)
-                .withClaim(AppConst.CURRENT_TIME_MILLIS,  String.valueOf(System.currentTimeMillis()))
-                .withExpiresAt(date)
-                .sign(algorithm);
-    }
-
-    /**
-     * @Author: LiV
-     * @Date: 2020.4.22 18:23
-     * @Description: token处理
-     **/
-    public static String tokenStore(HttpServletResponse response,String  token,boolean renewal){
-        //重新生成token
-        String jwttoken = token;
-        //设置为 每次请求重新生成token,判断是否没有线程用着当前token
-        if(renewal){
-            jwttoken = renewal(jwttoken);
-            //缓存刷新用户登录信息
-            CacheFactory.getLoginSuccessSubjectCache().put(jwttoken,CacheFactory.getLoginSuccessSubjectCache().get(token));
-            //延迟15-20秒清除token
-            TokenHandle.clearToken(token);
-        }
-
-        cookieHeaderToken( response,jwttoken);
-        return jwttoken;
-    }
-
 
     /**
      * @Author: LiV
      * @Date: 2020.4.22 16:30
      * @Description: cookeie和header中存储token
      **/
-    public static void cookieHeaderToken(HttpServletResponse response,String  jwttoken){
+    public static void cookieHeaderToken(HttpServletResponse response,String  jwttoken) {
         //Cookie存储token
         Cookie cookie = new Cookie(LivContextUtils.REQUEST_AUTH_HEADER, jwttoken);
         //值大于0, 将cookie存储于本地磁盘, 过期后删除；值小于0, cookie不会保存于本地, 浏览器会话结束后, 将会删除
@@ -186,6 +176,18 @@ public class JwtUtil {
         response.setHeader(LivContextUtils.REQUEST_AUTH_HEADER, jwttoken);
     }
 
+    /**
+     * 根据Token获取 count
+     */
+    public static String getAccountByToken(String token)  {
+        return JWT.decode(token).getClaim(AppConst.ACCOUNT).asString();
+    }
 
+    /**
+     * 根据Token 获取jwt-id
+     */
+    public static String getJwtIdByToken(String token)  {
+        return JWT.decode(token).getClaim("jwt-id").asString();
+    }
 
 }

@@ -19,12 +19,11 @@ import java.util.Properties;
  * @author LiV
  * @Title:
  * @Package com.liv.web.config
- * @Description: SwaggerUI配置
+ * @Description: PageHelperConfig
  * @date 2020.4.15  16:23
  * @email 453826286@qq.com
  */
 @Configuration
-@EnableSwagger2
 public class PageHelperConfig {
     @Bean
     public PageHelper pageHelper() {

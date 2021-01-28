@@ -1,6 +1,5 @@
 package com.liv.api.base.base;
 
-import com.liv.api.base.exception.IBaseMessageInfo;
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
@@ -54,8 +53,8 @@ public class DataBody {
      */
     public static DataBody success(Object data) {
         DataBody rb = new DataBody();
-        rb.setCode(CommonEnum.SUCCESS.getCode());
-        rb.setMessage(CommonEnum.SUCCESS.getMessage());
+        rb.setCode(CommonResultCode.SUCCESS.getCode());
+        rb.setMessage(CommonResultCode.SUCCESS.getMessage());
         rb.setData(data);
         return rb;
     }

@@ -69,6 +69,7 @@
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
@@ -88,6 +89,10 @@
             <artifactId>druid</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+        </dependency>
         <!-- swagger -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -97,7 +102,10 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+        </dependency>
         <!-- pojo bean-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -146,7 +154,7 @@
     </dependencies>
 
     <build>
-        <finalName>${artifactId}-${version}</finalName>
+        <finalName>${project.artifactId}-${project.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.mybatis.generator</groupId>

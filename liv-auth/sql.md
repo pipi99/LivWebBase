@@ -85,9 +85,22 @@ drop table if exists auth.PERMISSION_RESOURCE;
 create table auth.PERMISSION_RESOURCE 
 (
    PERMISSION_ID        bigint                         not null primary key auto_increment comment '主键',
-   PERMISSION      int                            null comment '权限类型',
+   PERMISSION           int                            null comment '权限类型',
    RESOURCE_ID          bigint                         null comment '资源ID'
 ) comment '权限资源表';
+
+
+drop table if exists APP;
+
+/*==============================================================*/
+/* Table: APP                                                   */
+/*==============================================================*/
+create table APP 
+(
+   APP_ID               bigint                         not null primary key auto_increment comment '主键',
+   APP_NAME             char(200)                      null comment '名称',
+   DESCRIPTION          varchar(200)                   null comment '说明'
+) comment '应用表';
 
 
 drop table if exists auth.MENU;
@@ -99,12 +112,39 @@ create table auth.MENU
 (
    MENU_ID              bigint                         not null primary key auto_increment comment '主键',
    MENU_NAME            char(200)                      null comment '菜单名称',
+   APP_ID               bigint                     null comment '所属应用',
    PARENT_ID            bigint                         null comment '上级ID',
    DESCRIPTION          varchar(200)                   null comment '说明',
    M_URL                varchar(2000)                  null comment '菜单链接',
    ICON                varchar(100)                  null comment '菜单图标',
-   ACCESS_CTRL          varchar(10)                  null comment ' 访问控制：login： 登录后访问。 perm：授权后访问。open：无需登录或授权访问'
+   ACCESS_CTRL          varchar(10)                  null comment ' 访问控制：login： 登录后访问。 perm：授权后访问。open：无需登录或授权访问',
+   SORT               bigint                     null comment '排序',
+   IS_LEAF               bigint                     null comment '是否子菜单'
 )  comment '菜单表';
+
+drop table if exists auth.RESOURCES;
+
+/*==============================================================*/
+/* Table: "RESOURCE"                                            */
+/*==============================================================*/
+create table auth.RESOURCES
+(
+   RESOURCE_ID               bigint                         not null primary key auto_increment comment '主键',
+   APP_ID               bigint                         null  comment '所属应用',
+   RESOURCE_NAME             char(200)                      null comment '菜单名称',
+   PARENT_ID            bigint                         null comment '上级ID',
+   DESCRIPTION          varchar(200)                   null comment '说明',
+   PATH                 varchar(2000)                  null comment '菜单链接',
+   ACCESS_CTRL          varchar(10)                    null comment '访问控制：login： 登录后访问。 perm：授权后访问。open：无需登录或授权访问',
+   ICON                 varchar(50)                    null comment '菜单图标',
+   SORT                 int                            null comment '排序',
+   RESOURCE_TYPE             int                            null comment '资源类型  1 菜单  2 按钮',
+   PERMISSION_STR       varchar(200)                   null comment '权限标识',
+   ROUTER_NAME          varchar(200)                   null comment '路由名称',
+   ROUTER_PATH          varchar(200)                   null comment '路由地址',
+   ROUTER_COPM          varchar(200)                   null comment '路由组件',
+   ROUTER_CACHE         int                            null comment '路由缓存  1 是 0否'
+)comment '资源表';
 
 drop table if exists auth.USER_ROLE;
 

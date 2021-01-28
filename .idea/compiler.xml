@@ -10,14 +10,18 @@
         <module name="liv-api-auth" />
         <module name="code-generator" />
         <module name="liv-api-base" />
-        <module name="mm-webDesktop" />
-        <module name="alcohol" />
-        <module name="mybatis-generator-lombok-plugin" />
+        <module name="x-sp" />
         <module name="gis-server-0.1" />
-        <module name="gis-client" />
+        <module name="mybatis-generator-lombok-plugin" />
         <module name="liv-auth" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="alcohol" target="1.7" />
+      <module name="gis-client" target="1.7" />
+      <module name="mm-webDesktop" target="1.8" />
+      <module name="v-adn" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -30,6 +34,8 @@
       <module name="liv-auth" options="-parameters" />
       <module name="mm-webDesktop" options="-parameters" />
       <module name="mybatis-generator-lombok-plugin" options="" />
+      <module name="v-adn" options="-parameters" />
+      <module name="x-sp" options="-parameters" />
     </option>
   </component>
 </project>

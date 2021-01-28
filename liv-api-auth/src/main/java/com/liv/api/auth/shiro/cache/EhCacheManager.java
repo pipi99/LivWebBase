@@ -28,7 +28,7 @@ public class EhCacheManager extends org.apache.shiro.cache.ehcache.EhCacheManage
         configuration.diskStore(new DiskStoreConfiguration().path("java.io.tmpdir"));
 
         //根据yml初始化 ehcache
-        for (RedisCacheExprie fsEnum : RedisCacheExprie.values()) {
+        for (CacheExpire fsEnum : CacheExpire.values()) {
             String name = fsEnum.getValue();
             int expireTime = fsEnum.getExprieTimes();
 

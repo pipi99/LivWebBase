@@ -53,7 +53,7 @@ public class CacheFactory {
             //使用的redis
             if(cacheManager instanceof RedisCacheManager){
                 //初始化枚举
-                RedisCacheExprie.init();
+                CacheExpire.init();
             }
             //使用的ehcache
             if(cacheManager instanceof EhCacheManager){

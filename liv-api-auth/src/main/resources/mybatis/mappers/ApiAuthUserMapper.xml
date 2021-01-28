@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.liv.api.auth.dao.UserMapper">
+    <resultMap id="userGroupsRoles" type="com.liv.api.auth.viewmodel.UserVO">
+        <id property="userId" column="user_id" />
+        <result property="userName" column="user_name" />
+        <result property="orgId" column="org_id" />
+        <result property="alias" column="alias" />
+        <result property="mobile" column="mobile" />
+        <result property="email" column="email" />
+        <result property="gender" column="gender" />
+        <result property="degree" column="degree" />
+        <result property="birthday" column="birthday" />
+        <result property="photo" column="photo" />
+        <result property="createDate" column="create_date" />
+        <result property="locktime" column="locktime" />
+        <result property="locked" column="locked" />
+        <result property="birthday" column="birthday" />
+
+        <collection property="roles" column="user_id"  javaType="ArrayList" ofType="com.liv.api.auth.dao.datamodel.Role">
+            <id property="roleId" column="role_id" />
+            <result property="roleName" column="role_name" />
+        </collection>
+        <collection property="groups" column="user_id"  javaType="ArrayList" ofType="com.liv.api.auth.dao.datamodel.Groups">
+            <id property="groupId" column="group_id" />
+            <result property="groupName" column="group_name" />
+        </collection>
+    </resultMap>
+
     <resultMap id="PermissionDOResultMap" type="com.liv.api.auth.domainmodel.PermissionDO">
         <id property="permissionId" column="permission_id" />
         <result property="permission" column="permission" />
@@ -41,11 +67,40 @@
             d.ACTION_URL ,
             d.ACTION_FUN
     from
-        auth.USER_PERMISSION c
-        inner join auth.PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
-        inner join auth.MENU b on a.resource_id=b.MENU_ID
-        left join auth.actions d on b.menu_id=d.menu_id
+        @[dbschema]USER_PERMISSION c
+        inner join @[dbschema]PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
+        inner join @[dbschema]MENU b on a.resource_id=b.MENU_ID
+        left join @[dbschema]actions d on b.menu_id=d.menu_id
     where
          c.user_id=#{userId}
+    </select>
+
+    <select id="findUserGroupRole" resultMap="userGroupsRoles">
+    select
+        u.user_id,
+        u.user_name,
+        u.org_id,
+        u.alias,
+        u.mobile,
+        u.email,
+        u.gender,
+        u.degree,
+        u.birthday,
+        u.photo,
+        u.create_date,
+        u.locktime,
+        u.locked,
+        u.birthday,
+
+        r.role_id,
+        r.role_name,
+        g.group_id,
+        g.group_name
+
+    from
+        @[dbschema]USER u
+        left join @[dbschema]USER_GROUP ug on u.user_id = ug.user_id  left join  @[dbschema]GROUPS g on ug.group_id = g.group_id
+        left join @[dbschema]USER_ROLE ur on u.user_id = ur.user_id  left join  @[dbschema]ROLE r on ur.role_id = r.role_id
+        ${ew.customSqlSegment}
     </select>
 </mapper>

@@ -2,7 +2,16 @@
 # 一、统一权限管理
 ## 1、概述
     提供单位、机构、用户、用户组、角色、权限管理的平台。  springboot\mybatis\mybatisplus\shiro\mysql\redis\ehcache    
-
+        
+### 2、菜单类型
+  需登录：登录即可访问    
+  需授权：登录后并分配给用户才可访问   
+  开放：无需登录即可访问
+### 3、开发开放接口
+开发过程当中的绿色链接，/public 开头
+```text
+/public/** 
+```
     
 二、搭建参考网址：
     前端: https://d2.pub/zh/doc/d2-admin/     https://github.com/d2-projects
@@ -10,6 +19,13 @@
     中文教程：http://www.w3cschool.cn/shiro/ac781ife.html
     加密：https://www.cnblogs.com/mozq/p/11761896.html
     按钮控制：https://blog.csdn.net/kity9420/article/details/102330886
+
+
+组件升级
+cnpm i  d2-crud-x  -S
+cnpm i  d2-crud-plus  -S
+cnpm i  d2p-extends   -S
+
 
 三、常用权限注解
     

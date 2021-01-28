@@ -1,9 +1,7 @@
 package com.liv.api.auth.dao.datamodel;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+import com.liv.api.base.base.BaseBean;
 import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,20 +10,21 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import java.io.Serializable;
+import java.util.BitSet;
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "Role", description = "角色实体")
-@TableName("auth.role")
-public class Role implements Serializable {
+@TableName("role")
+public class Role extends BaseBean<Role> implements Serializable {
     /**
      * 主键
      *
      * Nullable:  false
      */
-    @TableId
+    @TableId(type=IdType.ASSIGN_ID)
     private Long roleId;
 
     /**
@@ -34,6 +33,7 @@ public class Role implements Serializable {
      * Nullable:  true
      */
     @NotBlank(message = "角色名称不能为空")
+    @Pattern(regexp = "[a-zA-Z0-9]+",message = "请输入正确的角色名称，英文数字组合")
     private String roleName;
 
     /**
@@ -42,7 +42,6 @@ public class Role implements Serializable {
      * Nullable:  true
      */
     @NotBlank(message = "角色名称不能为空")
-    @Pattern(regexp = "[a-zA-Z]+",message = "请输入正确的角色名称，英文字符")
     private String roleAlias;
 
     /**
@@ -51,7 +50,7 @@ public class Role implements Serializable {
      * Nullable:  true
      */
     @TableLogic(value = "0",delval = "1")
-    private Integer del;
+    private Integer del = 0;
 
     /**
      * 角色说明

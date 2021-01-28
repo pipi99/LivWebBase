@@ -1,5 +1,6 @@
 package com.liv.api.auth.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.liv.api.auth.dao.datamodel.User;
@@ -30,9 +31,10 @@ public interface UserService extends IService<User>{
     public String dologin(UsernamePasswordToken token,HttpServletResponse response);
     public void logout();
     public UserDO getCurUser();
-    public void refreshToken(HttpServletResponse response, String token);
-    public void refreshToken(ShiroHttpServletResponse response, String token);
     public void clearCache(String userName);
-
+    public void doupdate(User user);
     public Page<UserVO> pagelist(UserQuery query);
+    public IPage<UserVO> findUserGroupRole(UserQuery query);
+    public void delete(Long id);
+
 }

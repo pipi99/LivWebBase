@@ -20,10 +20,10 @@ public interface RoleMapper extends BaseMapper<Role> {
      **/
     public List<PermissionDO> findPermissionAndResources(Long roleId);
 
-    @Select("select r.role_name as roleName,r.role_alias as roleAlias,r.ROLE_ID as roleId ,r.create_date as createDate ,r.description  from auth.role r,auth.USER_ROLE ur where r.ROLE_ID = ur.role_id and r.DEL=0 and ur.user_id = #{userId}")
+    @Select("select r.role_name as roleName,r.role_alias as roleAlias,r.ROLE_ID as roleId ,r.create_date as createDate ,r.description  from @[dbschema]role r,@[dbschema]USER_ROLE ur where r.ROLE_ID = ur.role_id and r.DEL=0 and ur.user_id = #{userId}")
     public List<Role> findByUserId(Long userId);
 
-    @Select("select r.role_name as roleName,r.role_alias as roleAlias,r.ROLE_ID as roleId ,r.create_date as createDate ,r.description  from auth.role r,auth.GROUP_ROLE gr where r.ROLE_ID = gr.role_id and r.DEL=0 and gr.group_id = #{groupId}")
+    @Select("select r.role_name as roleName,r.role_alias as roleAlias,r.ROLE_ID as roleId ,r.create_date as createDate ,r.description  from @[dbschema]role r,@[dbschema]GROUP_ROLE gr where r.ROLE_ID = gr.role_id and r.DEL=0 and gr.group_id = #{groupId}")
     public List<Role> findByGroupId(Long groupId);
 
     public List<Role> findByGroupIds(List<Long> groupIds);

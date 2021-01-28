@@ -32,14 +32,5 @@ import java.util.List;
 @Api(tags = "权限管理")
 public class PermissionController  {
 
-    @Autowired
-    private MenuService menuService;
-
-    @ApiOperation(value = "更新菜单权限过滤规则", notes="更新菜单权限过滤规则")
-    @GetMapping(value="/refreshPerm/{id}")
-    public ResultBody delete(@PathVariable("id") Long id){
-        menuService.setPermissionFilter();
-        return ResultBody.success("操作成功");
-    }
 
 }

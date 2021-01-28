@@ -1,12 +1,10 @@
 package com.liv.api.auth.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.google.common.collect.Lists;
 import com.liv.api.auth.dao.RoleMapper;
 import com.liv.api.auth.dao.UserMapper;
 import com.liv.api.auth.dao.datamodel.Groups;
 import com.liv.api.auth.dao.datamodel.Role;
-import com.liv.api.auth.domainmodel.PermissionDO;
 import com.liv.api.auth.service.RoleService;
 import com.liv.api.base.base.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;

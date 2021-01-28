@@ -1,10 +1,58 @@
-# 权限管理项目 
-#### 一、token认证
+> 项目介绍
+>> springboot 项目集成此包实现基本的权限控制
+* 权限框架：`shiro`
+* 统一认证：`jwttoken`
+* 样例项目：`x-sp`
 
-    取消 session ，使用 jwttoken ,缓存到 cookie，每次访问刷新token。
-    如果 无法缓存到 cookie或者是App 前端可根据登录返回的值和每次访问返回的 header,自行处理token，请求数据时带上即可
-    因为session取消，subject需要与token绑定，每次访问的时候，系统自动根据token将对应的subject绑定到当前线程。
-    shiro读取其他配置为空：https://blog.csdn.net/wuxuyang_7788/article/details/70141812
+## 一、`shrio` 基础包介绍
+### （1）、`cache` 包，权限缓存类
+* `CacheFactory` 获取缓存实例
+* `CacheExpire` 各个缓存的过期时间枚举配置
+* `EhCacheManager` EhCache集成自shiro的 EhCacheManager，缓存管理
+* `RedisShiroCache` shiro缓存的redis实现
+* `RedisCacheManager` cache管理
+### （2）、`permission` 权限字符串处理
+* `BitAndWildPermissionResolver` 根据字符串 首字母判断用什么解析器解析权限字符串
+* `BitPermission` 二进制的方式判断权限
+* `LivRolePermissionResolver` 解析用户拥有的角色和用户权限
+### （3）、realms 用户校验方案
+* `UserCacheRealm` 用户登录验证
+* `RetryLimitHashedCredentialsMatcher` 用户密码验证
+* `ByteSourceUtils` `SimpleByteSource` 对象序列化工具类
+### （4）、stateless `shiro` 配置信息
+* `StatelessShiroConfig` 全局配置
+* `StatelessDefaultSubjectFactory` 不创建session配置
+* `TokenHandle` Token过期处理，***一个变态的需求，每次请求都要重置token***
+* jwt 包
+   
+   * `JwtUtil` jwttoken的工具类
+   * `JwtProperties` jwttoken的配置信息
+ 
+ * filters 权限过滤器包
+ 
+    * `AuthcFilterFactoryBean` 过滤器配置
+    * `StatelessAccessControlFilter` 判断是否登录，权限拦截
+    * `StatelessBasicHttpAuthenticationFilter` basic方式判断是否登录，权限拦截,用户api接口开发场景
+    * `StatelessPermissionsFilter` Url权限拦截过滤器
+    
+### （5）、`ShiroRoles` 角色常量类
+
+## 二、权限控制
+### （1）、菜单类型
+  需登录：登录即可访问    
+  需授权：登录后并分配给用户才可访问   
+  开放：无需登录即可访问
+### （2）、开发开放接口
+开发过程当中的绿色链接，/public 开头
+```text
+/public/** 
+```
+
+## 二、token认证
+   取消 session ，使用 jwttoken ,缓存到 cookie，每次访问刷新token。
+   如果 无法缓存到 cookie或者是App 前端可根据登录返回的值和每次访问返回的 header,自行处理token，请求数据时带上即可
+   因为session取消，subject需要与token绑定，每次访问的时候，系统自动根据token将对应的subject绑定到当前线程。
+   shiro读取其他配置为空：https://blog.csdn.net/wuxuyang_7788/article/details/70141812
 二、搭建参考网址：
     前端: https://d2.pub/zh/doc/d2-admin/     https://github.com/d2-projects
     中文教程：http://www.w3cschool.cn/shiro/ac781ife.html
@@ -116,5 +164,10 @@ liv:
  # 权限过滤
   
    * 1.无需登即可访问，菜单类型设置为 open
-   * 3.登录后授权访问,菜单类型设置为 perm
-   * 4.无以上前缀的路径，登录后访问，设置为  login
+   * 2.登录后授权访问,菜单类型设置为 perm
+   * 3.无以上前缀的路径，登录后访问，设置为  login
+   
+   系统拦截：
+    /o 开头的url不拦截，无需登录即可访问
+    /p 开头的url进行权限判断，需授权访问
+    其他url需登录访问

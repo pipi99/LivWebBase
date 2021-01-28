@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.liv.api.base.base.BaseBean;
+import com.liv.api.base.base.BaseQuery;
 import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,41 +21,22 @@ import org.apache.commons.lang3.StringUtils;
  * @date 2020.6.9  14:26
  * @email 453826286@qq.com
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class DictQuery extends BaseBean<Dict> {
-
-    @TableId(type = IdType.AUTO)
-    @TableField("DICT_ID")
-    private Long dictId;
-
-    @TableField("D_TYPE")
-    private String dType;
-
-    @TableField("D_VALUE")
-    private String dValue;
-
-    @TableField("D_CODE")
-    private String dCode;
-
-    @TableField("PARENT_CODE")
-    private String parentCode;
+public class DictQuery extends Dict implements BaseQuery<Dict> {
 
     /**
      * 组装查询条件
      */
     @Override
-    protected QueryWrapper<Dict> getQueryWrapper() {
+    public QueryWrapper<Dict> getQueryWrapper() {
         QueryWrapper qw = new QueryWrapper();
-        if(StringUtils.isNotEmpty(this.dType)){
-            qw.eq("D_TYPE",this.dType);
+        if(StringUtils.isNotEmpty(this.getDType())){
+            qw.eq("D_TYPE",this.getDType());
         }
-        if(StringUtils.isNotEmpty(this.dValue)){
-            qw.like("D_VALUE",this.dValue);
+        if(StringUtils.isNotEmpty(this.getDValue())){
+            qw.like("D_VALUE",this.getDValue());
         }
-        if(StringUtils.isNotEmpty(this.dCode)){
-            qw.like("D_CODE",this.dCode);
+        if(StringUtils.isNotEmpty(this.getDCode())){
+            qw.like("D_CODE",this.getDCode());
         }
         return qw;
     }

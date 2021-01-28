@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liv.auth.dao.GroupMapper">
+    <resultMap id="groupRoleResultMap" type="com.liv.api.auth.dao.datamodel.Groups">
+        <id property="groupId" column="group_id" />
+        <result property="groupName" column="group_name" />
+        <result property="description" column="description" />
+        <collection property="roles" column="group_id"  javaType="ArrayList" ofType="com.liv.api.auth.dao.datamodel.Role">
+            <id property="roleId" column="ROLE_ID" />
+            <result property="roleName" column="ROLE_NAME" />
+            <result property="description" column="r_des" />
+            <result property="roleAlias" column="role_alias" />
+            <result property="createDate" column="create_date" />
+        </collection>
+    </resultMap>
+
+    <select id="findGroupRole" resultMap="groupRoleResultMap">
+        select
+        g.group_id ,
+        g.group_name ,
+        g.description,
+
+        r.ROLE_ID,
+        r.ROLE_NAME ,
+        r.description as r_des,
+        r.role_alias,
+        r.create_date
+
+        from
+        auth.GROUPS g
+        left join auth.GROUP_ROLE gr on gr.group_id=g.group_id
+        left join auth.ROLE r on gr.ROLE_ID=r.ROLE_ID
+
+        ${ew.customSqlSegment}
+    </select>
+</mapper>

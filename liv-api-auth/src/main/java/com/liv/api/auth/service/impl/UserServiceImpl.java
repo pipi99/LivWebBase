@@ -4,7 +4,11 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.common.collect.Lists;
+import com.liv.api.auth.dao.UserGroupMapper;
+import com.liv.api.auth.dao.UserRoleMapper;
 import com.liv.api.auth.dao.datamodel.Role;
+import com.liv.api.auth.dao.datamodel.UserGroup;
+import com.liv.api.auth.dao.datamodel.UserRole;
 import com.liv.api.auth.domainmodel.UserDO;
 import com.liv.api.auth.domainmodel.UserQuery;
 import com.liv.api.auth.service.RoleService;
@@ -20,7 +24,6 @@ import com.liv.api.auth.utils.AppConst;
 import com.liv.api.auth.utils.PasswordHelper;
 import com.liv.api.auth.viewmodel.UserVO;
 import com.liv.api.base.base.BaseService;
-import com.liv.api.base.base.DataBody;
 import com.liv.api.base.utils.LivContextUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -47,10 +50,16 @@ import java.util.List;
  * @email 453826286@qq.com
  */
 @Service("apiUserService")
-public class UserServiceImpl extends BaseService<UserMapper, User> implements UserService {
+class UserServiceImpl extends BaseService<UserMapper, User> implements UserService {
 
     @Autowired
     private RoleService roleService;
+
+    @Autowired
+    private UserGroupMapper userGroupMapper;
+
+    @Autowired
+    private UserRoleMapper userRoleMapper;
     /**
      * @Author: LiV
      * @Date: 2020.4.22 14:08
@@ -67,6 +76,11 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
         return dologinSuccess( LivContextUtils.getResponse()) ;
     }
 
+    /**
+     * @Author: LiV
+     * @Date: 2020.12.28 15:42
+     * @Description: swagger的接口调试，支持随意用户名登录，用户不存在自动创建一个
+     **/
     @Override
     public String dologin(UsernamePasswordToken token,HttpServletResponse response) {
         Subject subject = SecurityUtils.getSubject();
@@ -96,14 +110,9 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
      **/
     private String dologinSuccess(HttpServletResponse response) {
 
-        Subject user = SecurityUtils.getSubject();
-        //生成token
-        String jwttoken = JwtUtil.sign((String)user.getPrincipals().getPrimaryPrincipal());
+        String jwttoken = JwtUtil.sign();
         //返回token到reponse
-        JwtUtil.tokenStore(response,jwttoken,false);
-        //缓存用户登录信息
-        PrincipalCollection principalCollection = user.getPrincipals();
-        CacheFactory.getLoginSuccessSubjectCache().put(jwttoken,principalCollection);
+        JwtUtil.cookieHeaderToken(response,jwttoken);
         return jwttoken;
     }
 
@@ -153,30 +162,21 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
         return resultList;
     }
 
-    /**
-     * @Author: LiV
-     * @Date: 2020.4.27 16:02
-     * @Description: 刷新缓存的操作//每次请求需要更新缓存//
-     * 参考：StatelessAccessControlFilter.java
-     **/
-    //每次请求返回都携带token
-    public void refreshToken(HttpServletResponse response,String token) {
-        boolean renewalToken = "true".equals(AppConst.USER_LOGIN_TOKEN_RENEWAL_ONACCESS);
-        //返回token到reponse
-        JwtUtil.tokenStore(response,token,renewalToken);
-
+    @Override
+    public IPage<UserVO> findUserGroupRole(UserQuery query) {
+        IPage<UserVO> resultList = this.mapper.findUserGroupRole(query.getPage(),query.getQueryWrapper());
+        return resultList;
     }
 
+    @Override
+    public void delete(Long id) {
+        QueryWrapper qw = new QueryWrapper();
+        qw.eq("USER_ID",id);
 
-    /**
-     * @Author: LiV
-     * @Date: 2020.4.27 16:02
-     * @Description: 供反射调用
-     * 参考：tokenInterceptor反射调用
-     **/
-    //每次请求返回都携带token
-    public void refreshToken(ShiroHttpServletResponse response,String token) {
-        refreshToken(WebUtils.toHttp( response),token);
+        //删除用户组关联关系
+        userGroupMapper.delete(qw);
+        userRoleMapper.delete(qw);
+        this.mapper.deleteById(id);
     }
 
     /**
@@ -192,10 +192,10 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
         if(subject.getPrincipal()!=null){
             clearCache(subject.getPrincipal().toString());
         }
-
+        String token = LivContextUtils.getRequestToken(LivContextUtils.getRequest());
         //退出的话还是用 response中的token，request中的有可能已经被更新，与缓存中不一致
-        CacheFactory.getLoginSuccessSubjectCache().remove(getResponseToken());
-
+        CacheFactory.getLoginSuccessSubjectCache().remove(token);
+        CacheFactory.getLoginSuccessSubjectCache().remove(JwtUtil.getJwtIdByToken(token));
         //这特么有毛用
         subject.logout();
     }
@@ -211,17 +211,6 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
     }
 
     /**
-     * 获取请求中的token,首先从请求头中获取,如果没有,则尝试从请求参数中获取
-     *
-     * @return
-     */
-    private String getResponseToken() {
-        HttpServletResponse httpRep = LivContextUtils.getResponse();
-        String token = httpRep.getHeader(LivContextUtils.REQUEST_AUTH_HEADER);
-        return token;
-    }
-
-    /**
      * @Author: LiV
      * @Date: 2020.4.19 17:05
      * @Description: 用户注册
@@ -229,9 +218,66 @@ public class UserServiceImpl extends BaseService<UserMapper, User> implements Us
     public boolean reg(User user){
         user.setCreateDate(new Date());
         PasswordHelper.encryptNewUserPassword(user);
-        return mapper.insert(user)>0;
+        mapper.insert(user);
+
+        //新增用户组关联关系
+        Long[] groupIds = user.getGroupIds();
+        if(groupIds!=null){
+            for (int i = 0; i <groupIds.length ; i++) {
+                UserGroup ug = new UserGroup();
+                ug.setGroupId(groupIds[i]);
+                ug.setUserId(user.getUserId());
+                userGroupMapper.insert(ug);
+            }
+        }
+        //新增角色关联关系
+        Long[] roleIds= user.getRoleIds();
+        if(roleIds!=null){
+            for (int i = 0; i <roleIds.length ; i++) {
+                UserRole ur = new UserRole();
+                ur.setRoleId(roleIds[i]);
+                ur.setUserId(user.getUserId());
+                userRoleMapper.insert(ur);
+            }
+        }
+        return true;
     }
 
+
+    @Override
+    public void doupdate(User user) {
+        User databaseUser = this.getById(user.getUserId());
+        user.setPassword(databaseUser.getPassword());
+
+        QueryWrapper qw = new QueryWrapper();
+        qw.eq("USER_ID",user.getUserId());
+
+        //删除用户组关联关系
+        userGroupMapper.delete(qw);
+        //新增用户组关联关系
+        Long[] groupIds = user.getGroupIds();
+        if(groupIds!=null){
+            for (int i = 0; i <groupIds.length ; i++) {
+                UserGroup ug = new UserGroup();
+                ug.setGroupId(groupIds[i]);
+                ug.setUserId(user.getUserId());
+                userGroupMapper.insert(ug);
+            }
+        }
+
+        //删除用户角色关系
+        userRoleMapper.delete(qw);
+        //新增角色关联关系
+        Long[] roleIds= user.getRoleIds();
+        if(roleIds!=null){
+            for (int i = 0; i <roleIds.length ; i++) {
+                UserRole ur = new UserRole();
+                ur.setRoleId(roleIds[i]);
+                ur.setUserId(user.getUserId());
+                userRoleMapper.insert(ur);
+            }
+        }
+    }
     /**
      * @Author: LiV
      * @Date: 2020.4.19 20:44

@@ -2,12 +2,11 @@ package com.liv.api.base.dict;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.liv.api.base.annotation.ValidResult;
 import com.liv.api.base.base.BaseController;
 import com.liv.api.base.base.DataBody;
 import com.liv.api.base.base.ResultBody;
-import com.liv.api.base.utils.LivCllectionUtils;
+import com.liv.api.base.utils.LivCollectionUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -27,7 +26,6 @@ import java.util.stream.Collectors;
  * @Description: 字典管理控制器
  **/
 @RestController
-
 @RequestMapping(value = "/api/dict")
 @Api(tags = "字典管理")
 public class DictController extends BaseController<DictMapper, Dict, DictService> {
@@ -40,8 +38,8 @@ public class DictController extends BaseController<DictMapper, Dict, DictService
     }
 
     @ApiOperation(value = "查询字典列表", notes="查询字典列表")
-    @RequestMapping(value="/cascadelist")
-    public DataBody cascadelist(String dictType) throws Exception {
+    @RequestMapping(value="/cascadelist/{dictType}")
+    public DataBody cascadelist(@PathVariable("dictType") String dictType) throws Exception {
         QueryWrapper<Dict> qw = new QueryWrapper<>();
         if(StringUtils.isNotEmpty(dictType)){
             qw.eq("D_TYPE",dictType);
@@ -56,7 +54,7 @@ public class DictController extends BaseController<DictMapper, Dict, DictService
         }).collect(Collectors.toList());
 
         //返回树结构
-        return DataBody.success(LivCllectionUtils.getTree(vos,"dCode","parentCode","children"));
+        return DataBody.success(LivCollectionUtils.getTree(vos,"dCode","parentCode","children"));
     }
 
     @ApiOperation(value = "查询字典列表", notes="查询字典列表")

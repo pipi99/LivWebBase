@@ -21,14 +21,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "Actions", description = "操作操作")
-@TableName("auth.actions")
+@TableName("actions")
 public class Actions {
     /**
      * 主键
      *
      * Nullable:  false
      */
-    @TableId(type = IdType.AUTO)
+    @TableId(type = IdType.ASSIGN_ID)
     private Long actionId;
 
     /**

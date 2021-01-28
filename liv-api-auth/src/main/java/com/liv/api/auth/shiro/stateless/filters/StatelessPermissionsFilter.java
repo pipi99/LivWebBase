@@ -31,7 +31,7 @@ import java.io.IOException;
  *
  * 1、根据当前访问地址与用户维护的菜单按钮地址进行匹配是否有访问权限
  * 2、当访问地址未维护为菜单和按钮配置地址的，则登录即可访问。不做角色权限判断。
- *
+ * 拦截浏览器url访问菜单路径
  * @date 2020.4.21  16:04
  * @email 453826286@qq.com
  */
@@ -48,17 +48,19 @@ public class StatelessPermissionsFilter extends PermissionsAuthorizationFilter {
     public boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws IOException {
 
         Subject subject = SecurityUtils.getSubject();
-        String urlPermissionFlag = WebUtils.toHttp(request).getServletPath();
-        urlPermissionFlag = ApiAuthUtils.getInstance(WebUtils.toHttp(request)).getPermissionStrByUrl(urlPermissionFlag);
 
-        //默认0位上是查看权限
+        String urlPermissionFlag = ApiAuthUtils.getInstance().getPermissionStrByCurrentRequest();
+
         if(!StringUtils.isEmpty(urlPermissionFlag)){
-            //菜单权限过滤  //根据url判断是否有权限
+            /**
+             * 访问路径权限过滤
+             * 判断当前访问用户是否有此url的访问权限
+             *
+             */
             try{
                 subject.checkPermission("+"+urlPermissionFlag+"+1");
             }catch (Exception e){
                 log.error(e.getMessage(),e);
-//                remindPermission( response, WebUtils.toHttp(request).getRequestURI());
                 return false;
             }
         }

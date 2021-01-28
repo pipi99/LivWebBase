@@ -1,5 +1,7 @@
 package com.liv.api.base.exception;
 
+import com.liv.api.base.base.IBaseMessageInfo;
+
 /**
  * @author LiV
  * @Title:

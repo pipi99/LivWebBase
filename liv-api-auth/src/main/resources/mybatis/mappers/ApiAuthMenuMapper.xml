@@ -2,14 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.liv.api.auth.dao.MenuMapper">
     <resultMap id="MenuDOResultMap" type="com.liv.api.auth.domainmodel.MenuDO">
-        <id property="id" column="menu_id" />
+        <id property="menuId" column="menu_id" />
         <result property="permission" column="permission" />
         <result property="accessCtrl" column="access_ctrl" />
-        <result property="title" column="menu_name" />
+        <result property="menuName" column="menu_name" />
         <result property="parentId" column="parent_id" />
         <result property="description" column="description" />
-        <result property="path" column="m_url" />
+        <result property="mUrl" column="m_url" />
         <result property="icon" column="icon" />
+        <result property="appId" column="app_id" />
+        <result property="isLeaf" column="is_leaf" />
+
+        <result property="sort" column="sort" />
         <collection property="actions" column="menu_id"  javaType="ArrayList" ofType="com.liv.api.auth.dao.datamodel.Actions">
             <id property="actionId" column="ACTION_ID" />
             <result property="menuId" column="MENU_ID" />
@@ -30,6 +34,9 @@
             parent_id ,
             b.description,
             b.icon,
+            b.sort,
+            is_leaf,
+            app_id,
             m_url ,
 
             d.ACTION_ID ,
@@ -40,10 +47,10 @@
             d.ACTION_URL ,
             d.ACTION_FUN
     from
-        auth.USER_PERMISSION c
-        inner join auth.PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
-        inner join auth.MENU b on a.resource_id=b.MENU_ID
-        left join auth.actions d on b.menu_id=d.menu_id
+        @[dbschema]USER_PERMISSION c
+        inner join @[dbschema]PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
+        inner join @[dbschema]MENU b on a.resource_id=b.MENU_ID
+        left join @[dbschema]actions d on b.menu_id=d.menu_id
     where
         b.ACCESS_CTRL = 'perm'
           and
@@ -60,6 +67,9 @@
             parent_id ,
             b.description,
             b.icon,
+            b.sort,
+            is_leaf,
+            app_id,
             m_url ,
 
             d.ACTION_ID ,
@@ -71,10 +81,10 @@
             d.ACTION_FUN
 
         from
-          auth.ROLE_PERMISSION c
-          inner join  auth.PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
-          inner join auth.MENU b on a.resource_id=b.MENU_ID
-          left join auth.actions d on b.menu_id=d.menu_id
+          @[dbschema]ROLE_PERMISSION c
+          inner join  @[dbschema]PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
+          inner join @[dbschema]MENU b on a.resource_id=b.MENU_ID
+          left join @[dbschema]actions d on b.menu_id=d.menu_id
         where
             b.ACCESS_CTRL = 'perm'
             and c.role_id IN
@@ -91,6 +101,9 @@
         parent_id ,
         b.description,
         b.icon,
+        b.sort,
+        is_leaf,
+        app_id,
         m_url ,
 
         d.ACTION_ID ,
@@ -102,8 +115,106 @@
         d.ACTION_FUN
 
         from
-        auth.MENU b
-        left join auth.actions d on b.menu_id=d.menu_id
+        @[dbschema]MENU b
+        left join @[dbschema]actions d on b.menu_id=d.menu_id
         where b.ACCESS_CTRL &lt;&gt; 'perm'
     </select>
+
+    <select id="findByParentId" resultMap="MenuDOResultMap">
+        select
+        b.menu_id ,
+        menu_name ,
+        access_ctrl,
+        parent_id ,
+        b.description,
+        b.icon,
+        b.sort,
+        is_leaf,
+        app_id,
+        m_url ,
+
+        d.ACTION_ID ,
+        d.permission as a_permission,
+        d.description as a_description,
+        d.icon as a_icon,
+        d.ACTION_NAME,
+        d.ACTION_URL ,
+        d.ACTION_FUN
+
+        from
+        @[dbschema]MENU b
+        left join @[dbschema]actions d on b.menu_id=d.menu_id
+        <where>
+            <choose>
+                <when test="parentId!=null and parentId!=''">
+                    parent_id = #{parentId}
+                </when>
+                <otherwise>
+                    parent_id is null
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <select id="getTreeList" resultMap="MenuDOResultMap">
+        select
+        b.menu_id ,
+        menu_name ,
+        access_ctrl,
+        parent_id ,
+        b.description,
+        b.icon,
+        b.sort,
+        is_leaf,
+        app_id,
+        m_url ,
+
+        d.ACTION_ID ,
+        d.permission as a_permission,
+        d.description as a_description,
+        d.icon as a_icon,
+        d.ACTION_NAME,
+        d.ACTION_URL ,
+        d.ACTION_FUN
+
+        from
+        @[dbschema]MENU b
+        left join @[dbschema]actions d on b.menu_id=d.menu_id
+        where 1=1
+        <if  test="menu.menuName!=null and menu.menuName!=''">
+           and menu_name like CONCAT('%',#{menu.menuName},'%')
+        </if>
+        <if  test="menu.appId!=null and menu.appId!=''">
+           and app_id = #{menu.appId}
+        </if>
+    </select>
+
+
+    <select id="findPageList" resultMap="MenuDOResultMap">
+        select
+        b.menu_id ,
+        menu_name ,
+        access_ctrl,
+        parent_id ,
+        b.description,
+        b.icon,
+        b.sort,
+        is_leaf,
+        app_id,
+        m_url ,
+
+        d.ACTION_ID ,
+        d.permission as a_permission,
+        d.description as a_description,
+        d.icon as a_icon,
+        d.ACTION_NAME,
+        d.ACTION_URL ,
+        d.ACTION_FUN
+
+        from
+        @[dbschema]MENU b
+        left join @[dbschema]actions d on b.menu_id=d.menu_id
+        ${ew.customSqlSegment}
+    </select>
+
 </mapper>

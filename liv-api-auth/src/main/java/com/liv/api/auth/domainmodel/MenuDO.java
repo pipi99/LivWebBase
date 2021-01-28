@@ -29,19 +29,24 @@ public class MenuDO {
      *
      * Nullable:  false
      */
-    private Long id;
-
+    private Long menuId;
+    /**
+     * 所属应用
+     *
+     * Nullable:  false
+     */
+    private Long appId;
     /**
      * 权限类型： CRUD
      *
      * Nullable:  true
      */
-    private int permission;
+    private int permission = AppConst.MAX_BIT_PERMISSION;
 
     /**
      * 菜单名称
      **/
-    private String title;
+    private String menuName;
     /**
      * 上级ID
      **/
@@ -58,12 +63,24 @@ public class MenuDO {
     /**
      * 菜单链接
      **/
-    private String path;
+    private String mUrl;
     /**
      * 菜单图标
      **/
     private String icon;
 
+    /**
+     * 菜单排序
+     **/
+    private int sort;
+
+    /**
+     * 是否叶子节点
+     **/
+    private int isLeaf;
+    /**
+     * 下级菜单
+     **/
     private List<MenuDO> children;
 
     /**

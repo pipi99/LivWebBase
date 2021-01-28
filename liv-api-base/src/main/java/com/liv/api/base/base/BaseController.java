@@ -2,6 +2,8 @@ package com.liv.api.base.base;
 
 import com.google.common.collect.Lists;
 import com.liv.api.base.exception.ValidateException;
+import com.liv.api.base.utils.CacheUtils;
+import com.liv.api.base.utils.LivUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -24,9 +26,17 @@ import java.util.List;
  */
 public abstract class BaseController<M extends com.baomidou.mybatisplus.core.mapper.BaseMapper<T>, T,TService> {
 
-    @SuppressWarnings("SpringJavaAutowiringInspection")
+    /*缓存工具类*/
     @Autowired
-    private BaseService<M,T> _b_s;
+    protected CacheUtils cacheUtils;
+
+    /*service 自动注入*/
+    private TService _b_s;
+
+    @Autowired(required = false)
+    public void set_b_s(TService _b_s) {
+        this._b_s = _b_s;
+    }
 
     protected TService service;
 

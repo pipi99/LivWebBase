@@ -20,5 +20,5 @@ public class JwtProperties {
     //token过期时间，单位分钟
     Integer tokenExpireTime = 604800;
     //token加密密钥
-    String secretKey = "mmnzdmwhahan";
+    String secretKey = "snail$and$pig";
 }

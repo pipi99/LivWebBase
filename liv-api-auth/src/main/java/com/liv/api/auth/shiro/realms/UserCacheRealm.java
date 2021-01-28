@@ -71,8 +71,9 @@ public class UserCacheRealm extends AuthorizingRealm {
             authorizationInfo.addRole(roleList.get(i).getRoleName());
         }
 
-        /**用户权限(本用户名作为角色)**/
-        //用户名 作为本用户唯一角色，支持用户权限
+        /**用户权限(本用户名作为角色)
+         * 用户名 作为本用户唯一角色，支持单个用户权限
+         * **/
         authorizationInfo.addRole(user.getUserName());
 
         //**** 赋予任意角色在初始登录需要获取用户信息的情况下，可以使用此角色，以便shiro缓存用户信息

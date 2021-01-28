@@ -26,8 +26,7 @@ public class AuthcFilterFactoryBean {
     public static ShiroFilterFactoryBean getShiroFilterFactoryBean(DefaultWebSecurityManager defaultWebSecurityManager){
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         bean.setSecurityManager(defaultWebSecurityManager);
-        bean.setLoginUrl("/api/login");
-
+        bean.setLoginUrl("/sp_auth/login");
 //
         Map<String, Filter> filters = new LinkedHashMap<>();
         /**无需登录直接访问*/
@@ -37,41 +36,43 @@ public class AuthcFilterFactoryBean {
         filters.put("BasicHttpAuthenticationFilter",  new StatelessBasicHttpAuthenticationFilter());
         filters.put("PermissionsFilter",  new StatelessPermissionsFilter());
 
+        //shiro配置过滤规则少量的话可以用hashMap,数量多了要用LinkedHashMap,保证有序
+        Map<String, String> chains = new LinkedHashMap<>();
+        /**自动弹出登录框*/
+        chains.put("/doc.html", "BasicHttpAuthenticationFilter");
+        chains.put("/doc.html/**", "BasicHttpAuthenticationFilter");
+        chains.put("/swagger-ui.html", "BasicHttpAuthenticationFilter");
+        chains.put("/swagger-ui.html/**", "BasicHttpAuthenticationFilter");
+        chains.put("/swagger-resources/**", "BasicHttpAuthenticationFilter");
+        chains.put("/swagger/**", "BasicHttpAuthenticationFilter");
+        chains.put("/v2/**", "BasicHttpAuthenticationFilter");
+        chains.put("/v2/**", "BasicHttpAuthenticationFilter");
+        chains.put("/webjars/**", "BasicHttpAuthenticationFilter");
+        chains.put("/configuration/ui", "BasicHttpAuthenticationFilter");
+        chains.put("/configuration/security", "BasicHttpAuthenticationFilter");
+//        chains.put("/swagger-ui.html", "anon");
+//        chains.put("/swagger-ui.html/**", "anon");
+//        chains.put("/swagger-resources/**", "anon");
+//        chains.put("/swagger/**", "anon");
+//        chains.put("/v2/**", "anon");
+//        chains.put("/v2/**", "anon");
+//        chains.put("/webjars/**", "anon");
+//        chains.put("/configuration/ui", "anon");
+//        chains.put("/configuration/security", "anon");
+        chains.put("/csrf", "anon");
 
-//        //shiro配置过滤规则少量的话可以用hashMap,数量多了要用LinkedHashMap,保证有序
-//        Map<String, String> chains = new LinkedHashMap<>();
-//
-//        //路径的填写排除工程上下文
-//        //swagger
-////        chains.put("/swagger-ui.html", "anon");
-////        chains.put("/swagger-ui.html/**", "anon");
-//        /**自动弹出登录框*/
-//        chains.put("/swagger-ui.html", "BasicHttpAuthenticationFilter");
-//        chains.put("/swagger-ui.html/**", "BasicHttpAuthenticationFilter");
-//        chains.put("/swagger-resources/**", "BasicHttpAuthenticationFilter");
-//        chains.put("/swagger/**", "BasicHttpAuthenticationFilter");
-//        chains.put("/v2/**", "BasicHttpAuthenticationFilter");
-//        chains.put("/v2/**", "BasicHttpAuthenticationFilter");
-//        chains.put("/webjars/**", "BasicHttpAuthenticationFilter");
-//        chains.put("/configuration/ui", "BasicHttpAuthenticationFilter");
-//        chains.put("/configuration/security", "BasicHttpAuthenticationFilter");
-//        chains.put("/csrf", "anon");
-//
-//        /**无需登录访问**/
-//        chains.put("/**/*.js", "anon");
-//        chains.put("/**/*.png", "anon");
-//        chains.put("/**/*.jpg", "anon");
-//        chains.put("/**/*.css", "anon");
-//        //无需登录即可访问的链接
-//        chains.put("/g/**", "anon");
-//
-//        //登录后授权访问的链接
-//        chains.put("/p/**", "StatelessAuthcFilter,PermissionsFilter");
-//        chains.put("/**/p/**", "StatelessAuthcFilter,PermissionsFilter");
-//
-//        //登录后访问的链接
-//        chains.put("/**", "StatelessAuthcFilter");
-//        bean.setFilterChainDefinitionMap(chains);
+        /**开放链接**/
+        chains.put("/public/**", "anon");
+
+        /**无需登录访问**/
+        chains.put("/**/*.js", "anon");
+        chains.put("/**/*.png", "anon");
+        chains.put("/**/*.jpg", "anon");
+        chains.put("/**/*.css", "anon");
+
+        //登录后访问的链接
+        chains.put("/**", "StatelessAuthcFilter");
+        bean.setFilterChainDefinitionMap(chains);
 
         bean.setFilters(filters);
         return bean;

@@ -59,6 +59,8 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
     @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
         String token = LivContextUtils.getRequestToken(WebUtils.toHttp(request));
+
+        //验证和续签
         boolean tokenIsAvaliable = JwtUtil.verify(token);
         //有效token
         if(tokenIsAvaliable){
@@ -67,8 +69,6 @@ public class StatelessAccessControlFilter extends AccessControlFilter {
                 remindHasLogin(response);
                 return false;
             }else {
-                //token设置到 response /cookie ,【根据条件判断是否设置为重新生成】
-                LivContextUtils.getBean("apiUserService",UserService.class).refreshToken(WebUtils.toHttp(response),token);
                 return true;
             }
         }else if (isLoginRequest(request, response)) {

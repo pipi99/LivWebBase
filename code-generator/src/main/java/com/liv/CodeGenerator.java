@@ -2,7 +2,6 @@ package com.liv;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
@@ -11,6 +10,7 @@ import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.FileType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ public class CodeGenerator {
         System.out.println(help.toString());
         if (scanner.hasNext()) {
             String ipt = scanner.next();
-            if (StringUtils.isNotEmpty(ipt)) {
+            if (StringUtils.isNotBlank(ipt)) {
                 return ipt;
             }
         }
@@ -61,11 +61,11 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/auth?useAffectedRows=true&useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC");
+        dsc.setUrl("jdbc:oracle:thin:@192.168.14.156:1521:orcl");
         // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("root");
+        dsc.setDriverName("oracle.jdbc.OracleDriver");
+        dsc.setUsername("BJ_TEST");
+        dsc.setPassword("123456789");
         mpg.setDataSource(dsc);
 
         // 包配置

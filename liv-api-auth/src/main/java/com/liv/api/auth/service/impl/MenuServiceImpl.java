@@ -1,5 +1,8 @@
 package com.liv.api.auth.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.google.common.collect.Lists;
 import com.liv.api.auth.dao.MenuMapper;
 import com.liv.api.auth.dao.RoleMapper;
@@ -9,27 +12,20 @@ import com.liv.api.auth.dao.datamodel.Menu;
 import com.liv.api.auth.dao.datamodel.Role;
 import com.liv.api.auth.domainmodel.MenuDO;
 import com.liv.api.auth.service.MenuService;
-import com.liv.api.auth.shiro.stateless.filters.StatelessAccessControlFilter;
-import com.liv.api.auth.shiro.stateless.filters.StatelessBasicHttpAuthenticationFilter;
-import com.liv.api.auth.shiro.stateless.filters.StatelessPermissionsFilter;
 import com.liv.api.auth.utils.ApiAuthUtils;
 import com.liv.api.auth.utils.AppConst;
 import com.liv.api.auth.viewmodel.UserVO;
 import com.liv.api.base.base.BaseService;
-import com.liv.api.base.utils.LivCllectionUtils;
-import com.liv.api.base.utils.LivContextUtils;
+import com.liv.api.base.utils.LivCollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
-import org.apache.shiro.web.filter.authc.AnonymousFilter;
 import org.apache.shiro.web.filter.mgt.DefaultFilterChainManager;
 import org.apache.shiro.web.filter.mgt.PathMatchingFilterChainResolver;
 import org.apache.shiro.web.servlet.AbstractShiroFilter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import javax.servlet.Filter;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -82,6 +78,8 @@ public class MenuServiceImpl extends BaseService<MenuMapper, Menu> implements Me
         Map<String, String> chains = new LinkedHashMap<>();
 
         /**自动弹出登录框*/
+        chains.put("/doc.html", "BasicHttpAuthenticationFilter");
+        chains.put("/doc.html/**", "BasicHttpAuthenticationFilter");
         chains.put("/swagger-ui.html", "BasicHttpAuthenticationFilter");
         chains.put("/swagger-ui.html/**", "BasicHttpAuthenticationFilter");
         chains.put("/swagger-resources/**", "BasicHttpAuthenticationFilter");
@@ -91,7 +89,19 @@ public class MenuServiceImpl extends BaseService<MenuMapper, Menu> implements Me
         chains.put("/webjars/**", "BasicHttpAuthenticationFilter");
         chains.put("/configuration/ui", "BasicHttpAuthenticationFilter");
         chains.put("/configuration/security", "BasicHttpAuthenticationFilter");
+//        chains.put("/swagger-ui.html", "anon");
+//        chains.put("/swagger-ui.html/**", "anon");
+//        chains.put("/swagger-resources/**", "anon");
+//        chains.put("/swagger/**", "anon");
+//        chains.put("/v2/**", "anon");
+//        chains.put("/v2/**", "anon");
+//        chains.put("/webjars/**", "anon");
+//        chains.put("/configuration/ui", "anon");
+//        chains.put("/configuration/security", "anon");
         chains.put("/csrf", "anon");
+
+        /**开放链接**/
+        chains.put("/public/**", "anon");
 
         /**无需登录访问**/
         chains.put("/**/*.js", "anon");
@@ -99,7 +109,13 @@ public class MenuServiceImpl extends BaseService<MenuMapper, Menu> implements Me
         chains.put("/**/*.jpg", "anon");
         chains.put("/**/*.css", "anon");
 
-        List<Menu> menus = this.mapper.selectList(null);
+
+        /**
+         * 绿色链接，无需登录即可访问
+         * */
+        QueryWrapper qw = new QueryWrapper<>();
+        qw.eq("ACCESS_CTRL",AppConst.MENU_OPEN);
+        List<Menu> menus = this.mapper.selectList(qw);
         for (int i = 0; i <menus.size() ; i++) {
             Menu menu = menus.get(i);
             String url = menu.getMUrl();
@@ -109,16 +125,23 @@ public class MenuServiceImpl extends BaseService<MenuMapper, Menu> implements Me
             }
             String accessCtrl = menu.getAccessCtrl();
 
-            if(url.endsWith("/")||url.endsWith("\\")){
-                url = url.substring(0,url.length()-1);
-            }
-
-            //公开访问的链接
-            if(AppConst.MENU_OPEN.equals(accessCtrl)){
+            //无需登录访问的菜单
+            if(AppConst.MENU_PERM.equals(accessCtrl)){
                 chains.put(url+"/**", "anon");
             }
         }
 
+
+        //登录后访问的链接
+        chains.put("/**", "StatelessAuthcFilter");
+
+        /**
+         * 这里只拦截菜单访问，不拦截按钮的url
+         * 菜单拦截走拦截器 PermissionsFilter.java
+         * */
+        qw = new QueryWrapper<>();
+        qw.eq("ACCESS_CTRL",AppConst.MENU_PERM);
+        menus = this.mapper.selectList(qw);
         for (int i = 0; i <menus.size() ; i++) {
             Menu menu = menus.get(i);
             String url = menu.getMUrl();
@@ -127,17 +150,12 @@ public class MenuServiceImpl extends BaseService<MenuMapper, Menu> implements Me
                 continue;
             }
             String accessCtrl = menu.getAccessCtrl();
-            if(url.endsWith("/")||url.endsWith("\\")){
-                url = url.substring(0,url.length()-1);
-            }
+
             //授权才可访问的菜单
             if(AppConst.MENU_PERM.equals(accessCtrl)){
                 chains.put(url+"/**", "StatelessAuthcFilter,PermissionsFilter");
             }
         }
-
-        //登录后访问的链接
-        chains.put("/**", "StatelessAuthcFilter");
 
         // 清空老的权限控制
         manager.getFilterChains().clear();
@@ -152,6 +170,7 @@ public class MenuServiceImpl extends BaseService<MenuMapper, Menu> implements Me
         }
     }
 
+
     /**
      * 获取当前登录用户的菜单列表
      **/
@@ -162,7 +181,7 @@ public class MenuServiceImpl extends BaseService<MenuMapper, Menu> implements Me
 
 
         //当前登录用户信息
-        UserVO user = ApiAuthUtils.getCurrentUser().getUser();
+        UserVO user = ApiAuthUtils.getInstance().getCurrentUser().getUser();
         Long userId = user.getUserId();
 
 
@@ -192,6 +211,33 @@ public class MenuServiceImpl extends BaseService<MenuMapper, Menu> implements Me
         List<MenuDO> result1 = mapper.findCurUserMenus(userId);
         result.addAll(result1);
 
-        return LivCllectionUtils.getTree(result,"id","parentId","children");
+        return LivCollectionUtils.getTree(result,"menuId","parentId","children");
+    }
+
+    @Override
+    public List<MenuDO> getTreeList(Menu menu) throws Exception {
+
+        List<MenuDO> result = mapper.getTreeList(menu);
+        result = LivCollectionUtils.getTree(result,"menuId","parentId","children");
+        return result;
+    }
+
+    /**
+     * @Author: LiV
+     * @Date: 2020.6.24 15:20
+     * @Description: 根据上级ID查询菜单信息
+     **/
+    @Override
+    public List<MenuDO> findByParentId(Long parentId) throws Exception {
+        List<MenuDO> result = mapper.findByParentId(parentId);
+        return result;
+    }
+
+    @Override
+    public IPage<MenuDO> findPageList(IPage<Menu> page, Wrapper<Menu> queryWrapper) throws Exception {
+        IPage<MenuDO> list =  mapper.findPageList(page,queryWrapper);
+        List<MenuDO> treeList =  LivCollectionUtils.getTree(list.getRecords(),"menuId","parentId","children");
+        list.setRecords(treeList);
+        return list;
     }
 }

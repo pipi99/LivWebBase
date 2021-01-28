@@ -3,6 +3,7 @@ package com.liv.api.auth.dao.datamodel;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.liv.api.base.base.BaseBean;
 import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,14 +24,14 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "Menu", description = "菜单实体")
-@TableName("auth.menu")
-public class Menu {
+@TableName("menu")
+public class Menu extends BaseBean<Menu> {
     /**
      * 主键
      *
      * Nullable:  false
      */
-    @TableId(type = IdType.AUTO)
+    @TableId(type = IdType.ASSIGN_ID)
     private Long menuId;
 
     /**
@@ -43,7 +44,18 @@ public class Menu {
      **/
     private Long  parentId;
 
-
+    /**
+     * 所属应用
+     **/
+    private Long  appId;
+    /**
+     * 菜单排序
+     **/
+    private int sort;
+    /**
+     * 是否叶子节点
+     **/
+    private int isLeaf;
     /**
      * 菜单说明
      **/

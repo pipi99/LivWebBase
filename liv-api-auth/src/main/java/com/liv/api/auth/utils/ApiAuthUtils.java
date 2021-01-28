@@ -6,6 +6,7 @@ import com.liv.api.base.utils.LivContextUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Base64;
 
 /**
  * @author LiV
@@ -23,12 +24,12 @@ public class ApiAuthUtils {
      * @Date: 2020.5.13 18:22
      * @Description: 获取当前登录用户
      **/
-    public static UserDO getCurrentUser(){
+    public UserDO getCurrentUser(){
         return LivContextUtils.getBean("apiUserService", UserService.class).getCurUser();
     }
 
-    public static ApiAuthUtils getInstance(HttpServletRequest req){
-        request = req;
+    public static ApiAuthUtils getInstance(){
+        request = LivContextUtils.getRequest();
         return new ApiAuthUtils();
     }
     /**
@@ -38,22 +39,39 @@ public class ApiAuthUtils {
      * 结果作为 permission 模块字符串
      **/
     public String getPermissionStrByUrl(String url){
-        if(StringUtils.isEmpty(url)){
-            return "";
-        }
-        if(url.indexOf("://")!=-1){
-            url = url.substring(url.indexOf("://")+4);
-            url = url.substring(url.indexOf("/")+1);
-        }
-        if(url.indexOf("?")!=-1){
-            url = url.substring(0,url.indexOf("?"));
-        }
+        return Base64.getEncoder().encodeToString(url.getBytes());
+//
+//        if(StringUtils.isEmpty(url)){
+//            return "";
+//        }
+//        if(url.indexOf("://")!=-1){
+//            url = url.substring(url.indexOf("://")+4);
+//            url = url.substring(url.indexOf("/")+1);
+//        }
+//        if(url.indexOf("?")!=-1){
+//            url = url.substring(0,url.indexOf("?"));
+//        }
+//
+//        if(url.startsWith("/")){
+//            url = url.substring(url.indexOf("/")+1);
+//        }
+//
+//        return url.replaceAll("/","_");
+    }
 
-        if(url.startsWith("/")){
-            url = url.substring(url.indexOf("/")+1);
+    /**
+     * @Author: LiV
+     * @Date: 2020.5.25 16:45
+     * @Description: 截取URL （http://localhost:8080/livauth/auth/aaa?userid=2  截取为 auth/aaa）
+     * 结果作为 permission 模块字符串
+     **/
+    public String getPermissionStrByCurrentRequest(){
+        String url = request.getServletPath();
+        String queryString = request.getQueryString();
+        if(StringUtils.isNotEmpty(queryString)){
+            url = url+"?"+queryString;
         }
-
-        return url.replaceAll("/","_");
+        return Base64.getEncoder().encodeToString(url.getBytes());
     }
 
 

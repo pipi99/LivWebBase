@@ -1,9 +1,7 @@
 package com.liv.auth.dao.datamodel;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+import com.liv.api.base.base.BaseBean;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -15,6 +13,7 @@ import lombok.experimental.Accessors;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -29,7 +28,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @TableName("auth.organ")
 @ApiModel(value="Organ对象", description="组织机构表")
-public class Organ implements Serializable {
+@EqualsAndHashCode(callSuper = false)
+public class Organ extends BaseBean<Organ> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -62,7 +62,9 @@ public class Organ implements Serializable {
 
     @ApiModelProperty(value = "是否删除1 是 0否")
     @TableField("DEL")
-    private String del;
+    @TableLogic(delval = "1",value = "0")
+    private String del = "0";
 
-
+    @TableField(exist = false)
+    private List<Organ> children;
 }

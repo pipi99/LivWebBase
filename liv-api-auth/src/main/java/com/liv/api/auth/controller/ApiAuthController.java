@@ -39,8 +39,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @Description: 菜单管理控制器
  **/
 @RestController("api_auth_Controller")
-
-@RequestMapping(value = "/api")
+@CrossOrigin
+@RequestMapping(value = "/sp_auth")
 @Api(tags = "AUTH API组件控制器")
 @Slf4j
 public class ApiAuthController  {

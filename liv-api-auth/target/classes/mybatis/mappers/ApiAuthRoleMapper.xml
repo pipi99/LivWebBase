@@ -27,7 +27,7 @@
             r.create_date as createDate ,
             r.description
         from
-            auth.role r,auth.GROUP_ROLE gr
+            @[dbschema]role r,@[dbschema]GROUP_ROLE gr
         where
             r.ROLE_ID = gr.role_id and r.DEL=0
                 and gr.group_id IN
@@ -55,10 +55,10 @@
             d.ACTION_FUN
 
         from
-          auth.ROLE_PERMISSION c
-          inner join  auth.PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
-          inner join auth.MENU b on a.resource_id=b.MENU_ID
-          left join auth.actions d on b.menu_id=d.menu_id
+          @[dbschema]ROLE_PERMISSION c
+          inner join  @[dbschema]PERMISSION_RESOURCE a on  a.permission_id = c.permission_id
+          inner join @[dbschema]MENU b on a.resource_id=b.MENU_ID
+          left join @[dbschema]actions d on b.menu_id=d.menu_id
         where
           c.role_id=#{roleId}
     </select>

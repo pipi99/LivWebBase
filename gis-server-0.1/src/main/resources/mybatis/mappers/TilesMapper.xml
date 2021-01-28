@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.liv.api.auth.dao.TilesDao">
+<mapper namespace="com.liv.dao.TilesMapper">
 
-    <select id="getSatelliteTile" parameterType="com.liv.api.auth.entity.Tile" resultType="com.liv.api.auth.entity.Tile">
+    <select id="getSatelliteTile" parameterType="com.liv.dao.datamodel.Tile" resultType="com.liv.dao.datamodel.Tile">
         SELECT
             `type`,
             zoom z,
@@ -32,7 +32,7 @@
         and zoom = #{z}
     </select>
 
-    <select id="getSatelliteMixedTile" parameterType="com.liv.api.auth.entity.Tile" resultType="com.liv.api.auth.entity.Tile">
+    <select id="getSatelliteMixedTile" parameterType="com.liv.dao.datamodel.Tile" resultType="com.liv.dao.datamodel.Tile">
         SELECT
             `type`,
             zoom z,

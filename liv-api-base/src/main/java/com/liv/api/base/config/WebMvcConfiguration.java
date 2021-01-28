@@ -5,6 +5,7 @@ import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.liv.api.base.utils.LivPropertiesUtils;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -47,12 +48,14 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     public FastJsonHttpMessageConverter fastJsonHttpMessageConverter() {
         FastJsonHttpMessageConverter fastConverter = new FastJsonHttpMessageConverter();
         FastJsonConfig fastJsonConfig = new FastJsonConfig();
+        // 配置序列化策略
         fastJsonConfig.setSerializerFeatures(
                 SerializerFeature.PrettyFormat,
                 SerializerFeature.WriteNullListAsEmpty,
                 SerializerFeature.WriteMapNullValue,
                 SerializerFeature.WriteEnumUsingToString,
-                SerializerFeature.WriteNullStringAsEmpty);
+                SerializerFeature.WriteNullStringAsEmpty,
+                SerializerFeature.BrowserCompatible);
 
         fastJsonConfig.setDateFormat("yyyy-MM-dd HH:mm:ss");
         List<MediaType> fastMediaTypes = new ArrayList<>();
@@ -99,7 +102,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
      * @return
      */
     @Bean
-    public CorsFilter corsFilter() {
+    public FilterRegistrationBean corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowCredentials(true);
@@ -107,6 +110,10 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         corsConfiguration.addAllowedMethod("*");
         corsConfiguration.addAllowedOrigin("*");
         source.registerCorsConfiguration("/**", corsConfiguration);
-        return new CorsFilter(source);
+
+        FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
+        bean.setOrder(0);
+        return bean;
     }
+
 }
